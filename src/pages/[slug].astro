@@ -1,0 +1,179 @@
+---
+import ShowcaseLayout from '../layouts/ShowcaseLayout.astro';
+import { COMPONENTS, getComponent } from '../data/components';
+import { readFileSync } from 'fs';
+import { fileURLToPath } from 'url';
+import path from 'path';
+
+export async function getStaticPaths() {
+  return COMPONENTS.map(c => ({ params: { slug: c.slug } }));
+}
+
+const { slug } = Astro.params;
+const comp = getComponent(slug!);
+if (!comp) return Astro.redirect('/');
+
+const GITHUB_BASE = 'https://github.com/BLURR-Marketing/component-library/blob/main';
+const RAW_BASE = 'https://raw.githubusercontent.com/BLURR-Marketing/component-library/main';
+
+// Read the actual component source code
+let sourceCode = '';
+try {
+  const __dirname = path.dirname(fileURLToPath(import.meta.url));
+  const filePath = path.resolve(__dirname, '../../', comp.githubPath);
+  sourceCode = readFileSync(filePath, 'utf-8');
+} catch {
+  sourceCode = `<!-- Source niet beschikbaar. Bekijk: ${RAW_BASE}/${comp.githubPath} -->`;
+}
+
+const categoryLabels: Record<string, string> = {
+  nav: 'Navigation', hero: 'Hero', sections: 'Sections',
+  'social-proof': 'Social Proof', cta: 'CTA',
+  forms: 'Forms', footer: 'Footer', ui: 'UI Elements',
+};
+---
+
+<ShowcaseLayout title={`${comp.name} — BLURR Components`} activeSlug={comp.slug}>
+
+  <!-- Breadcrumb -->
+  <nav class="sc-detail-breadcrumb">
+    <a href="/">Library</a>
+    <span>/</span>
+    <a href={`/?cat=${comp.category}`}>{categoryLabels[comp.category] ?? comp.category}</a>
+    <span>/</span>
+    <span style="color: var(--sc-text)">{comp.name}</span>
+  </nav>
+
+  <!-- Header -->
+  <div class="sc-detail-header">
+    <div>
+      <h1 class="sc-detail-title">
+        {comp.name}
+        <span class="sc-cat-badge" style="font-size:0.75rem;vertical-align:middle;margin-left:0.5rem">
+          {categoryLabels[comp.category] ?? comp.category}
+        </span>
+      </h1>
+      <p class="sc-detail-desc">{comp.description}</p>
+    </div>
+    <div class="sc-detail-actions">
+      <a href={`${GITHUB_BASE}/${comp.githubPath}`} class="sc-btn" target="_blank" rel="noopener">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <a href={`${RAW_BASE}/${comp.githubPath}`} class="sc-btn sc-btn--primary" target="_blank" rel="noopener">
+        Raw ↗
+      </a>
+    </div>
+  </div>
+
+  <!-- Tabs: Preview / Code -->
+  <div class="sc-tabs">
+    <button class="sc-tab is-active" data-tab="preview">Preview</button>
+    <button class="sc-tab" data-tab="code">Code</button>
+  </div>
+
+  <!-- Preview tab -->
+  <div class="sc-tab-panel is-active" data-panel="preview">
+    <div class="sc-preview-frame">
+      <div class="sc-preview-toolbar">
+        <div class="sc-preview-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="sc-preview-url">/{comp.slug}</div>
+      </div>
+      <div class="sc-preview-body">
+        <iframe
+          src={`/preview/${comp.slug}`}
+          title={`Live preview: ${comp.name}`}
+          style="width:100%;border:none;display:block;"
+          id="preview-iframe"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Code tab -->
+  <div class="sc-tab-panel" data-panel="code">
+    <div class="sc-code-wrap">
+      <div class="sc-code-header">
+        <span class="sc-code-lang">{comp.githubPath}</span>
+        <button class="sc-copy-btn" id="copy-btn">
+          <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1h1a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1H3a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h1zm1 1H3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h1V5a1 1 0 0 1 1-1h4V3zm2 0v1h4a1 1 0 0 1 1 1v8H6V5h5V3H7z"/></svg>
+          Kopieer code
+        </button>
+      </div>
+      <div class="sc-code-body">
+        <pre id="source-code">{sourceCode}</pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Props table -->
+  {comp.propsDocs.length > 0 && (
+    <div>
+      <h2 class="sc-props-title">Props</h2>
+      <table class="sc-props-table">
+        <thead>
+          <tr>
+            <th>Prop</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Beschrijving</th>
+          </tr>
+        </thead>
+        <tbody>
+          {comp.propsDocs.map(prop => (
+            <tr>
+              <td>
+                <code class="sc-prop-name">{prop.name}</code>
+                {prop.required && <span class="sc-prop-required">*</span>}
+              </td>
+              <td><code class="sc-prop-type">{prop.type}</code></td>
+              <td><code class="sc-prop-default">{prop.default ?? '—'}</code></td>
+              <td>{prop.description}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p style="font-size:0.75rem;color:var(--sc-muted);margin-top:0.75rem">* = verplicht</p>
+    </div>
+  )}
+
+</ShowcaseLayout>
+
+<script>
+  // Auto-resize iframe to content height
+  const iframe = document.getElementById('preview-iframe') as HTMLIFrameElement;
+  function resizeIframe() {
+    if (!iframe?.contentDocument) return;
+    const h = iframe.contentDocument.documentElement.scrollHeight;
+    iframe.style.height = Math.max(h, 200) + 'px';
+  }
+  iframe?.addEventListener('load', resizeIframe);
+  window.addEventListener('resize', resizeIframe);
+
+  // Tabs
+  document.querySelectorAll('.sc-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = (tab as HTMLElement).dataset.tab;
+      document.querySelectorAll('.sc-tab').forEach(t => t.classList.remove('is-active'));
+      document.querySelectorAll('.sc-tab-panel').forEach(p => p.classList.remove('is-active'));
+      tab.classList.add('is-active');
+      document.querySelector(`[data-panel="${target}"]`)?.classList.add('is-active');
+    });
+  });
+
+  // Copy button
+  const copyBtn = document.getElementById('copy-btn') as HTMLButtonElement;
+  const codeEl = document.getElementById('source-code');
+  copyBtn?.addEventListener('click', async () => {
+    const code = codeEl?.textContent ?? '';
+    await navigator.clipboard.writeText(code);
+    copyBtn.classList.add('copied');
+    copyBtn.innerHTML = `<svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0z"/></svg> Gekopieerd!`;
+    setTimeout(() => {
+      copyBtn.classList.remove('copied');
+      copyBtn.innerHTML = `<svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M4 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1h1a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1H3a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h1zm1 1H3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h1V5a1 1 0 0 1 1-1h4V3zm2 0v1h4a1 1 0 0 1 1 1v8H6V5h5V3H7z"/></svg> Kopieer code`;
+    }, 2000);
+  });
+</script>

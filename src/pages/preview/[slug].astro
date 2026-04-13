@@ -1,0 +1,161 @@
+---
+/**
+ * Preview endpoint — gerenderd in iframe.
+ * Elke component wordt gerenderd met mock props en demo CSS variabelen.
+ * Geen sidebar/header chrome — puur de component.
+ */
+import { COMPONENTS, getComponent } from '../../data/components';
+
+// Import alle componenten statisch
+import NavSimple from '../../components/nav/NavSimple.astro';
+import NavSticky from '../../components/nav/NavSticky.astro';
+import HeroCentered from '../../components/hero/HeroCentered.astro';
+import HeroSplit from '../../components/hero/HeroSplit.astro';
+import HeroFullscreen from '../../components/hero/HeroFullscreen.astro';
+import ManifestBlock from '../../components/sections/ManifestBlock.astro';
+import FeaturesGrid from '../../components/sections/FeaturesGrid.astro';
+import ProcessSteps from '../../components/sections/ProcessSteps.astro';
+import PricingCards from '../../components/sections/PricingCards.astro';
+import TestimonialsGrid from '../../components/social-proof/TestimonialsGrid.astro';
+import LogoBar from '../../components/social-proof/LogoBar.astro';
+import MarqueeTicker from '../../components/social-proof/MarqueeTicker.astro';
+import StatsBar from '../../components/social-proof/StatsBar.astro';
+import CTABanner from '../../components/cta/CTABanner.astro';
+import ContactForm from '../../components/forms/ContactForm.astro';
+import NewsletterBar from '../../components/forms/NewsletterBar.astro';
+import FooterSimple from '../../components/footer/FooterSimple.astro';
+import FooterFull from '../../components/footer/FooterFull.astro';
+import Button from '../../components/ui/Button.astro';
+import Badge from '../../components/ui/Badge.astro';
+import Card from '../../components/ui/Card.astro';
+import AccordionFAQ from '../../components/ui/AccordionFAQ.astro';
+
+export async function getStaticPaths() {
+  return COMPONENTS.map(c => ({ params: { slug: c.slug } }));
+}
+
+const { slug } = Astro.params;
+const comp = getComponent(slug!);
+if (!comp) return Astro.redirect('/');
+
+const p = comp.mockProps as any;
+
+// Map slug → component
+const componentMap: Record<string, any> = {
+  'nav-simple': NavSimple,
+  'nav-sticky': NavSticky,
+  'hero-centered': HeroCentered,
+  'hero-split': HeroSplit,
+  'hero-fullscreen': HeroFullscreen,
+  'manifest-block': ManifestBlock,
+  'features-grid': FeaturesGrid,
+  'process-steps': ProcessSteps,
+  'pricing-cards': PricingCards,
+  'testimonials-grid': TestimonialsGrid,
+  'logo-bar': LogoBar,
+  'marquee-ticker': MarqueeTicker,
+  'stats-bar': StatsBar,
+  'cta-banner': CTABanner,
+  'contact-form': ContactForm,
+  'newsletter-bar': NewsletterBar,
+  'footer-simple': FooterSimple,
+  'footer-full': FooterFull,
+  'button': Button,
+  'badge': Badge,
+  'card': Card,
+  'accordion-faq': AccordionFAQ,
+};
+
+const Component = componentMap[slug!];
+---
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --color-primary: #0a0a0a;
+      --color-accent: #6366f1;
+      --color-bg: #ffffff;
+      --color-text: #0a0a0a;
+      --color-muted: #6b7280;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-display: var(--font-sans);
+      --radius: 0.5rem;
+    }
+
+    html, body {
+      background: #fff;
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Center small components */
+    .preview-wrapper--centered {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 200px;
+      padding: 2rem;
+      background: #f9f9fb;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+  {Component ? (
+    slug === 'button' || slug === 'badge' ? (
+      <div class="preview-wrapper--centered">
+        {slug === 'button' && (
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;align-items:center">
+            <Button label="Primary" variant="primary" size="md" />
+            <Button label="Secondary" variant="secondary" size="md" />
+            <Button label="Ghost" variant="ghost" size="md" />
+            <Button label="Danger" variant="danger" size="md" />
+          </div>
+        )}
+        {slug === 'badge' && (
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center">
+            <Badge label="Default" variant="default" />
+            <Badge label="Accent" variant="accent" />
+            <Badge label="Success" variant="success" />
+            <Badge label="Warning" variant="warning" />
+            <Badge label="Danger" variant="danger" />
+            <Badge label="Outline" variant="outline" />
+          </div>
+        )}
+      </div>
+    ) : slug === 'card' ? (
+      <div class="preview-wrapper--centered">
+        <div style="display:grid;grid-template-columns:repeat(2,240px);gap:1rem">
+          <Card variant="default" padding="md">
+            <p style="font-weight:700;margin-bottom:0.5rem">Default Card</p>
+            <p style="font-size:0.875rem;color:var(--color-muted)">Grijze achtergrond, geen border.</p>
+          </Card>
+          <Card variant="bordered" padding="md">
+            <p style="font-weight:700;margin-bottom:0.5rem">Bordered Card</p>
+            <p style="font-size:0.875rem;color:var(--color-muted)">Witte achtergrond met rand.</p>
+          </Card>
+          <Card variant="elevated" padding="md">
+            <p style="font-weight:700;margin-bottom:0.5rem">Elevated Card</p>
+            <p style="font-size:0.875rem;color:var(--color-muted)">Schaduw, geen rand.</p>
+          </Card>
+          <Card variant="elevated" href="#" padding="md">
+            <p style="font-weight:700;margin-bottom:0.5rem">Klikbare Card →</p>
+            <p style="font-size:0.875rem;color:var(--color-muted)">Hover voor lift effect.</p>
+          </Card>
+        </div>
+      </div>
+    ) : (
+      <Component {...p} />
+    )
+  ) : (
+    <p style="padding:2rem;color:red">Component niet gevonden: {slug}</p>
+  )}
+</body>
+</html>
