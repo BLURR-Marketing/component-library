@@ -1,0 +1,103 @@
+---
+/**
+ * ManifestBlock
+ * Genummerde USPs of pijlers. Krachtig en sober.
+ *
+ * Props:
+ * - headline?: string
+ * - items: Array<{ number?: string; title: string; body: string }>
+ * - columns?: 1 | 2 | 3
+ * - numbered?: boolean — toon auto-nummering als number niet opgegeven
+ */
+interface Props {
+  headline?: string;
+  items: { number?: string; title: string; body: string }[];
+  columns?: 1 | 2 | 3;
+  numbered?: boolean;
+}
+
+const { headline, items, columns = 3, numbered = true } = Astro.props;
+---
+
+<section class={`manifest manifest--cols-${columns}`} data-manifest>
+  <div class="manifest__inner">
+    {headline && <h2 class="manifest__headline">{headline}</h2>}
+    <ol class="manifest__list">
+      {items.map((item, i) => (
+        <li class="manifest__item">
+          <span class="manifest__num">
+            {item.number ?? (numbered ? String(i + 1).padStart(2, '0') : null)}
+          </span>
+          <h3 class="manifest__title">{item.title}</h3>
+          <p class="manifest__body">{item.body}</p>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<style>
+  .manifest {
+    padding: 5rem 1.5rem;
+    background: var(--color-bg);
+  }
+  .manifest__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .manifest__headline {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin: 0 0 3rem;
+    max-width: 640px;
+  }
+  .manifest__list {
+    list-style: none;
+    margin: 0; padding: 0;
+    display: grid;
+    gap: 2.5rem 3rem;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 600px) {
+    .manifest--cols-2 .manifest__list,
+    .manifest--cols-3 .manifest__list { grid-template-columns: 1fr 1fr; }
+  }
+  @media (min-width: 960px) {
+    .manifest--cols-3 .manifest__list { grid-template-columns: repeat(3, 1fr); }
+  }
+  .manifest__item {
+    border-top: 1px solid color-mix(in srgb, var(--color-text) 15%, transparent);
+    padding-top: 1.5rem;
+  }
+  .manifest__num {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+  }
+  .manifest__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.01em;
+  }
+  .manifest__body {
+    font-size: 0.9375rem;
+    color: var(--color-muted);
+    line-height: 1.65;
+    margin: 0;
+  }
+</style>
+
+<script>
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from('[data-manifest] .manifest__item', {
+      y: 24, opacity: 0, duration: 0.6, stagger: 0.08, ease: 'power2.out',
+      scrollTrigger: { trigger: '[data-manifest]', start: 'top 80%' }
+    });
+  }
+</script>

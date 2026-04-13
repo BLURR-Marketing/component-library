@@ -1,0 +1,114 @@
+---
+/**
+ * FooterSimple
+ * Compacte footer: logo, links, copyright. 1-2 rijen.
+ *
+ * Props:
+ * - logo: string
+ * - links?: Array<{ label: string; href: string }>
+ * - social?: Array<{ label: string; href: string; icon: string }>
+ * - copyright?: string — default: "© {jaar} {logo}"
+ */
+interface Props {
+  logo: string;
+  links?: { label: string; href: string }[];
+  social?: { label: string; href: string; icon: string }[];
+  copyright?: string;
+}
+
+const {
+  logo,
+  links = [],
+  social = [],
+  copyright,
+} = Astro.props;
+
+const year = new Date().getFullYear();
+const copyrightText = copyright ?? `© ${year} ${logo}`;
+---
+
+<footer class="footer-simple">
+  <div class="footer-simple__inner">
+    <div class="footer-simple__top">
+      <span class="footer-simple__logo">{logo}</span>
+
+      {links.length > 0 && (
+        <nav class="footer-simple__links" aria-label="Footer navigatie">
+          {links.map(l => <a href={l.href} class="footer-simple__link">{l.label}</a>)}
+        </nav>
+      )}
+
+      {social.length > 0 && (
+        <div class="footer-simple__social">
+          {social.map(s => (
+            <a href={s.href} class="footer-simple__social-link" aria-label={s.label} rel="noopener noreferrer" target="_blank">
+              <span aria-hidden="true">{s.icon}</span>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+
+    <div class="footer-simple__bottom">
+      <p class="footer-simple__copy">{copyrightText}</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-simple {
+    padding: 2.5rem 1.5rem;
+    background: var(--color-bg);
+    border-top: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent);
+  }
+  .footer-simple__inner { max-width: 1280px; margin: 0 auto; }
+  .footer-simple__top {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .footer-simple__logo {
+    font-weight: 800;
+    font-size: 1.125rem;
+    color: var(--color-text);
+    margin-right: auto;
+  }
+  .footer-simple__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+  .footer-simple__link {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-simple__link:hover { color: var(--color-text); }
+  .footer-simple__social {
+    display: flex;
+    gap: 1rem;
+  }
+  .footer-simple__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem; height: 2rem;
+    color: var(--color-muted);
+    text-decoration: none;
+    font-size: 1.125rem;
+    transition: color 0.2s;
+  }
+  .footer-simple__social-link:hover { color: var(--color-text); }
+  .footer-simple__bottom {
+    border-top: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);
+    padding-top: 1.25rem;
+  }
+  .footer-simple__copy {
+    font-size: 0.8125rem;
+    color: var(--color-muted);
+    margin: 0;
+  }
+</style>

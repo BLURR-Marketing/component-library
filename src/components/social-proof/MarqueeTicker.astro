@@ -1,0 +1,81 @@
+---
+/**
+ * MarqueeTicker
+ * Oneindige scrollende ticker/marquee. Tekst of logo's.
+ *
+ * Props:
+ * - items: string[] — teksten of items
+ * - speed?: number — animatieduur in seconden (default: 30)
+ * - direction?: 'left' | 'right'
+ * - separator?: string — scheidingsteken tussen items (default: "·")
+ * - bg?: string — achtergrondkleur (CSS value)
+ * - color?: string — tekstkleur (CSS value)
+ */
+interface Props {
+  items: string[];
+  speed?: number;
+  direction?: 'left' | 'right';
+  separator?: string;
+  bg?: string;
+  color?: string;
+}
+
+const {
+  items,
+  speed = 30,
+  direction = 'left',
+  separator = '·',
+  bg,
+  color,
+} = Astro.props;
+
+// Dupliceer voor naadloze loop
+const allItems = [...items, ...items, ...items];
+---
+
+<div
+  class="marquee"
+  style={`--marquee-speed: ${speed}s; --marquee-dir: ${direction === 'right' ? 'reverse' : 'normal'}; ${bg ? `background: ${bg};` : ''} ${color ? `color: ${color};` : ''}`}
+  aria-hidden="true"
+>
+  <div class="marquee__track">
+    {allItems.map((item, i) => (
+      <>
+        <span class="marquee__item">{item}</span>
+        <span class="marquee__sep">{separator}</span>
+      </>
+    ))}
+  </div>
+</div>
+
+<style>
+  .marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 1rem 0;
+    background: var(--color-primary);
+    color: #fff;
+    user-select: none;
+  }
+  .marquee__track {
+    display: inline-flex;
+    gap: 0;
+    animation: marquee var(--marquee-speed, 30s) linear infinite;
+    animation-direction: var(--marquee-dir, normal);
+  }
+  .marquee:hover .marquee__track { animation-play-state: paused; }
+  .marquee__item {
+    font-weight: 600;
+    font-size: 0.9375rem;
+    letter-spacing: 0.02em;
+    padding: 0 0.75rem;
+  }
+  .marquee__sep {
+    opacity: 0.4;
+    font-size: 0.875rem;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-33.333%); }
+  }
+</style>

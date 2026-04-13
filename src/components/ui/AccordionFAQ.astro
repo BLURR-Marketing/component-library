@@ -1,0 +1,138 @@
+---
+/**
+ * AccordionFAQ
+ * FAQ accordion. Toegankelijk, keyboard navigeerbaar.
+ *
+ * Props:
+ * - headline?: string
+ * - items: Array<{ question: string; answer: string }>
+ * - allowMultiple?: boolean — meerdere tegelijk open (default: false)
+ */
+interface Props {
+  headline?: string;
+  items: { question: string; answer: string }[];
+  allowMultiple?: boolean;
+}
+
+const { headline, items, allowMultiple = false } = Astro.props;
+const id = Math.random().toString(36).slice(2, 8);
+---
+
+<section class="faq" data-faq data-allow-multiple={allowMultiple}>
+  <div class="faq__inner">
+    {headline && <h2 class="faq__headline">{headline}</h2>}
+    <dl class="faq__list">
+      {items.map((item, i) => (
+        <div class="faq__item" data-faq-item>
+          <dt>
+            <button
+              class="faq__question"
+              aria-expanded="false"
+              aria-controls={`faq-${id}-${i}`}
+              id={`faq-btn-${id}-${i}`}
+              type="button"
+            >
+              <span>{item.question}</span>
+              <span class="faq__icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </button>
+          </dt>
+          <dd
+            class="faq__answer"
+            id={`faq-${id}-${i}`}
+            role="region"
+            aria-labelledby={`faq-btn-${id}-${i}`}
+            hidden
+          >
+            <div class="faq__answer-inner">{item.answer}</div>
+          </dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+</section>
+
+<style>
+  .faq { padding: 5rem 1.5rem; background: var(--color-bg); }
+  .faq__inner { max-width: 720px; margin: 0 auto; }
+  .faq__headline {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin: 0 0 2.5rem;
+  }
+  .faq__list { margin: 0; padding: 0; }
+  .faq__item {
+    border-bottom: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent);
+  }
+  .faq__question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    padding: 1.25rem 0;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+    font-family: inherit;
+  }
+  .faq__question:hover { color: var(--color-accent); }
+  .faq__icon {
+    flex-shrink: 0;
+    color: var(--color-muted);
+    transition: transform 0.3s ease;
+  }
+  .faq__question[aria-expanded="true"] .faq__icon { transform: rotate(180deg); }
+  .faq__answer {
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+  .faq__answer[hidden] { display: block; max-height: 0 !important; padding: 0; }
+  .faq__answer-inner {
+    padding: 0 0 1.25rem;
+    font-size: 0.9375rem;
+    color: var(--color-muted);
+    line-height: 1.7;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('[data-faq]').forEach(faqEl => {
+    const allowMultiple = faqEl.getAttribute('data-allow-multiple') === 'true';
+    faqEl.querySelectorAll('[data-faq-item]').forEach(item => {
+      const btn = item.querySelector('.faq__question') as HTMLButtonElement;
+      const answer = item.querySelector('.faq__answer') as HTMLElement;
+      if (!btn || !answer) return;
+
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        if (!allowMultiple) {
+          faqEl.querySelectorAll('.faq__question[aria-expanded="true"]').forEach(b => {
+            if (b !== btn) {
+              b.setAttribute('aria-expanded', 'false');
+              const ans = b.closest('[data-faq-item]')?.querySelector('.faq__answer') as HTMLElement;
+              if (ans) { ans.style.maxHeight = '0'; setTimeout(() => ans.setAttribute('hidden', ''), 350); }
+            }
+          });
+        }
+        if (open) {
+          btn.setAttribute('aria-expanded', 'false');
+          answer.style.maxHeight = '0';
+          setTimeout(() => answer.setAttribute('hidden', ''), 350);
+        } else {
+          answer.removeAttribute('hidden');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  });
+</script>

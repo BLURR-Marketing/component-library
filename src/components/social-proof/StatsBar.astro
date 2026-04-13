@@ -1,0 +1,76 @@
+---
+/**
+ * StatsBar
+ * Getallen/statistieken sectie — bewijslast in cijfers.
+ *
+ * Props:
+ * - stats: Array<{ value: string; label: string; prefix?: string; suffix?: string }>
+ * - bg?: 'default' | 'dark' | 'accent'
+ */
+interface Props {
+  stats: { value: string; label: string; prefix?: string; suffix?: string }[];
+  bg?: 'default' | 'dark' | 'accent';
+}
+
+const { stats, bg = 'default' } = Astro.props;
+---
+
+<section class={`stats stats--${bg}`} data-stats>
+  <div class="stats__inner">
+    {stats.map(stat => (
+      <div class="stats__item">
+        <div class="stats__value">
+          {stat.prefix && <span class="stats__affix">{stat.prefix}</span>}
+          <span class="stats__number" data-target={stat.value}>{stat.value}</span>
+          {stat.suffix && <span class="stats__affix">{stat.suffix}</span>}
+        </div>
+        <p class="stats__label">{stat.label}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .stats { padding: 4rem 1.5rem; background: var(--color-bg); }
+  .stats--dark { background: var(--color-primary); color: #fff; }
+  .stats--accent { background: var(--color-accent); color: #fff; }
+  .stats__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    text-align: center;
+  }
+  @media (min-width: 640px) {
+    .stats__inner { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+  }
+  .stats__item {
+    padding: 1.5rem 1rem;
+  }
+  .stats__value {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.125rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .stats__affix {
+    font-size: 0.55em;
+    font-weight: 700;
+  }
+  .stats__label {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    margin: 0;
+    letter-spacing: 0.02em;
+  }
+  .stats--dark .stats__label,
+  .stats--accent .stats__label {
+    color: color-mix(in srgb, #fff 65%, transparent);
+  }
+</style>

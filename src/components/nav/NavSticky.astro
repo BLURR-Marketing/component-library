@@ -1,0 +1,121 @@
+---
+/**
+ * NavSticky
+ * Start transparant, wordt wit/solid na scrollen.
+ * Identieke props als NavSimple.
+ */
+interface Props {
+  logo: string;
+  logoHref?: string;
+  links: { label: string; href: string }[];
+  cta?: { label: string; href: string };
+}
+
+const { logo, logoHref = '/', links, cta } = Astro.props;
+---
+
+<header class="nav-sticky" data-sticky>
+  <div class="nav-sticky__inner">
+    <a href={logoHref} class="nav-sticky__logo">{logo}</a>
+    <nav class="nav-sticky__links">
+      {links.map(l => <a href={l.href} class="nav-sticky__link">{l.label}</a>)}
+    </nav>
+    {cta && <a href={cta.href} class="nav-sticky__cta">{cta.label}</a>}
+    <button class="nav-sticky__hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-sticky__mobile">
+    {links.map(l => <a href={l.href} class="nav-sticky__mobile-link">{l.label}</a>)}
+    {cta && <a href={cta.href} class="nav-sticky__cta nav-sticky__cta--mobile">{cta.label}</a>}
+  </div>
+</header>
+
+<style>
+  .nav-sticky {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 200;
+    background: transparent;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  .nav-sticky.is-scrolled {
+    background: var(--color-bg);
+    box-shadow: 0 1px 0 color-mix(in srgb, var(--color-text) 10%, transparent);
+  }
+  .nav-sticky__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .nav-sticky__logo {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--color-text);
+    text-decoration: none;
+    margin-right: auto;
+  }
+  .nav-sticky__links {
+    display: none;
+    gap: 1.75rem;
+  }
+  @media (min-width: 768px) { .nav-sticky__links { display: flex; } }
+  .nav-sticky__link {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    opacity: 0.75;
+    transition: opacity 0.2s;
+  }
+  .nav-sticky__link:hover { opacity: 1; }
+  .nav-sticky__cta {
+    display: none;
+    padding: 0.5rem 1.25rem;
+    background: var(--color-accent);
+    color: #fff;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9375rem;
+  }
+  @media (min-width: 768px) { .nav-sticky__cta { display: inline-block; } }
+  .nav-sticky__hamburger {
+    display: flex; flex-direction: column; gap: 5px;
+    background: none; border: none; cursor: pointer; padding: 0.25rem;
+    margin-left: auto;
+  }
+  .nav-sticky__hamburger span { display: block; width: 22px; height: 2px; background: var(--color-text); }
+  @media (min-width: 768px) { .nav-sticky__hamburger { display: none; } }
+  .nav-sticky__mobile {
+    display: flex; flex-direction: column;
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.35s ease;
+    background: var(--color-bg);
+  }
+  .nav-sticky__mobile.is-open { max-height: 400px; }
+  .nav-sticky__mobile-link {
+    padding: 0.875rem 1.5rem;
+    color: var(--color-text);
+    text-decoration: none;
+    border-top: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);
+  }
+  .nav-sticky__cta--mobile { display: block; margin: 1rem 1.5rem 1.5rem; text-align: center; }
+  @media (min-width: 768px) { .nav-sticky__mobile { display: none; } }
+</style>
+
+<script>
+  const nav = document.querySelector('[data-sticky]');
+  window.addEventListener('scroll', () => {
+    nav?.classList.toggle('is-scrolled', window.scrollY > 40);
+  }, { passive: true });
+  const btn = document.querySelector('.nav-sticky__hamburger') as HTMLButtonElement;
+  const menu = document.querySelector('.nav-sticky__mobile');
+  btn?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', String(open));
+  });
+</script>

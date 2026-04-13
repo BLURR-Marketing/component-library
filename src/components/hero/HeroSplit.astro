@@ -1,0 +1,158 @@
+---
+/**
+ * HeroSplit
+ * Tekst links, image/media rechts. Klassieke "above the fold" layout.
+ *
+ * Props:
+ * - eyebrow?: string
+ * - headline: string
+ * - sub?: string
+ * - ctaPrimary?: { label: string; href: string }
+ * - ctaSecondary?: { label: string; href: string }
+ * - image: string
+ * - imageAlt?: string
+ * - imagePosition?: 'right' | 'left' — default: right
+ * - badge?: string — optioneel floating badge op image
+ */
+interface Props {
+  eyebrow?: string;
+  headline: string;
+  sub?: string;
+  ctaPrimary?: { label: string; href: string };
+  ctaSecondary?: { label: string; href: string };
+  image: string;
+  imageAlt?: string;
+  imagePosition?: 'right' | 'left';
+  badge?: string;
+}
+
+const {
+  eyebrow,
+  headline,
+  sub,
+  ctaPrimary,
+  ctaSecondary,
+  image,
+  imageAlt = '',
+  imagePosition = 'right',
+  badge,
+} = Astro.props;
+---
+
+<section class:list={['hero-split', { 'hero-split--reversed': imagePosition === 'left' }]} data-hero-split>
+  <div class="hero-split__inner">
+    <div class="hero-split__content">
+      {eyebrow && <p class="hero-split__eyebrow">{eyebrow}</p>}
+      <h1 class="hero-split__headline">{headline}</h1>
+      {sub && <p class="hero-split__sub">{sub}</p>}
+      {(ctaPrimary || ctaSecondary) && (
+        <div class="hero-split__actions">
+          {ctaPrimary && <a href={ctaPrimary.href} class="btn btn--primary">{ctaPrimary.label}</a>}
+          {ctaSecondary && <a href={ctaSecondary.href} class="btn btn--ghost">{ctaSecondary.label}</a>}
+        </div>
+      )}
+    </div>
+
+    <div class="hero-split__media">
+      <img src={image} alt={imageAlt} class="hero-split__image" loading="eager" />
+      {badge && <div class="hero-split__badge">{badge}</div>}
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-split {
+    padding: 5rem 1.5rem;
+    background: var(--color-bg);
+  }
+  .hero-split__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  @media (min-width: 768px) {
+    .hero-split__inner {
+      grid-template-columns: 1fr 1fr;
+    }
+    .hero-split--reversed .hero-split__media { order: -1; }
+  }
+  .hero-split__eyebrow {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+  }
+  .hero-split__headline {
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin: 0 0 1.25rem;
+  }
+  .hero-split__sub {
+    font-size: 1.0625rem;
+    color: var(--color-muted);
+    line-height: 1.65;
+    margin-bottom: 2rem;
+    max-width: 480px;
+  }
+  .hero-split__actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .hero-split__media {
+    position: relative;
+  }
+  .hero-split__image {
+    width: 100%;
+    height: auto;
+    border-radius: calc(var(--radius) * 2);
+    display: block;
+    box-shadow: 0 20px 60px -15px rgba(0,0,0,0.2);
+  }
+  .hero-split__badge {
+    position: absolute;
+    bottom: -1rem;
+    left: -1rem;
+    background: var(--color-accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .btn:hover { opacity: 0.85; transform: translateY(-1px); }
+  .btn--primary { background: var(--color-accent); color: #fff; }
+  .btn--ghost { background: transparent; border: 2px solid currentColor; color: var(--color-text); }
+</style>
+
+<script>
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from('[data-hero-split] .hero-split__content > *', {
+      x: -30, opacity: 0, duration: 0.7, stagger: 0.12, ease: 'power3.out',
+      scrollTrigger: { trigger: '[data-hero-split]', start: 'top 80%' }
+    });
+    gsap.from('[data-hero-split] .hero-split__media', {
+      x: 30, opacity: 0, duration: 0.7, ease: 'power3.out',
+      scrollTrigger: { trigger: '[data-hero-split]', start: 'top 80%' }
+    });
+  }
+</script>

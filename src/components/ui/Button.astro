@@ -1,0 +1,98 @@
+---
+/**
+ * Button
+ * Herbruikbare knop component. Als link of button element.
+ *
+ * Props:
+ * - label: string
+ * - href?: string — als opgegeven: <a>, anders: <button>
+ * - variant?: 'primary' | 'secondary' | 'ghost' | 'danger'
+ * - size?: 'sm' | 'md' | 'lg'
+ * - type?: 'button' | 'submit' | 'reset'
+ * - disabled?: boolean
+ * - iconLeft?: string — emoji of SVG string
+ * - iconRight?: string
+ * - fullWidth?: boolean
+ */
+interface Props {
+  label: string;
+  href?: string;
+  variant?: 'primary' | 'secondary' | 'ghost' | 'danger';
+  size?: 'sm' | 'md' | 'lg';
+  type?: 'button' | 'submit' | 'reset';
+  disabled?: boolean;
+  iconLeft?: string;
+  iconRight?: string;
+  fullWidth?: boolean;
+  [key: string]: unknown;
+}
+
+const {
+  label,
+  href,
+  variant = 'primary',
+  size = 'md',
+  type = 'button',
+  disabled = false,
+  iconLeft,
+  iconRight,
+  fullWidth = false,
+  ...rest
+} = Astro.props;
+
+const classes = [
+  'btn',
+  `btn--${variant}`,
+  `btn--${size}`,
+  fullWidth && 'btn--full',
+].filter(Boolean).join(' ');
+---
+
+{href ? (
+  <a href={href} class={classes} {...rest}>
+    {iconLeft && <span class="btn__icon" aria-hidden="true" set:html={iconLeft} />}
+    {label}
+    {iconRight && <span class="btn__icon" aria-hidden="true" set:html={iconRight} />}
+  </a>
+) : (
+  <button type={type} class={classes} disabled={disabled} {...rest}>
+    {iconLeft && <span class="btn__icon" aria-hidden="true" set:html={iconLeft} />}
+    {label}
+    {iconRight && <span class="btn__icon" aria-hidden="true" set:html={iconRight} />}
+  </button>
+)}
+
+<style>
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+    font-family: inherit;
+    white-space: nowrap;
+    -webkit-appearance: none;
+  }
+  .btn:hover:not(:disabled) { opacity: 0.85; transform: translateY(-1px); }
+  .btn:active:not(:disabled) { transform: translateY(0); }
+  .btn:disabled { opacity: 0.45; cursor: not-allowed; }
+  .btn--full { width: 100%; }
+
+  /* Variants */
+  .btn--primary { background: var(--color-accent); color: #fff; }
+  .btn--secondary { background: color-mix(in srgb, var(--color-accent) 15%, transparent); color: var(--color-accent); }
+  .btn--ghost { background: transparent; border: 2px solid currentColor; color: var(--color-text); }
+  .btn--danger { background: #ef4444; color: #fff; }
+
+  /* Sizes */
+  .btn--sm { padding: 0.375rem 0.875rem; font-size: 0.8125rem; }
+  .btn--md { padding: 0.625rem 1.375rem; font-size: 0.9375rem; }
+  .btn--lg { padding: 0.875rem 2rem; font-size: 1rem; }
+
+  .btn__icon { display: flex; align-items: center; flex-shrink: 0; }
+</style>

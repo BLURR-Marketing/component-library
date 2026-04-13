@@ -1,0 +1,173 @@
+---
+/**
+ * PricingCards
+ * Prijskaarten — 1, 2, of 3 kolommen. Highlighted plan support.
+ *
+ * Props:
+ * - headline?: string
+ * - sub?: string
+ * - plans: Array<PricingPlan>
+ */
+interface PricingPlan {
+  name: string;
+  price: string;
+  period?: string;
+  description?: string;
+  features: string[];
+  cta: { label: string; href: string };
+  highlighted?: boolean;
+  badge?: string;
+}
+interface Props {
+  headline?: string;
+  sub?: string;
+  plans: PricingPlan[];
+}
+
+const { headline, sub, plans } = Astro.props;
+---
+
+<section class="pricing" data-pricing>
+  <div class="pricing__inner">
+    {(headline || sub) && (
+      <div class="pricing__header">
+        {headline && <h2 class="pricing__headline">{headline}</h2>}
+        {sub && <p class="pricing__sub">{sub}</p>}
+      </div>
+    )}
+    <div class="pricing__grid" style={`--plan-count: ${plans.length}`}>
+      {plans.map(plan => (
+        <div class:list={['pricing__card', { 'pricing__card--highlighted': plan.highlighted }]}>
+          {plan.badge && <span class="pricing__badge">{plan.badge}</span>}
+          <div class="pricing__plan-name">{plan.name}</div>
+          <div class="pricing__price">
+            {plan.price}
+            {plan.period && <span class="pricing__period">/{plan.period}</span>}
+          </div>
+          {plan.description && <p class="pricing__desc">{plan.description}</p>}
+          <ul class="pricing__features">
+            {plan.features.map(f => (
+              <li class="pricing__feature">
+                <span class="pricing__check" aria-hidden="true">✓</span>
+                {f}
+              </li>
+            ))}
+          </ul>
+          <a href={plan.cta.href} class:list={['pricing__cta', { 'pricing__cta--primary': plan.highlighted }]}>
+            {plan.cta.label}
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .pricing { padding: 5rem 1.5rem; background: var(--color-bg); }
+  .pricing__inner { max-width: 1280px; margin: 0 auto; }
+  .pricing__header { text-align: center; max-width: 600px; margin: 0 auto 3.5rem; }
+  .pricing__headline {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin: 0 0 0.75rem;
+  }
+  .pricing__sub { font-size: 1.0625rem; color: var(--color-muted); line-height: 1.6; margin: 0; }
+  .pricing__grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 640px) {
+    .pricing__grid { grid-template-columns: repeat(min(var(--plan-count), 3), 1fr); }
+  }
+  .pricing__card {
+    position: relative;
+    padding: 2rem;
+    border: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent);
+    border-radius: calc(var(--radius) * 2);
+    display: flex;
+    flex-direction: column;
+  }
+  .pricing__card--highlighted {
+    background: var(--color-primary);
+    color: #fff;
+    border-color: var(--color-primary);
+    box-shadow: 0 20px 60px -15px rgba(0,0,0,0.3);
+    transform: scale(1.03);
+  }
+  .pricing__badge {
+    position: absolute;
+    top: -0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-accent);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.875rem;
+    border-radius: 99px;
+    white-space: nowrap;
+  }
+  .pricing__plan-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+  }
+  .pricing__card--highlighted .pricing__plan-name {
+    color: color-mix(in srgb, #fff 70%, transparent);
+  }
+  .pricing__price {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    margin-bottom: 0.5rem;
+  }
+  .pricing__period { font-size: 1rem; font-weight: 400; opacity: 0.6; }
+  .pricing__desc {
+    font-size: 0.9375rem;
+    color: var(--color-muted);
+    margin: 0 0 1.5rem;
+    line-height: 1.5;
+  }
+  .pricing__card--highlighted .pricing__desc { color: color-mix(in srgb, #fff 65%, transparent); }
+  .pricing__features {
+    list-style: none; margin: 0; padding: 0;
+    display: flex; flex-direction: column; gap: 0.625rem;
+    margin-bottom: 2rem;
+    flex: 1;
+  }
+  .pricing__feature {
+    display: flex; gap: 0.625rem;
+    font-size: 0.9375rem;
+    align-items: flex-start;
+  }
+  .pricing__check {
+    color: var(--color-accent);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 0.1em;
+  }
+  .pricing__card--highlighted .pricing__check { color: #fff; }
+  .pricing__cta {
+    display: block;
+    text-align: center;
+    padding: 0.75rem;
+    border: 2px solid currentColor;
+    border-radius: var(--radius);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: background 0.2s, color 0.2s;
+  }
+  .pricing__cta:hover { background: var(--color-text); color: var(--color-bg); }
+  .pricing__cta--primary {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #fff;
+  }
+  .pricing__cta--primary:hover { opacity: 0.85; background: var(--color-accent); color: #fff; }
+</style>

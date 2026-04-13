@@ -1,0 +1,155 @@
+---
+/**
+ * FeaturesGrid
+ * Feature-kaarten in een grid. Elk met icon, titel en beschrijving.
+ *
+ * Props:
+ * - headline?: string
+ * - sub?: string
+ * - features: Array<{ icon?: string; title: string; body: string; href?: string }>
+ * - columns?: 2 | 3 | 4
+ * - variant?: 'card' | 'minimal' | 'bordered'
+ */
+interface Props {
+  headline?: string;
+  sub?: string;
+  features: { icon?: string; title: string; body: string; href?: string }[];
+  columns?: 2 | 3 | 4;
+  variant?: 'card' | 'minimal' | 'bordered';
+}
+
+const { headline, sub, features, columns = 3, variant = 'card' } = Astro.props;
+---
+
+<section class={`features-grid features-grid--${variant} features-grid--cols-${columns}`} data-features>
+  <div class="features-grid__inner">
+    {(headline || sub) && (
+      <div class="features-grid__header">
+        {headline && <h2 class="features-grid__headline">{headline}</h2>}
+        {sub && <p class="features-grid__sub">{sub}</p>}
+      </div>
+    )}
+    <ul class="features-grid__list">
+      {features.map(f => (
+        <li class="features-grid__item">
+          {f.href ? (
+            <a href={f.href} class="features-grid__card">
+              {f.icon && <span class="features-grid__icon" aria-hidden="true">{f.icon}</span>}
+              <h3 class="features-grid__title">{f.title}</h3>
+              <p class="features-grid__body">{f.body}</p>
+            </a>
+          ) : (
+            <div class="features-grid__card">
+              {f.icon && <span class="features-grid__icon" aria-hidden="true">{f.icon}</span>}
+              <h3 class="features-grid__title">{f.title}</h3>
+              <p class="features-grid__body">{f.body}</p>
+            </div>
+          )}
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .features-grid {
+    padding: 5rem 1.5rem;
+    background: var(--color-bg);
+  }
+  .features-grid__inner { max-width: 1280px; margin: 0 auto; }
+  .features-grid__header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 3.5rem;
+  }
+  .features-grid__headline {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin: 0 0 0.75rem;
+  }
+  .features-grid__sub {
+    font-size: 1.0625rem;
+    color: var(--color-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+  .features-grid__list {
+    list-style: none;
+    margin: 0; padding: 0;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 600px) {
+    .features-grid--cols-2 .features-grid__list,
+    .features-grid--cols-3 .features-grid__list,
+    .features-grid--cols-4 .features-grid__list { grid-template-columns: 1fr 1fr; }
+  }
+  @media (min-width: 960px) {
+    .features-grid--cols-3 .features-grid__list { grid-template-columns: repeat(3, 1fr); }
+    .features-grid--cols-4 .features-grid__list { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  /* Card variant */
+  .features-grid--card .features-grid__card {
+    display: block;
+    padding: 1.75rem;
+    background: color-mix(in srgb, var(--color-text) 4%, transparent);
+    border-radius: calc(var(--radius) * 2);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%;
+  }
+  .features-grid--card .features-grid__card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px -8px rgba(0,0,0,0.12);
+  }
+
+  /* Bordered variant */
+  .features-grid--bordered .features-grid__card {
+    display: block;
+    padding: 1.75rem;
+    border: 1px solid color-mix(in srgb, var(--color-text) 12%, transparent);
+    border-radius: calc(var(--radius) * 2);
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+  }
+
+  /* Minimal variant — geen achtergrond */
+  .features-grid--minimal .features-grid__card {
+    display: block;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .features-grid__icon {
+    display: block;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  .features-grid__title {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+  }
+  .features-grid__body {
+    font-size: 0.9375rem;
+    color: var(--color-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+</style>
+
+<script>
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.from('[data-features] .features-grid__item', {
+      y: 20, opacity: 0, duration: 0.5, stagger: 0.07, ease: 'power2.out',
+      scrollTrigger: { trigger: '[data-features]', start: 'top 75%' }
+    });
+  }
+</script>

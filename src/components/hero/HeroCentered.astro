@@ -1,0 +1,177 @@
+---
+/**
+ * HeroCentered
+ * Centered hero met grote headline, subtekst, en 1-2 CTA knoppen.
+ * Optioneel: achtergrondkleur, image, of gradient.
+ *
+ * Props:
+ * - eyebrow?: string — klein label boven headline
+ * - headline: string — hoofd H1
+ * - sub?: string — ondertitel/beschrijving
+ * - ctaPrimary?: { label: string; href: string }
+ * - ctaSecondary?: { label: string; href: string }
+ * - bg?: 'default' | 'dark' | 'accent' | 'gradient'
+ * - image?: string — optionele afbeelding onder tekst
+ * - imageAlt?: string
+ */
+interface Props {
+  eyebrow?: string;
+  headline: string;
+  sub?: string;
+  ctaPrimary?: { label: string; href: string };
+  ctaSecondary?: { label: string; href: string };
+  bg?: 'default' | 'dark' | 'accent' | 'gradient';
+  image?: string;
+  imageAlt?: string;
+}
+
+const {
+  eyebrow,
+  headline,
+  sub,
+  ctaPrimary,
+  ctaSecondary,
+  bg = 'default',
+  image,
+  imageAlt = '',
+} = Astro.props;
+---
+
+<section class={`hero-centered hero-centered--${bg}`} data-hero>
+  <div class="hero-centered__inner">
+    {eyebrow && <p class="hero-centered__eyebrow">{eyebrow}</p>}
+    <h1 class="hero-centered__headline">{headline}</h1>
+    {sub && <p class="hero-centered__sub">{sub}</p>}
+
+    {(ctaPrimary || ctaSecondary) && (
+      <div class="hero-centered__actions">
+        {ctaPrimary && (
+          <a href={ctaPrimary.href} class="btn btn--primary">{ctaPrimary.label}</a>
+        )}
+        {ctaSecondary && (
+          <a href={ctaSecondary.href} class="btn btn--ghost">{ctaSecondary.label}</a>
+        )}
+      </div>
+    )}
+
+    {image && (
+      <div class="hero-centered__image-wrap">
+        <img src={image} alt={imageAlt} class="hero-centered__image" loading="eager" />
+      </div>
+    )}
+  </div>
+</section>
+
+<style>
+  .hero-centered {
+    padding: 6rem 1.5rem 5rem;
+    text-align: center;
+    background: var(--color-bg);
+  }
+  .hero-centered--dark {
+    background: var(--color-primary);
+    color: #fff;
+  }
+  .hero-centered--accent {
+    background: var(--color-accent);
+    color: #fff;
+  }
+  .hero-centered--gradient {
+    background: linear-gradient(135deg, var(--color-primary) 0%, color-mix(in srgb, var(--color-accent) 60%, var(--color-primary)) 100%);
+    color: #fff;
+  }
+  .hero-centered__inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .hero-centered__eyebrow {
+    display: inline-block;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+  }
+  .hero-centered--dark .hero-centered__eyebrow,
+  .hero-centered--accent .hero-centered__eyebrow,
+  .hero-centered--gradient .hero-centered__eyebrow {
+    color: color-mix(in srgb, #fff 70%, transparent);
+  }
+  .hero-centered__headline {
+    font-size: clamp(2.25rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin: 0 0 1.25rem;
+  }
+  .hero-centered__sub {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--color-muted);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+  }
+  .hero-centered--dark .hero-centered__sub,
+  .hero-centered--accent .hero-centered__sub,
+  .hero-centered--gradient .hero-centered__sub {
+    color: color-mix(in srgb, #fff 70%, transparent);
+  }
+  .hero-centered__actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+  .hero-centered__image-wrap {
+    border-radius: calc(var(--radius) * 2);
+    overflow: hidden;
+    box-shadow: 0 25px 80px -20px rgba(0,0,0,0.25);
+  }
+  .hero-centered__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Shared button styles */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .btn:hover { opacity: 0.85; transform: translateY(-1px); }
+  .btn--primary {
+    background: var(--color-accent);
+    color: #fff;
+  }
+  .btn--ghost {
+    background: transparent;
+    border: 2px solid currentColor;
+    color: var(--color-text);
+  }
+  .hero-centered--dark .btn--ghost,
+  .hero-centered--accent .btn--ghost,
+  .hero-centered--gradient .btn--ghost {
+    color: #fff;
+  }
+</style>
+
+<script>
+  // GSAP entrance animation (graceful degrade zonder GSAP)
+  if (typeof gsap !== 'undefined') {
+    gsap.from('[data-hero] .hero-centered__eyebrow, [data-hero] .hero-centered__headline, [data-hero] .hero-centered__sub, [data-hero] .hero-centered__actions', {
+      y: 30,
+      opacity: 0,
+      duration: 0.7,
+      stagger: 0.12,
+      ease: 'power3.out',
+    });
+  }
+</script>

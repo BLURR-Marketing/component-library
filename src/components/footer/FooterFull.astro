@@ -1,0 +1,170 @@
+---
+/**
+ * FooterFull
+ * Volledige footer met kolommen, groot merknaam woord, social links.
+ *
+ * Props:
+ * - logo: string
+ * - tagline?: string
+ * - columns: Array<FooterColumn>
+ * - social?: Array<{ label: string; href: string; icon: string }>
+ * - copyright?: string
+ * - bigWord?: string — groot achtergrondwoord (Brandy-stijl)
+ */
+interface FooterColumn {
+  title: string;
+  links: { label: string; href: string }[];
+}
+interface Props {
+  logo: string;
+  tagline?: string;
+  columns: FooterColumn[];
+  social?: { label: string; href: string; icon: string }[];
+  copyright?: string;
+  bigWord?: string;
+}
+
+const {
+  logo,
+  tagline,
+  columns,
+  social = [],
+  copyright,
+  bigWord,
+} = Astro.props;
+
+const year = new Date().getFullYear();
+const copyrightText = copyright ?? `© ${year} ${logo}. Alle rechten voorbehouden.`;
+---
+
+<footer class="footer-full">
+  {bigWord && (
+    <div class="footer-full__bigword" aria-hidden="true">{bigWord}</div>
+  )}
+
+  <div class="footer-full__inner">
+    <div class="footer-full__brand">
+      <p class="footer-full__logo">{logo}</p>
+      {tagline && <p class="footer-full__tagline">{tagline}</p>}
+      {social.length > 0 && (
+        <div class="footer-full__social">
+          {social.map(s => (
+            <a href={s.href} class="footer-full__social-link" aria-label={s.label} rel="noopener noreferrer" target="_blank">
+              <span aria-hidden="true">{s.icon}</span>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+
+    {columns.map(col => (
+      <div class="footer-full__col">
+        <h3 class="footer-full__col-title">{col.title}</h3>
+        <ul class="footer-full__col-links">
+          {col.links.map(l => (
+            <li><a href={l.href} class="footer-full__col-link">{l.label}</a></li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+
+  <div class="footer-full__bottom">
+    <div class="footer-full__bottom-inner">
+      <p class="footer-full__copy">{copyrightText}</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-full {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-primary);
+    color: #fff;
+    padding: 5rem 1.5rem 0;
+  }
+  .footer-full__bigword {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(5rem, 18vw, 16rem);
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    color: rgba(255,255,255,0.04);
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+    line-height: 1;
+  }
+  .footer-full__inner {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding-bottom: 3.5rem;
+  }
+  @media (min-width: 640px) {
+    .footer-full__inner { grid-template-columns: 1.5fr repeat(auto-fill, minmax(160px, 1fr)); }
+  }
+  .footer-full__logo {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin: 0 0 0.75rem;
+  }
+  .footer-full__tagline {
+    font-size: 0.9375rem;
+    color: rgba(255,255,255,0.55);
+    margin: 0 0 1.5rem;
+    line-height: 1.6;
+    max-width: 280px;
+  }
+  .footer-full__social { display: flex; gap: 0.75rem; }
+  .footer-full__social-link {
+    display: flex; align-items: center; justify-content: center;
+    width: 2.25rem; height: 2.25rem;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: var(--radius);
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .footer-full__social-link:hover { color: #fff; border-color: rgba(255,255,255,0.4); }
+  .footer-full__col-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin: 0 0 1rem;
+  }
+  .footer-full__col-links {
+    list-style: none; margin: 0; padding: 0;
+    display: flex; flex-direction: column; gap: 0.625rem;
+  }
+  .footer-full__col-link {
+    font-size: 0.9375rem;
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-full__col-link:hover { color: #fff; }
+  .footer-full__bottom {
+    position: relative;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 1.25rem 0;
+  }
+  .footer-full__bottom-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .footer-full__copy {
+    font-size: 0.8125rem;
+    color: rgba(255,255,255,0.35);
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,52 @@
+---
+/**
+ * Badge / Label
+ * Pill-badge voor status, labels, categorieën.
+ *
+ * Props:
+ * - label: string
+ * - variant?: 'default' | 'accent' | 'success' | 'warning' | 'danger' | 'outline'
+ * - size?: 'sm' | 'md'
+ * - dot?: boolean — toon kleur dot voor label
+ */
+interface Props {
+  label: string;
+  variant?: 'default' | 'accent' | 'success' | 'warning' | 'danger' | 'outline';
+  size?: 'sm' | 'md';
+  dot?: boolean;
+}
+
+const { label, variant = 'default', size = 'md', dot = false } = Astro.props;
+---
+
+<span class={`badge badge--${variant} badge--${size}`}>
+  {dot && <span class="badge__dot" aria-hidden="true"></span>}
+  {label}
+</span>
+
+<style>
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    border-radius: 99px;
+    font-weight: 600;
+    line-height: 1;
+  }
+  .badge--sm { padding: 0.25rem 0.625rem; font-size: 0.6875rem; }
+  .badge--md { padding: 0.375rem 0.75rem; font-size: 0.75rem; }
+
+  .badge--default { background: color-mix(in srgb, var(--color-text) 10%, transparent); color: var(--color-text); }
+  .badge--accent { background: color-mix(in srgb, var(--color-accent) 15%, transparent); color: var(--color-accent); }
+  .badge--success { background: #dcfce7; color: #15803d; }
+  .badge--warning { background: #fef9c3; color: #a16207; }
+  .badge--danger { background: #fee2e2; color: #b91c1c; }
+  .badge--outline { background: transparent; border: 1px solid currentColor; color: var(--color-text); }
+
+  .badge__dot {
+    width: 0.4375rem; height: 0.4375rem;
+    border-radius: 50%;
+    background: currentColor;
+    flex-shrink: 0;
+  }
+</style>

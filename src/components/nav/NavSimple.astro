@@ -1,0 +1,176 @@
+---
+/**
+ * NavSimple
+ * Eenvoudige navigatiebalk: logo links, links midden/rechts, CTA knop.
+ *
+ * Props:
+ * - logo: string — tekst of pad naar SVG/image
+ * - logoHref?: string — link van logo (default: "/")
+ * - links: Array<{ label: string; href: string }>
+ * - cta?: { label: string; href: string }
+ * - transparent?: boolean — geen achtergrond (voor hero overlap)
+ */
+interface Props {
+  logo: string;
+  logoHref?: string;
+  links: { label: string; href: string }[];
+  cta?: { label: string; href: string };
+  transparent?: boolean;
+}
+
+const {
+  logo,
+  logoHref = '/',
+  links,
+  cta,
+  transparent = false,
+} = Astro.props;
+---
+
+<header class:list={['nav-simple', { 'nav-simple--transparent': transparent }]}>
+  <div class="nav-simple__inner">
+    <a href={logoHref} class="nav-simple__logo">{logo}</a>
+
+    <nav class="nav-simple__links" aria-label="Hoofdnavigatie">
+      {links.map(link => (
+        <a href={link.href} class="nav-simple__link">{link.label}</a>
+      ))}
+    </nav>
+
+    {cta && (
+      <a href={cta.href} class="nav-simple__cta">{cta.label}</a>
+    )}
+
+    <button class="nav-simple__hamburger" aria-label="Menu openen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="nav-simple__mobile" aria-hidden="true">
+    {links.map(link => (
+      <a href={link.href} class="nav-simple__mobile-link">{link.label}</a>
+    ))}
+    {cta && (
+      <a href={cta.href} class="nav-simple__cta nav-simple__cta--mobile">{cta.label}</a>
+    )}
+  </div>
+</header>
+
+<style>
+  .nav-simple {
+    position: relative;
+    width: 100%;
+    background: var(--color-bg);
+    border-bottom: 1px solid color-mix(in srgb, var(--color-text) 10%, transparent);
+    z-index: 100;
+  }
+  .nav-simple--transparent {
+    background: transparent;
+    border-bottom: none;
+    position: absolute;
+    top: 0; left: 0; right: 0;
+  }
+  .nav-simple__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .nav-simple__logo {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--color-text);
+    text-decoration: none;
+    margin-right: auto;
+  }
+  .nav-simple__links {
+    display: none;
+    gap: 1.75rem;
+  }
+  @media (min-width: 768px) {
+    .nav-simple__links { display: flex; }
+  }
+  .nav-simple__link {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    opacity: 0.75;
+    transition: opacity 0.2s;
+  }
+  .nav-simple__link:hover { opacity: 1; }
+  .nav-simple__cta {
+    display: none;
+    padding: 0.5rem 1.25rem;
+    background: var(--color-accent);
+    color: #fff;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    transition: opacity 0.2s;
+  }
+  .nav-simple__cta:hover { opacity: 0.85; }
+  @media (min-width: 768px) {
+    .nav-simple__cta { display: inline-block; }
+  }
+  .nav-simple__hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    margin-left: auto;
+  }
+  .nav-simple__hamburger span {
+    display: block;
+    width: 22px; height: 2px;
+    background: var(--color-text);
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  @media (min-width: 768px) {
+    .nav-simple__hamburger { display: none; }
+  }
+  .nav-simple__mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    background: var(--color-bg);
+  }
+  .nav-simple__mobile.is-open {
+    max-height: 400px;
+  }
+  .nav-simple__mobile-link {
+    padding: 0.875rem 1.5rem;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1rem;
+    border-top: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent);
+  }
+  .nav-simple__cta--mobile {
+    display: block;
+    margin: 1rem 1.5rem 1.5rem;
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    .nav-simple__mobile { display: none; }
+  }
+</style>
+
+<script>
+  const btn = document.querySelector('.nav-simple__hamburger') as HTMLButtonElement;
+  const menu = document.querySelector('.nav-simple__mobile');
+  btn?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', String(open));
+    menu?.setAttribute('aria-hidden', String(!open));
+  });
+</script>
