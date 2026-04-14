@@ -450,6 +450,7 @@ const p = comp.mockProps as any;
 
 // Map slug → component
 const componentMap: Record<string, any> = {
+  'cta-banner': CTABanner,
   'cta-accent': CtaAccent,
   'cta-angular': CtaAngular,
   'cta-big-quote': CtaBigQuote,
@@ -799,6 +800,7 @@ const componentMap: Record<string, any> = {
   'text-wide': TextWide,
   'about-split': AboutSplit,
   'accordion': Accordion,
+  'accordion-faq': AccordionFAQ,
   'alert': Alert,
   'avatar': Avatar,
   'awards-badges': AwardsBadges,
@@ -871,6 +873,7 @@ const componentMap: Record<string, any> = {
   'video-testimonial': VideoTestimonial,
   'video-thumbnail': VideoThumbnail,
   'video-wide': VideoWide,
+  'wow-usp': WowUSP,
 };
 
 const Component = componentMap[slug!];
