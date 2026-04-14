@@ -1,6 +1,6 @@
 ---
 import ShowcaseLayout from '../layouts/ShowcaseLayout.astro';
-import { COMPONENTS, CATEGORIES } from '../data/components';
+import { COMPONENTS, CATEGORIES, STARTER_PACKS } from '../data/components';
 
 const categoryMap: Record<string, string> = {
   nav: 'Navigation',
@@ -12,6 +12,14 @@ const categoryMap: Record<string, string> = {
   footer: 'Footer',
   ui: 'UI Elements',
 };
+
+// Build slug sets per starter pack for client-side use
+const packSlugs = Object.fromEntries(
+  STARTER_PACKS.map(p => [
+    p.id,
+    [p.components.nav, p.components.hero, ...p.components.sections, ...p.components.socialProof, p.components.cta, ...(p.components.forms ? [p.components.forms] : []), p.components.footer],
+  ])
+);
 ---
 
 <ShowcaseLayout title="BLURR Component Library">
@@ -29,6 +37,23 @@ const categoryMap: Record<string, string> = {
     aria-label="Zoek component"
   />
 
+  <!-- Starter Packs -->
+  <div class="sc-section-label">Starter Packs</div>
+  <div class="sc-filter-pills sc-packs">
+    <button class="sc-pill sc-pack-pill is-active" data-pack="all">Alle</button>
+    {STARTER_PACKS.map(pack => (
+      <button
+        class="sc-pill sc-pack-pill"
+        data-pack={pack.id}
+        title={pack.description}
+      >
+        {pack.label}
+      </button>
+    ))}
+  </div>
+
+  <!-- Category filter -->
+  <div class="sc-section-label">Categorie</div>
   <div class="sc-filter-pills">
     {CATEGORIES.map(cat => (
       <button
@@ -52,6 +77,8 @@ const categoryMap: Record<string, string> = {
         class="sc-component-card"
         data-category={comp.category}
         data-name={comp.name.toLowerCase()}
+        data-slug={comp.slug}
+        data-tags={comp.tags.join(',')}
       >
         <div class="sc-component-preview">
           <iframe
@@ -67,6 +94,11 @@ const categoryMap: Record<string, string> = {
         </div>
         <div class="sc-component-footer">
           <span class="sc-cat-badge">{categoryMap[comp.category] ?? comp.category}</span>
+          <div class="sc-tag-list">
+            {comp.tags.filter(t => !['utility','static'].includes(t)).slice(0,3).map(tag => (
+              <span class="sc-tag">{tag}</span>
+            ))}
+          </div>
           <span class="sc-arrow">→</span>
         </div>
       </a>
@@ -80,7 +112,6 @@ const categoryMap: Record<string, string> = {
 </ShowcaseLayout>
 
 <style>
-  /* Scale down iframe previews to fit card */
   .sc-component-preview iframe {
     width: 960px;
     height: 600px;
@@ -88,43 +119,88 @@ const categoryMap: Record<string, string> = {
     transform-origin: top left;
     pointer-events: none;
   }
+  .sc-section-label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.45;
+    margin: 1.5rem 0 0.5rem;
+  }
+  .sc-tag-list {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+  .sc-tag {
+    font-size: 0.625rem;
+    padding: 1px 6px;
+    border-radius: 999px;
+    background: var(--surface-2, #f0f0f0);
+    color: var(--text-2, #666);
+    font-weight: 500;
+  }
+  .sc-pack-pill.is-active {
+    background: var(--color-accent, #4f46e5);
+    color: #fff;
+    border-color: transparent;
+  }
 </style>
 
-<script>
-  const searchInput = document.getElementById('main-search') as HTMLInputElement;
-  const grid = document.getElementById('component-grid') as HTMLElement;
-  const emptyState = document.getElementById('empty-state') as HTMLElement;
-  const pills = document.querySelectorAll('.sc-pill');
-  const cards = document.querySelectorAll('.sc-component-card') as NodeListOf<HTMLElement>;
+<script define:vars={{ packSlugs }}>
+  const searchInput = document.getElementById('main-search');
+  const emptyState = document.getElementById('empty-state');
+  const catPills = document.querySelectorAll('.sc-pill:not(.sc-pack-pill)');
+  const packPills = document.querySelectorAll('.sc-pack-pill');
+  const cards = document.querySelectorAll('.sc-component-card');
 
   let activeCategory = 'all';
+  let activePack = 'all';
   let searchQuery = '';
 
   function filterCards() {
     let visible = 0;
+    const packSet = activePack !== 'all' ? new Set(packSlugs[activePack] ?? []) : null;
+
     cards.forEach(card => {
       const cat = card.dataset.category ?? '';
       const name = card.dataset.name ?? '';
+      const slug = card.dataset.slug ?? '';
+
       const matchesCat = activeCategory === 'all' || cat === activeCategory;
-      const matchesSearch = !searchQuery || name.includes(searchQuery);
-      const show = matchesCat && matchesSearch;
+      const matchesPack = !packSet || packSet.has(slug);
+      const matchesSearch = !searchQuery || name.includes(searchQuery) || (card.dataset.tags ?? '').includes(searchQuery);
+
+      const show = matchesCat && matchesPack && matchesSearch;
       card.style.display = show ? '' : 'none';
+      card.classList.toggle('is-pack-match', !!packSet && packSet.has(slug));
       if (show) visible++;
     });
     emptyState.style.display = visible === 0 ? 'block' : 'none';
   }
 
-  // Category filter
-  pills.forEach(pill => {
+  // Starter pack filter
+  packPills.forEach(pill => {
     pill.addEventListener('click', () => {
-      activeCategory = (pill as HTMLElement).dataset.cat ?? 'all';
-      pills.forEach(p => p.classList.remove('is-active'));
+      activePack = pill.dataset.pack ?? 'all';
+      packPills.forEach(p => p.classList.remove('is-active'));
       pill.classList.add('is-active');
       filterCards();
     });
   });
 
-  // Search
+  // Category filter
+  catPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      activeCategory = pill.dataset.cat ?? 'all';
+      catPills.forEach(p => p.classList.remove('is-active'));
+      pill.classList.add('is-active');
+      filterCards();
+    });
+  });
+
+  // Search (also searches tags)
   searchInput?.addEventListener('input', () => {
     searchQuery = searchInput.value.toLowerCase().trim();
     filterCards();

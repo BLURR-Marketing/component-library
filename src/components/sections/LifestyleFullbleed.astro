@@ -1,0 +1,196 @@
+---
+/**
+ * LifestyleFullbleed
+ * Full-bleed 75vh afbeelding met dark gradient overlay.
+ * Quote + attributie + optionele stat overlaid op de afbeelding, bottom-anchored.
+ * Ideaal als brand-moment of lifestyle break tussen product-secties.
+ *
+ * Props:
+ * - image: string — URL naar afbeelding
+ * - imageAlt?: string
+ * - quote: string — italic display quote (HTML toegestaan)
+ * - authorName?: string — naam van de getuige
+ * - authorRole?: string — rol / context (klein monospace)
+ * - label?: string — klein label boven quote (bijv. 'Klantervaring')
+ * - statValue?: string — stat waarde (bijv. '3.000+')
+ * - statLabel?: string — stat beschrijving
+ * - accentColor?: string — kleur voor statValue (default: '#c43d3a')
+ * - minHeight?: string — minimale hoogte (default: '75vh')
+ */
+interface Props {
+  image: string;
+  imageAlt?: string;
+  quote: string;
+  authorName?: string;
+  authorRole?: string;
+  label?: string;
+  statValue?: string;
+  statLabel?: string;
+  accentColor?: string;
+  minHeight?: string;
+}
+
+const {
+  image,
+  imageAlt = '',
+  quote,
+  authorName,
+  authorRole,
+  label,
+  statValue,
+  statLabel,
+  accentColor = '#c43d3a',
+  minHeight = '75vh',
+} = Astro.props;
+---
+
+<section class="lf" style={`--lf-accent:${accentColor};--lf-min-h:${minHeight}`}>
+  <div class="lf-wrap">
+    <img src={image} alt={imageAlt} width="1200" height="800" loading="lazy" />
+    <div class="lf-overlay" aria-hidden="true"></div>
+
+    <div class="lf-content">
+      {label && <p class="lf-label">{label}</p>}
+      <blockquote class="lf-quote" set:html={quote} />
+
+      {(authorName || authorRole) && (
+        <footer class="lf-attribution">
+          {authorName && <span class="lf-author-name">{authorName}</span>}
+          {authorRole && <span class="lf-author-role">{authorRole}</span>}
+        </footer>
+      )}
+
+      {(statValue || statLabel) && (
+        <div class="lf-stat">
+          {statValue && <span class="lf-stat-value">{statValue}</span>}
+          {statLabel && <span class="lf-stat-label">{statLabel}</span>}
+        </div>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  .lf {
+    position: relative;
+    overflow: hidden;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  .lf-wrap {
+    position: relative;
+    width: 100%;
+    min-height: var(--lf-min-h, 75vh);
+    overflow: hidden;
+  }
+
+  .lf-wrap img {
+    width: 100%;
+    height: 100%;
+    min-height: var(--lf-min-h, 75vh);
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+  }
+
+  .lf-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(13, 11, 9, 0.15) 0%,
+      rgba(13, 11, 9, 0.35) 40%,
+      rgba(13, 11, 9, 0.75) 70%,
+      rgba(13, 11, 9, 0.92) 100%
+    );
+  }
+
+  .lf-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: clamp(3rem, 6vw, 6rem) clamp(2rem, 8vw, 10rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 800px;
+  }
+
+  .lf-label {
+    font-family: 'Courier New', monospace;
+    font-size: 0.5625rem;
+    color: rgba(196, 189, 180, 0.45);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .lf-quote {
+    font-family: 'Cormorant Garamond', 'Cormorant', Georgia, serif;
+    font-size: clamp(1.75rem, 4vw, 4rem);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #fdfaf6;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .lf-attribution {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(196, 189, 180, 0.15);
+  }
+
+  .lf-author-name {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #fdfaf6;
+  }
+
+  .lf-author-role {
+    font-family: 'Courier New', monospace;
+    font-size: 0.6rem;
+    color: rgba(196, 189, 180, 0.45);
+    letter-spacing: 0.1em;
+  }
+
+  .lf-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-top: 0.25rem;
+  }
+
+  .lf-stat-value {
+    font-family: 'Courier New', monospace;
+    font-size: 1.5rem;
+    color: var(--lf-accent, #c43d3a);
+    letter-spacing: -0.02em;
+    font-weight: 500;
+  }
+
+  .lf-stat-label {
+    font-family: 'Courier New', monospace;
+    font-size: 0.625rem;
+    color: rgba(196, 189, 180, 0.45);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 640px) {
+    .lf-wrap,
+    .lf-wrap img {
+      min-height: 90vw;
+    }
+
+    .lf-content {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>

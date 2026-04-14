@@ -1,0 +1,341 @@
+---
+/**
+ * HeroEditorial
+ * Full-bleed dark editorial hero. Image bleeds to right viewport edge,
+ * left-to-right scrim gradient. Ghost number as typographic anchor.
+ * Scroll indicator with animated accent line.
+ *
+ * Props:
+ * - headline: string — main H1 (supports HTML, use <br> for line breaks)
+ * - eyebrow?: string — small label above headline
+ * - sub?: string — subtext, max ~420px wide
+ * - ctaPrimary?: { label: string; href: string }
+ * - ctaSecondary?: { label: string; href: string }
+ * - image: string — URL to hero image (right side, bleeds to edge)
+ * - imageAlt?: string
+ * - trustItems?: string[] — small monospace trust pills below CTAs
+ * - ghostNumber?: string — large ghost number (default: '01')
+ * - accentColor?: string — CSS color for accent/crimson elements (default: '#c43d3a')
+ * - bgColor?: string — dark background color (default: '#1a1714')
+ */
+interface Props {
+  headline: string;
+  eyebrow?: string;
+  sub?: string;
+  ctaPrimary?: { label: string; href: string };
+  ctaSecondary?: { label: string; href: string };
+  image: string;
+  imageAlt?: string;
+  trustItems?: string[];
+  ghostNumber?: string;
+  accentColor?: string;
+  bgColor?: string;
+}
+
+const {
+  headline,
+  eyebrow,
+  sub,
+  ctaPrimary,
+  ctaSecondary,
+  image,
+  imageAlt = '',
+  trustItems = [],
+  ghostNumber = '01',
+  accentColor = '#c43d3a',
+  bgColor = '#1a1714',
+} = Astro.props;
+---
+
+<section class="he" style={`--he-accent:${accentColor};--he-bg:${bgColor}`}>
+  <span class="he-ghost" aria-hidden="true">{ghostNumber}</span>
+
+  <div class="he-content">
+    {eyebrow && <p class="he-eyebrow">{eyebrow}</p>}
+    <h1 class="he-headline" set:html={headline} />
+    {sub && <p class="he-sub" set:html={sub} />}
+
+    {(ctaPrimary || ctaSecondary) && (
+      <div class="he-cta">
+        {ctaPrimary && (
+          <a href={ctaPrimary.href} class="he-btn-primary">
+            {ctaPrimary.label}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        )}
+        {ctaSecondary && (
+          <a href={ctaSecondary.href} class="he-btn-secondary">
+            {ctaSecondary.label}
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+        )}
+      </div>
+    )}
+
+    {trustItems.length > 0 && (
+      <div class="he-trust">
+        {trustItems.map(item => <span class="he-trust-pill">{item}</span>)}
+      </div>
+    )}
+  </div>
+
+  <div class="he-image">
+    <img src={image} alt={imageAlt} width="800" height="1000" loading="eager" fetchpriority="high" />
+    <div class="he-scrim" aria-hidden="true"></div>
+  </div>
+
+  <div class="he-scroll" aria-hidden="true">
+    <span class="he-scroll-label">Scroll</span>
+    <span class="he-scroll-line"></span>
+  </div>
+</section>
+
+<style>
+  .he {
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--he-bg, #1a1714);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  .he-ghost {
+    position: absolute;
+    top: 50%;
+    right: -0.1em;
+    transform: translateY(-52%);
+    font-family: 'Cormorant Garamond', 'Cormorant', Georgia, serif;
+    font-size: clamp(12rem, 26vw, 26rem);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: rgba(253, 250, 246, 0.028);
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+  }
+
+  .he-content {
+    position: relative;
+    z-index: 2;
+    padding-left: clamp(1.5rem, 8vw, 10rem);
+    padding-right: 2rem;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+    max-width: 58%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .he-eyebrow {
+    font-size: 0.625rem;
+    color: var(--he-accent, #c43d3a);
+    letter-spacing: 0.14em;
+    margin-bottom: 2rem;
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+  }
+
+  .he-headline {
+    font-family: 'Cormorant Garamond', 'Cormorant', Georgia, serif;
+    font-size: clamp(3rem, 6.25vw, 7.5rem);
+    font-weight: 300;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    color: #fdfaf6;
+    margin: 0 0 2.25rem;
+  }
+
+  .he-headline :global(em) {
+    font-style: italic;
+    color: var(--he-accent, #c43d3a);
+  }
+
+  .he-sub {
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+    color: rgba(196, 189, 180, 0.75);
+    line-height: 1.75;
+    margin: 0 0 2.75rem;
+    max-width: 420px;
+  }
+
+  .he-cta {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .he-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    background-color: var(--he-accent, #c43d3a);
+    color: #fff;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    padding: 0 2.25rem;
+    min-height: 52px;
+    transition: opacity 0.2s ease;
+  }
+
+  .he-btn-primary:hover { opacity: 0.88; }
+
+  .he-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: rgba(196, 189, 180, 0.65);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: color 0.2s ease;
+  }
+
+  .he-btn-secondary:hover { color: #fdfaf6; }
+
+  .he-trust {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(196, 189, 180, 0.12);
+  }
+
+  .he-trust-pill {
+    font-family: 'Courier New', monospace;
+    font-size: 0.5625rem;
+    color: rgba(196, 189, 180, 0.4);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .he-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 52%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .he-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    display: block;
+  }
+
+  .he-scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      var(--he-bg, #1a1714) 0%,
+      rgba(26, 23, 20, 0.55) 35%,
+      rgba(26, 23, 20, 0) 65%
+    );
+  }
+
+  .he-scroll {
+    position: absolute;
+    bottom: 2.5rem;
+    left: clamp(1.5rem, 8vw, 10rem);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 2;
+  }
+
+  .he-scroll-label {
+    font-family: 'Courier New', monospace;
+    font-size: 0.5rem;
+    color: rgba(196, 189, 180, 0.25);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .he-scroll-line {
+    display: block;
+    width: 48px;
+    height: 1px;
+    background: rgba(196, 189, 180, 0.12);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .he-scroll-line::after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--he-accent, #c43d3a);
+    animation: heScroll 2.2s ease-in-out infinite;
+  }
+
+  @keyframes heScroll {
+    0%   { left: -100%; }
+    50%  { left: 0%; }
+    100% { left: 100%; }
+  }
+
+  @media (max-width: 860px) {
+    .he {
+      flex-direction: column;
+      align-items: stretch;
+      min-height: auto;
+    }
+
+    .he-content {
+      max-width: 100%;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      padding-top: 6rem;
+      padding-bottom: 2rem;
+      order: 2;
+    }
+
+    .he-image {
+      position: relative;
+      inset: auto;
+      width: 100%;
+      height: 55vw;
+      max-height: 380px;
+      order: 1;
+    }
+
+    .he-scrim {
+      background: linear-gradient(
+        to bottom,
+        var(--he-bg, #1a1714) 0%,
+        transparent 25%,
+        transparent 75%,
+        var(--he-bg, #1a1714) 100%
+      );
+    }
+
+    .he-ghost,
+    .he-scroll { display: none; }
+
+    .he-sub { max-width: none; }
+  }
+
+  @media (max-width: 480px) {
+    .he-cta {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  }
+</style>

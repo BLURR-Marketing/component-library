@@ -1,0 +1,160 @@
+---
+/**
+ * StatsEditorial
+ * Editoriale statistieken-sectie met grote Cormorant-cijfers.
+ * Ghost number als typografisch anker. Left-aligned, border-left dividers.
+ * Lichte achtergrond, donkere cijfers — contrast-inversion ten opzichte van StatsBar.
+ *
+ * Props:
+ * - stats: { value: string; label: string; prefix?: string; suffix?: string }[]
+ * - label?: string — kleine eyebrow boven de stats (bijv. 'Resultaten')
+ * - ghostNumber?: string — groot ghost nummer (default: '02')
+ * - accentColor?: string — kleur voor suffix/ghost accent (default: '#c43d3a')
+ * - bgColor?: string — achtergrondkleur (default: '#fdfaf6')
+ */
+interface Props {
+  stats: { value: string; label: string; prefix?: string; suffix?: string }[];
+  label?: string;
+  ghostNumber?: string;
+  accentColor?: string;
+  bgColor?: string;
+}
+
+const {
+  stats,
+  label,
+  ghostNumber = '02',
+  accentColor = '#c43d3a',
+  bgColor = '#fdfaf6',
+} = Astro.props;
+---
+
+<section class="se" style={`--se-accent:${accentColor};--se-bg:${bgColor}`}>
+  <span class="se-ghost" aria-hidden="true">{ghostNumber}</span>
+  <div class="se-inner">
+    {label && <p class="se-label">{label}</p>}
+    <div class="se-grid">
+      {stats.map((stat, i) => (
+        <div class="se-item">
+          <span class="se-number">
+            {stat.prefix && <span class="se-affix">{stat.prefix}</span>}
+            {stat.value}
+            {stat.suffix && <span class="se-suffix">{stat.suffix}</span>}
+          </span>
+          <span class="se-label-item">{stat.label}</span>
+          {i < stats.length - 1 && <span class="se-divider" aria-hidden="true" />}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .se {
+    background-color: var(--se-bg, #fdfaf6);
+    padding-block: clamp(5rem, 10vw, 9rem);
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(26, 23, 20, 0.08);
+    border-bottom: 1px solid rgba(26, 23, 20, 0.08);
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  .se-ghost {
+    position: absolute;
+    bottom: -0.2em;
+    right: -0.05em;
+    font-family: 'Cormorant Garamond', 'Cormorant', Georgia, serif;
+    font-size: clamp(10rem, 22vw, 22rem);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: rgba(26, 23, 20, 0.04);
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .se-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: clamp(1.5rem, 6vw, 6rem);
+  }
+
+  .se-label {
+    font-family: 'Courier New', monospace;
+    font-size: 0.625rem;
+    color: rgba(26, 23, 20, 0.4);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+
+  .se-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0;
+  }
+
+  .se-item {
+    position: relative;
+    padding-right: 3rem;
+  }
+
+  .se-item:not(:first-child) {
+    padding-left: 3rem;
+    border-left: 1px solid rgba(26, 23, 20, 0.1);
+  }
+
+  .se-number {
+    display: block;
+    font-family: 'Cormorant Garamond', 'Cormorant', Georgia, serif;
+    font-size: clamp(4rem, 8vw, 8rem);
+    font-weight: 300;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    color: #1a1714;
+    margin-bottom: 1rem;
+  }
+
+  .se-affix {
+    color: var(--se-accent, #c43d3a);
+  }
+
+  .se-suffix {
+    color: var(--se-accent, #c43d3a);
+  }
+
+  .se-label-item {
+    display: block;
+    font-size: 0.875rem;
+    color: rgba(26, 23, 20, 0.5);
+    line-height: 1.5;
+    max-width: 160px;
+  }
+
+  @media (max-width: 768px) {
+    .se-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .se-item {
+      padding-right: 0;
+      padding-block: 2.5rem;
+      border-left: none !important;
+      border-bottom: 1px solid rgba(26, 23, 20, 0.08);
+    }
+
+    .se-item:last-child {
+      border-bottom: none;
+    }
+
+    .se-item:not(:first-child) {
+      padding-left: 0;
+    }
+
+    .se-ghost { display: none; }
+    .se-label-item { max-width: none; }
+  }
+</style>

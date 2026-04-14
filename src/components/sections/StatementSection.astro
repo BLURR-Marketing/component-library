@@ -1,0 +1,87 @@
+---
+/**
+ * StatementSection
+ * Pure typografie moment. Donkere sectie met één grote cursieve quote
+ * als visuele break tussen zware content-secties.
+ * Verticale accentregel boven de quote.
+ *
+ * Props:
+ * - quote: string — de quote tekst (HTML toegestaan, use <br> voor regelbreuk)
+ * - attribution?: string — kleine tekst onder quote (— auteur / context)
+ * - bgColor?: string — achtergrondkleur (default: '#0d0b09')
+ * - accentColor?: string — kleur van de verticale regel (default: '#c43d3a')
+ */
+interface Props {
+  quote: string;
+  attribution?: string;
+  bgColor?: string;
+  accentColor?: string;
+}
+
+const {
+  quote,
+  attribution,
+  bgColor = '#0d0b09',
+  accentColor = '#c43d3a',
+} = Astro.props;
+---
+
+<section class="ss" style={`--ss-bg:${bgColor};--ss-accent:${accentColor}`} aria-label="Statement">
+  <div class="ss-inner">
+    <span class="ss-rule" aria-hidden="true"></span>
+    <blockquote class="ss-quote" set:html={quote} />
+    {attribution && <p class="ss-attr">{attribution}</p>}
+  </div>
+</section>
+
+<style>
+  .ss {
+    background-color: var(--ss-bg, #0d0b09);
+    padding-block: clamp(5rem, 12vw, 10rem);
+    overflow: hidden;
+    position: relative;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  .ss-inner {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: clamp(1.5rem, 6vw, 6rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .ss-rule {
+    display: block;
+    width: 1px;
+    height: 4rem;
+    background: var(--ss-accent, #c43d3a);
+    margin-bottom: 0.5rem;
+  }
+
+  .ss-quote {
+    font-family: 'Cormorant Garamond', 'Cormorant', Georgia, serif;
+    font-size: clamp(2.75rem, 7vw, 7.5rem);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: #fdfaf6;
+    margin: 0;
+    padding: 0;
+    border: none;
+    max-width: 16ch;
+  }
+
+  .ss-attr {
+    font-family: 'Courier New', monospace;
+    font-size: 0.6875rem;
+    color: rgba(196, 189, 180, 0.35);
+    letter-spacing: 0.14em;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+  }
+</style>

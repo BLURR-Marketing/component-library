@@ -29,6 +29,11 @@ import Button from '../../components/ui/Button.astro';
 import Badge from '../../components/ui/Badge.astro';
 import Card from '../../components/ui/Card.astro';
 import AccordionFAQ from '../../components/ui/AccordionFAQ.astro';
+import HeroEditorial from '../../components/hero/HeroEditorial.astro';
+import StatementSection from '../../components/sections/StatementSection.astro';
+import StatsEditorial from '../../components/social-proof/StatsEditorial.astro';
+import WowUSP from '../../components/sections/WowUSP.astro';
+import LifestyleFullbleed from '../../components/sections/LifestyleFullbleed.astro';
 
 export async function getStaticPaths() {
   return COMPONENTS.map(c => ({ params: { slug: c.slug } }));
@@ -64,6 +69,11 @@ const componentMap: Record<string, any> = {
   'badge': Badge,
   'card': Card,
   'accordion-faq': AccordionFAQ,
+  'hero-editorial': HeroEditorial,
+  'statement-section': StatementSection,
+  'stats-editorial': StatsEditorial,
+  'wow-usp': WowUSP,
+  'lifestyle-fullbleed': LifestyleFullbleed,
 };
 
 const Component = componentMap[slug!];

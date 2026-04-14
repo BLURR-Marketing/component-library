@@ -6,11 +6,18 @@ export type PropDoc = {
   description: string;
 };
 
+export type StyleTag =
+  | 'minimal' | 'bold' | 'editorial' | 'luxury' | 'modern' | 'dark' | 'light' | 'animated' | 'static'
+  | 'fullbleed' | 'split' | 'centered' | 'grid'
+  | 'saas' | 'retail' | 'agency' | 'local' | 'hospitality' | 'b2b'
+  | 'utility';
+
 export type ComponentEntry = {
   slug: string;
   name: string;
   category: string;
   description: string;
+  tags: StyleTag[];
   mockProps: Record<string, unknown>;
   propsDocs: PropDoc[];
   githubPath: string;
@@ -36,6 +43,7 @@ export const COMPONENTS: ComponentEntry[] = [
     category: 'nav',
     description: 'Eenvoudige navigatiebalk met logo, links en optionele CTA knop. Ingebouwde hamburger voor mobile.',
     githubPath: 'src/components/nav/NavSimple.astro',
+    tags: ['minimal', 'light', 'static', 'agency', 'local', 'saas', 'b2b', 'hospitality'],
     mockProps: {
       logo: 'BLURR',
       links: [
@@ -60,6 +68,7 @@ export const COMPONENTS: ComponentEntry[] = [
     category: 'nav',
     description: 'Sticky nav die start als transparant en solid wordt na 40px scrollen.',
     githubPath: 'src/components/nav/NavSticky.astro',
+    tags: ['modern', 'animated', 'agency', 'saas', 'b2b', 'luxury', 'hospitality', 'retail'],
     mockProps: {
       logo: 'BLURR',
       links: [
@@ -84,6 +93,7 @@ export const COMPONENTS: ComponentEntry[] = [
     category: 'hero',
     description: 'Gecentreerde hero met headline, ondertitel, 1-2 CTA knoppen. 4 achtergrondvarianten.',
     githubPath: 'src/components/hero/HeroCentered.astro',
+    tags: ['modern', 'centered', 'light', 'saas', 'agency', 'b2b', 'local'],
     mockProps: {
       eyebrow: 'Online Marketing Bureau',
       headline: 'Meer klanten via Google en Social',
@@ -108,6 +118,7 @@ export const COMPONENTS: ComponentEntry[] = [
     category: 'hero',
     description: 'Klassieke split-hero: tekst links, afbeelding rechts (of omgekeerd).',
     githubPath: 'src/components/hero/HeroSplit.astro',
+    tags: ['minimal', 'split', 'light', 'modern', 'saas', 'agency', 'local', 'b2b'],
     mockProps: {
       eyebrow: 'Webdesign bureau',
       headline: 'Jouw website in 5 dagen live',
@@ -134,6 +145,7 @@ export const COMPONENTS: ComponentEntry[] = [
     category: 'hero',
     description: '100vh hero met achtergrondafbeelding of -video + donkere overlay.',
     githubPath: 'src/components/hero/HeroFullscreen.astro',
+    tags: ['bold', 'fullbleed', 'dark', 'luxury', 'hospitality', 'retail', 'animated'],
     mockProps: {
       headline: 'Verander de manier waarop jij groeit',
       sub: 'Data-gedreven marketing die schaalbaar en meetbaar is.',
@@ -160,6 +172,7 @@ export const COMPONENTS: ComponentEntry[] = [
     category: 'sections',
     description: 'Genummerde USPs of pijlers. Sober en krachtig.',
     githubPath: 'src/components/sections/ManifestBlock.astro',
+    tags: ['minimal', 'grid', 'modern', 'b2b', 'agency', 'saas', 'local'],
     mockProps: {
       headline: 'Waarom kiezen voor BLURR?',
       columns: 3,
@@ -182,6 +195,7 @@ export const COMPONENTS: ComponentEntry[] = [
     category: 'sections',
     description: 'Feature kaarten grid met icon, titel en beschrijving. 3 visuele varianten.',
     githubPath: 'src/components/sections/FeaturesGrid.astro',
+    tags: ['modern', 'grid', 'light', 'saas', 'agency', 'b2b'],
     mockProps: {
       headline: 'Alles wat je nodig hebt',
       sub: 'Eén bureau voor alle online marketing kanalen.',
@@ -210,6 +224,7 @@ export const COMPONENTS: ComponentEntry[] = [
     category: 'sections',
     description: 'Stappen-sectie voor werkwijze of onboarding. Horizontaal of verticaal.',
     githubPath: 'src/components/sections/ProcessSteps.astro',
+    tags: ['minimal', 'modern', 'light', 'local', 'b2b', 'agency', 'saas'],
     mockProps: {
       headline: 'Zo werken we',
       sub: 'Van eerste gesprek tot lopende campagnes in 4 stappen.',
@@ -234,6 +249,7 @@ export const COMPONENTS: ComponentEntry[] = [
     category: 'sections',
     description: 'Prijskaarten met highlighted plan en optionele badge.',
     githubPath: 'src/components/sections/PricingCards.astro',
+    tags: ['modern', 'grid', 'light', 'saas', 'b2b'],
     mockProps: {
       headline: 'Kies je pakket',
       sub: 'Transparante prijzen, geen verborgen kosten.',
@@ -279,6 +295,7 @@ export const COMPONENTS: ComponentEntry[] = [
     category: 'social-proof',
     description: 'Klantreviews in grid met sterrating en avatar.',
     githubPath: 'src/components/social-proof/TestimonialsGrid.astro',
+    tags: ['modern', 'grid', 'light', 'saas', 'local', 'b2b', 'agency'],
     mockProps: {
       headline: 'Wat klanten zeggen',
       columns: 3,
@@ -300,6 +317,7 @@ export const COMPONENTS: ComponentEntry[] = [
     category: 'social-proof',
     description: 'Rij met klanten- of partnerlogo\'s. Grayscale optioneel.',
     githubPath: 'src/components/social-proof/LogoBar.astro',
+    tags: ['minimal', 'light', 'static', 'b2b', 'saas', 'agency'],
     mockProps: {
       label: 'Vertrouwd door meer dan 80 bedrijven',
       grayscale: true,
@@ -323,6 +341,7 @@ export const COMPONENTS: ComponentEntry[] = [
     category: 'social-proof',
     description: 'Oneindige scrollende ticker. Pauzeert bij hover. Puur CSS.',
     githubPath: 'src/components/social-proof/MarqueeTicker.astro',
+    tags: ['animated', 'bold', 'agency', 'retail', 'saas'],
     mockProps: {
       items: ['Google Ads', 'Meta Ads', 'SEO', 'Webdesign', 'Analytics', 'CRO', 'LinkedIn Ads', 'TikTok Ads', 'Email Marketing'],
       speed: 25,
@@ -342,6 +361,7 @@ export const COMPONENTS: ComponentEntry[] = [
     category: 'social-proof',
     description: 'Statistieken sectie met grote getallen. 3 achtergrondvarianten.',
     githubPath: 'src/components/social-proof/StatsBar.astro',
+    tags: ['minimal', 'modern', 'dark', 'b2b', 'saas', 'local'],
     mockProps: {
       bg: 'dark',
       stats: [
@@ -364,6 +384,7 @@ export const COMPONENTS: ComponentEntry[] = [
     category: 'cta',
     description: 'Call-to-action sectie. Center of split layout. 4 achtergrondvarianten.',
     githubPath: 'src/components/cta/CTABanner.astro',
+    tags: ['modern', 'bold', 'agency', 'saas', 'b2b', 'local', 'retail', 'hospitality'],
     mockProps: {
       headline: 'Klaar om te groeien?',
       sub: 'Boek een gratis strategie-gesprek en ontdek wat er mogelijk is voor jouw bedrijf.',
@@ -389,6 +410,7 @@ export const COMPONENTS: ComponentEntry[] = [
     category: 'forms',
     description: 'Contactformulier met async submit. Werkt met Formspree, Netlify Forms of eigen API.',
     githubPath: 'src/components/forms/ContactForm.astro',
+    tags: ['minimal', 'light', 'static', 'local', 'b2b', 'agency'],
     mockProps: {
       headline: 'Stuur ons een bericht',
       sub: 'We reageren binnen 1 werkdag.',
@@ -410,6 +432,7 @@ export const COMPONENTS: ComponentEntry[] = [
     category: 'forms',
     description: 'Compacte e-mail aanmeldbalk. Inline of gestapeld.',
     githubPath: 'src/components/forms/NewsletterBar.astro',
+    tags: ['minimal', 'light', 'static', 'saas', 'retail', 'hospitality'],
     mockProps: {
       headline: 'Ontvang wekelijkse marketing tips',
       placeholder: 'jouw@email.nl',
@@ -435,6 +458,7 @@ export const COMPONENTS: ComponentEntry[] = [
     category: 'footer',
     description: 'Compacte footer met logo, links, social icons en copyright.',
     githubPath: 'src/components/footer/FooterSimple.astro',
+    tags: ['minimal', 'light', 'static', 'local', 'saas', 'retail', 'hospitality'],
     mockProps: {
       logo: 'BLURR',
       links: [
@@ -460,6 +484,7 @@ export const COMPONENTS: ComponentEntry[] = [
     category: 'footer',
     description: 'Volledige footer met navigatiekolommen en optioneel groot achtergrondwoord.',
     githubPath: 'src/components/footer/FooterFull.astro',
+    tags: ['modern', 'editorial', 'dark', 'agency', 'b2b', 'saas', 'luxury'],
     mockProps: {
       logo: 'BLURR',
       tagline: 'Online marketing die werkt.',
@@ -484,6 +509,145 @@ export const COMPONENTS: ComponentEntry[] = [
     ],
   },
 
+  // ── EDITORIAL (AWW / Sushi Rol) ─────────────────────────────────────────
+  {
+    slug: 'hero-editorial',
+    name: 'HeroEditorial',
+    category: 'hero',
+    description: 'Full-bleed dark editorial hero. Afbeelding bleedt naar rechts. Ghost-nummer als typografisch anker. Scroll-indicator met geanimeerde accentlijn.',
+    githubPath: 'src/components/hero/HeroEditorial.astro',
+    tags: ['editorial', 'bold', 'fullbleed', 'dark', 'luxury', 'retail', 'agency'],
+    mockProps: {
+      eyebrow: 'Premium verpakking · NL-voorraad',
+      headline: 'De verpakking<br>die jouw product<br><em>viraal maakt.</em>',
+      sub: 'Jouw klanten filmen dit zelf.<br>Dat is de beste marketing die bestaat.',
+      ctaPrimary: { label: 'Bestel proefpakket', href: '#' },
+      ctaSecondary: { label: 'Bekijk maten', href: '#' },
+      image: 'https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=900&q=80',
+      imageAlt: 'Product detail shot',
+      trustItems: ['✓ Food-grade', '✓ EU-cert', '✓ Vanaf 50 stuks', '✓ Morgen in huis'],
+      ghostNumber: '01',
+      accentColor: '#c43d3a',
+    },
+    propsDocs: [
+      { name: 'headline', type: 'string', required: true, description: 'H1 tekst (HTML toegestaan, <br> voor regelbreuk, <em> voor accent)' },
+      { name: 'eyebrow', type: 'string', required: false, description: 'Klein monospace label boven headline' },
+      { name: 'sub', type: 'string', required: false, description: 'Ondertitel (HTML toegestaan)' },
+      { name: 'ctaPrimary', type: '{ label: string; href: string }', required: false, description: 'Primaire CTA knop' },
+      { name: 'ctaSecondary', type: '{ label: string; href: string }', required: false, description: 'Secundaire tekstlink' },
+      { name: 'image', type: 'string', required: true, description: 'URL naar hero afbeelding (rechts, bleedt naar rand)' },
+      { name: 'imageAlt', type: 'string', required: false, default: '""', description: 'Alt tekst voor afbeelding' },
+      { name: 'trustItems', type: 'string[]', required: false, default: '[]', description: 'Kleine trust pills onder CTAs' },
+      { name: 'ghostNumber', type: 'string', required: false, default: '"01"', description: 'Groot achtergrond ghost-nummer' },
+      { name: 'accentColor', type: 'string', required: false, default: '"#c43d3a"', description: 'CSS kleurwaarde voor accenten' },
+      { name: 'bgColor', type: 'string', required: false, default: '"#1a1714"', description: 'Donkere achtergrondkleur' },
+    ],
+  },
+  {
+    slug: 'statement-section',
+    name: 'StatementSection',
+    category: 'sections',
+    description: 'Pure typografie moment. Donkere sectie met één grote cursieve display-quote. Verticale accentregel als typografische inleiding.',
+    githubPath: 'src/components/sections/StatementSection.astro',
+    tags: ['bold', 'editorial', 'dark', 'luxury', 'agency', 'retail'],
+    mockProps: {
+      quote: '"Jouw klanten<br>filmen dit zelf."',
+      attribution: '— De beste marketing die bestaat',
+      bgColor: '#0d0b09',
+      accentColor: '#c43d3a',
+    },
+    propsDocs: [
+      { name: 'quote', type: 'string', required: true, description: 'Display quote tekst (HTML toegestaan, <br> voor regelbreuk)' },
+      { name: 'attribution', type: 'string', required: false, description: 'Kleine tekst onder quote (auteur / context)' },
+      { name: 'bgColor', type: 'string', required: false, default: '"#0d0b09"', description: 'Achtergrondkleur (gebruik donkere tint)' },
+      { name: 'accentColor', type: 'string', required: false, default: '"#c43d3a"', description: 'Kleur van de verticale accentregel' },
+    ],
+  },
+  {
+    slug: 'stats-editorial',
+    name: 'StatsEditorial',
+    category: 'social-proof',
+    description: 'Editoriale statistieken met grote Cormorant-cijfers. Ghost-nummer als anker. Lichte achtergrond, border-left dividers tussen items.',
+    githubPath: 'src/components/social-proof/StatsEditorial.astro',
+    tags: ['editorial', 'bold', 'light', 'luxury', 'retail', 'agency'],
+    mockProps: {
+      label: 'Resultaten',
+      ghostNumber: '02',
+      accentColor: '#c43d3a',
+      stats: [
+        { value: '185', suffix: '%', label: 'meer social media mentions' },
+        { value: '50', suffix: '+', label: 'stuks minimum bestelling' },
+        { value: '24', suffix: 'u', label: 'besteld voor 14:00 morgen in huis' },
+      ],
+    },
+    propsDocs: [
+      { name: 'stats', type: '{ value: string; label: string; prefix?: string; suffix?: string }[]', required: true, description: 'Array van statistieken' },
+      { name: 'label', type: 'string', required: false, description: 'Klein eyebrow label boven de stats' },
+      { name: 'ghostNumber', type: 'string', required: false, default: '"02"', description: 'Groot achtergrond ghost-nummer' },
+      { name: 'accentColor', type: 'string', required: false, default: '"#c43d3a"', description: 'Kleur voor prefix/suffix van cijfers' },
+      { name: 'bgColor', type: 'string', required: false, default: '"#fdfaf6"', description: 'Achtergrondkleur (gebruik lichte tint)' },
+    ],
+  },
+  {
+    slug: 'wow-usp',
+    name: 'WowUSP',
+    category: 'sections',
+    description: 'Donkere USP-sectie met groot editorial headline en genummerde items. Ghost-nummer links. 4-kolommen grid met border-left per item.',
+    githubPath: 'src/components/sections/WowUSP.astro',
+    tags: ['bold', 'editorial', 'dark', 'animated', 'agency', 'retail', 'luxury'],
+    mockProps: {
+      label: 'Waarom kiezen',
+      headline: 'Geen plastic.<br>Geen gedoe.<br><em>Gewoon resultaat.</em>',
+      ghostNumber: '04',
+      accentColor: '#c43d3a',
+      usps: [
+        { title: 'Duurzaam materiaal', body: 'Food-grade papier. Je klant voelt het verschil met goedkoop plastic.' },
+        { title: 'NL-voorraad', body: 'Besteld voor 14:00 = morgen in huis. Altijd op voorraad.' },
+        { title: 'EU-gecertificeerd', body: 'Volledig food-safe en gecertificeerd. Geen risico.' },
+        { title: 'Custom branding', body: 'Jouw logo, jouw kleuren. Jouw zaak als visitekaartje.' },
+      ],
+    },
+    propsDocs: [
+      { name: 'usps', type: '{ title: string; body: string; number?: string }[]', required: true, description: 'Array van USP items (number auto-gegenereerd als leeg)' },
+      { name: 'headline', type: 'string', required: true, description: 'Groot H2 (HTML toegestaan, <em> voor accent)' },
+      { name: 'label', type: 'string', required: false, description: 'Klein eyebrow boven headline' },
+      { name: 'ghostNumber', type: 'string', required: false, default: '"04"', description: 'Groot achtergrond ghost-nummer' },
+      { name: 'accentColor', type: 'string', required: false, default: '"#c43d3a"', description: 'Kleur voor nummers en em in headline' },
+      { name: 'bgColor', type: 'string', required: false, default: '"#1a1714"', description: 'Donkere achtergrondkleur' },
+    ],
+  },
+  {
+    slug: 'lifestyle-fullbleed',
+    name: 'LifestyleFullbleed',
+    category: 'sections',
+    description: 'Full-bleed 75vh afbeelding met donkere gradient overlay. Quote + attributie + optionele stat overlaid onderaan. Brand-moment tussen product-secties.',
+    githubPath: 'src/components/sections/LifestyleFullbleed.astro',
+    tags: ['bold', 'fullbleed', 'dark', 'luxury', 'hospitality', 'retail'],
+    mockProps: {
+      image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1400&q=80',
+      imageAlt: 'Sfeervolle restaurant scene',
+      label: 'Klantervaring',
+      quote: '"Onze klanten beginnen<br>spontaan video\'s te maken."',
+      authorName: 'Yasmine R.',
+      authorRole: 'Eigenaar · Restaurant Amsterdam',
+      statValue: '3.000+',
+      statLabel: 'views per video gemiddeld',
+      accentColor: '#c43d3a',
+    },
+    propsDocs: [
+      { name: 'image', type: 'string', required: true, description: 'URL naar full-bleed afbeelding' },
+      { name: 'quote', type: 'string', required: true, description: 'Italic display quote (HTML toegestaan)' },
+      { name: 'imageAlt', type: 'string', required: false, default: '""', description: 'Alt tekst voor afbeelding' },
+      { name: 'label', type: 'string', required: false, description: 'Klein monospace label boven quote' },
+      { name: 'authorName', type: 'string', required: false, description: 'Naam van de getuige' },
+      { name: 'authorRole', type: 'string', required: false, description: 'Rol / context (monospace, klein)' },
+      { name: 'statValue', type: 'string', required: false, description: 'Stat waarde (bijv. "3.000+")' },
+      { name: 'statLabel', type: 'string', required: false, description: 'Stat beschrijving' },
+      { name: 'accentColor', type: 'string', required: false, default: '"#c43d3a"', description: 'Kleur voor statValue' },
+      { name: 'minHeight', type: 'string', required: false, default: '"75vh"', description: 'Minimale hoogte van de sectie' },
+    ],
+  },
+
   // ── UI ELEMENTS ──────────────────────────────────────────────────────────
   {
     slug: 'button',
@@ -491,6 +655,7 @@ export const COMPONENTS: ComponentEntry[] = [
     category: 'ui',
     description: 'Herbruikbare knop: 4 varianten, 3 groottes, als link of button element.',
     githubPath: 'src/components/ui/Button.astro',
+    tags: ['minimal', 'static', 'utility'],
     mockProps: {
       label: 'Klik hier',
       variant: 'primary',
@@ -510,6 +675,7 @@ export const COMPONENTS: ComponentEntry[] = [
     name: 'Badge',
     category: 'ui',
     description: 'Pill badge voor status, labels en categorieën. 6 kleurvarianten.',
+    tags: ['minimal', 'static', 'utility'],
     githubPath: 'src/components/ui/Badge.astro',
     mockProps: {
       label: 'Nieuw',
@@ -529,6 +695,7 @@ export const COMPONENTS: ComponentEntry[] = [
     category: 'ui',
     description: 'Basis kaart component met slot voor flexibele content. 4 varianten.',
     githubPath: 'src/components/ui/Card.astro',
+    tags: ['modern', 'light', 'static', 'utility'],
     mockProps: {
       variant: 'elevated',
       padding: 'md',
@@ -546,6 +713,7 @@ export const COMPONENTS: ComponentEntry[] = [
     category: 'ui',
     description: 'FAQ accordion. Toegankelijk (ARIA), keyboard navigeerbaar.',
     githubPath: 'src/components/ui/AccordionFAQ.astro',
+    tags: ['minimal', 'static', 'local', 'b2b', 'saas'],
     mockProps: {
       headline: 'Veelgestelde vragen',
       items: [
@@ -570,4 +738,136 @@ export function getComponent(slug: string): ComponentEntry | undefined {
 export function getByCategory(category: string): ComponentEntry[] {
   if (category === 'all') return COMPONENTS;
   return COMPONENTS.filter(c => c.category === category);
+}
+
+export function getByTag(tag: StyleTag): ComponentEntry[] {
+  return COMPONENTS.filter(c => c.tags.includes(tag));
+}
+
+export function getByTags(tags: StyleTag[], matchAll = false): ComponentEntry[] {
+  if (matchAll) return COMPONENTS.filter(c => tags.every(t => c.tags.includes(t)));
+  return COMPONENTS.filter(c => tags.some(t => c.tags.includes(t)));
+}
+
+// ── STARTER PACKS ───────────────────────────────────────────────────────────
+// Curated component sets per brand archetype.
+// One slug per page section — select the best fit based on brand guide output.
+
+export type StarterPack = {
+  id: string;
+  label: string;
+  description: string;
+  archetype: StyleTag[];
+  components: {
+    nav: string;
+    hero: string;
+    sections: string[];
+    socialProof: string[];
+    cta: string;
+    forms?: string;
+    footer: string;
+  };
+};
+
+export const STARTER_PACKS: StarterPack[] = [
+  {
+    id: 'luxury-retail',
+    label: 'Luxury Retail',
+    description: 'Editoriale stijl. Donkere palette, serif typography, fullbleed visuals. Geschikt voor premium producten, boutiques, high-end retail.',
+    archetype: ['luxury', 'editorial', 'bold', 'retail'],
+    components: {
+      nav: 'nav-sticky',
+      hero: 'hero-editorial',
+      sections: ['lifestyle-fullbleed', 'statement-section', 'wow-usp'],
+      socialProof: ['stats-editorial', 'marquee-ticker'],
+      cta: 'cta-banner',
+      footer: 'footer-full',
+    },
+  },
+  {
+    id: 'b2b-saas',
+    label: 'B2B / SaaS',
+    description: 'Schoon, professioneel, conversiegericht. Lichte palette, heldere hiërarchie. Geschikt voor software, agencies, B2B dienstverleners.',
+    archetype: ['modern', 'light', 'saas', 'b2b'],
+    components: {
+      nav: 'nav-sticky',
+      hero: 'hero-split',
+      sections: ['features-grid', 'pricing-cards', 'process-steps'],
+      socialProof: ['logo-bar', 'testimonials-grid'],
+      cta: 'cta-banner',
+      footer: 'footer-full',
+    },
+  },
+  {
+    id: 'local-business',
+    label: 'Lokaal Bedrijf',
+    description: 'Toegankelijk, warm, vertrouwenwekkend. Lichte palette, persoonlijke toon. Geschikt voor lokale dienstverleners, vakmensen, mkb.',
+    archetype: ['minimal', 'light', 'local'],
+    components: {
+      nav: 'nav-simple',
+      hero: 'hero-centered',
+      sections: ['process-steps', 'manifest-block'],
+      socialProof: ['testimonials-grid', 'stats-bar'],
+      cta: 'cta-banner',
+      forms: 'contact-form',
+      footer: 'footer-simple',
+    },
+  },
+  {
+    id: 'creative-agency',
+    label: 'Creative Agency',
+    description: 'Opvallend, eigenzinnig, motion-rich. Donkere accenten, editorial typografie. Geschikt voor design studios, marketing bureaus, creatieve agencies.',
+    archetype: ['bold', 'editorial', 'agency', 'dark'],
+    components: {
+      nav: 'nav-sticky',
+      hero: 'hero-editorial',
+      sections: ['wow-usp', 'statement-section', 'manifest-block'],
+      socialProof: ['marquee-ticker', 'logo-bar'],
+      cta: 'cta-banner',
+      footer: 'footer-full',
+    },
+  },
+  {
+    id: 'hospitality',
+    label: 'Hospitality',
+    description: 'Sfeervol, immersief, lifestyle-gedreven. Fullbleed visuals, warme tonen. Geschikt voor restaurants, hotels, spa, wellness, horeca.',
+    archetype: ['luxury', 'fullbleed', 'hospitality'],
+    components: {
+      nav: 'nav-sticky',
+      hero: 'hero-fullscreen',
+      sections: ['lifestyle-fullbleed', 'manifest-block'],
+      socialProof: ['testimonials-grid', 'stats-bar'],
+      cta: 'cta-banner',
+      forms: 'newsletter-bar',
+      footer: 'footer-simple',
+    },
+  },
+  {
+    id: 'startup',
+    label: 'Startup / Modern',
+    description: 'Fris, helder, groei-gefocust. Lichte palette, duidelijke propositie. Geschikt voor startups, apps, nieuwe diensten.',
+    archetype: ['modern', 'minimal', 'light', 'saas'],
+    components: {
+      nav: 'nav-simple',
+      hero: 'hero-centered',
+      sections: ['features-grid', 'process-steps', 'pricing-cards'],
+      socialProof: ['logo-bar', 'stats-bar'],
+      cta: 'cta-banner',
+      footer: 'footer-full',
+    },
+  },
+];
+
+export function getStarterPack(id: string): StarterPack | undefined {
+  return STARTER_PACKS.find(p => p.id === id);
+}
+
+export function matchStarterPack(tags: StyleTag[]): StarterPack | undefined {
+  // Score each pack by how many archetype tags match
+  const scored = STARTER_PACKS.map(pack => ({
+    pack,
+    score: pack.archetype.filter(t => tags.includes(t)).length,
+  }));
+  scored.sort((a, b) => b.score - a.score);
+  return scored[0]?.score > 0 ? scored[0].pack : undefined;
 }

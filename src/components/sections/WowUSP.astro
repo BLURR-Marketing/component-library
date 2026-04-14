@@ -1,0 +1,200 @@
+---
+/**
+ * WowUSP
+ * Donkere USP-sectie met groot editorial headline en genummerde items.
+ * Ghost number als typografisch anker (links). 4-kolommen grid op desktop.
+ * Elke USP heeft een border-left, crimson nummer en hover state.
+ *
+ * Props:
+ * - headline: string — groot H2 (HTML toegestaan, <br> voor regelbreuk)
+ * - label?: string — kleine eyebrow boven headline
+ * - usps: { title: string; body: string; number?: string }[]
+ * - ghostNumber?: string — groot ghost nummer (default: '04')
+ * - accentColor?: string — kleur voor nummers + em in headline (default: '#c43d3a')
+ * - bgColor?: string — achtergrondkleur (default: '#1a1714')
+ */
+interface Props {
+  headline: string;
+  label?: string;
+  usps: { title: string; body: string; number?: string }[];
+  ghostNumber?: string;
+  accentColor?: string;
+  bgColor?: string;
+}
+
+const {
+  headline,
+  label,
+  usps,
+  ghostNumber = '04',
+  accentColor = '#c43d3a',
+  bgColor = '#1a1714',
+} = Astro.props;
+
+const numbered = usps.map((u, i) => ({
+  ...u,
+  number: u.number ?? String(i + 1).padStart(2, '0'),
+}));
+---
+
+<section class="wu" style={`--wu-accent:${accentColor};--wu-bg:${bgColor}`}>
+  <span class="wu-ghost" aria-hidden="true">{ghostNumber}</span>
+
+  <div class="wu-inner">
+    <div class="wu-header">
+      {label && <p class="wu-label">{label}</p>}
+      <h2 class="wu-headline" set:html={headline} />
+    </div>
+
+    <div class="wu-grid">
+      {numbered.map((usp) => (
+        <div class="wu-item">
+          <span class="wu-number">{usp.number}</span>
+          <div class="wu-divider" aria-hidden="true"></div>
+          <h3 class="wu-title">{usp.title}</h3>
+          <p class="wu-body">{usp.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .wu {
+    background-color: var(--wu-bg, #1a1714);
+    color: #fdfaf6;
+    padding-block: clamp(5rem, 12vw, 10rem);
+    position: relative;
+    overflow: hidden;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  .wu-ghost {
+    position: absolute;
+    top: 50%;
+    left: -0.08em;
+    transform: translateY(-50%);
+    font-family: 'Cormorant Garamond', 'Cormorant', Georgia, serif;
+    font-size: clamp(12rem, 26vw, 26rem);
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: rgba(253, 250, 246, 0.025);
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .wu-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: clamp(1.5rem, 6vw, 6rem);
+  }
+
+  .wu-header {
+    margin-bottom: clamp(3rem, 6vw, 5rem);
+    max-width: 600px;
+  }
+
+  .wu-label {
+    font-family: 'Courier New', monospace;
+    font-size: 0.625rem;
+    color: rgba(196, 189, 180, 0.4);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 1.75rem;
+  }
+
+  .wu-headline {
+    font-family: 'Cormorant Garamond', 'Cormorant', Georgia, serif;
+    font-size: clamp(2.5rem, 5vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: #fdfaf6;
+    margin: 0;
+  }
+
+  .wu-headline :global(em) {
+    font-style: italic;
+    color: var(--wu-accent, #c43d3a);
+  }
+
+  .wu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+
+  .wu-item {
+    padding: 2.5rem 2rem;
+    border-left: 1px solid rgba(196, 189, 180, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: border-color 0.3s ease;
+  }
+
+  .wu-item:hover {
+    border-color: rgba(196, 61, 58, 0.25);
+  }
+
+  .wu-item:first-child {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .wu-number {
+    font-family: 'Courier New', monospace;
+    font-size: 0.5625rem;
+    color: var(--wu-accent, #c43d3a);
+    letter-spacing: 0.16em;
+  }
+
+  .wu-divider {
+    width: 1.5rem;
+    height: 1px;
+    background-color: rgba(196, 189, 180, 0.15);
+  }
+
+  .wu-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fdfaf6;
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .wu-body {
+    font-size: 0.875rem;
+    color: rgba(196, 189, 180, 0.55);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  @media (max-width: 1100px) {
+    .wu-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .wu-item {
+      border-top: 1px solid rgba(196, 189, 180, 0.1);
+    }
+
+    .wu-item:nth-child(odd) {
+      border-left: none;
+      padding-left: 0;
+    }
+
+    .wu-item:nth-child(even) {
+      border-left: 1px solid rgba(196, 189, 180, 0.1);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .wu-grid { grid-template-columns: 1fr; }
+    .wu-item { border-left: none !important; padding-left: 0 !important; }
+    .wu-ghost { display: none; }
+  }
+</style>
