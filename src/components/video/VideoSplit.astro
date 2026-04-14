@@ -2,6 +2,18 @@
 // VideoSplit — recovered from blurr-components.pages.dev
 ---
 
-<section class="vsp" data-astro-cid-zdmtfy3n> <div class="vsp__inner" data-astro-cid-zdmtfy3n> <div class="vsp__video-col" data-astro-cid-zdmtfy3n> <div class="vsp__video-wrap" data-astro-cid-zdmtfy3n> <video class="vsp__video" src="https://www.w3schools.com/html/mov_bbb.mp4" controls preload="metadata" data-astro-cid-zdmtfy3n></video> </div> </div> <div class="vsp__text-col" data-astro-cid-zdmtfy3n> <p class="vsp__sub" data-astro-cid-zdmtfy3n>Onze aanpak in 3 minuten</p> <h2 class="vsp__headline" data-astro-cid-zdmtfy3n>Zie hoe wij werken</h2> <p class="vsp__body" data-astro-cid-zdmtfy3n>Van strategie tot executie — wij nemen het volledig over.</p> <ul class="vsp__points" data-astro-cid-zdmtfy3n> <li data-astro-cid-zdmtfy3n>Dagelijkse optimalisaties zonder extra kosten</li> <li data-astro-cid-zdmtfy3n>Transparant rapportage-dashboard</li> <li data-astro-cid-zdmtfy3n>Aantoonbare groei in 90 dagen of geld terug</li> </ul> </div> </div> </section>
+<section class="vsp"> <div class="vsp__inner"> <div class="vsp__video-col"> <div class="vsp__video-wrap"> <video class="vsp__video" src="https://www.w3schools.com/html/mov_bbb.mp4" controls preload="metadata"></video> </div> </div> <div class="vsp__text-col"> <p class="vsp__sub">Onze aanpak in 3 minuten</p> <h2 class="vsp__headline">Zie hoe wij werken</h2> <p class="vsp__body">Van strategie tot executie — wij nemen het volledig over.</p> <ul class="vsp__points"> <li>Dagelijkse optimalisaties zonder extra kosten</li> <li>Transparant rapportage-dashboard</li> <li>Aantoonbare groei in 90 dagen of geld terug</li> </ul> </div> </div> </section>
 
-
+<style>
+.vsp{background:#fff;padding:5rem 1.5rem}
+.vsp__inner{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.vsp__video-wrap{border-radius:14px;overflow:hidden;box-shadow:0 8px 40px #0000001a;aspect-ratio:16/9;background:#000}
+.vsp__video{width:100%;height:100%;display:block;object-fit:cover}
+.vsp__sub{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent, #6366f1);margin:0 0 .75rem}
+.vsp__headline{font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;color:var(--color-primary, #0a0a0a);margin:0 0 1rem;line-height:1.2;letter-spacing:-.02em}
+.vsp__body{color:#555;font-size:.97rem;line-height:1.7;margin:0 0 1.5rem}
+.vsp__points{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.6rem}
+.vsp__points li{font-size:.9rem;color:#444;padding-left:1.4rem;position:relative}
+.vsp__points li:before{content:"✓";position:absolute;left:0;color:var(--color-accent, #6366f1);font-weight:700}
+.vsp__inner{grid-template-columns:1fr;gap:2rem}
+</style>

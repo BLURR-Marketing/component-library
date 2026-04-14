@@ -2,6 +2,35 @@
 // NumberedList — recovered from blurr-components.pages.dev
 ---
 
-<section class="nml__section nml__variant-large nml__layout-stack" data-astro-cid-wxk2uvqm> <div class="nml__header" data-astro-cid-wxk2uvqm> <p class="nml__eyebrow" data-astro-cid-wxk2uvqm>Onboarding</p> <h2 class="nml__headline" data-astro-cid-wxk2uvqm>Van aanmelding tot eerste resultaat in 4 stappen</h2> </div> <ol class="nml__list" role="list" data-astro-cid-wxk2uvqm> <li class="nml__item" style="--delay: 0ms; --index: 0" data-astro-cid-wxk2uvqm> <div class="nml__large-wrap" data-astro-cid-wxk2uvqm> <span class="nml__large-num" aria-hidden="true" data-astro-cid-wxk2uvqm>01</span> <div class="nml__text" data-astro-cid-wxk2uvqm> <p class="nml__title" data-astro-cid-wxk2uvqm>Gratis intake gesprek</p> <p class="nml__desc" data-astro-cid-wxk2uvqm>We bespreken je doelen, budget en huidige situatie. Geen verplichtingen.</p> </div> </div> </li><li class="nml__item" style="--delay: 100ms; --index: 1" data-astro-cid-wxk2uvqm> <div class="nml__large-wrap" data-astro-cid-wxk2uvqm> <span class="nml__large-num" aria-hidden="true" data-astro-cid-wxk2uvqm>02</span> <div class="nml__text" data-astro-cid-wxk2uvqm> <p class="nml__title" data-astro-cid-wxk2uvqm>Strategievoorstel</p> <p class="nml__desc" data-astro-cid-wxk2uvqm>Binnen 3 werkdagen ontvang je een concreet plan met verwachte resultaten.</p> </div> </div> </li><li class="nml__item" style="--delay: 200ms; --index: 2" data-astro-cid-wxk2uvqm> <div class="nml__large-wrap" data-astro-cid-wxk2uvqm> <span class="nml__large-num" aria-hidden="true" data-astro-cid-wxk2uvqm>03</span> <div class="nml__text" data-astro-cid-wxk2uvqm> <p class="nml__title" data-astro-cid-wxk2uvqm>Onboarding en setup</p> <p class="nml__desc" data-astro-cid-wxk2uvqm>We koppelen alle platformen, richten tracking in en starten de eerste campagnes.</p> </div> </div> </li><li class="nml__item" style="--delay: 300ms; --index: 3" data-astro-cid-wxk2uvqm> <div class="nml__large-wrap" data-astro-cid-wxk2uvqm> <span class="nml__large-num" aria-hidden="true" data-astro-cid-wxk2uvqm>04</span> <div class="nml__text" data-astro-cid-wxk2uvqm> <p class="nml__title" data-astro-cid-wxk2uvqm>Live en optimaliseren</p> <p class="nml__desc" data-astro-cid-wxk2uvqm>Na goedkeuring gaan we live. Elke week sturen we bij op basis van data.</p> </div> </div> </li> </ol> </section>
+<section class="nml__section nml__variant-large nml__layout-stack"> <div class="nml__header"> <p class="nml__eyebrow">Onboarding</p> <h2 class="nml__headline">Van aanmelding tot eerste resultaat in 4 stappen</h2> </div> <ol class="nml__list" role="list"> <li class="nml__item" style="--delay: 0ms; --index: 0"> <div class="nml__large-wrap"> <span class="nml__large-num" aria-hidden="true">01</span> <div class="nml__text"> <p class="nml__title">Gratis intake gesprek</p> <p class="nml__desc">We bespreken je doelen, budget en huidige situatie. Geen verplichtingen.</p> </div> </div> </li><li class="nml__item" style="--delay: 100ms; --index: 1"> <div class="nml__large-wrap"> <span class="nml__large-num" aria-hidden="true">02</span> <div class="nml__text"> <p class="nml__title">Strategievoorstel</p> <p class="nml__desc">Binnen 3 werkdagen ontvang je een concreet plan met verwachte resultaten.</p> </div> </div> </li><li class="nml__item" style="--delay: 200ms; --index: 2"> <div class="nml__large-wrap"> <span class="nml__large-num" aria-hidden="true">03</span> <div class="nml__text"> <p class="nml__title">Onboarding en setup</p> <p class="nml__desc">We koppelen alle platformen, richten tracking in en starten de eerste campagnes.</p> </div> </div> </li><li class="nml__item" style="--delay: 300ms; --index: 3"> <div class="nml__large-wrap"> <span class="nml__large-num" aria-hidden="true">04</span> <div class="nml__text"> <p class="nml__title">Live en optimaliseren</p> <p class="nml__desc">Na goedkeuring gaan we live. Elke week sturen we bij op basis van data.</p> </div> </div> </li> </ol> </section>
 
-
+<style>
+.nml__section{padding:5rem 1.5rem;max-width:56rem;margin-inline:auto}
+.nml__header{margin-bottom:3rem}
+.nml__eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent);margin:0 0 .75rem}
+.nml__headline{font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;color:var(--color-primary);margin:0;line-height:1.15}
+.nml__list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0}
+.nml__layout-grid .nml__list{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.nml__item{opacity:0;transform:translateY(18px)}
+.nml__item--visible{animation:nml-fadein .5s ease forwards;animation-delay:var(--delay, 0ms)}
+.nml__default-wrap{display:flex;align-items:flex-start;gap:1.25rem;position:relative;padding-bottom:2.5rem}
+.nml__layout-grid .nml__default-wrap{flex-direction:column;padding-bottom:0;gap:1rem}
+.nml__num-circle{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:var(--color-accent);color:#fff;font-size:.8125rem;font-weight:900;flex-shrink:0;font-variant-numeric:tabular-nums;position:relative;z-index:1}
+.nml__connector{position:absolute;left:19px;top:40px;bottom:0;width:2px;background:#6366f126;display:block}
+.nml__layout-grid .nml__connector{display:none}
+.nml__text{padding-top:.25rem;flex:1}
+.nml__title{font-size:1.0625rem;font-weight:700;color:var(--color-primary);margin:0 0 .375rem;line-height:1.3}
+.nml__desc{font-size:.9375rem;color:var(--color-muted);margin:0;line-height:1.65}
+.nml__img{display:block;margin-top:1rem;border-radius:var(--radius);max-width:100%;height:auto}
+.nml__variant-large .nml__item{padding-bottom:3.5rem}
+.nml__variant-large .nml__large-wrap{position:relative;padding-left:1rem}
+.nml__large-num{position:absolute;top:-.5rem;left:0;font-size:clamp(4rem,8vw,7rem);font-weight:900;line-height:1;color:var(--color-accent);opacity:.12;pointer-events:none;user-select:none;font-variant-numeric:tabular-nums;letter-spacing:-.04em}
+.nml__variant-large .nml__text{position:relative;padding-top:clamp(2.5rem,4vw,4rem)}
+.nml__variant-large .nml__title{font-size:1.25rem;font-weight:800}
+.nml__variant-inline .nml__item{padding-bottom:2rem}
+.nml__inline-wrap{display:flex;flex-direction:column;gap:.5rem}
+.nml__inline-heading{display:flex;align-items:center;gap:.75rem;margin:0}
+.nml__variant-inline .nml__title{font-size:1.125rem;font-weight:700;margin:0}
+.nml__variant-inline .nml__desc{padding-left:calc(40px + .75rem)}
+.nml__layout-grid .nml__list{grid-template-columns:1fr;gap:1.5rem}
+</style>

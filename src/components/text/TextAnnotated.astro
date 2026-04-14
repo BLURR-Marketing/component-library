@@ -2,6 +2,13 @@
 // TextAnnotated — recovered from blurr-components.pages.dev
 ---
 
-<div class="tx-ann" data-astro-cid-igj6r75e> <p class="tx-ann__body" data-astro-cid-igj6r75e>BLURR heeft onze conversieratio verdubbeld in drie maanden.</p> <aside class="tx-ann__note" data-astro-cid-igj6r75e> <strong class="tx-ann__label" data-astro-cid-igj6r75e>Noot</strong> <p class="tx-ann__text" data-astro-cid-igj6r75e>Gemeten over Q1 2025 t.o.v. Q1 2024.</p> </aside> </div>
+<div class="tx-ann"> <p class="tx-ann__body">BLURR heeft onze conversieratio verdubbeld in drie maanden.</p> <aside class="tx-ann__note"> <strong class="tx-ann__label">Noot</strong> <p class="tx-ann__text">Gemeten over Q1 2025 t.o.v. Q1 2024.</p> </aside> </div>
 
-
+<style>
+.tx-ann{display:grid;grid-template-columns:1fr 200px;gap:2rem;align-items:flex-start}
+.tx-ann{grid-template-columns:1fr}
+.tx-ann__body{margin:0;font-size:1rem;color:var(--color-primary);line-height:1.7}
+.tx-ann__note{padding:.75rem;background:#6366f10f;border-radius:.5rem;border-left:3px solid var(--color-accent)}
+.tx-ann__label{display:block;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--color-accent);margin-bottom:.3rem}
+.tx-ann__text{margin:0;font-size:.8rem;color:#555;line-height:1.55}
+</style>

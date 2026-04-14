@@ -2,6 +2,25 @@
 // GalleryGrid — recovered from blurr-components.pages.dev
 ---
 
-<section class="gg gg--cols-3 gg--gap-md" data-astro-cid-loewgr25> <div class="gg-inner" data-astro-cid-loewgr25> <div class="gg-header" data-astro-cid-loewgr25> <h2 class="gg-headline" data-astro-cid-loewgr25>Onze projecten</h2> <p class="gg-sub" data-astro-cid-loewgr25>Een greep uit de campagnes en websites die wij hebben gebouwd.</p> </div> <div class="gg-grid" data-astro-cid-loewgr25> <figure class="gg-figure" data-astro-cid-loewgr25> <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Dashboard" class="gg-img" loading="lazy" data-astro-cid-loewgr25> <figcaption class="gg-caption" data-astro-cid-loewgr25>Google Ads Dashboard</figcaption> </figure><figure class="gg-figure" data-astro-cid-loewgr25> <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="Analytics" class="gg-img" loading="lazy" data-astro-cid-loewgr25> <figcaption class="gg-caption" data-astro-cid-loewgr25>Analytics Rapport</figcaption> </figure><figure class="gg-figure" data-astro-cid-loewgr25> <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="Team" class="gg-img" loading="lazy" data-astro-cid-loewgr25> <figcaption class="gg-caption" data-astro-cid-loewgr25>Team brainstorm</figcaption> </figure><figure class="gg-figure" data-astro-cid-loewgr25> <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80" alt="Strategie" class="gg-img" loading="lazy" data-astro-cid-loewgr25> <figcaption class="gg-caption" data-astro-cid-loewgr25>Strategiesessie</figcaption> </figure><figure class="gg-figure" data-astro-cid-loewgr25> <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80" alt="Presentatie" class="gg-img" loading="lazy" data-astro-cid-loewgr25> <figcaption class="gg-caption" data-astro-cid-loewgr25>Klantpresentatie</figcaption> </figure><figure class="gg-figure" data-astro-cid-loewgr25> <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80" alt="Samenwerking" class="gg-img" loading="lazy" data-astro-cid-loewgr25> <figcaption class="gg-caption" data-astro-cid-loewgr25>Samenwerking</figcaption> </figure> </div> </div> </section>
+<section class="gg gg--cols-3 gg--gap-md"> <div class="gg-inner"> <div class="gg-header"> <h2 class="gg-headline">Onze projecten</h2> <p class="gg-sub">Een greep uit de campagnes en websites die wij hebben gebouwd.</p> </div> <div class="gg-grid"> <figure class="gg-figure"> <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Dashboard" class="gg-img" loading="lazy"> <figcaption class="gg-caption">Google Ads Dashboard</figcaption> </figure><figure class="gg-figure"> <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="Analytics" class="gg-img" loading="lazy"> <figcaption class="gg-caption">Analytics Rapport</figcaption> </figure><figure class="gg-figure"> <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="Team" class="gg-img" loading="lazy"> <figcaption class="gg-caption">Team brainstorm</figcaption> </figure><figure class="gg-figure"> <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80" alt="Strategie" class="gg-img" loading="lazy"> <figcaption class="gg-caption">Strategiesessie</figcaption> </figure><figure class="gg-figure"> <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80" alt="Presentatie" class="gg-img" loading="lazy"> <figcaption class="gg-caption">Klantpresentatie</figcaption> </figure><figure class="gg-figure"> <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80" alt="Samenwerking" class="gg-img" loading="lazy"> <figcaption class="gg-caption">Samenwerking</figcaption> </figure> </div> </div> </section>
 
-
+<style>
+.gg{padding:5rem 2rem;background:#fff}
+.gg-inner{max-width:1280px;margin:0 auto}
+.gg-header{text-align:center;max-width:640px;margin:0 auto 3rem}
+.gg-headline{font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;letter-spacing:-.03em;margin:0 0 .75rem}
+.gg-sub{font-size:1.0625rem;color:#6b7280;line-height:1.6;margin:0}
+.gg-grid{display:grid}
+.gg--cols-2 .gg-grid{grid-template-columns:repeat(2,1fr)}
+.gg--cols-3 .gg-grid{grid-template-columns:repeat(3,1fr)}
+.gg--cols-4 .gg-grid{grid-template-columns:repeat(4,1fr)}
+.gg--gap-sm .gg-grid{gap:.5rem}
+.gg--gap-md .gg-grid{gap:1rem}
+.gg--gap-lg .gg-grid{gap:1.5rem}
+.gg-figure{margin:0;overflow:hidden;border-radius:.5rem;position:relative}
+.gg-img{width:100%;height:280px;object-fit:cover;display:block;transition:transform .4s ease}
+.gg-figure:hover .gg-img{transform:scale(1.04)}
+.gg-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,#0009);color:#fff;padding:1.5rem .875rem .75rem;font-size:.8125rem}
+.gg--cols-3 .gg-grid,.gg--cols-4 .gg-grid{grid-template-columns:repeat(2,1fr)}
+.gg-grid{grid-template-columns:1fr!important}
+</style>

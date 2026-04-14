@@ -2,6 +2,19 @@
 // ContentWithSidebar — recovered from blurr-components.pages.dev
 ---
 
-<div class="cws-wrap" data-astro-cid-7ovtboe2> <div class="cws-main" data-astro-cid-7ovtboe2> <h2 class="cws-heading" data-astro-cid-7ovtboe2>Waarom bedrijven kiezen voor BLURR</h2> <p class="cws-para" data-astro-cid-7ovtboe2>Marketing is geen kostenpost — het is de motor van je groei.</p> </div> <aside class="cws-sidebar" data-astro-cid-7ovtboe2> <div class="cws-sidebar-inner" data-astro-cid-7ovtboe2> <h3 class="cws-sidebar-title" data-astro-cid-7ovtboe2>Snelle feiten</h3> <dl class="cws-facts" data-astro-cid-7ovtboe2> <div class="cws-fact" data-astro-cid-7ovtboe2> <dt class="cws-fact-label" data-astro-cid-7ovtboe2>Opgericht</dt> <dd class="cws-fact-value" data-astro-cid-7ovtboe2>2019</dd> </div><div class="cws-fact" data-astro-cid-7ovtboe2> <dt class="cws-fact-label" data-astro-cid-7ovtboe2>Klanten geholpen</dt> <dd class="cws-fact-value" data-astro-cid-7ovtboe2>140+</dd> </div><div class="cws-fact" data-astro-cid-7ovtboe2> <dt class="cws-fact-label" data-astro-cid-7ovtboe2>Team</dt> <dd class="cws-fact-value" data-astro-cid-7ovtboe2>18 specialisten</dd> </div> </dl> <a class="cws-cta" href="/contact" data-astro-cid-7ovtboe2>Plan een gesprek</a> </div> </aside> </div>
+<div class="cws-wrap"> <div class="cws-main"> <h2 class="cws-heading">Waarom bedrijven kiezen voor BLURR</h2> <p class="cws-para">Marketing is geen kostenpost — het is de motor van je groei.</p> </div> <aside class="cws-sidebar"> <div class="cws-sidebar-inner"> <h3 class="cws-sidebar-title">Snelle feiten</h3> <dl class="cws-facts"> <div class="cws-fact"> <dt class="cws-fact-label">Opgericht</dt> <dd class="cws-fact-value">2019</dd> </div><div class="cws-fact"> <dt class="cws-fact-label">Klanten geholpen</dt> <dd class="cws-fact-value">140+</dd> </div><div class="cws-fact"> <dt class="cws-fact-label">Team</dt> <dd class="cws-fact-value">18 specialisten</dd> </div> </dl> <a class="cws-cta" href="/contact">Plan een gesprek</a> </div> </aside> </div>
 
-
+<style>
+.cws-wrap{display:grid;grid-template-columns:1fr 280px;gap:3rem;padding:2.5rem 0;align-items:start}
+.cws-wrap{grid-template-columns:1fr}
+.cws-heading{font-size:2rem;font-weight:800;color:var(--color-primary, #0a0a0a);margin:0 0 1.5rem}
+.cws-para{font-size:1rem;line-height:1.8;color:#444;margin:0 0 1.25rem}
+.cws-sidebar-inner{background:#f9f9f9;border:1px solid #ebebeb;border-radius:12px;padding:1.75rem;position:sticky;top:2rem}
+.cws-sidebar-title{font-size:1rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 1.25rem;padding-bottom:1rem;border-bottom:1px solid #e5e5e5}
+.cws-facts{margin:0 0 1.5rem;display:flex;flex-direction:column;gap:.75rem}
+.cws-fact{display:flex;justify-content:space-between;align-items:center;font-size:.9rem}
+.cws-fact-label{color:#777}
+.cws-fact-value{font-weight:700;color:var(--color-primary, #0a0a0a);margin:0}
+.cws-cta{display:block;text-align:center;background:var(--color-accent, #6366f1);color:#fff;text-decoration:none;padding:.85rem 1rem;border-radius:8px;font-size:.9rem;font-weight:600;transition:opacity .2s}
+.cws-cta:hover{opacity:.88}
+</style>

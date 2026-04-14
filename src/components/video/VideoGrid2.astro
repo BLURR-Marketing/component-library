@@ -2,6 +2,27 @@
 // VideoGrid2 — recovered from blurr-components.pages.dev
 ---
 
-<section class="vg2" data-astro-cid-ky6jbay5> <div class="vg2__inner" data-astro-cid-ky6jbay5> <h2 class="vg2__headline" data-astro-cid-ky6jbay5>Cases in beeld</h2> <div class="vg2__grid" data-astro-cid-ky6jbay5> <div class="vg2__card vg2__card--featured" data-astro-cid-ky6jbay5> <div class="vg2__thumb" data-astro-cid-ky6jbay5> <span class="vg2__play" aria-hidden="true" data-astro-cid-ky6jbay5>▶</span> <span class="vg2__duration" data-astro-cid-ky6jbay5>4:12</span> </div> <div class="vg2__meta" data-astro-cid-ky6jbay5> <span class="vg2__cat" data-astro-cid-ky6jbay5>Case</span> <h3 class="vg2__title" data-astro-cid-ky6jbay5>TechFlow: van 0 naar 280% meer leads</h3> </div> </div><div class="vg2__card" data-astro-cid-ky6jbay5> <div class="vg2__thumb" data-astro-cid-ky6jbay5> <span class="vg2__play" aria-hidden="true" data-astro-cid-ky6jbay5>▶</span> <span class="vg2__duration" data-astro-cid-ky6jbay5>3:50</span> </div> <div class="vg2__meta" data-astro-cid-ky6jbay5> <span class="vg2__cat" data-astro-cid-ky6jbay5>Case</span> <h3 class="vg2__title" data-astro-cid-ky6jbay5>Mode &amp; Meer: 5.1× ROAS</h3> </div> </div><div class="vg2__card" data-astro-cid-ky6jbay5> <div class="vg2__thumb" data-astro-cid-ky6jbay5> <span class="vg2__play" aria-hidden="true" data-astro-cid-ky6jbay5>▶</span> <span class="vg2__duration" data-astro-cid-ky6jbay5>8:21</span> </div> <div class="vg2__meta" data-astro-cid-ky6jbay5> <span class="vg2__cat" data-astro-cid-ky6jbay5>Proces</span> <h3 class="vg2__title" data-astro-cid-ky6jbay5>BLURR aanpak uitgelegd</h3> </div> </div> </div> </div> </section>
+<section class="vg2"> <div class="vg2__inner"> <h2 class="vg2__headline">Cases in beeld</h2> <div class="vg2__grid"> <div class="vg2__card vg2__card--featured"> <div class="vg2__thumb"> <span class="vg2__play" aria-hidden="true">▶</span> <span class="vg2__duration">4:12</span> </div> <div class="vg2__meta"> <span class="vg2__cat">Case</span> <h3 class="vg2__title">TechFlow: van 0 naar 280% meer leads</h3> </div> </div><div class="vg2__card"> <div class="vg2__thumb"> <span class="vg2__play" aria-hidden="true">▶</span> <span class="vg2__duration">3:50</span> </div> <div class="vg2__meta"> <span class="vg2__cat">Case</span> <h3 class="vg2__title">Mode &amp; Meer: 5.1× ROAS</h3> </div> </div><div class="vg2__card"> <div class="vg2__thumb"> <span class="vg2__play" aria-hidden="true">▶</span> <span class="vg2__duration">8:21</span> </div> <div class="vg2__meta"> <span class="vg2__cat">Proces</span> <h3 class="vg2__title">BLURR aanpak uitgelegd</h3> </div> </div> </div> </div> </section>
 
-
+<style>
+.vg2{background:#fff;padding:4rem 1.5rem}
+.vg2__inner{max-width:1060px;margin:0 auto}
+.vg2__headline{font-size:1.75rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 2rem}
+.vg2__grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto auto;gap:1.25rem}
+.vg2__card--featured{grid-column:1 / 3;grid-row:1 / 3}
+.vg2__card{border-radius:12px;overflow:hidden;background:#f4f4f6;transition:transform .2s;cursor:pointer}
+.vg2__card:hover{transform:translateY(-3px)}
+.vg2__thumb{aspect-ratio:16/9;background:var(--color-primary, #0a0a0a);display:flex;align-items:center;justify-content:center;position:relative}
+.vg2__card--featured .vg2__thumb{background:linear-gradient(135deg,#1e1b4b 0%,var(--color-accent, #6366f1) 100%)}
+.vg2__play{font-size:1.5rem;color:#ffffffd9;background:#ffffff26;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .2s;padding-left:4px}
+.vg2__card:hover .vg2__play{background:#ffffff4d}
+.vg2__card--featured .vg2__play{width:64px;height:64px;font-size:1.8rem}
+.vg2__duration{position:absolute;bottom:.6rem;right:.75rem;background:#000000b3;color:#fff;font-size:.72rem;font-weight:600;padding:.2rem .45rem;border-radius:4px;font-variant-numeric:tabular-nums}
+.vg2__meta{padding:.85rem 1rem}
+.vg2__card--featured .vg2__meta{padding:1rem 1.25rem}
+.vg2__cat{font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent, #6366f1);display:block;margin-bottom:.3rem}
+.vg2__title{font-size:.9rem;font-weight:600;color:var(--color-primary, #0a0a0a);margin:0;line-height:1.35}
+.vg2__card--featured .vg2__title{font-size:1.1rem}
+.vg2__grid{grid-template-columns:1fr}
+.vg2__card--featured{grid-column:1;grid-row:auto}
+</style>

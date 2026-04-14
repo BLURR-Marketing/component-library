@@ -2,6 +2,12 @@
 // TextScroll — recovered from blurr-components.pages.dev
 ---
 
-<div class="tx-scroll" aria-hidden="true" data-astro-cid-6x6wm5ql> <div class="tx-scroll__track" style="animation-duration: 30s" data-astro-cid-6x6wm5ql> <span class="tx-scroll__item" data-astro-cid-6x6wm5ql>Google Ads</span><span class="tx-scroll__item" data-astro-cid-6x6wm5ql>Meta Ads</span><span class="tx-scroll__item" data-astro-cid-6x6wm5ql>SEO</span><span class="tx-scroll__item" data-astro-cid-6x6wm5ql>Content Marketing</span><span class="tx-scroll__item" data-astro-cid-6x6wm5ql>E-mail Flows</span><span class="tx-scroll__item" data-astro-cid-6x6wm5ql>CRO</span><span class="tx-scroll__item" data-astro-cid-6x6wm5ql>Analytics</span><span class="tx-scroll__item" data-astro-cid-6x6wm5ql>Google Ads</span><span class="tx-scroll__item" data-astro-cid-6x6wm5ql>Meta Ads</span><span class="tx-scroll__item" data-astro-cid-6x6wm5ql>SEO</span><span class="tx-scroll__item" data-astro-cid-6x6wm5ql>Content Marketing</span><span class="tx-scroll__item" data-astro-cid-6x6wm5ql>E-mail Flows</span><span class="tx-scroll__item" data-astro-cid-6x6wm5ql>CRO</span><span class="tx-scroll__item" data-astro-cid-6x6wm5ql>Analytics</span> </div> </div>
+<div class="tx-scroll" aria-hidden="true"> <div class="tx-scroll__track" style="animation-duration: 30s"> <span class="tx-scroll__item">Google Ads</span><span class="tx-scroll__item">Meta Ads</span><span class="tx-scroll__item">SEO</span><span class="tx-scroll__item">Content Marketing</span><span class="tx-scroll__item">E-mail Flows</span><span class="tx-scroll__item">CRO</span><span class="tx-scroll__item">Analytics</span><span class="tx-scroll__item">Google Ads</span><span class="tx-scroll__item">Meta Ads</span><span class="tx-scroll__item">SEO</span><span class="tx-scroll__item">Content Marketing</span><span class="tx-scroll__item">E-mail Flows</span><span class="tx-scroll__item">CRO</span><span class="tx-scroll__item">Analytics</span> </div> </div>
 
-
+<style>
+.tx-scroll{overflow:hidden;white-space:nowrap;padding:.75rem 0;border-top:1px solid #efefef;border-bottom:1px solid #efefef}
+.tx-scroll__track{display:inline-flex;gap:2rem;animation:tx-scroll-move linear infinite}
+.tx-scroll:hover .tx-scroll__track{animation-play-state:paused}
+.tx-scroll__item{font-size:.875rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#999}
+.tx-scroll__item:after{content:"·";margin-left:2rem;color:var(--color-accent)}
+</style>

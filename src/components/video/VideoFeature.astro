@@ -2,6 +2,20 @@
 // VideoFeature — recovered from blurr-components.pages.dev
 ---
 
-<section class="vft" data-astro-cid-ireafdx7> <h2 class="vft__heading" data-astro-cid-ireafdx7>Waarom BLURR</h2> <div class="vft__layout" data-astro-cid-ireafdx7> <div class="vft__media" data-astro-cid-ireafdx7> <div class="vft__player" data-astro-cid-ireafdx7> <div class="vft__placeholder" aria-label="Onze aanpak in beeld" data-astro-cid-ireafdx7> <svg width="52" height="52" viewBox="0 0 52 52" data-astro-cid-ireafdx7> <circle cx="26" cy="26" r="26" fill="rgba(99,102,241,0.85)" data-astro-cid-ireafdx7></circle> <polygon points="21,13 43,26 21,39" fill="#fff" data-astro-cid-ireafdx7></polygon> </svg> </div> </div> <p class="vft__video-title" data-astro-cid-ireafdx7>Onze aanpak in beeld</p> </div> <div class="vft__features" data-astro-cid-ireafdx7> <div class="vft__feature" data-astro-cid-ireafdx7> <span class="vft__icon" aria-hidden="true" data-astro-cid-ireafdx7>📊</span> <div data-astro-cid-ireafdx7> <p class="vft__feat-title" data-astro-cid-ireafdx7>Data-gedreven</p> <p class="vft__feat-body" data-astro-cid-ireafdx7>Elke beslissing onderbouwd met cijfers.</p> </div> </div><div class="vft__feature" data-astro-cid-ireafdx7> <span class="vft__icon" aria-hidden="true" data-astro-cid-ireafdx7>⚡</span> <div data-astro-cid-ireafdx7> <p class="vft__feat-title" data-astro-cid-ireafdx7>Snel en agile</p> <p class="vft__feat-body" data-astro-cid-ireafdx7>Wekelijkse sprints.</p> </div> </div><div class="vft__feature" data-astro-cid-ireafdx7> <span class="vft__icon" aria-hidden="true" data-astro-cid-ireafdx7>🎯</span> <div data-astro-cid-ireafdx7> <p class="vft__feat-title" data-astro-cid-ireafdx7>Resultaatgericht</p> <p class="vft__feat-body" data-astro-cid-ireafdx7>KPIs bepalen we samen vóór de lancering.</p> </div> </div> </div> </div> </section>
+<section class="vft"> <h2 class="vft__heading">Waarom BLURR</h2> <div class="vft__layout"> <div class="vft__media"> <div class="vft__player"> <div class="vft__placeholder" aria-label="Onze aanpak in beeld"> <svg width="52" height="52" viewBox="0 0 52 52"> <circle cx="26" cy="26" r="26" fill="rgba(99,102,241,0.85)"></circle> <polygon points="21,13 43,26 21,39" fill="#fff"></polygon> </svg> </div> </div> <p class="vft__video-title">Onze aanpak in beeld</p> </div> <div class="vft__features"> <div class="vft__feature"> <span class="vft__icon" aria-hidden="true">📊</span> <div> <p class="vft__feat-title">Data-gedreven</p> <p class="vft__feat-body">Elke beslissing onderbouwd met cijfers.</p> </div> </div><div class="vft__feature"> <span class="vft__icon" aria-hidden="true">⚡</span> <div> <p class="vft__feat-title">Snel en agile</p> <p class="vft__feat-body">Wekelijkse sprints.</p> </div> </div><div class="vft__feature"> <span class="vft__icon" aria-hidden="true">🎯</span> <div> <p class="vft__feat-title">Resultaatgericht</p> <p class="vft__feat-body">KPIs bepalen we samen vóór de lancering.</p> </div> </div> </div> </div> </section>
 
-
+<style>
+.vft{padding:3rem 0}
+.vft__heading{font-size:clamp(1.75rem,3vw,2.5rem);font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 3rem;text-align:center}
+.vft__layout{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.vft__player{aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#111}
+.vft__video{width:100%;height:100%;object-fit:cover}
+.vft__placeholder{width:100%;height:100%;background:linear-gradient(135deg,#0a0a1a,#1a1a3a);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.vft__video-title{font-size:.9rem;color:#888;margin:.6rem 0 0;font-style:italic}
+.vft__features{display:flex;flex-direction:column;gap:1.5rem}
+.vft__feature{display:flex;gap:1rem;align-items:flex-start}
+.vft__icon{font-size:1.5rem;flex-shrink:0;margin-top:.1em}
+.vft__feat-title{font-size:1rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 .3rem}
+.vft__feat-body{font-size:.9rem;color:#666;line-height:1.6;margin:0}
+.vft__layout{grid-template-columns:1fr}
+</style>

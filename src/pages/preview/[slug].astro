@@ -7,33 +7,436 @@
 import { COMPONENTS, getComponent } from '../../data/components';
 
 // Import alle componenten statisch
-import NavSimple from '../../components/nav/NavSimple.astro';
-import NavSticky from '../../components/nav/NavSticky.astro';
-import HeroCentered from '../../components/hero/HeroCentered.astro';
-import HeroSplit from '../../components/hero/HeroSplit.astro';
-import HeroFullscreen from '../../components/hero/HeroFullscreen.astro';
-import ManifestBlock from '../../components/sections/ManifestBlock.astro';
-import FeaturesGrid from '../../components/sections/FeaturesGrid.astro';
-import ProcessSteps from '../../components/sections/ProcessSteps.astro';
-import PricingCards from '../../components/sections/PricingCards.astro';
-import TestimonialsGrid from '../../components/social-proof/TestimonialsGrid.astro';
-import LogoBar from '../../components/social-proof/LogoBar.astro';
-import MarqueeTicker from '../../components/social-proof/MarqueeTicker.astro';
-import StatsBar from '../../components/social-proof/StatsBar.astro';
 import CTABanner from '../../components/cta/CTABanner.astro';
-import ContactForm from '../../components/forms/ContactForm.astro';
-import NewsletterBar from '../../components/forms/NewsletterBar.astro';
-import FooterSimple from '../../components/footer/FooterSimple.astro';
+import CtaAccent from '../../components/cta/CtaAccent.astro';
+import CtaAngular from '../../components/cta/CtaAngular.astro';
+import CtaBigQuote from '../../components/cta/CtaBigQuote.astro';
+import CtaBooking from '../../components/cta/CtaBooking.astro';
+import CtaCard from '../../components/cta/CtaCard.astro';
+import CtaCards from '../../components/cta/CtaCards.astro';
+import CtaDark from '../../components/cta/CtaDark.astro';
+import CtaDownload from '../../components/cta/CtaDownload.astro';
+import CtaEmail from '../../components/cta/CtaEmail.astro';
+import CtaFreeTrial from '../../components/cta/CtaFreeTrial.astro';
+import CtaFullWidth from '../../components/cta/CtaFullWidth.astro';
+import CtaGradient from '../../components/cta/CtaGradient.astro';
+import CtaIconRow from '../../components/cta/CtaIconRow.astro';
+import CtaImageBg from '../../components/cta/CtaImageBg.astro';
+import CtaMinimal from '../../components/cta/CtaMinimal.astro';
+import CtaNewsletter from '../../components/cta/CtaNewsletter.astro';
+import CtaPhone from '../../components/cta/CtaPhone.astro';
+import CtaPricing from '../../components/cta/CtaPricing.astro';
+import CtaSplit from '../../components/cta/CtaSplit.astro';
+import CtaStats from '../../components/cta/CtaStats.astro';
+import CtaSticky from '../../components/cta/CtaSticky.astro';
+import CtaUrgent from '../../components/cta/CtaUrgent.astro';
+import CtaVideo from '../../components/cta/CtaVideo.astro';
+import CtaWithTestimonial from '../../components/cta/CtaWithTestimonial.astro';
+import FooterAccordion from '../../components/footer/FooterAccordion.astro';
+import FooterApp from '../../components/footer/FooterApp.astro';
+import FooterBigText from '../../components/footer/FooterBigText.astro';
+import FooterBrand from '../../components/footer/FooterBrand.astro';
+import FooterCentered from '../../components/footer/FooterCentered.astro';
+import FooterCompact from '../../components/footer/FooterCompact.astro';
+import FooterContact from '../../components/footer/FooterContact.astro';
+import FooterCta from '../../components/footer/FooterCta.astro';
+import FooterDark from '../../components/footer/FooterDark.astro';
+import FooterEditorial from '../../components/footer/FooterEditorial.astro';
 import FooterFull from '../../components/footer/FooterFull.astro';
-import Button from '../../components/ui/Button.astro';
-import Badge from '../../components/ui/Badge.astro';
-import Card from '../../components/ui/Card.astro';
-import AccordionFAQ from '../../components/ui/AccordionFAQ.astro';
+import FooterGradient from '../../components/footer/FooterGradient.astro';
+import FooterGrid from '../../components/footer/FooterGrid.astro';
+import FooterMega from '../../components/footer/FooterMega.astro';
+import FooterMinimal from '../../components/footer/FooterMinimal.astro';
+import FooterMinimalDark from '../../components/footer/FooterMinimalDark.astro';
+import FooterModern from '../../components/footer/FooterModern.astro';
+import FooterNewsletter from '../../components/footer/FooterNewsletter.astro';
+import FooterRetro from '../../components/footer/FooterRetro.astro';
+import FooterSimple from '../../components/footer/FooterSimple.astro';
+import FooterSocial from '../../components/footer/FooterSocial.astro';
+import FooterSplit from '../../components/footer/FooterSplit.astro';
+import FooterSticky from '../../components/footer/FooterSticky.astro';
+import FooterTech from '../../components/footer/FooterTech.astro';
+import FooterWave from '../../components/footer/FooterWave.astro';
+import ContactForm from '../../components/forms/ContactForm.astro';
+import FormBooking from '../../components/forms/FormBooking.astro';
+import FormCallback from '../../components/forms/FormCallback.astro';
+import FormChat from '../../components/forms/FormChat.astro';
+import FormCheckout from '../../components/forms/FormCheckout.astro';
+import FormComplex from '../../components/forms/FormComplex.astro';
+import FormContact from '../../components/forms/FormContact.astro';
+import FormDownload from '../../components/forms/FormDownload.astro';
+import FormEventReg from '../../components/forms/FormEventReg.astro';
+import FormFeedback from '../../components/forms/FormFeedback.astro';
+import FormFilter from '../../components/forms/FormFilter.astro';
+import FormJobApplication from '../../components/forms/FormJobApplication.astro';
+import FormLeadMagnet from '../../components/forms/FormLeadMagnet.astro';
+import FormLogin from '../../components/forms/FormLogin.astro';
+import FormMini from '../../components/forms/FormMini.astro';
+import FormMultiStep from '../../components/forms/FormMultiStep.astro';
+import FormNewsletter from '../../components/forms/FormNewsletter.astro';
+import FormNewsletter2 from '../../components/forms/FormNewsletter2.astro';
+import FormOnboarding from '../../components/forms/FormOnboarding.astro';
+import FormPassword from '../../components/forms/FormPassword.astro';
+import FormPayment from '../../components/forms/FormPayment.astro';
+import FormProfile from '../../components/forms/FormProfile.astro';
+import FormQuick from '../../components/forms/FormQuick.astro';
+import FormQuote from '../../components/forms/FormQuote.astro';
+import FormRegister from '../../components/forms/FormRegister.astro';
+import FormReview from '../../components/forms/FormReview.astro';
+import FormSearch from '../../components/forms/FormSearch.astro';
+import FormSettings from '../../components/forms/FormSettings.astro';
+import FormSubscribe from '../../components/forms/FormSubscribe.astro';
+import FormSurvey from '../../components/forms/FormSurvey.astro';
+import FormUpload from '../../components/forms/FormUpload.astro';
+import FormWaitlist from '../../components/forms/FormWaitlist.astro';
+import NewsletterBar from '../../components/forms/NewsletterBar.astro';
+import HeadingAccent from '../../components/heading/HeadingAccent.astro';
+import HeadingAnimated from '../../components/heading/HeadingAnimated.astro';
+import HeadingBadge from '../../components/heading/HeadingBadge.astro';
+import HeadingCategory from '../../components/heading/HeadingCategory.astro';
+import HeadingCenter from '../../components/heading/HeadingCenter.astro';
+import HeadingCentered from '../../components/heading/HeadingCentered.astro';
+import HeadingDark from '../../components/heading/HeadingDark.astro';
+import HeadingEditorial from '../../components/heading/HeadingEditorial.astro';
+import HeadingFloat from '../../components/heading/HeadingFloat.astro';
+import HeadingGradient from '../../components/heading/HeadingGradient.astro';
+import HeadingHighlight from '../../components/heading/HeadingHighlight.astro';
+import HeadingInline from '../../components/heading/HeadingInline.astro';
+import HeadingLarge from '../../components/heading/HeadingLarge.astro';
+import HeadingLeft from '../../components/heading/HeadingLeft.astro';
+import HeadingMinimal from '../../components/heading/HeadingMinimal.astro';
+import HeadingMono from '../../components/heading/HeadingMono.astro';
+import HeadingNumber from '../../components/heading/HeadingNumber.astro';
+import HeadingSplit from '../../components/heading/HeadingSplit.astro';
+import HeadingStacked from '../../components/heading/HeadingStacked.astro';
+import HeadingTag from '../../components/heading/HeadingTag.astro';
+import HeadingUnderline from '../../components/heading/HeadingUnderline.astro';
+import HeadingWide from '../../components/heading/HeadingWide.astro';
+import HeadingWithLabel from '../../components/heading/HeadingWithLabel.astro';
+import HeadingWithLine from '../../components/heading/HeadingWithLine.astro';
+import HeadingWithStats from '../../components/heading/HeadingWithStats.astro';
+import HeroAsymmetric from '../../components/hero/HeroAsymmetric.astro';
+import HeroBento from '../../components/hero/HeroBento.astro';
+import HeroBold from '../../components/hero/HeroBold.astro';
+import HeroBoldSplit from '../../components/hero/HeroBoldSplit.astro';
+import HeroCentered from '../../components/hero/HeroCentered.astro';
+import HeroCenteredMinimal from '../../components/hero/HeroCenteredMinimal.astro';
+import HeroCta from '../../components/hero/HeroCta.astro';
+import HeroDark from '../../components/hero/HeroDark.astro';
 import HeroEditorial from '../../components/hero/HeroEditorial.astro';
-import StatementSection from '../../components/sections/StatementSection.astro';
-import StatsEditorial from '../../components/social-proof/StatsEditorial.astro';
-import WowUSP from '../../components/sections/WowUSP.astro';
+import HeroFloatingTestimonial from '../../components/hero/HeroFloatingTestimonial.astro';
+import HeroFullscreen from '../../components/hero/HeroFullscreen.astro';
+import HeroGradient from '../../components/hero/HeroGradient.astro';
+import HeroMagazine from '../../components/hero/HeroMagazine.astro';
+import HeroMinimal from '../../components/hero/HeroMinimal.astro';
+import HeroNeon from '../../components/hero/HeroNeon.astro';
+import HeroParallax from '../../components/hero/HeroParallax.astro';
+import HeroPortfolio from '../../components/hero/HeroPortfolio.astro';
+import HeroProduct from '../../components/hero/HeroProduct.astro';
+import HeroSaas from '../../components/hero/HeroSaas.astro';
+import HeroSplit from '../../components/hero/HeroSplit.astro';
+import HeroSplitAngle from '../../components/hero/HeroSplitAngle.astro';
+import HeroSplitDark from '../../components/hero/HeroSplitDark.astro';
+import HeroSplitReversed from '../../components/hero/HeroSplitReversed.astro';
+import HeroStats from '../../components/hero/HeroStats.astro';
+import HeroTypography from '../../components/hero/HeroTypography.astro';
+import HeroVideoGrid from '../../components/hero/HeroVideoGrid.astro';
+import IconAccordion from '../../components/icon/IconAccordion.astro';
+import IconBadge from '../../components/icon/IconBadge.astro';
+import IconBento from '../../components/icon/IconBento.astro';
+import IconCallout from '../../components/icon/IconCallout.astro';
+import IconCard from '../../components/icon/IconCard.astro';
+import IconCards from '../../components/icon/IconCards.astro';
+import IconCircle from '../../components/icon/IconCircle.astro';
+import IconColumns from '../../components/icon/IconColumns.astro';
+import IconComparison from '../../components/icon/IconComparison.astro';
+import IconCta from '../../components/icon/IconCta.astro';
+import IconDark from '../../components/icon/IconDark.astro';
+import IconEmoji from '../../components/icon/IconEmoji.astro';
+import IconFeatures from '../../components/icon/IconFeatures.astro';
+import IconFlat from '../../components/icon/IconFlat.astro';
+import IconGradient from '../../components/icon/IconGradient.astro';
+import IconGrid from '../../components/icon/IconGrid.astro';
+import IconHero from '../../components/icon/IconHero.astro';
+import IconHighlight from '../../components/icon/IconHighlight.astro';
+import IconHorizontal from '../../components/icon/IconHorizontal.astro';
+import IconInline from '../../components/icon/IconInline.astro';
+import IconLarge from '../../components/icon/IconLarge.astro';
+import IconList from '../../components/icon/IconList.astro';
+import IconMasonry from '../../components/icon/IconMasonry.astro';
+import IconMinimal from '../../components/icon/IconMinimal.astro';
+import IconNav from '../../components/icon/IconNav.astro';
+import IconNumbers from '../../components/icon/IconNumbers.astro';
+import IconPricing from '../../components/icon/IconPricing.astro';
+import IconProcess from '../../components/icon/IconProcess.astro';
+import IconRow from '../../components/icon/IconRow.astro';
+import IconServices from '../../components/icon/IconServices.astro';
+import IconShowcase from '../../components/icon/IconShowcase.astro';
+import IconSocial from '../../components/icon/IconSocial.astro';
+import IconSplit from '../../components/icon/IconSplit.astro';
+import IconStack from '../../components/icon/IconStack.astro';
+import IconStats from '../../components/icon/IconStats.astro';
+import IconTabs from '../../components/icon/IconTabs.astro';
+import IconTeam from '../../components/icon/IconTeam.astro';
+import IconTechnology from '../../components/icon/IconTechnology.astro';
+import IconTimeline from '../../components/icon/IconTimeline.astro';
+import IconWithText from '../../components/icon/IconWithText.astro';
+import ImageBackground from '../../components/image/ImageBackground.astro';
+import ImageBanner from '../../components/image/ImageBanner.astro';
+import ImageBefore from '../../components/image/ImageBefore.astro';
+import ImageCaption from '../../components/image/ImageCaption.astro';
+import ImageCarousel from '../../components/image/ImageCarousel.astro';
+import ImageCinematic from '../../components/image/ImageCinematic.astro';
+import ImageComparison from '../../components/image/ImageComparison.astro';
+import ImageFeatured from '../../components/image/ImageFeatured.astro';
+import ImageFullscreen from '../../components/image/ImageFullscreen.astro';
+import ImageGallery from '../../components/image/ImageGallery.astro';
+import ImageGrid2x2 from '../../components/image/ImageGrid2x2.astro';
+import ImageHero from '../../components/image/ImageHero.astro';
+import ImageLightbox from '../../components/image/ImageLightbox.astro';
+import ImageMasonry from '../../components/image/ImageMasonry.astro';
+import ImageMosaic from '../../components/image/ImageMosaic.astro';
+import ImageOverlay from '../../components/image/ImageOverlay.astro';
+import ImagePolaroid from '../../components/image/ImagePolaroid.astro';
+import ImagePortfolio from '../../components/image/ImagePortfolio.astro';
+import ImageProfile from '../../components/image/ImageProfile.astro';
+import ImageRound from '../../components/image/ImageRound.astro';
+import ImageShowcase from '../../components/image/ImageShowcase.astro';
+import ImageSplit from '../../components/image/ImageSplit.astro';
+import ImageTimeline from '../../components/image/ImageTimeline.astro';
+import ImageWithCaption from '../../components/image/ImageWithCaption.astro';
+import ImageWithStats from '../../components/image/ImageWithStats.astro';
+import ListBullets from '../../components/list/ListBullets.astro';
+import ListCards from '../../components/list/ListCards.astro';
+import ListChecklist from '../../components/list/ListChecklist.astro';
+import ListCollapsible from '../../components/list/ListCollapsible.astro';
+import ListComparison from '../../components/list/ListComparison.astro';
+import ListDivided from '../../components/list/ListDivided.astro';
+import ListFeatures from '../../components/list/ListFeatures.astro';
+import ListFilter from '../../components/list/ListFilter.astro';
+import ListGrid from '../../components/list/ListGrid.astro';
+import ListHighlight from '../../components/list/ListHighlight.astro';
+import ListHorizontal from '../../components/list/ListHorizontal.astro';
+import ListIcons from '../../components/list/ListIcons.astro';
+import ListLinks from '../../components/list/ListLinks.astro';
+import ListMinimal from '../../components/list/ListMinimal.astro';
+import ListNumbered from '../../components/list/ListNumbered.astro';
+import ListOrdered from '../../components/list/ListOrdered.astro';
+import ListPrice from '../../components/list/ListPrice.astro';
+import ListProcess from '../../components/list/ListProcess.astro';
+import ListPros from '../../components/list/ListPros.astro';
+import ListStats from '../../components/list/ListStats.astro';
+import ListSteps from '../../components/list/ListSteps.astro';
+import ListTimeline from '../../components/list/ListTimeline.astro';
+import NavAccent from '../../components/nav/NavAccent.astro';
+import NavAnimated from '../../components/nav/NavAnimated.astro';
+import NavBreadcrumb from '../../components/nav/NavBreadcrumb.astro';
+import NavCentered from '../../components/nav/NavCentered.astro';
+import NavColorful from '../../components/nav/NavColorful.astro';
+import NavCompact from '../../components/nav/NavCompact.astro';
+import NavDark from '../../components/nav/NavDark.astro';
+import NavDualLine from '../../components/nav/NavDualLine.astro';
+import NavEditorial from '../../components/nav/NavEditorial.astro';
+import NavFloating from '../../components/nav/NavFloating.astro';
+import NavGlass from '../../components/nav/NavGlass.astro';
+import NavIconLinks from '../../components/nav/NavIconLinks.astro';
+import NavLogoRight from '../../components/nav/NavLogoRight.astro';
+import NavMega from '../../components/nav/NavMega.astro';
+import NavMinimal from '../../components/nav/NavMinimal.astro';
+import NavMobileFirst from '../../components/nav/NavMobileFirst.astro';
+import NavOffcanvas from '../../components/nav/NavOffcanvas.astro';
+import NavPills from '../../components/nav/NavPills.astro';
+import NavSidebar from '../../components/nav/NavSidebar.astro';
+import NavSimple from '../../components/nav/NavSimple.astro';
+import NavSplit from '../../components/nav/NavSplit.astro';
+import NavStacked from '../../components/nav/NavStacked.astro';
+import NavSticky from '../../components/nav/NavSticky.astro';
+import NavTabs from '../../components/nav/NavTabs.astro';
+import NavTopBar from '../../components/nav/NavTopBar.astro';
+import NavTransparent from '../../components/nav/NavTransparent.astro';
+import NavUnderline from '../../components/nav/NavUnderline.astro';
+import NavWithBanner from '../../components/nav/NavWithBanner.astro';
+import NavWithDropdown from '../../components/nav/NavWithDropdown.astro';
+import NavWithSearch from '../../components/nav/NavWithSearch.astro';
+import ContentAccordion from '../../components/sections/ContentAccordion.astro';
+import ContentBadges from '../../components/sections/ContentBadges.astro';
+import ContentBullets from '../../components/sections/ContentBullets.astro';
+import ContentCallout from '../../components/sections/ContentCallout.astro';
+import ContentColumns from '../../components/sections/ContentColumns.astro';
+import ContentComparison from '../../components/sections/ContentComparison.astro';
+import ContentCta from '../../components/sections/ContentCta.astro';
+import ContentDivider from '../../components/sections/ContentDivider.astro';
+import ContentFaq from '../../components/sections/ContentFaq.astro';
+import ContentGrid from '../../components/sections/ContentGrid.astro';
+import ContentHighlight from '../../components/sections/ContentHighlight.astro';
+import ContentImageCaption from '../../components/sections/ContentImageCaption.astro';
+import ContentIntro from '../../components/sections/ContentIntro.astro';
+import ContentLead from '../../components/sections/ContentLead.astro';
+import ContentMedia from '../../components/sections/ContentMedia.astro';
+import ContentProCons from '../../components/sections/ContentProCons.astro';
+import ContentQuote from '../../components/sections/ContentQuote.astro';
+import ContentSplit from '../../components/sections/ContentSplit.astro';
+import ContentSteps from '../../components/sections/ContentSteps.astro';
+import ContentTable from '../../components/sections/ContentTable.astro';
+import ContentTestimonial from '../../components/sections/ContentTestimonial.astro';
+import ContentTimeline from '../../components/sections/ContentTimeline.astro';
+import ContentTwoUp from '../../components/sections/ContentTwoUp.astro';
+import ContentWithSidebar from '../../components/sections/ContentWithSidebar.astro';
+import ContentWithStats from '../../components/sections/ContentWithStats.astro';
+import FeaturesBento from '../../components/sections/FeaturesBento.astro';
+import FeaturesGrid from '../../components/sections/FeaturesGrid.astro';
+import FeaturesHorizontal from '../../components/sections/FeaturesHorizontal.astro';
+import FeaturesIconBar from '../../components/sections/FeaturesIconBar.astro';
+import FeaturesShowcase from '../../components/sections/FeaturesShowcase.astro';
+import HowItWorks from '../../components/sections/HowItWorks.astro';
 import LifestyleFullbleed from '../../components/sections/LifestyleFullbleed.astro';
+import ManifestBlock from '../../components/sections/ManifestBlock.astro';
+import PricingCards from '../../components/sections/PricingCards.astro';
+import PricingCompact from '../../components/sections/PricingCompact.astro';
+import PricingMenu from '../../components/sections/PricingMenu.astro';
+import PricingToggle from '../../components/sections/PricingToggle.astro';
+import ProcessSteps from '../../components/sections/ProcessSteps.astro';
+import ProcessTimeline from '../../components/sections/ProcessTimeline.astro';
+import ServiceCards from '../../components/sections/ServiceCards.astro';
+import StatementSection from '../../components/sections/StatementSection.astro';
+import WowUSP from '../../components/sections/WowUSP.astro';
+import CounterStats from '../../components/social-proof/CounterStats.astro';
+import LogoBar from '../../components/social-proof/LogoBar.astro';
+import LogoGrid from '../../components/social-proof/LogoGrid.astro';
+import LogoGridWithTitle from '../../components/social-proof/LogoGridWithTitle.astro';
+import LogosBanner from '../../components/social-proof/LogosBanner.astro';
+import MarqueeTicker from '../../components/social-proof/MarqueeTicker.astro';
+import NumberedStats from '../../components/social-proof/NumberedStats.astro';
+import PartnerLogos from '../../components/social-proof/PartnerLogos.astro';
+import StatsBar from '../../components/social-proof/StatsBar.astro';
+import StatsCounter from '../../components/social-proof/StatsCounter.astro';
+import StatsEditorial from '../../components/social-proof/StatsEditorial.astro';
+import TestimonialsCarousel from '../../components/social-proof/TestimonialsCarousel.astro';
+import TestimonialsCoverPhoto from '../../components/social-proof/TestimonialsCoverPhoto.astro';
+import TestimonialsDark from '../../components/social-proof/TestimonialsDark.astro';
+import TestimonialsGrid from '../../components/social-proof/TestimonialsGrid.astro';
+import TestimonialsHighlight from '../../components/social-proof/TestimonialsHighlight.astro';
+import TestimonialsMasonry from '../../components/social-proof/TestimonialsMasonry.astro';
+import TestimonialsMinimal from '../../components/social-proof/TestimonialsMinimal.astro';
+import TestimonialsSingle from '../../components/social-proof/TestimonialsSingle.astro';
+import TestimonialsSlider from '../../components/social-proof/TestimonialsSlider.astro';
+import TestimonialsVideo from '../../components/social-proof/TestimonialsVideo.astro';
+import TestimonialsWall from '../../components/social-proof/TestimonialsWall.astro';
+import TextAccordion from '../../components/text/TextAccordion.astro';
+import TextAnnotated from '../../components/text/TextAnnotated.astro';
+import TextBig from '../../components/text/TextBig.astro';
+import TextBlockquote from '../../components/text/TextBlockquote.astro';
+import TextCallout from '../../components/text/TextCallout.astro';
+import TextCaption from '../../components/text/TextCaption.astro';
+import TextCentered from '../../components/text/TextCentered.astro';
+import TextCenteredImpact from '../../components/text/TextCenteredImpact.astro';
+import TextCode from '../../components/text/TextCode.astro';
+import TextColumns from '../../components/text/TextColumns.astro';
+import TextDark from '../../components/text/TextDark.astro';
+import TextDropCap from '../../components/text/TextDropCap.astro';
+import TextEditorial from '../../components/text/TextEditorial.astro';
+import TextFaq from '../../components/text/TextFaq.astro';
+import TextGradient from '../../components/text/TextGradient.astro';
+import TextHighlight from '../../components/text/TextHighlight.astro';
+import TextInset from '../../components/text/TextInset.astro';
+import TextIntro from '../../components/text/TextIntro.astro';
+import TextLead from '../../components/text/TextLead.astro';
+import TextLegal from '../../components/text/TextLegal.astro';
+import TextLetter from '../../components/text/TextLetter.astro';
+import TextManifesto from '../../components/text/TextManifesto.astro';
+import TextMark from '../../components/text/TextMark.astro';
+import TextMono from '../../components/text/TextMono.astro';
+import TextNote from '../../components/text/TextNote.astro';
+import TextNumbers from '../../components/text/TextNumbers.astro';
+import TextOutline from '../../components/text/TextOutline.astro';
+import TextPullQuote from '../../components/text/TextPullQuote.astro';
+import TextQuote from '../../components/text/TextQuote.astro';
+import TextScroll from '../../components/text/TextScroll.astro';
+import TextSplit from '../../components/text/TextSplit.astro';
+import TextStack from '../../components/text/TextStack.astro';
+import TextStats from '../../components/text/TextStats.astro';
+import TextSummary from '../../components/text/TextSummary.astro';
+import TextTimeline from '../../components/text/TextTimeline.astro';
+import TextWide from '../../components/text/TextWide.astro';
+import AboutSplit from '../../components/ui/AboutSplit.astro';
+import Accordion from '../../components/ui/Accordion.astro';
+import AccordionFAQ from '../../components/ui/AccordionFAQ.astro';
+import Alert from '../../components/ui/Alert.astro';
+import Avatar from '../../components/ui/Avatar.astro';
+import AwardsBadges from '../../components/ui/AwardsBadges.astro';
+import Badge from '../../components/ui/Badge.astro';
+import BeforeAfter from '../../components/ui/BeforeAfter.astro';
+import Blockquote from '../../components/ui/Blockquote.astro';
+import BlogGrid from '../../components/ui/BlogGrid.astro';
+import Breadcrumb from '../../components/ui/Breadcrumb.astro';
+import Button from '../../components/ui/Button.astro';
+import CalloutBox from '../../components/ui/CalloutBox.astro';
+import Card from '../../components/ui/Card.astro';
+import CaseStudyCard from '../../components/ui/CaseStudyCard.astro';
+import CheckList from '../../components/ui/CheckList.astro';
+import Chip from '../../components/ui/Chip.astro';
+import ClientLogosScroll from '../../components/ui/ClientLogosScroll.astro';
+import ComparisonSection from '../../components/ui/ComparisonSection.astro';
+import ComparisonTable from '../../components/ui/ComparisonTable.astro';
+import ContactCentered from '../../components/ui/ContactCentered.astro';
+import ContactSplitPhoto from '../../components/ui/ContactSplitPhoto.astro';
+import Countdown from '../../components/ui/Countdown.astro';
+import Dropdown from '../../components/ui/Dropdown.astro';
+import EmptyState from '../../components/ui/EmptyState.astro';
+import FaqCategorized from '../../components/ui/FaqCategorized.astro';
+import GalleryGrid from '../../components/ui/GalleryGrid.astro';
+import InputField from '../../components/ui/InputField.astro';
+import MediaFeature from '../../components/ui/MediaFeature.astro';
+import Modal from '../../components/ui/Modal.astro';
+import Notification from '../../components/ui/Notification.astro';
+import NumberedList from '../../components/ui/NumberedList.astro';
+import PressMentions from '../../components/ui/PressMentions.astro';
+import Progress from '../../components/ui/Progress.astro';
+import PullQuote from '../../components/ui/PullQuote.astro';
+import Rating from '../../components/ui/Rating.astro';
+import RatingBreakdown from '../../components/ui/RatingBreakdown.astro';
+import ReviewStars from '../../components/ui/ReviewStars.astro';
+import Skeleton from '../../components/ui/Skeleton.astro';
+import SocialProofBanner from '../../components/ui/SocialProofBanner.astro';
+import Stepper from '../../components/ui/Stepper.astro';
+import Table from '../../components/ui/Table.astro';
+import Tabs from '../../components/ui/Tabs.astro';
+import TeamAlternating from '../../components/ui/TeamAlternating.astro';
+import TeamGrid from '../../components/ui/TeamGrid.astro';
+import Toast from '../../components/ui/Toast.astro';
+import Toggle from '../../components/ui/Toggle.astro';
+import Tooltip from '../../components/ui/Tooltip.astro';
+import TrustBadges from '../../components/ui/TrustBadges.astro';
+import VideoAnnotated from '../../components/video/VideoAnnotated.astro';
+import VideoAutoplay from '../../components/video/VideoAutoplay.astro';
+import VideoBackground from '../../components/video/VideoBackground.astro';
+import VideoCarousel from '../../components/video/VideoCarousel.astro';
+import VideoChapters from '../../components/video/VideoChapters.astro';
+import VideoCtaOverlay from '../../components/video/VideoCtaOverlay.astro';
+import VideoEmbed from '../../components/video/VideoEmbed.astro';
+import VideoEmbed2 from '../../components/video/VideoEmbed2.astro';
+import VideoFeature from '../../components/video/VideoFeature.astro';
+import VideoGrid from '../../components/video/VideoGrid.astro';
+import VideoGrid2 from '../../components/video/VideoGrid2.astro';
+import VideoHero from '../../components/video/VideoHero.astro';
+import VideoHero2 from '../../components/video/VideoHero2.astro';
+import VideoIntro from '../../components/video/VideoIntro.astro';
+import VideoLoop from '../../components/video/VideoLoop.astro';
+import VideoMagazine from '../../components/video/VideoMagazine.astro';
+import VideoModal from '../../components/video/VideoModal.astro';
+import VideoMuted from '../../components/video/VideoMuted.astro';
+import VideoPip from '../../components/video/VideoPip.astro';
+import VideoPlaylist from '../../components/video/VideoPlaylist.astro';
+import VideoRecap from '../../components/video/VideoRecap.astro';
+import VideoShort from '../../components/video/VideoShort.astro';
+import VideoShowcase from '../../components/video/VideoShowcase.astro';
+import VideoSplit from '../../components/video/VideoSplit.astro';
+import VideoSplitScreen from '../../components/video/VideoSplitScreen.astro';
+import VideoStats from '../../components/video/VideoStats.astro';
+import VideoTestimonial from '../../components/video/VideoTestimonial.astro';
+import VideoTestimonial2 from '../../components/video/VideoTestimonial2.astro';
+import VideoThumbnail from '../../components/video/VideoThumbnail.astro';
+import VideoWide from '../../components/video/VideoWide.astro';
 
 export async function getStaticPaths() {
   return COMPONENTS.map(c => ({ params: { slug: c.slug } }));
@@ -47,33 +450,427 @@ const p = comp.mockProps as any;
 
 // Map slug → component
 const componentMap: Record<string, any> = {
-  'nav-simple': NavSimple,
-  'nav-sticky': NavSticky,
-  'hero-centered': HeroCentered,
-  'hero-split': HeroSplit,
-  'hero-fullscreen': HeroFullscreen,
-  'manifest-block': ManifestBlock,
-  'features-grid': FeaturesGrid,
-  'process-steps': ProcessSteps,
-  'pricing-cards': PricingCards,
-  'testimonials-grid': TestimonialsGrid,
-  'logo-bar': LogoBar,
-  'marquee-ticker': MarqueeTicker,
-  'stats-bar': StatsBar,
-  'cta-banner': CTABanner,
-  'contact-form': ContactForm,
-  'newsletter-bar': NewsletterBar,
-  'footer-simple': FooterSimple,
+  'cta-accent': CtaAccent,
+  'cta-angular': CtaAngular,
+  'cta-big-quote': CtaBigQuote,
+  'cta-booking': CtaBooking,
+  'cta-card': CtaCard,
+  'cta-cards': CtaCards,
+  'cta-dark': CtaDark,
+  'cta-download': CtaDownload,
+  'cta-email': CtaEmail,
+  'cta-free-trial': CtaFreeTrial,
+  'cta-full-width': CtaFullWidth,
+  'cta-gradient': CtaGradient,
+  'cta-icon-row': CtaIconRow,
+  'cta-image-bg': CtaImageBg,
+  'cta-minimal': CtaMinimal,
+  'cta-newsletter': CtaNewsletter,
+  'cta-phone': CtaPhone,
+  'cta-pricing': CtaPricing,
+  'cta-split': CtaSplit,
+  'cta-stats': CtaStats,
+  'cta-sticky': CtaSticky,
+  'cta-urgent': CtaUrgent,
+  'cta-video': CtaVideo,
+  'cta-with-testimonial': CtaWithTestimonial,
+  'footer-accordion': FooterAccordion,
+  'footer-app': FooterApp,
+  'footer-big-text': FooterBigText,
+  'footer-brand': FooterBrand,
+  'footer-centered': FooterCentered,
+  'footer-compact': FooterCompact,
+  'footer-contact': FooterContact,
+  'footer-cta': FooterCta,
+  'footer-dark': FooterDark,
+  'footer-editorial': FooterEditorial,
   'footer-full': FooterFull,
-  'button': Button,
-  'badge': Badge,
-  'card': Card,
-  'accordion-faq': AccordionFAQ,
+  'footer-gradient': FooterGradient,
+  'footer-grid': FooterGrid,
+  'footer-mega': FooterMega,
+  'footer-minimal': FooterMinimal,
+  'footer-minimal-dark': FooterMinimalDark,
+  'footer-modern': FooterModern,
+  'footer-newsletter': FooterNewsletter,
+  'footer-retro': FooterRetro,
+  'footer-simple': FooterSimple,
+  'footer-social': FooterSocial,
+  'footer-split': FooterSplit,
+  'footer-sticky': FooterSticky,
+  'footer-tech': FooterTech,
+  'footer-wave': FooterWave,
+  'contact-form': ContactForm,
+  'form-booking': FormBooking,
+  'form-callback': FormCallback,
+  'form-chat': FormChat,
+  'form-checkout': FormCheckout,
+  'form-complex': FormComplex,
+  'form-contact': FormContact,
+  'form-download': FormDownload,
+  'form-event-reg': FormEventReg,
+  'form-feedback': FormFeedback,
+  'form-filter': FormFilter,
+  'form-job-application': FormJobApplication,
+  'form-lead-magnet': FormLeadMagnet,
+  'form-login': FormLogin,
+  'form-mini': FormMini,
+  'form-multi-step': FormMultiStep,
+  'form-newsletter': FormNewsletter,
+  'form-onboarding': FormOnboarding,
+  'form-password': FormPassword,
+  'form-payment': FormPayment,
+  'form-profile': FormProfile,
+  'form-quick': FormQuick,
+  'form-quote': FormQuote,
+  'form-register': FormRegister,
+  'form-review': FormReview,
+  'form-search': FormSearch,
+  'form-settings': FormSettings,
+  'form-subscribe': FormSubscribe,
+  'form-survey': FormSurvey,
+  'form-upload': FormUpload,
+  'form-waitlist': FormWaitlist,
+  'newsletter-bar': NewsletterBar,
+  'heading-accent': HeadingAccent,
+  'heading-animated': HeadingAnimated,
+  'heading-badge': HeadingBadge,
+  'heading-category': HeadingCategory,
+  'heading-center': HeadingCenter,
+  'heading-centered': HeadingCentered,
+  'heading-dark': HeadingDark,
+  'heading-editorial': HeadingEditorial,
+  'heading-float': HeadingFloat,
+  'heading-gradient': HeadingGradient,
+  'heading-highlight': HeadingHighlight,
+  'heading-inline': HeadingInline,
+  'heading-large': HeadingLarge,
+  'heading-left': HeadingLeft,
+  'heading-minimal': HeadingMinimal,
+  'heading-mono': HeadingMono,
+  'heading-number': HeadingNumber,
+  'heading-split': HeadingSplit,
+  'heading-stacked': HeadingStacked,
+  'heading-tag': HeadingTag,
+  'heading-underline': HeadingUnderline,
+  'heading-wide': HeadingWide,
+  'heading-with-label': HeadingWithLabel,
+  'heading-with-line': HeadingWithLine,
+  'heading-with-stats': HeadingWithStats,
+  'hero-asymmetric': HeroAsymmetric,
+  'hero-bento': HeroBento,
+  'hero-bold': HeroBold,
+  'hero-bold-split': HeroBoldSplit,
+  'hero-centered': HeroCentered,
+  'hero-centered-minimal': HeroCenteredMinimal,
+  'hero-cta': HeroCta,
+  'hero-dark': HeroDark,
   'hero-editorial': HeroEditorial,
-  'statement-section': StatementSection,
-  'stats-editorial': StatsEditorial,
-  'wow-usp': WowUSP,
+  'hero-floating-testimonial': HeroFloatingTestimonial,
+  'hero-fullscreen': HeroFullscreen,
+  'hero-gradient': HeroGradient,
+  'hero-magazine': HeroMagazine,
+  'hero-minimal': HeroMinimal,
+  'hero-neon': HeroNeon,
+  'hero-parallax': HeroParallax,
+  'hero-portfolio': HeroPortfolio,
+  'hero-product': HeroProduct,
+  'hero-saas': HeroSaas,
+  'hero-split': HeroSplit,
+  'hero-split-angle': HeroSplitAngle,
+  'hero-split-dark': HeroSplitDark,
+  'hero-split-reversed': HeroSplitReversed,
+  'hero-stats': HeroStats,
+  'hero-typography': HeroTypography,
+  'hero-video-grid': HeroVideoGrid,
+  'icon-accordion': IconAccordion,
+  'icon-badge': IconBadge,
+  'icon-bento': IconBento,
+  'icon-callout': IconCallout,
+  'icon-card': IconCard,
+  'icon-cards': IconCards,
+  'icon-circle': IconCircle,
+  'icon-columns': IconColumns,
+  'icon-comparison': IconComparison,
+  'icon-cta': IconCta,
+  'icon-dark': IconDark,
+  'icon-emoji': IconEmoji,
+  'icon-features': IconFeatures,
+  'icon-flat': IconFlat,
+  'icon-gradient': IconGradient,
+  'icon-grid': IconGrid,
+  'icon-hero': IconHero,
+  'icon-highlight': IconHighlight,
+  'icon-horizontal': IconHorizontal,
+  'icon-inline': IconInline,
+  'icon-large': IconLarge,
+  'icon-list': IconList,
+  'icon-masonry': IconMasonry,
+  'icon-minimal': IconMinimal,
+  'icon-nav': IconNav,
+  'icon-numbers': IconNumbers,
+  'icon-pricing': IconPricing,
+  'icon-process': IconProcess,
+  'icon-row': IconRow,
+  'icon-services': IconServices,
+  'icon-showcase': IconShowcase,
+  'icon-social': IconSocial,
+  'icon-split': IconSplit,
+  'icon-stack': IconStack,
+  'icon-stats': IconStats,
+  'icon-tabs': IconTabs,
+  'icon-team': IconTeam,
+  'icon-technology': IconTechnology,
+  'icon-timeline': IconTimeline,
+  'icon-with-text': IconWithText,
+  'image-background': ImageBackground,
+  'image-banner': ImageBanner,
+  'image-before': ImageBefore,
+  'image-caption': ImageCaption,
+  'image-carousel': ImageCarousel,
+  'image-cinematic': ImageCinematic,
+  'image-comparison': ImageComparison,
+  'image-featured': ImageFeatured,
+  'image-fullscreen': ImageFullscreen,
+  'image-gallery': ImageGallery,
+  'image-hero': ImageHero,
+  'image-lightbox': ImageLightbox,
+  'image-masonry': ImageMasonry,
+  'image-mosaic': ImageMosaic,
+  'image-overlay': ImageOverlay,
+  'image-polaroid': ImagePolaroid,
+  'image-portfolio': ImagePortfolio,
+  'image-profile': ImageProfile,
+  'image-round': ImageRound,
+  'image-showcase': ImageShowcase,
+  'image-split': ImageSplit,
+  'image-timeline': ImageTimeline,
+  'image-with-caption': ImageWithCaption,
+  'image-with-stats': ImageWithStats,
+  'list-bullets': ListBullets,
+  'list-cards': ListCards,
+  'list-checklist': ListChecklist,
+  'list-collapsible': ListCollapsible,
+  'list-comparison': ListComparison,
+  'list-divided': ListDivided,
+  'list-features': ListFeatures,
+  'list-filter': ListFilter,
+  'list-grid': ListGrid,
+  'list-highlight': ListHighlight,
+  'list-horizontal': ListHorizontal,
+  'list-icons': ListIcons,
+  'list-links': ListLinks,
+  'list-minimal': ListMinimal,
+  'list-numbered': ListNumbered,
+  'list-ordered': ListOrdered,
+  'list-price': ListPrice,
+  'list-process': ListProcess,
+  'list-pros': ListPros,
+  'list-stats': ListStats,
+  'list-steps': ListSteps,
+  'list-timeline': ListTimeline,
+  'nav-accent': NavAccent,
+  'nav-animated': NavAnimated,
+  'nav-breadcrumb': NavBreadcrumb,
+  'nav-centered': NavCentered,
+  'nav-colorful': NavColorful,
+  'nav-compact': NavCompact,
+  'nav-dark': NavDark,
+  'nav-dual-line': NavDualLine,
+  'nav-editorial': NavEditorial,
+  'nav-floating': NavFloating,
+  'nav-glass': NavGlass,
+  'nav-icon-links': NavIconLinks,
+  'nav-logo-right': NavLogoRight,
+  'nav-mega': NavMega,
+  'nav-minimal': NavMinimal,
+  'nav-mobile-first': NavMobileFirst,
+  'nav-offcanvas': NavOffcanvas,
+  'nav-pills': NavPills,
+  'nav-sidebar': NavSidebar,
+  'nav-simple': NavSimple,
+  'nav-split': NavSplit,
+  'nav-stacked': NavStacked,
+  'nav-sticky': NavSticky,
+  'nav-tabs': NavTabs,
+  'nav-top-bar': NavTopBar,
+  'nav-transparent': NavTransparent,
+  'nav-underline': NavUnderline,
+  'nav-with-banner': NavWithBanner,
+  'nav-with-dropdown': NavWithDropdown,
+  'nav-with-search': NavWithSearch,
+  'content-accordion': ContentAccordion,
+  'content-badges': ContentBadges,
+  'content-bullets': ContentBullets,
+  'content-callout': ContentCallout,
+  'content-columns': ContentColumns,
+  'content-comparison': ContentComparison,
+  'content-cta': ContentCta,
+  'content-divider': ContentDivider,
+  'content-faq': ContentFaq,
+  'content-grid': ContentGrid,
+  'content-highlight': ContentHighlight,
+  'content-image-caption': ContentImageCaption,
+  'content-intro': ContentIntro,
+  'content-lead': ContentLead,
+  'content-media': ContentMedia,
+  'content-pro-cons': ContentProCons,
+  'content-quote': ContentQuote,
+  'content-split': ContentSplit,
+  'content-steps': ContentSteps,
+  'content-table': ContentTable,
+  'content-testimonial': ContentTestimonial,
+  'content-timeline': ContentTimeline,
+  'content-two-up': ContentTwoUp,
+  'content-with-sidebar': ContentWithSidebar,
+  'content-with-stats': ContentWithStats,
+  'features-bento': FeaturesBento,
+  'features-grid': FeaturesGrid,
+  'features-horizontal': FeaturesHorizontal,
+  'features-icon-bar': FeaturesIconBar,
+  'features-showcase': FeaturesShowcase,
+  'how-it-works': HowItWorks,
   'lifestyle-fullbleed': LifestyleFullbleed,
+  'manifest-block': ManifestBlock,
+  'pricing-cards': PricingCards,
+  'pricing-compact': PricingCompact,
+  'pricing-menu': PricingMenu,
+  'pricing-toggle': PricingToggle,
+  'process-steps': ProcessSteps,
+  'process-timeline': ProcessTimeline,
+  'service-cards': ServiceCards,
+  'statement-section': StatementSection,
+  'counter-stats': CounterStats,
+  'logo-bar': LogoBar,
+  'logo-grid': LogoGrid,
+  'logo-grid-with-title': LogoGridWithTitle,
+  'logos-banner': LogosBanner,
+  'marquee-ticker': MarqueeTicker,
+  'numbered-stats': NumberedStats,
+  'partner-logos': PartnerLogos,
+  'stats-bar': StatsBar,
+  'stats-counter': StatsCounter,
+  'stats-editorial': StatsEditorial,
+  'testimonials-carousel': TestimonialsCarousel,
+  'testimonials-cover-photo': TestimonialsCoverPhoto,
+  'testimonials-dark': TestimonialsDark,
+  'testimonials-grid': TestimonialsGrid,
+  'testimonials-highlight': TestimonialsHighlight,
+  'testimonials-masonry': TestimonialsMasonry,
+  'testimonials-minimal': TestimonialsMinimal,
+  'testimonials-single': TestimonialsSingle,
+  'testimonials-slider': TestimonialsSlider,
+  'testimonials-video': TestimonialsVideo,
+  'testimonials-wall': TestimonialsWall,
+  'text-accordion': TextAccordion,
+  'text-annotated': TextAnnotated,
+  'text-big': TextBig,
+  'text-blockquote': TextBlockquote,
+  'text-callout': TextCallout,
+  'text-caption': TextCaption,
+  'text-centered': TextCentered,
+  'text-centered-impact': TextCenteredImpact,
+  'text-code': TextCode,
+  'text-columns': TextColumns,
+  'text-dark': TextDark,
+  'text-drop-cap': TextDropCap,
+  'text-editorial': TextEditorial,
+  'text-faq': TextFaq,
+  'text-gradient': TextGradient,
+  'text-highlight': TextHighlight,
+  'text-inset': TextInset,
+  'text-intro': TextIntro,
+  'text-lead': TextLead,
+  'text-legal': TextLegal,
+  'text-letter': TextLetter,
+  'text-manifesto': TextManifesto,
+  'text-mark': TextMark,
+  'text-mono': TextMono,
+  'text-note': TextNote,
+  'text-numbers': TextNumbers,
+  'text-outline': TextOutline,
+  'text-pull-quote': TextPullQuote,
+  'text-quote': TextQuote,
+  'text-scroll': TextScroll,
+  'text-split': TextSplit,
+  'text-stack': TextStack,
+  'text-stats': TextStats,
+  'text-summary': TextSummary,
+  'text-timeline': TextTimeline,
+  'text-wide': TextWide,
+  'about-split': AboutSplit,
+  'accordion': Accordion,
+  'alert': Alert,
+  'avatar': Avatar,
+  'awards-badges': AwardsBadges,
+  'badge': Badge,
+  'before-after': BeforeAfter,
+  'blockquote': Blockquote,
+  'blog-grid': BlogGrid,
+  'breadcrumb': Breadcrumb,
+  'button': Button,
+  'callout-box': CalloutBox,
+  'card': Card,
+  'case-study-card': CaseStudyCard,
+  'check-list': CheckList,
+  'chip': Chip,
+  'client-logos-scroll': ClientLogosScroll,
+  'comparison-section': ComparisonSection,
+  'comparison-table': ComparisonTable,
+  'contact-centered': ContactCentered,
+  'contact-split-photo': ContactSplitPhoto,
+  'countdown': Countdown,
+  'dropdown': Dropdown,
+  'empty-state': EmptyState,
+  'faq-categorized': FaqCategorized,
+  'gallery-grid': GalleryGrid,
+  'input-field': InputField,
+  'media-feature': MediaFeature,
+  'modal': Modal,
+  'notification': Notification,
+  'numbered-list': NumberedList,
+  'press-mentions': PressMentions,
+  'progress': Progress,
+  'pull-quote': PullQuote,
+  'rating': Rating,
+  'rating-breakdown': RatingBreakdown,
+  'review-stars': ReviewStars,
+  'skeleton': Skeleton,
+  'social-proof-banner': SocialProofBanner,
+  'stepper': Stepper,
+  'table': Table,
+  'tabs': Tabs,
+  'team-alternating': TeamAlternating,
+  'team-grid': TeamGrid,
+  'toast': Toast,
+  'toggle': Toggle,
+  'tooltip': Tooltip,
+  'trust-badges': TrustBadges,
+  'video-annotated': VideoAnnotated,
+  'video-autoplay': VideoAutoplay,
+  'video-background': VideoBackground,
+  'video-carousel': VideoCarousel,
+  'video-chapters': VideoChapters,
+  'video-cta-overlay': VideoCtaOverlay,
+  'video-embed': VideoEmbed,
+  'video-feature': VideoFeature,
+  'video-grid': VideoGrid,
+  'video-hero': VideoHero,
+  'video-intro': VideoIntro,
+  'video-loop': VideoLoop,
+  'video-magazine': VideoMagazine,
+  'video-modal': VideoModal,
+  'video-muted': VideoMuted,
+  'video-pip': VideoPip,
+  'video-playlist': VideoPlaylist,
+  'video-recap': VideoRecap,
+  'video-short': VideoShort,
+  'video-showcase': VideoShowcase,
+  'video-split': VideoSplit,
+  'video-split-screen': VideoSplitScreen,
+  'video-stats': VideoStats,
+  'video-testimonial': VideoTestimonial,
+  'video-thumbnail': VideoThumbnail,
+  'video-wide': VideoWide,
 };
 
 const Component = componentMap[slug!];

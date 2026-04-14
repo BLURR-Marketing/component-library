@@ -2,6 +2,17 @@
 // Notification — recovered from blurr-components.pages.dev
 ---
 
-<div class="notif notif--success" data-astro-cid-lv2j2rcs> <span class="notif-dot" style="background: #10b981" data-astro-cid-lv2j2rcs></span> <div class="notif-body" data-astro-cid-lv2j2rcs> <div class="notif-row" data-astro-cid-lv2j2rcs> <p class="notif-title" data-astro-cid-lv2j2rcs>Campagne geoptimaliseerd</p> <span class="notif-time" data-astro-cid-lv2j2rcs>2 min geleden</span> </div> <p class="notif-message" data-astro-cid-lv2j2rcs>Je Google Ads campagne heeft vandaag een conversieratio van 4.2% bereikt.</p> <a href="#" class="notif-action" data-astro-cid-lv2j2rcs>Bekijk rapport →</a> </div> </div>
+<div class="notif notif--success"> <span class="notif-dot" style="background: #10b981"></span> <div class="notif-body"> <div class="notif-row"> <p class="notif-title">Campagne geoptimaliseerd</p> <span class="notif-time">2 min geleden</span> </div> <p class="notif-message">Je Google Ads campagne heeft vandaag een conversieratio van 4.2% bereikt.</p> <a href="#" class="notif-action">Bekijk rapport →</a> </div> </div>
 
-
+<style>
+.notif{display:flex;align-items:flex-start;gap:.875rem;padding:1rem 1.25rem;background:#fff;border:1px solid #e5e7eb;border-radius:.75rem;box-shadow:0 4px 16px #00000012;max-width:380px}
+.notif-avatar{width:36px;height:36px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.notif-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:.25rem}
+.notif-body{flex:1}
+.notif-row{display:flex;align-items:flex-start;justify-content:space-between;gap:.5rem;margin-bottom:.25rem}
+.notif-title{font-size:.9375rem;font-weight:600;color:#0a0a0a;margin:0}
+.notif-time{font-size:.75rem;color:#9ca3af;white-space:nowrap;flex-shrink:0}
+.notif-message{font-size:.875rem;color:#6b7280;line-height:1.55;margin:0 0 .625rem}
+.notif-action{font-size:.875rem;font-weight:600;color:var(--color-accent,#6366f1);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
+.notif-action:hover{border-color:var(--color-accent,#6366f1)}
+</style>

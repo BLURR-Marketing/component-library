@@ -2,6 +2,21 @@
 // VideoTestimonial2 — recovered from blurr-components.pages.dev
 ---
 
-<section class="vt2" data-astro-cid-fltgbvzh> <div class="vt2__inner" data-astro-cid-fltgbvzh> <h2 class="vt2__headline" data-astro-cid-fltgbvzh>Klanten aan het woord</h2> <div class="vt2__grid" data-astro-cid-fltgbvzh> <div class="vt2__card" style="--card-bg: #1e1b4b" data-astro-cid-fltgbvzh> <div class="vt2__thumb" data-astro-cid-fltgbvzh> <button class="vt2__play-btn" aria-label="Bekijk testimonial van Mark de Vries" data-astro-cid-fltgbvzh> <span class="vt2__play-icon" aria-hidden="true" data-astro-cid-fltgbvzh>▶</span> </button> <span class="vt2__dur" data-astro-cid-fltgbvzh>2:34</span> </div> <div class="vt2__info" data-astro-cid-fltgbvzh> <p class="vt2__name" data-astro-cid-fltgbvzh>Mark de Vries</p> <p class="vt2__role" data-astro-cid-fltgbvzh>CEO · TechFlow</p> </div> </div><div class="vt2__card" style="--card-bg: #0f172a" data-astro-cid-fltgbvzh> <div class="vt2__thumb" data-astro-cid-fltgbvzh> <button class="vt2__play-btn" aria-label="Bekijk testimonial van Lisa Hoekstra" data-astro-cid-fltgbvzh> <span class="vt2__play-icon" aria-hidden="true" data-astro-cid-fltgbvzh>▶</span> </button> <span class="vt2__dur" data-astro-cid-fltgbvzh>3:12</span> </div> <div class="vt2__info" data-astro-cid-fltgbvzh> <p class="vt2__name" data-astro-cid-fltgbvzh>Lisa Hoekstra</p> <p class="vt2__role" data-astro-cid-fltgbvzh>Marketingmanager · Mode &amp; Meer</p> </div> </div> </div> </div> </section>
+<section class="vt2"> <div class="vt2__inner"> <h2 class="vt2__headline">Klanten aan het woord</h2> <div class="vt2__grid"> <div class="vt2__card" style="--card-bg: #1e1b4b"> <div class="vt2__thumb"> <button class="vt2__play-btn" aria-label="Bekijk testimonial van Mark de Vries"> <span class="vt2__play-icon" aria-hidden="true">▶</span> </button> <span class="vt2__dur">2:34</span> </div> <div class="vt2__info"> <p class="vt2__name">Mark de Vries</p> <p class="vt2__role">CEO · TechFlow</p> </div> </div><div class="vt2__card" style="--card-bg: #0f172a"> <div class="vt2__thumb"> <button class="vt2__play-btn" aria-label="Bekijk testimonial van Lisa Hoekstra"> <span class="vt2__play-icon" aria-hidden="true">▶</span> </button> <span class="vt2__dur">3:12</span> </div> <div class="vt2__info"> <p class="vt2__name">Lisa Hoekstra</p> <p class="vt2__role">Marketingmanager · Mode &amp; Meer</p> </div> </div> </div> </div> </section>
 
-
+<style>
+.vt2{background:#f9f9fb;padding:4rem 1.5rem}
+.vt2__inner{max-width:1000px;margin:0 auto}
+.vt2__headline{font-size:1.75rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 2rem}
+.vt2__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.25rem}
+.vt2__card{border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 2px 12px #0000000f;transition:transform .2s,box-shadow .2s;cursor:pointer}
+.vt2__card:hover{transform:translateY(-4px);box-shadow:0 8px 28px #0000001f}
+.vt2__thumb{aspect-ratio:4/3;background:var(--card-bg, #1e1b4b);display:flex;align-items:center;justify-content:center;position:relative}
+.vt2__play-btn{background:#ffffff26;border:2px solid rgba(255,255,255,.4);width:52px;height:52px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.vt2__play-btn:hover{background:#ffffff47}
+.vt2__play-icon{color:#fff;font-size:1.1rem;padding-left:3px}
+.vt2__dur{position:absolute;bottom:.5rem;right:.6rem;background:#000000a6;color:#fff;font-size:.7rem;font-weight:600;padding:.15rem .4rem;border-radius:4px;font-variant-numeric:tabular-nums}
+.vt2__info{padding:.85rem 1rem}
+.vt2__name{font-size:.9rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 .2rem}
+.vt2__role{font-size:.76rem;color:#888;margin:0}
+</style>

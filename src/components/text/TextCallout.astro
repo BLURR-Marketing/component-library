@@ -2,6 +2,15 @@
 // TextCallout — recovered from blurr-components.pages.dev
 ---
 
-<div class="tx-callout tx-callout--tip" data-astro-cid-l7pg3xkq> <span class="tx-callout__icon" aria-hidden="true" data-astro-cid-l7pg3xkq>💡</span> <div data-astro-cid-l7pg3xkq> <strong class="tx-callout__title" data-astro-cid-l7pg3xkq>Pro tip</strong> <p class="tx-callout__body" data-astro-cid-l7pg3xkq>Combineer Google Ads met organische SEO voor het sterkste resultaat.</p> </div> </div>
+<div class="tx-callout tx-callout--tip"> <span class="tx-callout__icon" aria-hidden="true">💡</span> <div> <strong class="tx-callout__title">Pro tip</strong> <p class="tx-callout__body">Combineer Google Ads met organische SEO voor het sterkste resultaat.</p> </div> </div>
 
-
+<style>
+.tx-callout{display:flex;gap:.85rem;align-items:flex-start;padding:1rem 1.25rem;border-radius:.6rem;border:1px solid transparent}
+.tx-callout--info{background:#eff6ff;border-color:#bfdbfe}
+.tx-callout--warning{background:#fffbeb;border-color:#fde68a}
+.tx-callout--success{background:#f0fdf4;border-color:#bbf7d0}
+.tx-callout--tip{background:#6366f10f;border-color:#6366f133}
+.tx-callout__icon{font-size:1rem;flex-shrink:0;margin-top:.1rem}
+.tx-callout__title{display:block;font-size:.875rem;font-weight:700;color:var(--color-primary);margin-bottom:.2rem}
+.tx-callout__body{margin:0;font-size:.875rem;color:#444;line-height:1.6}
+</style>

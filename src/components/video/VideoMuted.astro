@@ -2,6 +2,23 @@
 // VideoMuted — recovered from blurr-components.pages.dev
 ---
 
-<section class="vmut" data-astro-cid-frzr3x6n> <div class="vmut__player" data-astro-cid-frzr3x6n> <div class="vmut__placeholder" aria-label="Muted autoplay video" data-astro-cid-frzr3x6n> <div class="vmut__motion-hint" aria-hidden="true" data-astro-cid-frzr3x6n> <div class="vmut__bar" data-astro-cid-frzr3x6n></div> <div class="vmut__bar" data-astro-cid-frzr3x6n></div> <div class="vmut__bar" data-astro-cid-frzr3x6n></div> <div class="vmut__bar" data-astro-cid-frzr3x6n></div> <div class="vmut__bar" data-astro-cid-frzr3x6n></div> </div> </div> <span class="vmut__badge" data-astro-cid-frzr3x6n>Autoplay · Geluidloos</span> </div> <div class="vmut__content" data-astro-cid-frzr3x6n> <h2 class="vmut__title" data-astro-cid-frzr3x6n>Altijd in beweging</h2> <p class="vmut__subtitle" data-astro-cid-frzr3x6n>BLURR werkt continu aan de groei van jouw merk.</p> </div> </section>
+<section class="vmut"> <div class="vmut__player"> <div class="vmut__placeholder" aria-label="Muted autoplay video"> <div class="vmut__motion-hint" aria-hidden="true"> <div class="vmut__bar"></div> <div class="vmut__bar"></div> <div class="vmut__bar"></div> <div class="vmut__bar"></div> <div class="vmut__bar"></div> </div> </div> <span class="vmut__badge">Autoplay · Geluidloos</span> </div> <div class="vmut__content"> <h2 class="vmut__title">Altijd in beweging</h2> <p class="vmut__subtitle">BLURR werkt continu aan de groei van jouw merk.</p> </div> </section>
 
-
+<style>
+.vmut{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:3rem;padding:3rem 0}
+.vmut__player{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;max-width:300px;justify-self:center}
+.vmut__video{width:100%;height:100%;object-fit:cover}
+.vmut__placeholder{width:100%;height:100%;background:linear-gradient(180deg,#0a0a20,#1a1a40);display:flex;align-items:center;justify-content:center}
+.vmut__motion-hint{display:flex;align-items:flex-end;gap:5px;height:60px}
+.vmut__bar{width:8px;background:#6366f199;border-radius:4px;animation:vmut-pulse 1.2s ease-in-out infinite}
+.vmut__bar:nth-child(1){height:30%;animation-delay:0s}
+.vmut__bar:nth-child(2){height:70%;animation-delay:.15s}
+.vmut__bar:nth-child(3){height:100%;animation-delay:.3s}
+.vmut__bar:nth-child(4){height:60%;animation-delay:.45s}
+.vmut__bar:nth-child(5){height:40%;animation-delay:.6s}
+.vmut__badge{position:absolute;top:.75rem;left:.75rem;background:#000000a6;color:#fffc;font-size:.65rem;font-weight:600;padding:.2rem .5rem;border-radius:20px}
+.vmut__title{font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;color:var(--color-primary, #0a0a0a);margin:0 0 1rem;line-height:1.2}
+.vmut__subtitle{font-size:1.05rem;color:#666;line-height:1.7;margin:0}
+.vmut{grid-template-columns:1fr}
+.vmut__player{max-width:220px}
+</style>

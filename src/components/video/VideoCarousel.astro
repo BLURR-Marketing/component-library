@@ -2,6 +2,19 @@
 // VideoCarousel — recovered from blurr-components.pages.dev
 ---
 
-<section class="vca" data-astro-cid-mrz5kmfo> <h2 class="vca__heading" data-astro-cid-mrz5kmfo>Video overzicht</h2> <div class="vca__track" data-astro-cid-mrz5kmfo> <a class="vca__item" href="#" aria-label="Bekijk: Case: TechFlow +280% leads in 3 maanden" data-astro-cid-mrz5kmfo> <div class="vca__media" data-astro-cid-mrz5kmfo> <div class="vca__placeholder" aria-label="Video 1" data-astro-cid-mrz5kmfo></div> <span class="vca__play" aria-hidden="true" data-astro-cid-mrz5kmfo>▶</span> <span class="vca__duration" data-astro-cid-mrz5kmfo>4:12</span> </div> <p class="vca__title" data-astro-cid-mrz5kmfo>Case: TechFlow +280% leads in 3 maanden</p> </a><a class="vca__item" href="#" aria-label="Bekijk: Hoe wij Google Ads optimaliseren" data-astro-cid-mrz5kmfo> <div class="vca__media" data-astro-cid-mrz5kmfo> <div class="vca__placeholder" aria-label="Video 2" data-astro-cid-mrz5kmfo></div> <span class="vca__play" aria-hidden="true" data-astro-cid-mrz5kmfo>▶</span> <span class="vca__duration" data-astro-cid-mrz5kmfo>6:30</span> </div> <p class="vca__title" data-astro-cid-mrz5kmfo>Hoe wij Google Ads optimaliseren</p> </a><a class="vca__item" href="#" aria-label="Bekijk: Brand identity voor Mode &#38; Meer" data-astro-cid-mrz5kmfo> <div class="vca__media" data-astro-cid-mrz5kmfo> <div class="vca__placeholder" aria-label="Video 3" data-astro-cid-mrz5kmfo></div> <span class="vca__play" aria-hidden="true" data-astro-cid-mrz5kmfo>▶</span> <span class="vca__duration" data-astro-cid-mrz5kmfo>2:55</span> </div> <p class="vca__title" data-astro-cid-mrz5kmfo>Brand identity voor Mode &amp; Meer</p> </a> </div> </section>
+<section class="vca"> <h2 class="vca__heading">Video overzicht</h2> <div class="vca__track"> <a class="vca__item" href="#" aria-label="Bekijk: Case: TechFlow +280% leads in 3 maanden"> <div class="vca__media"> <div class="vca__placeholder" aria-label="Video 1"></div> <span class="vca__play" aria-hidden="true">▶</span> <span class="vca__duration">4:12</span> </div> <p class="vca__title">Case: TechFlow +280% leads in 3 maanden</p> </a><a class="vca__item" href="#" aria-label="Bekijk: Hoe wij Google Ads optimaliseren"> <div class="vca__media"> <div class="vca__placeholder" aria-label="Video 2"></div> <span class="vca__play" aria-hidden="true">▶</span> <span class="vca__duration">6:30</span> </div> <p class="vca__title">Hoe wij Google Ads optimaliseren</p> </a><a class="vca__item" href="#" aria-label="Bekijk: Brand identity voor Mode &#38; Meer"> <div class="vca__media"> <div class="vca__placeholder" aria-label="Video 3"></div> <span class="vca__play" aria-hidden="true">▶</span> <span class="vca__duration">2:55</span> </div> <p class="vca__title">Brand identity voor Mode &amp; Meer</p> </a> </div> </section>
 
-
+<style>
+.vca{padding:2rem 0;overflow:hidden}
+.vca__heading{font-size:2rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 2rem}
+.vca__track{display:flex;gap:1.25rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:1rem;scrollbar-width:thin;scrollbar-color:var(--color-accent, #6366f1) #eee}
+.vca__track::-webkit-scrollbar{height:4px}
+.vca__track::-webkit-scrollbar-thumb{background:var(--color-accent, #6366f1);border-radius:2px}
+.vca__item{flex:0 0 280px;scroll-snap-align:start;text-decoration:none}
+.vca__media{position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#111;margin-bottom:.75rem}
+.vca__poster{width:100%;height:100%;object-fit:cover}
+.vca__placeholder{width:100%;height:100%;background:linear-gradient(135deg,#1a1a2e,#2a2a4e)}
+.vca__play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#ffffffd9;text-shadow:0 2px 8px rgba(0,0,0,.5)}
+.vca__duration{position:absolute;bottom:.5rem;right:.5rem;background:#000000bf;color:#fff;font-size:.7rem;font-weight:700;padding:.15rem .4rem;border-radius:3px}
+.vca__title{font-size:.9rem;font-weight:600;color:var(--color-primary, #0a0a0a);margin:0;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+</style>

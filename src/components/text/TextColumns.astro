@@ -2,6 +2,23 @@
 // TextColumns — recovered from blurr-components.pages.dev
 ---
 
-<section class="txc__section txc__cols-2 txc--dropcap txc--dividers" data-astro-cid-xvyhkosj> <header class="txc__header" data-astro-cid-xvyhkosj> <p class="txc__eyebrow" data-astro-cid-xvyhkosj>Over ons</p> <h2 class="txc__headline" data-astro-cid-xvyhkosj>Ons verhaal in onze eigen woorden</h2> </header> <div class="txc__grid" data-astro-cid-xvyhkosj> <div class="txc__col" data-astro-cid-xvyhkosj> <h3 class="txc__col-title" data-astro-cid-xvyhkosj>Hoe het begon</h3> <p class="txc__body" data-astro-cid-xvyhkosj>BLURR is opgericht in 2018 met één missie: bewijs leveren dat online marketing echt werkt. Niet met mooie verhalen, maar met harde cijfers. We begonnen klein — één klant, één bureau, één overtuiging.</p> </div><div class="txc__col" data-astro-cid-xvyhkosj> <h3 class="txc__col-title" data-astro-cid-xvyhkosj>Waar we nu staan</h3> <p class="txc__body" data-astro-cid-xvyhkosj>Vandaag werken we met meer dan 80 klanten in Nederland en België. We hebben meer dan €50 miljoen aan advertentiebudget beheerd en gemiddeld een ROAS van 4.2× gerealiseerd. Maar we zijn nog niet klaar.</p> </div> </div> </section>
+<section class="txc__section txc__cols-2 txc--dropcap txc--dividers"> <header class="txc__header"> <p class="txc__eyebrow">Over ons</p> <h2 class="txc__headline">Ons verhaal in onze eigen woorden</h2> </header> <div class="txc__grid"> <div class="txc__col"> <h3 class="txc__col-title">Hoe het begon</h3> <p class="txc__body">BLURR is opgericht in 2018 met één missie: bewijs leveren dat online marketing echt werkt. Niet met mooie verhalen, maar met harde cijfers. We begonnen klein — één klant, één bureau, één overtuiging.</p> </div><div class="txc__col"> <h3 class="txc__col-title">Waar we nu staan</h3> <p class="txc__body">Vandaag werken we met meer dan 80 klanten in Nederland en België. We hebben meer dan €50 miljoen aan advertentiebudget beheerd en gemiddeld een ROAS van 4.2× gerealiseerd. Maar we zijn nog niet klaar.</p> </div> </div> </section>
 
-
+<style>
+.txc__section{padding:5rem 1.5rem;max-width:1200px;margin:0 auto}
+.txc__header{text-align:center;margin-bottom:3rem;display:flex;flex-direction:column;align-items:center;gap:.75rem}
+.txc__eyebrow{margin:0;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent)}
+.txc__headline{margin:0;font-size:clamp(1.75rem,3vw,2.75rem);font-weight:800;letter-spacing:-.02em;color:var(--color-primary);line-height:1.15}
+.txc__grid{display:grid;gap:2.5rem}
+.txc__cols-2 .txc__grid{grid-template-columns:repeat(2,1fr)}
+.txc__cols-3 .txc__grid{grid-template-columns:repeat(3,1fr)}
+.txc--dividers .txc__col:not(:last-child){border-right:1px solid rgba(0,0,0,.08);padding-right:2.5rem}
+.txc--dividers .txc__col:not(:first-child){padding-left:0}
+.txc__col-title{margin:0 0 .75rem;font-size:1rem;font-weight:700;color:var(--color-primary);letter-spacing:-.01em}
+.txc__body{margin:0;font-size:1rem;line-height:1.75;color:var(--color-muted)}
+.txc--dropcap .txc__col:first-child .txc__body:first-letter{font-size:3.5em;font-weight:900;float:left;line-height:.85;margin-right:.1em;color:var(--color-primary)}
+.txc__cols-3 .txc__grid{grid-template-columns:repeat(2,1fr)}
+.txc--dividers .txc__col:nth-child(2){border-right:none;padding-right:0}
+.txc__cols-2 .txc__grid,.txc__cols-3 .txc__grid{grid-template-columns:1fr}
+.txc--dividers .txc__col:not(:last-child){border-right:none;border-bottom:1px solid rgba(0,0,0,.08);padding-right:0;padding-bottom:2rem}
+</style>

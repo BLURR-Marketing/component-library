@@ -2,6 +2,26 @@
 // Alert — recovered from blurr-components.pages.dev
 ---
 
-<div class="alert alert--success" role="alert" data-astro-cid-2hqhup5u> <span class="alert-icon" aria-hidden="true" data-astro-cid-2hqhup5u>✅</span> <div class="alert-content" data-astro-cid-2hqhup5u> <strong class="alert-title" data-astro-cid-2hqhup5u>Aanvraag verzonden!</strong> <span class="alert-message" data-astro-cid-2hqhup5u>We hebben je bericht ontvangen en nemen binnen 1 werkdag contact op.</span> </div> <button class="alert-close" aria-label="Sluiten" onclick="this.closest('.alert').remove()" data-astro-cid-2hqhup5u>×</button> </div>
+<div class="alert alert--success" role="alert"> <span class="alert-icon" aria-hidden="true">✅</span> <div class="alert-content"> <strong class="alert-title">Aanvraag verzonden!</strong> <span class="alert-message">We hebben je bericht ontvangen en nemen binnen 1 werkdag contact op.</span> </div> <button class="alert-close" aria-label="Sluiten" onclick="this.closest('.alert').remove()">×</button> </div>
 
-
+<style>
+.alert{display:flex;align-items:flex-start;gap:.75rem;padding:1rem 1.25rem;border-radius:.625rem;border:1px solid}
+.alert--info{background:#eff6ff;border-color:#bfdbfe}
+.alert--success{background:#f0fdf4;border-color:#bbf7d0}
+.alert--warning{background:#fffbeb;border-color:#fde68a}
+.alert--error{background:#fef2f2;border-color:#fecaca}
+.alert-icon{font-size:1.125rem;flex-shrink:0;line-height:1.4}
+.alert-content{flex:1;display:flex;flex-direction:column;gap:.25rem}
+.alert-title{font-size:.9375rem;font-weight:700}
+.alert--info .alert-title{color:#1e40af}
+.alert--success .alert-title{color:#166534}
+.alert--warning .alert-title{color:#92400e}
+.alert--error .alert-title{color:#991b1b}
+.alert-message{font-size:.9375rem;line-height:1.5}
+.alert--info .alert-message{color:#1e3a8a}
+.alert--success .alert-message{color:#14532d}
+.alert--warning .alert-message{color:#78350f}
+.alert--error .alert-message{color:#7f1d1d}
+.alert-close{background:none;border:none;cursor:pointer;font-size:1.25rem;line-height:1;color:inherit;opacity:.5;padding:0;flex-shrink:0}
+.alert-close:hover{opacity:1}
+</style>

@@ -2,6 +2,28 @@
 // Blockquote — recovered from blurr-components.pages.dev
 ---
 
-<div class="bq__wrap bq__variant-large" style="" data-astro-cid-syepfcdp> <span class="bq__open-quote" aria-hidden="true" data-astro-cid-syepfcdp>&ldquo;</span> <blockquote class="bq__quote" data-astro-cid-syepfcdp> <p class="bq__text" data-astro-cid-syepfcdp>BLURR heeft onze Google Ads volledig omgegooid. De ROAS ging van 1.8× naar 4.6× in drie maanden. Ik had dit eerder moeten doen.</p>  <footer class="bq__author" data-astro-cid-syepfcdp>  <div class="bq__author-meta" data-astro-cid-syepfcdp> <span class="bq__author-name" data-astro-cid-syepfcdp>Sarah van den Berg</span> <span class="bq__author-sub" data-astro-cid-syepfcdp> Marketing Director · TechCorp Nederland </span> </div> </footer> </blockquote> <span class="bq__close-quote" aria-hidden="true" data-astro-cid-syepfcdp>&rdquo;</span> </div>
+<div class="bq__wrap bq__variant-large" style=""> <span class="bq__open-quote" aria-hidden="true">&ldquo;</span> <blockquote class="bq__quote"> <p class="bq__text">BLURR heeft onze Google Ads volledig omgegooid. De ROAS ging van 1.8× naar 4.6× in drie maanden. Ik had dit eerder moeten doen.</p>  <footer class="bq__author">  <div class="bq__author-meta"> <span class="bq__author-name">Sarah van den Berg</span> <span class="bq__author-sub"> Marketing Director · TechCorp Nederland </span> </div> </footer> </blockquote> <span class="bq__close-quote" aria-hidden="true">&rdquo;</span> </div>
 
-
+<style>
+.bq__wrap{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
+.bq__wrap.bq--visible{opacity:1;transform:translateY(0)}
+.bq__quote{margin:0}
+.bq__text{margin:0;font-style:italic;color:var(--color-primary);line-height:1.6}
+.bq__source{display:block;margin-top:.5rem;font-size:.875rem;font-style:normal;color:var(--color-muted)}
+.bq__variant-default{padding-left:1.25rem;border-left:4px solid var(--bq-accent)}
+.bq__variant-default .bq__text{font-size:1.0625rem}
+.bq__variant-large{text-align:center;padding:3rem 1.5rem;position:relative;display:flex;flex-direction:column;align-items:center;gap:.5rem}
+.bq__variant-large .bq__text{font-size:clamp(1.25rem,2vw,1.75rem);font-style:italic}
+.bq__open-quote,.bq__close-quote{font-size:5rem;line-height:1;font-weight:900;color:var(--bq-accent);opacity:.25;user-select:none}
+.bq__close-quote{align-self:flex-end}
+.bq__variant-large .bq__author{justify-content:center}
+.bq__variant-card{background:var(--color-bg);border-radius:var(--radius);box-shadow:0 4px 24px #00000014,0 1px 4px #0000000a;padding:2rem}
+.bq__variant-card .bq__text{font-size:1.0625rem;font-style:normal}
+.bq__variant-sidebar{padding:1rem 0 1rem 1rem;border-left:3px solid var(--bq-accent);font-size:.9375rem}
+.bq__variant-sidebar .bq__text{font-size:.9375rem}
+.bq__author{display:flex;align-items:center;gap:.75rem;margin-top:1.25rem}
+.bq__avatar{width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.bq__author-meta{display:flex;flex-direction:column;gap:.125rem}
+.bq__author-name{font-size:.9375rem;font-weight:700;font-style:normal;color:var(--color-primary)}
+.bq__author-sub{font-size:.8125rem;font-style:normal;color:var(--color-muted)}
+</style>

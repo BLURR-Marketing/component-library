@@ -2,6 +2,13 @@
 // TextPullQuote — recovered from blurr-components.pages.dev
 ---
 
-<figure class="tx-pq" data-astro-cid-ckthda3v> <blockquote class="tx-pq__quote" data-astro-cid-ckthda3v> <span class="tx-pq__mark" aria-hidden="true" data-astro-cid-ckthda3v>"</span> Dankzij BLURR groeide ons verkeer met 280% in zes maanden. </blockquote> <figcaption class="tx-pq__caption" data-astro-cid-ckthda3v> <span class="tx-pq__name" data-astro-cid-ckthda3v>Mark de Vries</span> <span class="tx-pq__role" data-astro-cid-ckthda3v>CEO TechFlow</span> </figcaption> </figure>
+<figure class="tx-pq"> <blockquote class="tx-pq__quote"> <span class="tx-pq__mark" aria-hidden="true">"</span> Dankzij BLURR groeide ons verkeer met 280% in zes maanden. </blockquote> <figcaption class="tx-pq__caption"> <span class="tx-pq__name">Mark de Vries</span> <span class="tx-pq__role">CEO TechFlow</span> </figcaption> </figure>
 
-
+<style>
+.tx-pq{margin:0;padding:2rem 0;border-top:3px solid var(--color-accent)}
+.tx-pq__quote{position:relative;margin:0 0 1.25rem;font-size:clamp(1.35rem,3vw,2rem);font-weight:700;color:var(--color-primary);line-height:1.35;letter-spacing:-.01em}
+.tx-pq__mark{position:absolute;top:-.5rem;left:-.25rem;font-size:5rem;line-height:1;color:var(--color-accent);opacity:.15;font-family:Georgia,serif;pointer-events:none}
+.tx-pq__caption{display:flex;flex-direction:column;gap:.15rem}
+.tx-pq__name{font-size:.875rem;font-weight:700;color:var(--color-primary)}
+.tx-pq__role{font-size:.8rem;color:#888}
+</style>

@@ -2,6 +2,13 @@
 // TextStack — recovered from blurr-components.pages.dev
 ---
 
-<div class="tx-stack" data-astro-cid-rqt2iszp> <p class="tx-stack__line tx-stack__line--bold" data-astro-cid-rqt2iszp>Meer clicks.</p><p class="tx-stack__line tx-stack__line--accent" data-astro-cid-rqt2iszp>Meer leads.</p><p class="tx-stack__line tx-stack__line--bold" data-astro-cid-rqt2iszp>Meer omzet.</p><p class="tx-stack__line tx-stack__line--light" data-astro-cid-rqt2iszp>Dat is BLURR.</p> </div>
+<div class="tx-stack"> <p class="tx-stack__line tx-stack__line--bold">Meer clicks.</p><p class="tx-stack__line tx-stack__line--accent">Meer leads.</p><p class="tx-stack__line tx-stack__line--bold">Meer omzet.</p><p class="tx-stack__line tx-stack__line--light">Dat is BLURR.</p> </div>
 
-
+<style>
+.tx-stack{display:flex;flex-direction:column;gap:.15rem;padding:1rem 0}
+.tx-stack__line{margin:0;font-size:clamp(1.5rem,4vw,2.5rem);line-height:1.2;letter-spacing:-.02em}
+.tx-stack__line--bold{font-weight:900;color:var(--color-primary)}
+.tx-stack__line--light{font-weight:300;color:#444}
+.tx-stack__line--accent{font-weight:800;color:var(--color-accent)}
+.tx-stack__line--muted{font-weight:400;color:#999;font-size:clamp(1rem,2.5vw,1.5rem)}
+</style>

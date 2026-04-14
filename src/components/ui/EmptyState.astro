@@ -2,6 +2,28 @@
 // EmptyState — recovered from blurr-components.pages.dev
 ---
 
-<div class="es es--bordered es--md" data-component="empty-state" data-astro-cid-hi2kfju5> <!-- Slot for custom illustration --> <div class="es__icon" data-astro-cid-hi2kfju5><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 3H8L4 7h16l-4-4z"/></svg></div> <div class="es__text" data-astro-cid-hi2kfju5> <h3 class="es__headline" data-astro-cid-hi2kfju5>Geen resultaten gevonden</h3> <p class="es__sub" data-astro-cid-hi2kfju5>Probeer je zoekopdracht aan te passen of verwijder filters om meer resultaten te zien.</p> </div> <div class="es__actions" data-astro-cid-hi2kfju5> <a href="#" class="es__cta" data-astro-cid-hi2kfju5>Filters wissen</a> <a href="#" class="es__secondary" data-astro-cid-hi2kfju5>Terug naar overzicht</a> </div> <!-- Optional extra slot for custom content -->  </div>
+<div class="es es--bordered es--md" data-component="empty-state"> <!-- Slot for custom illustration --> <div class="es__icon"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 3H8L4 7h16l-4-4z"/></svg></div> <div class="es__text"> <h3 class="es__headline">Geen resultaten gevonden</h3> <p class="es__sub">Probeer je zoekopdracht aan te passen of verwijder filters om meer resultaten te zien.</p> </div> <div class="es__actions"> <a href="#" class="es__cta">Filters wissen</a> <a href="#" class="es__secondary">Terug naar overzicht</a> </div> <!-- Optional extra slot for custom content -->  </div>
 
-
+<style>
+.es{display:flex;flex-direction:column;align-items:center;text-align:center;padding:3rem 2rem;gap:1.25rem}
+.es--bordered{border:1.5px dashed rgba(0,0,0,.12);border-radius:var(--radius, .5rem);background:#00000003}
+.es--fullscreen{min-height:60vh;justify-content:center}
+.es--sm{padding:2rem 1.5rem;gap:.875rem}
+.es--lg{padding:5rem 2.5rem;gap:1.75rem}
+.es__icon{width:64px;height:64px;display:flex;align-items:center;justify-content:center;background:#0000000a;border-radius:var(--radius, .5rem);color:var(--color-muted, #6b7280)}
+.es--sm .es__icon{width:48px;height:48px}
+.es--lg .es__icon{width:80px;height:80px}
+.es__illustration{max-width:200px}
+.es__text{display:flex;flex-direction:column;gap:.5rem;max-width:380px}
+.es__headline{font-size:1.0625rem;font-weight:700;color:var(--color-primary, #0a0a0a);letter-spacing:-.02em;margin:0}
+.es--sm .es__headline{font-size:.9375rem}
+.es--lg .es__headline{font-size:1.25rem}
+.es__sub{font-size:.9375rem;line-height:1.65;color:var(--color-muted, #6b7280)}
+.es--sm .es__sub{font-size:.875rem}
+.es__actions{display:flex;align-items:center;gap:.875rem;flex-wrap:wrap;justify-content:center}
+.es__cta{display:inline-flex;align-items:center;background:var(--color-primary, #0a0a0a);color:#fff;padding:.625rem 1.5rem;border-radius:var(--radius, .5rem);font-size:.875rem;font-weight:700;text-decoration:none;transition:background .2s}
+.es__cta:hover{background:var(--color-accent, #6366f1)}
+.es__secondary{font-size:.875rem;font-weight:600;color:var(--color-muted, #6b7280);text-decoration:none;transition:color .15s}
+.es__secondary:hover{color:var(--color-primary, #0a0a0a)}
+.es__extra{width:100%;max-width:480px}
+</style>

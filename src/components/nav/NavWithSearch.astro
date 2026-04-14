@@ -1,0 +1,22 @@
+---
+// NavWithSearch — recovered from blurr-components.pages.dev
+---
+
+<header class="nws"> <nav class="nws-inner"> <a href="/" class="nws-logo">BLURR</a> <ul class="nws-links"> <li><a href="#" class="nws-link">Diensten</a></li><li><a href="#" class="nws-link">Cases</a></li><li><a href="#" class="nws-link">Blog</a></li> </ul> <div class="nws-search"> <svg class="nws-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg> <input type="search" placeholder="Zoek een artikel..." class="nws-input"> </div> <a href="#" class="nws-cta">Gratis gesprek</a> </nav> </header>
+
+<style>
+.nws{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:100}
+.nws-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;height:64px;gap:1.5rem}
+.nws-logo{font-weight:800;font-size:1.0625rem;color:#0a0a0a;text-decoration:none;letter-spacing:-.02em;white-space:nowrap}
+.nws-links{list-style:none;padding:0;margin:0;display:flex;gap:0}
+.nws-link{display:block;font-size:.875rem;font-weight:500;color:#374151;text-decoration:none;padding:.375rem .75rem;border-radius:.375rem;transition:all .15s;white-space:nowrap}
+.nws-link:hover,.nws-link--active{color:var(--color-accent,#6366f1);background:#6366f112}
+.nws-search{flex:1;max-width:280px;position:relative;margin-left:auto}
+.nws-search-icon{position:absolute;left:.75rem;top:50%;transform:translateY(-50%);color:#9ca3af}
+.nws-input{width:100%;padding:.5rem .75rem .5rem 2.25rem;font-size:.875rem;border:1px solid #e5e7eb;border-radius:.5rem;outline:none;background:#f9fafb;transition:border-color .15s}
+.nws-input:focus{border-color:var(--color-accent,#6366f1);background:#fff}
+.nws-cta{font-size:.875rem;font-weight:600;padding:.5rem 1.125rem;background:var(--color-accent,#6366f1);color:#fff;border-radius:.5rem;text-decoration:none;transition:opacity .2s;white-space:nowrap}
+.nws-cta:hover{opacity:.88}
+.nws-links{display:none}
+.nws-search{max-width:160px}
+</style>

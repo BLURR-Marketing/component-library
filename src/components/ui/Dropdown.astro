@@ -2,6 +2,19 @@
 // Dropdown — recovered from blurr-components.pages.dev
 ---
 
-<div class="dd" data-astro-cid-wwe277d2> <button class="dd-trigger" aria-haspopup="true" data-astro-cid-wwe277d2>Diensten <span class="dd-arrow" aria-hidden="true" data-astro-cid-wwe277d2>▾</span></button> <div class="dd-menu dd-menu--left" role="menu" data-astro-cid-wwe277d2> <a href="#" class="dd-item" role="menuitem" data-astro-cid-wwe277d2> <span class="dd-item-icon" aria-hidden="true" data-astro-cid-wwe277d2>🎯</span> Google Ads </a><a href="#" class="dd-item" role="menuitem" data-astro-cid-wwe277d2> <span class="dd-item-icon" aria-hidden="true" data-astro-cid-wwe277d2>📘</span> Meta Ads </a><a href="#" class="dd-item" role="menuitem" data-astro-cid-wwe277d2> <span class="dd-item-icon" aria-hidden="true" data-astro-cid-wwe277d2>🔍</span> SEO </a><a href="#" class="dd-item" role="menuitem" data-astro-cid-wwe277d2> <span class="dd-item-icon" aria-hidden="true" data-astro-cid-wwe277d2>📊</span> Analytics </a><a href="#" class="dd-item" role="menuitem" data-astro-cid-wwe277d2>  Alle diensten → </a> </div> </div>
+<div class="dd"> <button class="dd-trigger" aria-haspopup="true">Diensten <span class="dd-arrow" aria-hidden="true">▾</span></button> <div class="dd-menu dd-menu--left" role="menu"> <a href="#" class="dd-item" role="menuitem"> <span class="dd-item-icon" aria-hidden="true">🎯</span> Google Ads </a><a href="#" class="dd-item" role="menuitem"> <span class="dd-item-icon" aria-hidden="true">📘</span> Meta Ads </a><a href="#" class="dd-item" role="menuitem"> <span class="dd-item-icon" aria-hidden="true">🔍</span> SEO </a><a href="#" class="dd-item" role="menuitem"> <span class="dd-item-icon" aria-hidden="true">📊</span> Analytics </a><a href="#" class="dd-item" role="menuitem">  Alle diensten → </a> </div> </div>
 
-
+<style>
+.dd{position:relative;display:inline-block}
+.dd-trigger{padding:.5625rem 1rem;background:#fff;border:1.5px solid #d1d5db;border-radius:.5rem;font-size:.9375rem;font-weight:500;color:#374151;cursor:pointer;display:inline-flex;align-items:center;gap:.5rem;transition:border-color .15s}
+.dd-trigger:hover{border-color:#9ca3af}
+.dd-arrow{font-size:.75rem;opacity:.6}
+.dd-menu{position:absolute;top:calc(100% + 6px);background:#fff;border:1px solid #e5e7eb;border-radius:.625rem;padding:.375rem;min-width:180px;box-shadow:0 8px 24px #0000001a;z-index:100;opacity:0;pointer-events:none;transform:translateY(-4px);transition:opacity .15s,transform .15s}
+.dd-menu--left{left:0}
+.dd-menu--right{right:0}
+.dd:hover .dd-menu,.dd:focus-within .dd-menu{opacity:1;pointer-events:auto;transform:translateY(0)}
+.dd-item{display:flex;align-items:center;gap:.625rem;padding:.5625rem .875rem;font-size:.9375rem;color:#374151;border-radius:.375rem;text-decoration:none;transition:background .1s}
+.dd-item:hover{background:#f3f4f6;color:#0a0a0a}
+.dd-item-icon{font-size:1rem}
+.dd-divider{height:1px;background:#f3f4f6;margin:.375rem 0}
+</style>

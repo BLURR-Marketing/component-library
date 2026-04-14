@@ -2,8 +2,17 @@
 // ContentTwoUp — recovered from blurr-components.pages.dev
 ---
 
-<div class="ctu-wrap" data-astro-cid-vvbna6dl> <div class="ctu-block" data-astro-cid-vvbna6dl> <div class="ctu-icon" aria-hidden="true" data-astro-cid-vvbna6dl>🚀</div> <h3 class="ctu-title" data-astro-cid-vvbna6dl>Snelle lancering</h3> <p class="ctu-text" data-astro-cid-vvbna6dl>Binnen twee weken staat je campagne live.</p> <a class="ctu-link" href="/diensten" data-astro-cid-vvbna6dl> Bekijk ons aanbod →
-</a> </div><div class="ctu-block" data-astro-cid-vvbna6dl> <div class="ctu-icon" aria-hidden="true" data-astro-cid-vvbna6dl>📊</div> <h3 class="ctu-title" data-astro-cid-vvbna6dl>Data-gedreven beslissingen</h3> <p class="ctu-text" data-astro-cid-vvbna6dl>Elk besluit baseren we op cijfers, niet op meningen.</p> <a class="ctu-link" href="/cases" data-astro-cid-vvbna6dl> Zie onze resultaten →
+<div class="ctu-wrap"> <div class="ctu-block"> <div class="ctu-icon" aria-hidden="true">🚀</div> <h3 class="ctu-title">Snelle lancering</h3> <p class="ctu-text">Binnen twee weken staat je campagne live.</p> <a class="ctu-link" href="/diensten"> Bekijk ons aanbod →
+</a> </div><div class="ctu-block"> <div class="ctu-icon" aria-hidden="true">📊</div> <h3 class="ctu-title">Data-gedreven beslissingen</h3> <p class="ctu-text">Elk besluit baseren we op cijfers, niet op meningen.</p> <a class="ctu-link" href="/cases"> Zie onze resultaten →
 </a> </div> </div>
 
-
+<style>
+.ctu-wrap{display:grid;grid-template-columns:1fr 1fr;gap:2rem;padding:2rem 0}
+.ctu-wrap{grid-template-columns:1fr}
+.ctu-block{padding:2rem;background:#f9f9f9;border-radius:12px;border:1px solid #ebebeb}
+.ctu-icon{font-size:2rem;margin-bottom:1rem}
+.ctu-title{font-size:1.25rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 .75rem}
+.ctu-text{font-size:.975rem;line-height:1.7;color:#555;margin:0 0 1.25rem}
+.ctu-link{font-size:.9rem;font-weight:600;color:var(--color-accent, #6366f1);text-decoration:none}
+.ctu-link:hover{text-decoration:underline}
+</style>

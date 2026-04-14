@@ -2,6 +2,14 @@
 // VideoLoop — recovered from blurr-components.pages.dev
 ---
 
-<section class="vlp" data-astro-cid-nkeybp6m> <div class="vlp__video-wrap" data-astro-cid-nkeybp6m> <video class="vlp__video" autoplay muted loop playsinline aria-hidden="true" data-astro-cid-nkeybp6m> <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" data-astro-cid-nkeybp6m> </video> <div class="vlp__gradient" data-astro-cid-nkeybp6m></div> </div> <div class="vlp__content" data-astro-cid-nkeybp6m> <h2 class="vlp__headline" data-astro-cid-nkeybp6m>Altijd in beweging</h2> <p class="vlp__body" data-astro-cid-nkeybp6m>Marketing die nooit stilstaat.</p> </div> </section>
+<section class="vlp"> <div class="vlp__video-wrap"> <video class="vlp__video" autoplay muted loop playsinline aria-hidden="true"> <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"> </video> <div class="vlp__gradient"></div> </div> <div class="vlp__content"> <h2 class="vlp__headline">Altijd in beweging</h2> <p class="vlp__body">Marketing die nooit stilstaat.</p> </div> </section>
 
-
+<style>
+.vlp{position:relative;height:480px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center}
+.vlp__video-wrap{position:absolute;inset:0}
+.vlp__video{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.4) brightness(.75)}
+.vlp__gradient{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.85) 0%,rgba(10,10,10,.2) 60%,transparent 100%)}
+.vlp__content{position:relative;z-index:1;padding:2.5rem 1.5rem 3rem;text-align:center;max-width:680px;width:100%}
+.vlp__headline{font-size:clamp(1.75rem,4vw,3rem);font-weight:800;color:#fff;margin:0 0 .75rem;letter-spacing:-.02em;line-height:1.15}
+.vlp__body{color:#ffffffa6;font-size:.97rem;line-height:1.65;margin:0}
+</style>

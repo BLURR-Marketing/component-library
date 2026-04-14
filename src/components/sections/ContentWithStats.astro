@@ -2,6 +2,37 @@
 // ContentWithStats — recovered from blurr-components.pages.dev
 ---
 
-<section class="cws__section" data-astro-cid-g7lqw6a6> <div class="cws__inner" data-astro-cid-g7lqw6a6> <!-- Left: text --> <div class="cws__text cws-reveal cws-reveal--left" data-astro-cid-g7lqw6a6> <p class="cws__eyebrow" data-astro-cid-g7lqw6a6>Resultaten</p> <h2 class="cws__headline" data-astro-cid-g7lqw6a6>Bewezen <em>resultaten</em> voor onze klanten</h2> <p class="cws__body" data-astro-cid-g7lqw6a6>Elk kwartaal meten we onze impact opnieuw. Geen mooie praatjes — alleen harde cijfers die we graag met je delen.</p> <a href="#" class="cws__cta" data-astro-cid-g7lqw6a6>Bekijk cases</a> </div> <!-- Right: stats --> <div class="cws__stats-col cws-reveal cws-reveal--right" data-astro-cid-g7lqw6a6>  <div class="cws__stats" data-astro-cid-g7lqw6a6> <div class="cws__stat" data-astro-cid-g7lqw6a6> <span class="cws__stat-value" data-astro-cid-g7lqw6a6>4.2×</span> <span class="cws__stat-label" data-astro-cid-g7lqw6a6>Gemiddelde ROAS</span> <span class="cws__stat-desc" data-astro-cid-g7lqw6a6>Over alle Google Ads klanten</span> <hr class="cws__stat-rule" data-astro-cid-g7lqw6a6> </div><div class="cws__stat" data-astro-cid-g7lqw6a6> <span class="cws__stat-value" data-astro-cid-g7lqw6a6>93%</span> <span class="cws__stat-label" data-astro-cid-g7lqw6a6>Klantbehoud</span> <span class="cws__stat-desc" data-astro-cid-g7lqw6a6>Na 12 maanden samenwerking</span> <hr class="cws__stat-rule" data-astro-cid-g7lqw6a6> </div><div class="cws__stat" data-astro-cid-g7lqw6a6> <span class="cws__stat-value" data-astro-cid-g7lqw6a6>€50M+</span> <span class="cws__stat-label" data-astro-cid-g7lqw6a6>Ad spend beheerd</span> <span class="cws__stat-desc" data-astro-cid-g7lqw6a6>In de afgelopen 5 jaar</span>  </div> </div> </div> </div> </section>
+<section class="cws__section"> <div class="cws__inner"> <!-- Left: text --> <div class="cws__text cws-reveal cws-reveal--left"> <p class="cws__eyebrow">Resultaten</p> <h2 class="cws__headline">Bewezen <em>resultaten</em> voor onze klanten</h2> <p class="cws__body">Elk kwartaal meten we onze impact opnieuw. Geen mooie praatjes — alleen harde cijfers die we graag met je delen.</p> <a href="#" class="cws__cta">Bekijk cases</a> </div> <!-- Right: stats --> <div class="cws__stats-col cws-reveal cws-reveal--right">  <div class="cws__stats"> <div class="cws__stat"> <span class="cws__stat-value">4.2×</span> <span class="cws__stat-label">Gemiddelde ROAS</span> <span class="cws__stat-desc">Over alle Google Ads klanten</span> <hr class="cws__stat-rule"> </div><div class="cws__stat"> <span class="cws__stat-value">93%</span> <span class="cws__stat-label">Klantbehoud</span> <span class="cws__stat-desc">Na 12 maanden samenwerking</span> <hr class="cws__stat-rule"> </div><div class="cws__stat"> <span class="cws__stat-value">€50M+</span> <span class="cws__stat-label">Ad spend beheerd</span> <span class="cws__stat-desc">In de afgelopen 5 jaar</span>  </div> </div> </div> </div> </section>
 
-
+<style>
+.cws__section{background:var(--color-bg);padding:clamp(3rem,8vw,7rem) clamp(1rem,5vw,2rem)}
+.cws__inner{display:flex;align-items:flex-start;gap:clamp(2.5rem,6vw,6rem);max-width:1200px;margin:0 auto}
+.cws__text{flex:1 1 45%;min-width:0}
+.cws__eyebrow{font-size:clamp(.65rem,1.2vw,.75rem);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--color-accent);margin:0 0 .75rem}
+.cws__headline{font-size:clamp(2rem,3.5vw,3rem);font-weight:800;line-height:1.15;color:var(--color-primary);margin:0 0 1.25rem}
+.cws__headline em{font-style:italic;color:var(--color-accent)}
+.cws__body{font-size:clamp(1rem,1.5vw,1.125rem);line-height:1.7;color:var(--color-muted);margin:0 0 2rem}
+.cws__cta{display:inline-flex;align-items:center;padding:.75rem 1.5rem;border-radius:var(--radius);font-size:.9375rem;font-weight:600;text-decoration:none;background:var(--color-accent);color:#fff;transition:opacity .2s ease,transform .2s ease}
+.cws__cta:hover{opacity:.85;transform:translateY(-1px)}
+.cws__stats-col{flex:1 1 45%;min-width:0}
+.cws__thumb{margin-bottom:1.5rem;border-radius:var(--radius);overflow:hidden}
+.cws__thumb-img{display:block;width:100%;height:180px;object-fit:cover;border-radius:var(--radius)}
+.cws__stats{display:flex;flex-direction:column;gap:0}
+.cws__stat{display:flex;flex-direction:column;padding:1.25rem 0}
+.cws__stat-value{font-size:clamp(2.5rem,4vw,4rem);font-weight:900;line-height:1;color:var(--color-accent);letter-spacing:-.02em}
+.cws__stat-label{font-size:clamp(.9rem,1.2vw,1rem);font-weight:700;color:var(--color-primary);margin-top:.25rem}
+.cws__stat-desc{font-size:.875rem;color:var(--color-muted);margin-top:.25rem;line-height:1.5}
+.cws__stat-rule{border:none;border-top:1px solid rgba(0,0,0,.08);margin:0}
+.cws-reveal{opacity:0;transition:opacity .7s ease,transform .7s ease}
+.cws-reveal--left{transform:translate(-2rem)}
+.cws-reveal--right{transform:translate(2rem);transition-delay:.12s}
+.cws-reveal--visible{opacity:1;transform:translate(0)}
+.cws__inner{flex-direction:column}
+.cws__text,.cws__stats-col{flex:1 1 100%;width:100%}
+.cws__stats{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.cws__stat{padding:0}
+.cws__stat-rule{display:none}
+.cws-reveal--left,.cws-reveal--right{transform:translateY(1.5rem)}
+.cws-reveal--visible{transform:translateY(0)}
+.cws__stats{grid-template-columns:1fr}
+</style>

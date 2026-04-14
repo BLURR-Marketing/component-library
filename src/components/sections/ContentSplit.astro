@@ -2,6 +2,33 @@
 // ContentSplit — recovered from blurr-components.pages.dev
 ---
 
-<section class="csp__section" data-astro-cid-hnovxf7z> <div class="csp__inner" data-astro-cid-hnovxf7z> <div class="csp__text csp-reveal csp-reveal--left" data-astro-cid-hnovxf7z> <p class="csp__eyebrow" data-astro-cid-hnovxf7z>Onze aanpak</p> <h2 class="csp__headline" data-astro-cid-hnovxf7z>Data-gedreven <em>beslissingen</em></h2> <p class="csp__body" data-astro-cid-hnovxf7z>We analyseren elk aspect van je campagnes — van klikkosten tot klantwaarde. Geen onderbuikgevoel, maar cijfers die richting geven.</p> <div class="csp__actions" data-astro-cid-hnovxf7z> <a href="#" class="csp__cta csp__cta--primary" data-astro-cid-hnovxf7z>Meer over onze aanpak</a>  </div> </div> <div class="csp__media csp-reveal csp-reveal--right" data-astro-cid-hnovxf7z> <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80" alt="Team aan het analyseren" class="csp__image" style="object-fit: cover;" loading="lazy" decoding="async" data-astro-cid-hnovxf7z> </div> </div> </section>
+<section class="csp__section"> <div class="csp__inner"> <div class="csp__text csp-reveal csp-reveal--left"> <p class="csp__eyebrow">Onze aanpak</p> <h2 class="csp__headline">Data-gedreven <em>beslissingen</em></h2> <p class="csp__body">We analyseren elk aspect van je campagnes — van klikkosten tot klantwaarde. Geen onderbuikgevoel, maar cijfers die richting geven.</p> <div class="csp__actions"> <a href="#" class="csp__cta csp__cta--primary">Meer over onze aanpak</a>  </div> </div> <div class="csp__media csp-reveal csp-reveal--right"> <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80" alt="Team aan het analyseren" class="csp__image" style="object-fit: cover;" loading="lazy" decoding="async"> </div> </div> </section>
 
-
+<style>
+.csp__section{background:var(--color-bg);padding:clamp(3rem,8vw,7rem) clamp(1rem,5vw,2rem)}
+.csp__inner{display:flex;align-items:center;gap:clamp(2rem,5vw,5rem);max-width:1200px;margin:0 auto}
+.csp__section--reversed .csp__inner{flex-direction:row-reverse}
+.csp__text{flex:1 1 45%;min-width:0}
+.csp__eyebrow{font-size:clamp(.65rem,1.2vw,.75rem);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--color-accent);margin:0 0 .75rem}
+.csp__headline{font-size:clamp(2rem,3.5vw,3rem);font-weight:800;line-height:1.15;color:var(--color-primary);margin:0 0 1.25rem}
+.csp__headline em{font-style:italic;color:var(--color-accent)}
+.csp__body{font-size:clamp(1rem,1.5vw,1.125rem);line-height:1.7;color:var(--color-muted);margin:0 0 2rem}
+.csp__actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.csp__cta{display:inline-flex;align-items:center;padding:.75rem 1.5rem;border-radius:var(--radius);font-size:.9375rem;font-weight:600;text-decoration:none;transition:opacity .2s ease,transform .2s ease}
+.csp__cta:hover{opacity:.85;transform:translateY(-1px)}
+.csp__cta--primary{background:var(--color-accent);color:#fff}
+.csp__cta--secondary{background:transparent;color:var(--color-primary);border:1.5px solid rgba(0,0,0,.15)}
+.csp__media{flex:1 1 55%;min-width:0}
+.csp__image{display:block;width:100%;height:clamp(280px,45vw,560px);object-position:center;border-radius:var(--radius);box-shadow:0 8px 40px #0000001a,0 2px 8px #0000000f}
+.csp-reveal{opacity:0;transition:opacity .7s ease,transform .7s ease}
+.csp-reveal--left{transform:translate(-2.5rem)}
+.csp-reveal--right{transform:translate(2.5rem);transition-delay:.1s}
+.csp__section--reversed .csp-reveal--left{transform:translate(-2.5rem)}
+.csp__section--reversed .csp-reveal--right{transform:translate(2.5rem)}
+.csp-reveal--visible{opacity:1;transform:translate(0)}
+.csp__inner,.csp__section--reversed .csp__inner{flex-direction:column}
+.csp__text,.csp__media{flex:1 1 100%;width:100%}
+.csp__media{order:-1}
+.csp-reveal--left,.csp-reveal--right{transform:translateY(1.5rem)}
+.csp-reveal--visible{transform:translateY(0)}
+</style>

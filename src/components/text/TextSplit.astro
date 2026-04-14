@@ -2,6 +2,16 @@
 // TextSplit — recovered from blurr-components.pages.dev
 ---
 
-<div class="tspl-wrap" data-astro-cid-aytkimxj> <h2 class="tspl-headline" data-astro-cid-aytkimxj>Onze visie</h2> <div class="tspl-grid" data-astro-cid-aytkimxj> <div class="tspl-col" data-astro-cid-aytkimxj> <p class="tspl-para" data-astro-cid-aytkimxj>Wij geloven dat marketing meetbaar moet zijn. Geen vage beloften, maar concrete resultaten.</p> </div> <div class="tspl-col" data-astro-cid-aytkimxj> <p class="tspl-para" data-astro-cid-aytkimxj>Elk bedrijf heeft potentieel. Onze taak is dat potentieel omzetten naar aantoonbare groei.</p> </div> </div> </div>
+<div class="tspl-wrap"> <h2 class="tspl-headline">Onze visie</h2> <div class="tspl-grid"> <div class="tspl-col"> <p class="tspl-para">Wij geloven dat marketing meetbaar moet zijn. Geen vage beloften, maar concrete resultaten.</p> </div> <div class="tspl-col"> <p class="tspl-para">Elk bedrijf heeft potentieel. Onze taak is dat potentieel omzetten naar aantoonbare groei.</p> </div> </div> </div>
 
-
+<style>
+.tspl-wrap{--color-accent: #6366f1;--color-primary: #0a0a0a;max-width:900px;padding:40px 32px;font-family:system-ui,sans-serif}
+.tspl-headline{margin:0 0 32px;font-size:clamp(1.4rem,3vw,1.9rem);font-weight:800;color:var(--color-primary);letter-spacing:-.02em}
+.tspl-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.tspl-grid{grid-template-columns:1fr}
+.tspl-col{display:flex;flex-direction:column;gap:0}
+.tspl-para{margin:0 0 16px;font-size:.95rem;line-height:1.75;color:#374151}
+.tspl-para:last-child{margin-bottom:0}
+.tspl-col:first-child{padding-right:16px;border-right:1px solid #f0f0f0}
+.tspl-col:first-child{padding-right:0;border-right:none}
+</style>

@@ -2,6 +2,30 @@
 // ContentColumns — recovered from blurr-components.pages.dev
 ---
 
-<section class="ccl__section ccl__section--cols-3" data-astro-cid-ue7gvu2l> <div class="ccl__header ccl-reveal" data-astro-cid-ue7gvu2l> <p class="ccl__eyebrow" data-astro-cid-ue7gvu2l>Onze visie</p> <h2 class="ccl__headline" data-astro-cid-ue7gvu2l>Waarom de meeste marketing-budgetten worden verspild</h2> </div> <div class="ccl__grid ccl__grid--3" data-astro-cid-ue7gvu2l> <div class="ccl__col ccl-reveal ccl__col--dropcap ccl__col--divided" style="animation-delay: 0s; transition-delay: 0s;" data-astro-cid-ue7gvu2l>  <h3 class="ccl__col-title" data-astro-cid-ue7gvu2l>Het probleem</h3> <p class="ccl__col-body" data-astro-cid-ue7gvu2l>De meeste bedrijven geven geld uit aan advertenties zonder te weten wat werkt. Ze meten clicks, maar niet klanten. Ze optimaliseren voor volume, maar niet voor waarde.</p> </div><div class="ccl__col ccl-reveal ccl__col--divided" style="animation-delay: 0.1s; transition-delay: 0.1s;" data-astro-cid-ue7gvu2l>  <h3 class="ccl__col-title" data-astro-cid-ue7gvu2l>Onze aanpak</h3> <p class="ccl__col-body" data-astro-cid-ue7gvu2l>Wij beginnen altijd met meten. Wat kost een klant? Wat is die klant waard? Pas als we die getallen kennen, starten we met adverteren. En dan optimaliseren we continu.</p> </div><div class="ccl__col ccl-reveal" style="animation-delay: 0.2s; transition-delay: 0.2s;" data-astro-cid-ue7gvu2l>  <h3 class="ccl__col-title" data-astro-cid-ue7gvu2l>Het resultaat</h3> <p class="ccl__col-body" data-astro-cid-ue7gvu2l>Klanten die met ons werken zien gemiddeld een ROAS van 4.2× na 3 maanden. Dat is geen toeval — dat is systeem. Een bewezen aanpak die we elke dag verfijnen.</p> </div> </div> </section>
+<section class="ccl__section ccl__section--cols-3"> <div class="ccl__header ccl-reveal"> <p class="ccl__eyebrow">Onze visie</p> <h2 class="ccl__headline">Waarom de meeste marketing-budgetten worden verspild</h2> </div> <div class="ccl__grid ccl__grid--3"> <div class="ccl__col ccl-reveal ccl__col--dropcap ccl__col--divided" style="animation-delay: 0s; transition-delay: 0s;">  <h3 class="ccl__col-title">Het probleem</h3> <p class="ccl__col-body">De meeste bedrijven geven geld uit aan advertenties zonder te weten wat werkt. Ze meten clicks, maar niet klanten. Ze optimaliseren voor volume, maar niet voor waarde.</p> </div><div class="ccl__col ccl-reveal ccl__col--divided" style="animation-delay: 0.1s; transition-delay: 0.1s;">  <h3 class="ccl__col-title">Onze aanpak</h3> <p class="ccl__col-body">Wij beginnen altijd met meten. Wat kost een klant? Wat is die klant waard? Pas als we die getallen kennen, starten we met adverteren. En dan optimaliseren we continu.</p> </div><div class="ccl__col ccl-reveal" style="animation-delay: 0.2s; transition-delay: 0.2s;">  <h3 class="ccl__col-title">Het resultaat</h3> <p class="ccl__col-body">Klanten die met ons werken zien gemiddeld een ROAS van 4.2× na 3 maanden. Dat is geen toeval — dat is systeem. Een bewezen aanpak die we elke dag verfijnen.</p> </div> </div> </section>
 
-
+<style>
+.ccl__section{background:var(--color-bg);padding:clamp(3rem,8vw,7rem) clamp(1rem,5vw,2rem)}
+.ccl__header{max-width:760px;margin:0 auto clamp(2.5rem,5vw,4rem);text-align:center}
+.ccl__eyebrow{font-size:clamp(.65rem,1.2vw,.75rem);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--color-accent);margin:0 0 .75rem}
+.ccl__headline{font-size:clamp(1.75rem,3vw,2.75rem);font-weight:800;line-height:1.2;color:var(--color-primary);margin:0}
+.ccl__grid{display:grid;max-width:1200px;margin:0 auto;align-items:start}
+.ccl__grid--3{grid-template-columns:repeat(3,1fr);gap:0}
+.ccl__grid--2{grid-template-columns:repeat(2,1fr);gap:0}
+.ccl__col{padding:0 clamp(1.25rem,3vw,2.5rem)}
+.ccl__col--divided{border-right:1px solid rgba(0,0,0,.08)}
+.ccl__col--dropcap .ccl__col-body:first-letter{float:left;font-size:clamp(3.5rem,6vw,5rem);font-weight:900;line-height:.8;margin:.05em .1em 0 0;color:var(--color-accent);font-family:Georgia,Times New Roman,serif}
+.ccl__icon{display:flex;align-items:center;justify-content:flex-start;margin-bottom:1rem;color:var(--color-accent)}
+.ccl__icon svg{width:2rem;height:2rem;flex-shrink:0}
+.ccl__col-title{font-size:clamp(1rem,1.5vw,1.125rem);font-weight:700;color:var(--color-primary);margin:0 0 .75rem;line-height:1.3}
+.ccl__col-body{font-size:clamp(.9375rem,1.3vw,1rem);line-height:1.75;color:var(--color-muted);margin:0}
+.ccl-reveal{opacity:0;transform:translateY(1.5rem);transition:opacity .6s ease,transform .6s ease}
+.ccl-reveal--visible{opacity:1;transform:translateY(0)}
+.ccl__grid--3{grid-template-columns:repeat(2,1fr)}
+.ccl__col{padding:clamp(1rem,3vw,1.5rem);border-right:none!important}
+.ccl__grid--3 .ccl__col:nth-child(odd):not(:last-child){border-right:1px solid rgba(0,0,0,.08)!important}
+.ccl__grid--3 .ccl__col,.ccl__grid--2 .ccl__col{border-bottom:1px solid rgba(0,0,0,.06)}
+.ccl__grid--3 .ccl__col:last-child,.ccl__grid--2 .ccl__col:last-child{border-bottom:none}
+.ccl__grid--3,.ccl__grid--2{grid-template-columns:1fr}
+.ccl__grid--3 .ccl__col:nth-child(odd):not(:last-child){border-right:none!important}
+</style>

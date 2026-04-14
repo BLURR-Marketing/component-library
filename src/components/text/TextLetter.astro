@@ -2,6 +2,13 @@
 // TextLetter — recovered from blurr-components.pages.dev
 ---
 
-<div class="tx-letter" data-astro-cid-nwdg6wo4> <p class="tx-letter__greeting" data-astro-cid-nwdg6wo4>Beste ondernemer,</p> <p class="tx-letter__para" data-astro-cid-nwdg6wo4>Je kent het gevoel: je investeert in advertenties maar weet niet of het werkt.</p> <p class="tx-letter__closing" data-astro-cid-nwdg6wo4>Met vriendelijke groet,</p> <p class="tx-letter__sig" data-astro-cid-nwdg6wo4>Team BLURR</p> </div>
+<div class="tx-letter"> <p class="tx-letter__greeting">Beste ondernemer,</p> <p class="tx-letter__para">Je kent het gevoel: je investeert in advertenties maar weet niet of het werkt.</p> <p class="tx-letter__closing">Met vriendelijke groet,</p> <p class="tx-letter__sig">Team BLURR</p> </div>
 
-
+<style>
+.tx-letter{max-width:600px;padding:2rem 2.5rem;background:#fafafa;border-radius:.75rem;border:1px solid #e5e5e5}
+.tx-letter__greeting{margin:0 0 1.25rem;font-size:1rem;font-weight:600;color:var(--color-primary)}
+.tx-letter__para{margin:0 0 1rem;font-size:.975rem;color:#444;line-height:1.75}
+.tx-letter__para:last-of-type{margin-bottom:1.5rem}
+.tx-letter__closing{margin:0 0 .15rem;font-size:.9rem;color:#666}
+.tx-letter__sig{margin:0;font-size:1rem;font-weight:700;color:var(--color-primary);font-style:italic}
+</style>

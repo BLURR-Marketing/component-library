@@ -2,6 +2,14 @@
 // VideoWide — recovered from blurr-components.pages.dev
 ---
 
-<section class="vwd" data-astro-cid-r7blbarp> <div class="vwd__player" data-astro-cid-r7blbarp> <div class="vwd__placeholder" aria-label="Cinematic video" data-astro-cid-r7blbarp> <span class="vwd__play" aria-hidden="true" data-astro-cid-r7blbarp> <svg width="64" height="64" viewBox="0 0 64 64" data-astro-cid-r7blbarp> <circle cx="32" cy="32" r="32" fill="rgba(99,102,241,0.85)" data-astro-cid-r7blbarp></circle> <polygon points="26,18 52,32 26,46" fill="#fff" data-astro-cid-r7blbarp></polygon> </svg> </span> </div> </div> <div class="vwd__meta" data-astro-cid-r7blbarp> <h2 class="vwd__title" data-astro-cid-r7blbarp>Showreel 2024</h2> <p class="vwd__subtitle" data-astro-cid-r7blbarp>Een jaar vol groei, creativiteit en resultaat.</p> </div> </section>
+<section class="vwd"> <div class="vwd__player"> <div class="vwd__placeholder" aria-label="Cinematic video"> <span class="vwd__play" aria-hidden="true"> <svg width="64" height="64" viewBox="0 0 64 64"> <circle cx="32" cy="32" r="32" fill="rgba(99,102,241,0.85)"></circle> <polygon points="26,18 52,32 26,46" fill="#fff"></polygon> </svg> </span> </div> </div> <div class="vwd__meta"> <h2 class="vwd__title">Showreel 2024</h2> <p class="vwd__subtitle">Een jaar vol groei, creativiteit en resultaat.</p> </div> </section>
 
-
+<style>
+.vwd{padding:2rem 0}
+.vwd__player{position:relative;aspect-ratio:21/9;border-radius:12px;overflow:hidden;background:#0a0a0a}
+.vwd__video{width:100%;height:100%;object-fit:cover}
+.vwd__placeholder{width:100%;height:100%;background:linear-gradient(180deg,#0a0a1a,#1a1a3a);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.vwd__meta{display:flex;align-items:baseline;gap:1rem;margin-top:1rem;padding:0 .25rem}
+.vwd__title{font-size:1.15rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0}
+.vwd__subtitle{font-size:.9rem;color:#888;margin:0}
+</style>

@@ -2,6 +2,38 @@
 // StatsCounter — recovered from blurr-components.pages.dev
 ---
 
-<section class="sc sc--row" data-component="stats-counter" data-astro-cid-jozwaxb3> <div class="sc__inner" data-astro-cid-jozwaxb3> <div class="sc__header" data-astro-cid-jozwaxb3> <p class="sc__pre" data-astro-cid-jozwaxb3>In cijfers</p> <h2 class="sc__headline" data-astro-cid-jozwaxb3>Bewezen <em>resultaten</em></h2>  </div> <div class="sc__stats" data-astro-cid-jozwaxb3> <div class="sc__stat" style="--delay:0s" data-astro-cid-jozwaxb3>  <div class="sc__value-wrap" data-astro-cid-jozwaxb3> <span class="sc__value" data-target="80" data-suffix="+" data-astro-cid-jozwaxb3> 80+ </span> </div> <p class="sc__label" data-astro-cid-jozwaxb3>Tevreden klanten</p> <p class="sc__desc" data-astro-cid-jozwaxb3>Actieve samenwerkingen</p> </div><div class="sc__stat" style="--delay:0.1s" data-astro-cid-jozwaxb3>  <div class="sc__value-wrap" data-astro-cid-jozwaxb3> <span class="sc__value" data-target="4.2" data-suffix="×" data-astro-cid-jozwaxb3> 4.2× </span> </div> <p class="sc__label" data-astro-cid-jozwaxb3>Gemiddeld ROAS</p> <p class="sc__desc" data-astro-cid-jozwaxb3>Over alle accounts</p> </div><div class="sc__stat" style="--delay:0.2s" data-astro-cid-jozwaxb3>  <div class="sc__value-wrap" data-astro-cid-jozwaxb3> <span class="sc__value" data-target="12" data-suffix="M+" data-astro-cid-jozwaxb3> 12M+ </span> </div> <p class="sc__label" data-astro-cid-jozwaxb3>Omzet gegenereerd</p> <p class="sc__desc" data-astro-cid-jozwaxb3>In het afgelopen jaar</p> </div><div class="sc__stat" style="--delay:0.30000000000000004s" data-astro-cid-jozwaxb3>  <div class="sc__value-wrap" data-astro-cid-jozwaxb3> <span class="sc__value" data-target="93" data-suffix="%" data-astro-cid-jozwaxb3> 93% </span> </div> <p class="sc__label" data-astro-cid-jozwaxb3>Klantretentie</p> <p class="sc__desc" data-astro-cid-jozwaxb3>Klanten die blijven</p> </div> </div> </div> </section>
+<section class="sc sc--row" data-component="stats-counter"> <div class="sc__inner"> <div class="sc__header"> <p class="sc__pre">In cijfers</p> <h2 class="sc__headline">Bewezen <em>resultaten</em></h2>  </div> <div class="sc__stats"> <div class="sc__stat" style="--delay:0s">  <div class="sc__value-wrap"> <span class="sc__value" data-target="80" data-suffix="+"> 80+ </span> </div> <p class="sc__label">Tevreden klanten</p> <p class="sc__desc">Actieve samenwerkingen</p> </div><div class="sc__stat" style="--delay:0.1s">  <div class="sc__value-wrap"> <span class="sc__value" data-target="4.2" data-suffix="×"> 4.2× </span> </div> <p class="sc__label">Gemiddeld ROAS</p> <p class="sc__desc">Over alle accounts</p> </div><div class="sc__stat" style="--delay:0.2s">  <div class="sc__value-wrap"> <span class="sc__value" data-target="12" data-suffix="M+"> 12M+ </span> </div> <p class="sc__label">Omzet gegenereerd</p> <p class="sc__desc">In het afgelopen jaar</p> </div><div class="sc__stat" style="--delay:0.30000000000000004s">  <div class="sc__value-wrap"> <span class="sc__value" data-target="93" data-suffix="%"> 93% </span> </div> <p class="sc__label">Klantretentie</p> <p class="sc__desc">Klanten die blijven</p> </div> </div> </div> </section>
 
-
+<style>
+.sc{padding:5rem 1.5rem;background:var(--color-bg, #fff)}
+.sc--dark{background:var(--color-primary, #0a0a0a)}
+.sc__inner{max-width:1200px;margin:0 auto}
+.sc__header{text-align:center;max-width:600px;margin:0 auto 4rem}
+.sc__pre{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--color-accent, #6366f1);margin-bottom:.875rem}
+.sc__headline{font-size:clamp(1.75rem,3.5vw,2.75rem);font-weight:800;letter-spacing:-.035em;line-height:1.1;color:var(--color-primary, #0a0a0a);margin-bottom:.875rem}
+.sc--dark .sc__headline{color:#fff}
+.sc__headline em{font-style:normal;color:var(--color-accent, #6366f1)}
+.sc__sub{font-size:1rem;line-height:1.65;color:var(--color-muted, #6b7280)}
+.sc--dark .sc__sub{color:#ffffff73}
+.sc--row .sc__stats{display:flex;gap:0;justify-content:center;flex-wrap:wrap}
+.sc--row .sc__stat{flex:1;min-width:160px;max-width:280px;text-align:center;padding:2rem 1.5rem;border-right:1px solid rgba(0,0,0,.07)}
+.sc--dark.sc--row .sc__stat{border-right-color:#ffffff12}
+.sc--row .sc__stat:last-child{border-right:none}
+.sc--grid .sc__stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
+.sc--grid .sc__stat{background:#00000005;border-radius:1rem;padding:2rem;border:1px solid rgba(0,0,0,.05)}
+.sc--dark.sc--grid .sc__stat{background:#ffffff0a;border-color:#ffffff12}
+.sc__stat{animation:sc-fade-up .6s var(--delay, 0s) cubic-bezier(.22,1,.36,1) both}
+.sc__icon{width:40px;height:40px;color:var(--color-accent, #6366f1);margin:0 auto 1rem}
+.sc__value-wrap{overflow:hidden}
+.sc__value{display:block;font-size:clamp(2.5rem,5vw,4rem);font-weight:900;letter-spacing:-.04em;line-height:1;color:var(--color-primary, #0a0a0a);margin-bottom:.5rem;font-feature-settings:"tnum"}
+.sc--dark .sc__value{color:#fff}
+.sc__label{font-size:.9375rem;font-weight:600;color:var(--color-primary, #0a0a0a);margin-bottom:.375rem}
+.sc--dark .sc__label{color:#ffffffd9}
+.sc__desc{font-size:.8125rem;line-height:1.5;color:var(--color-muted, #6b7280)}
+.sc--dark .sc__desc{color:#ffffff59}
+.sc__stat{animation:none}
+.sc--row .sc__stats{flex-direction:column}
+.sc--row .sc__stat{border-right:none;border-bottom:1px solid rgba(0,0,0,.07);max-width:none}
+.sc--row .sc__stat:last-child{border-bottom:none}
+.sc--dark.sc--row .sc__stat{border-bottom-color:#ffffff12}
+</style>

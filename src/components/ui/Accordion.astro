@@ -2,6 +2,18 @@
 // Accordion — recovered from blurr-components.pages.dev
 ---
 
-<div class="acc" data-astro-cid-wx4eh2ni> <details class="acc-item" name="accordion" data-astro-cid-wx4eh2ni> <summary class="acc-summary" data-astro-cid-wx4eh2ni> <span class="acc-question" data-astro-cid-wx4eh2ni>Hoeveel kost een Google Ads campagne?</span> <span class="acc-icon" aria-hidden="true" data-astro-cid-wx4eh2ni>+</span> </summary> <div class="acc-body" data-astro-cid-wx4eh2ni> <p class="acc-answer" data-astro-cid-wx4eh2ni>De kosten hangen af van je budget en doelstellingen. We werken met flexibele maandbudgetten vanaf €500 en transparante managementvergoedingen.</p> </div> </details><details class="acc-item" name="accordion" data-astro-cid-wx4eh2ni> <summary class="acc-summary" data-astro-cid-wx4eh2ni> <span class="acc-question" data-astro-cid-wx4eh2ni>Hoe snel zie ik resultaten?</span> <span class="acc-icon" aria-hidden="true" data-astro-cid-wx4eh2ni>+</span> </summary> <div class="acc-body" data-astro-cid-wx4eh2ni> <p class="acc-answer" data-astro-cid-wx4eh2ni>Google Ads kan direct verkeer opleveren. Gemiddeld zien klanten binnen 30 dagen meetbare verbeteringen in conversies en kosten per lead.</p> </div> </details><details class="acc-item" name="accordion" data-astro-cid-wx4eh2ni> <summary class="acc-summary" data-astro-cid-wx4eh2ni> <span class="acc-question" data-astro-cid-wx4eh2ni>Zit ik vast aan een contract?</span> <span class="acc-icon" aria-hidden="true" data-astro-cid-wx4eh2ni>+</span> </summary> <div class="acc-body" data-astro-cid-wx4eh2ni> <p class="acc-answer" data-astro-cid-wx4eh2ni>Nee. We werken zonder langetermijncontracten. Je kunt maandelijks opzeggen.</p> </div> </details> </div>
+<div class="acc"> <details class="acc-item" name="accordion"> <summary class="acc-summary"> <span class="acc-question">Hoeveel kost een Google Ads campagne?</span> <span class="acc-icon" aria-hidden="true">+</span> </summary> <div class="acc-body"> <p class="acc-answer">De kosten hangen af van je budget en doelstellingen. We werken met flexibele maandbudgetten vanaf €500 en transparante managementvergoedingen.</p> </div> </details><details class="acc-item" name="accordion"> <summary class="acc-summary"> <span class="acc-question">Hoe snel zie ik resultaten?</span> <span class="acc-icon" aria-hidden="true">+</span> </summary> <div class="acc-body"> <p class="acc-answer">Google Ads kan direct verkeer opleveren. Gemiddeld zien klanten binnen 30 dagen meetbare verbeteringen in conversies en kosten per lead.</p> </div> </details><details class="acc-item" name="accordion"> <summary class="acc-summary"> <span class="acc-question">Zit ik vast aan een contract?</span> <span class="acc-icon" aria-hidden="true">+</span> </summary> <div class="acc-body"> <p class="acc-answer">Nee. We werken zonder langetermijncontracten. Je kunt maandelijks opzeggen.</p> </div> </details> </div>
 
-
+<style>
+.acc{display:flex;flex-direction:column;border:1px solid #e5e7eb;border-radius:.75rem;overflow:hidden}
+.acc-item{border-bottom:1px solid #e5e7eb}
+.acc-item:last-child{border-bottom:none}
+.acc-summary{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;cursor:pointer;list-style:none;gap:1rem;background:#fff;transition:background .15s}
+.acc-summary::-webkit-details-marker{display:none}
+.acc-summary:hover{background:#f9fafb}
+.acc-question{font-size:1rem;font-weight:600;color:#0a0a0a}
+.acc-icon{font-size:1.25rem;color:var(--color-accent,#6366f1);flex-shrink:0;transition:transform .2s;font-weight:300;line-height:1}
+details[open] .acc-icon{transform:rotate(45deg)}
+.acc-body{padding:0 1.5rem 1.25rem;background:#fff}
+.acc-answer{font-size:.9375rem;color:#6b7280;line-height:1.65;margin:0}
+</style>

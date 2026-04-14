@@ -2,6 +2,21 @@
 // Chip — recovered from blurr-components.pages.dev
 ---
 
-<span class="chip chip--primary chip--md" data-astro-cid-l6h77gx5> <span class="chip-icon" aria-hidden="true" data-astro-cid-l6h77gx5>🎯</span> <span class="chip-label" data-astro-cid-l6h77gx5>Google Ads</span>  </span>
+<span class="chip chip--primary chip--md"> <span class="chip-icon" aria-hidden="true">🎯</span> <span class="chip-label">Google Ads</span>  </span>
 
-
+<style>
+.chip{display:inline-flex;align-items:center;gap:.375rem;border-radius:2rem;font-weight:500;white-space:nowrap}
+.chip--sm{font-size:.75rem;padding:.2rem .625rem}
+.chip--md{font-size:.8125rem;padding:.3125rem .875rem}
+.chip--lg{font-size:.9375rem;padding:.4375rem 1.125rem}
+.chip--default{background:#f3f4f6;color:#374151}
+.chip--primary{background:#6366f11a;color:var(--color-accent,#6366f1);border:1px solid rgba(99,102,241,.2)}
+.chip--success{background:#f0fdf4;color:#166534;border:1px solid #bbf7d0}
+.chip--warning{background:#fffbeb;color:#92400e;border:1px solid #fde68a}
+.chip--error{background:#fef2f2;color:#991b1b;border:1px solid #fecaca}
+.chip--outline{background:transparent;color:#374151;border:1.5px solid #d1d5db}
+.chip-icon{font-size:.875em}
+.chip-label{line-height:1}
+.chip-remove{background:none;border:none;cursor:pointer;font-size:1em;line-height:1;color:inherit;opacity:.6;padding:0;display:flex;align-items:center}
+.chip-remove:hover{opacity:1}
+</style>

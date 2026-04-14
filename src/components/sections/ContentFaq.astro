@@ -2,6 +2,18 @@
 // ContentFaq — recovered from blurr-components.pages.dev
 ---
 
-<section class="cfq-wrap" data-astro-cid-7vsvx6km> <div class="cfq-header" data-astro-cid-7vsvx6km> <h2 class="cfq-heading" data-astro-cid-7vsvx6km>Alles wat je wilt weten</h2> <p class="cfq-subtext" data-astro-cid-7vsvx6km>Staat jouw vraag er niet bij? Neem gerust contact op.</p> </div> <div class="cfq-grid cfq-grid--1" data-astro-cid-7vsvx6km> <div class="cfq-item" data-astro-cid-7vsvx6km> <h3 class="cfq-question" data-astro-cid-7vsvx6km>Werken jullie ook met kleine budgetten?</h3> <p class="cfq-answer" data-astro-cid-7vsvx6km>Ja. We hebben pakketten vanaf €1.500/mnd excl. mediabudget.</p> </div><div class="cfq-item" data-astro-cid-7vsvx6km> <h3 class="cfq-question" data-astro-cid-7vsvx6km>Kunnen jullie ook onze website bouwen?</h3> <p class="cfq-answer" data-astro-cid-7vsvx6km>Absoluut. We bouwen websites in Astro, Next.js en WordPress.</p> </div> </div> </section>
+<section class="cfq-wrap"> <div class="cfq-header"> <h2 class="cfq-heading">Alles wat je wilt weten</h2> <p class="cfq-subtext">Staat jouw vraag er niet bij? Neem gerust contact op.</p> </div> <div class="cfq-grid cfq-grid--1"> <div class="cfq-item"> <h3 class="cfq-question">Werken jullie ook met kleine budgetten?</h3> <p class="cfq-answer">Ja. We hebben pakketten vanaf €1.500/mnd excl. mediabudget.</p> </div><div class="cfq-item"> <h3 class="cfq-question">Kunnen jullie ook onze website bouwen?</h3> <p class="cfq-answer">Absoluut. We bouwen websites in Astro, Next.js en WordPress.</p> </div> </div> </section>
 
-
+<style>
+.cfq-wrap{padding:3rem 0}
+.cfq-header{margin-bottom:2.5rem}
+.cfq-heading{font-size:2rem;font-weight:800;color:var(--color-primary, #0a0a0a);margin:0 0 .75rem}
+.cfq-subtext{font-size:1rem;color:#666;margin:0}
+.cfq-grid{display:grid;gap:2rem}
+.cfq-grid--1{grid-template-columns:1fr}
+.cfq-grid--2{grid-template-columns:1fr 1fr}
+.cfq-grid--2{grid-template-columns:1fr}
+.cfq-item{padding-bottom:2rem;border-bottom:1px solid #ebebeb}
+.cfq-question{font-size:1.05rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 .6rem}
+.cfq-answer{font-size:.975rem;line-height:1.7;color:#555;margin:0}
+</style>

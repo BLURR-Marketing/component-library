@@ -2,6 +2,28 @@
 // Countdown — recovered from blurr-components.pages.dev
 ---
 
-<div class="cd cd--md" data-component="countdown" data-target="2026-04-21T11:51:16.489Z" data-expired="De actie is verlopen" data-astro-cid-yssr4pjy> <p class="cd__label" data-astro-cid-yssr4pjy>Aanbieding verloopt over</p> <div class="cd__blocks" data-astro-cid-yssr4pjy> <div class="cd__block" data-astro-cid-yssr4pjy> <span class="cd__value" data-unit="days" data-astro-cid-yssr4pjy>--</span> <span class="cd__unit" data-astro-cid-yssr4pjy>Dagen</span> </div> <span class="cd__sep" data-astro-cid-yssr4pjy>:</span> <div class="cd__block" data-astro-cid-yssr4pjy> <span class="cd__value" data-unit="hours" data-astro-cid-yssr4pjy>--</span> <span class="cd__unit" data-astro-cid-yssr4pjy>Uren</span> </div> <span class="cd__sep" data-astro-cid-yssr4pjy>:</span> <div class="cd__block" data-astro-cid-yssr4pjy> <span class="cd__value" data-unit="minutes" data-astro-cid-yssr4pjy>--</span> <span class="cd__unit" data-astro-cid-yssr4pjy>Minuten</span> </div>  <span class="cd__sep" data-astro-cid-yssr4pjy>:</span> <div class="cd__block" data-astro-cid-yssr4pjy> <span class="cd__value" data-unit="seconds" data-astro-cid-yssr4pjy>--</span> <span class="cd__unit" data-astro-cid-yssr4pjy>Seconden</span> </div>  </div> </div>
+<div class="cd cd--md" data-component="countdown" data-target="2026-04-21T11:51:16.489Z" data-expired="De actie is verlopen"> <p class="cd__label">Aanbieding verloopt over</p> <div class="cd__blocks"> <div class="cd__block"> <span class="cd__value" data-unit="days">--</span> <span class="cd__unit">Dagen</span> </div> <span class="cd__sep">:</span> <div class="cd__block"> <span class="cd__value" data-unit="hours">--</span> <span class="cd__unit">Uren</span> </div> <span class="cd__sep">:</span> <div class="cd__block"> <span class="cd__value" data-unit="minutes">--</span> <span class="cd__unit">Minuten</span> </div>  <span class="cd__sep">:</span> <div class="cd__block"> <span class="cd__value" data-unit="seconds">--</span> <span class="cd__unit">Seconden</span> </div>  </div> </div>
 
-
+<style>
+.cd{display:flex;flex-direction:column;align-items:center;gap:.875rem}
+.cd__label{font-size:.8125rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--color-muted, #6b7280)}
+.cd--dark .cd__label{color:#ffffff80}
+.cd__blocks{display:flex;align-items:flex-end;gap:.5rem}
+.cd__sep{font-size:2rem;font-weight:800;color:#0003;line-height:1;padding-bottom:1.25rem;letter-spacing:-.04em}
+.cd--sm .cd__sep{font-size:1.25rem;padding-bottom:.875rem}
+.cd--lg .cd__sep{font-size:3rem;padding-bottom:1.625rem}
+.cd--dark .cd__sep{color:#fff3}
+.cd__block{display:flex;flex-direction:column;align-items:center;gap:.375rem;min-width:64px;background:#0000000a;border-radius:var(--radius, .5rem);padding:.875rem .5rem .625rem}
+.cd--sm .cd__block{min-width:48px;padding:.625rem .375rem .5rem}
+.cd--lg .cd__block{min-width:90px;padding:1.25rem .75rem .875rem}
+.cd--dark .cd__block{background:#ffffff14}
+.cd__value{font-size:2rem;font-weight:900;letter-spacing:-.04em;color:var(--color-primary, #0a0a0a);line-height:1;font-feature-settings:"tnum";min-width:2ch;text-align:center}
+.cd--sm .cd__value{font-size:1.375rem}
+.cd--lg .cd__value{font-size:3rem}
+.cd--dark .cd__value{color:#fff}
+.cd__unit{font-size:.625rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--color-muted, #6b7280)}
+.cd--sm .cd__unit{font-size:.5625rem}
+.cd--lg .cd__unit{font-size:.75rem}
+.cd--dark .cd__unit{color:#fff6}
+.cd__expired{font-size:1rem;font-weight:600;color:var(--color-muted, #6b7280);padding:1.5rem}
+</style>

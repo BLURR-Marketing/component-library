@@ -2,6 +2,11 @@
 // TextManifesto — recovered from blurr-components.pages.dev
 ---
 
-<div class="tx-mfst" data-astro-cid-ijalgkac> <p class="tx-mfst__line " data-astro-cid-ijalgkac>Wij geloven dat marketing meetbaar moet zijn.</p><p class="tx-mfst__line " data-astro-cid-ijalgkac>Dat elke euro telt.</p><p class="tx-mfst__line " data-astro-cid-ijalgkac>Dat data niet liegt.</p><p class="tx-mfst__line tx-mfst__line--final" data-astro-cid-ijalgkac>Dat groei mogelijk is voor elk bedrijf.</p> </div>
+<div class="tx-mfst"> <p class="tx-mfst__line ">Wij geloven dat marketing meetbaar moet zijn.</p><p class="tx-mfst__line ">Dat elke euro telt.</p><p class="tx-mfst__line ">Dat data niet liegt.</p><p class="tx-mfst__line tx-mfst__line--final">Dat groei mogelijk is voor elk bedrijf.</p> </div>
 
-
+<style>
+.tx-mfst{padding:2rem 0;max-width:680px;display:flex;flex-direction:column;gap:.75rem}
+.tx-mfst__line{margin:0;font-size:clamp(1.1rem,2.5vw,1.35rem);font-weight:500;color:#444;line-height:1.55;padding-left:1.5rem;border-left:2px solid transparent;transition:border-color .2s,color .2s}
+.tx-mfst__line:hover{color:var(--color-primary);border-left-color:var(--color-accent)}
+.tx-mfst__line--final{font-weight:800;color:var(--color-primary);border-left-color:var(--color-accent);font-size:clamp(1.2rem,3vw,1.55rem);letter-spacing:-.01em}
+</style>

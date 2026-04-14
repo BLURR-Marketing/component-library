@@ -2,6 +2,23 @@
 // ContentGrid — recovered from blurr-components.pages.dev
 ---
 
-<section class="cgr-wrap" data-astro-cid-cpdhudnl> <div class="cgr-header" data-astro-cid-cpdhudnl> <h2 class="cgr-heading" data-astro-cid-cpdhudnl>Onze diensten</h2> <p class="cgr-subheading" data-astro-cid-cpdhudnl>Van strategie tot executie — alles onder één dak.</p> </div> <div class="cgr-grid cgr-grid--3" data-astro-cid-cpdhudnl> <div class="cgr-card" data-astro-cid-cpdhudnl> <div class="cgr-icon" aria-hidden="true" data-astro-cid-cpdhudnl>🎯</div> <div class="cgr-card-body" data-astro-cid-cpdhudnl> <span class="cgr-tag" data-astro-cid-cpdhudnl>Performance</span> <h3 class="cgr-card-title" data-astro-cid-cpdhudnl>Paid Search</h3> <p class="cgr-card-text" data-astro-cid-cpdhudnl>Google Ads campagnes die scoren op intent.</p> </div> </div><div class="cgr-card" data-astro-cid-cpdhudnl> <div class="cgr-icon" aria-hidden="true" data-astro-cid-cpdhudnl>📱</div> <div class="cgr-card-body" data-astro-cid-cpdhudnl> <span class="cgr-tag" data-astro-cid-cpdhudnl>Paid Social</span> <h3 class="cgr-card-title" data-astro-cid-cpdhudnl>Social Advertising</h3> <p class="cgr-card-text" data-astro-cid-cpdhudnl>Meta, LinkedIn en TikTok campagnes.</p> </div> </div><div class="cgr-card" data-astro-cid-cpdhudnl> <div class="cgr-icon" aria-hidden="true" data-astro-cid-cpdhudnl>🔍</div> <div class="cgr-card-body" data-astro-cid-cpdhudnl> <span class="cgr-tag" data-astro-cid-cpdhudnl>Organisch</span> <h3 class="cgr-card-title" data-astro-cid-cpdhudnl>SEO</h3> <p class="cgr-card-text" data-astro-cid-cpdhudnl>Technische SEO en contentstrategie.</p> </div> </div> </div> </section>
+<section class="cgr-wrap"> <div class="cgr-header"> <h2 class="cgr-heading">Onze diensten</h2> <p class="cgr-subheading">Van strategie tot executie — alles onder één dak.</p> </div> <div class="cgr-grid cgr-grid--3"> <div class="cgr-card"> <div class="cgr-icon" aria-hidden="true">🎯</div> <div class="cgr-card-body"> <span class="cgr-tag">Performance</span> <h3 class="cgr-card-title">Paid Search</h3> <p class="cgr-card-text">Google Ads campagnes die scoren op intent.</p> </div> </div><div class="cgr-card"> <div class="cgr-icon" aria-hidden="true">📱</div> <div class="cgr-card-body"> <span class="cgr-tag">Paid Social</span> <h3 class="cgr-card-title">Social Advertising</h3> <p class="cgr-card-text">Meta, LinkedIn en TikTok campagnes.</p> </div> </div><div class="cgr-card"> <div class="cgr-icon" aria-hidden="true">🔍</div> <div class="cgr-card-body"> <span class="cgr-tag">Organisch</span> <h3 class="cgr-card-title">SEO</h3> <p class="cgr-card-text">Technische SEO en contentstrategie.</p> </div> </div> </div> </section>
 
-
+<style>
+.cgr-wrap{padding:3rem 0}
+.cgr-header{margin-bottom:2.5rem}
+.cgr-heading{font-size:2rem;font-weight:800;color:var(--color-primary, #0a0a0a);margin:0 0 .5rem}
+.cgr-subheading{font-size:1.1rem;color:#666;margin:0}
+.cgr-grid{display:grid;gap:1.5rem}
+.cgr-grid--2{grid-template-columns:repeat(2,1fr)}
+.cgr-grid--3{grid-template-columns:repeat(3,1fr)}
+.cgr-grid--4{grid-template-columns:repeat(4,1fr)}
+.cgr-grid--3,.cgr-grid--4{grid-template-columns:repeat(2,1fr)}
+.cgr-grid--2,.cgr-grid--3,.cgr-grid--4{grid-template-columns:1fr}
+.cgr-card{padding:1.75rem;background:#fff;border:1px solid #e5e5e5;border-radius:12px;transition:box-shadow .2s,transform .2s}
+.cgr-card:hover{box-shadow:0 8px 30px #00000014;transform:translateY(-2px)}
+.cgr-icon{font-size:2rem;margin-bottom:1rem}
+.cgr-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--color-accent, #6366f1);background:#eef2ff;padding:.25rem .6rem;border-radius:4px;margin-bottom:.6rem}
+.cgr-card-title{font-size:1.1rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 .5rem}
+.cgr-card-text{font-size:.9rem;line-height:1.65;color:#666;margin:0}
+</style>

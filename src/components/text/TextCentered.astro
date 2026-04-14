@@ -2,6 +2,14 @@
 // TextCentered — recovered from blurr-components.pages.dev
 ---
 
-<div class="tctr-wrap" data-astro-cid-lyiqq5qz> <div class="tctr-deco tctr-deco--top" data-astro-cid-lyiqq5qz></div> <span class="tctr-eyebrow" data-astro-cid-lyiqq5qz>Over ons</span> <h2 class="tctr-headline" data-astro-cid-lyiqq5qz>Data-driven groei</h2> <div class="tctr-divider" data-astro-cid-lyiqq5qz></div> <p class="tctr-body" data-astro-cid-lyiqq5qz>Wij zijn BLURR — een bureau dat leeft voor resultaat.</p> <div class="tctr-deco tctr-deco--bottom" data-astro-cid-lyiqq5qz></div> </div>
+<div class="tctr-wrap"> <div class="tctr-deco tctr-deco--top"></div> <span class="tctr-eyebrow">Over ons</span> <h2 class="tctr-headline">Data-driven groei</h2> <div class="tctr-divider"></div> <p class="tctr-body">Wij zijn BLURR — een bureau dat leeft voor resultaat.</p> <div class="tctr-deco tctr-deco--bottom"></div> </div>
 
-
+<style>
+.tctr-wrap{--color-accent: #6366f1;--color-primary: #0a0a0a;text-align:center;padding:64px 32px;font-family:system-ui,sans-serif;display:flex;flex-direction:column;align-items:center;gap:16px;max-width:680px;margin:0 auto}
+.tctr-deco{width:40px;height:3px;background:linear-gradient(90deg,var(--color-accent),transparent);border-radius:2px}
+.tctr-deco--bottom{background:linear-gradient(90deg,transparent,var(--color-accent))}
+.tctr-eyebrow{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--color-accent)}
+.tctr-headline{margin:0;font-size:clamp(1.6rem,4vw,2.25rem);font-weight:800;color:var(--color-primary);letter-spacing:-.02em;line-height:1.2}
+.tctr-divider{width:48px;height:2px;background:var(--color-accent);border-radius:2px;opacity:.5}
+.tctr-body{margin:0;font-size:1.05rem;line-height:1.7;color:#4b5563;max-width:540px}
+</style>

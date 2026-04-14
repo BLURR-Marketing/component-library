@@ -2,6 +2,32 @@
 // PullQuote — recovered from blurr-components.pages.dev
 ---
 
-<section class="pq__section pq__variant-editorial pq__size-lg pq__align-center" data-astro-cid-hgkqqbcz> <div class="pq__inner" data-astro-cid-hgkqqbcz> <span class="pq__bg-quote" aria-hidden="true" data-astro-cid-hgkqqbcz>&ldquo;</span> <blockquote class="pq__quote" data-astro-cid-hgkqqbcz> <p class="pq__text" data-astro-cid-hgkqqbcz>Data zonder actie is informatie. Actie zonder data is gokken. Wij doen geen van beide.</p> <footer class="pq__author" data-astro-cid-hgkqqbcz>  <div class="pq__author-meta" data-astro-cid-hgkqqbcz> <span class="pq__author-name" data-astro-cid-hgkqqbcz>Mark Visscher</span> <span class="pq__author-role" data-astro-cid-hgkqqbcz>Founder, BLURR Marketing</span> </div> </footer> </blockquote> </div> </section>
+<section class="pq__section pq__variant-editorial pq__size-lg pq__align-center"> <div class="pq__inner"> <span class="pq__bg-quote" aria-hidden="true">&ldquo;</span> <blockquote class="pq__quote"> <p class="pq__text">Data zonder actie is informatie. Actie zonder data is gokken. Wij doen geen van beide.</p> <footer class="pq__author">  <div class="pq__author-meta"> <span class="pq__author-name">Mark Visscher</span> <span class="pq__author-role">Founder, BLURR Marketing</span> </div> </footer> </blockquote> </div> </section>
 
-
+<style>
+.pq__section{padding:5rem 1.5rem;opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.pq__section.pq--visible{opacity:1;transform:translateY(0)}
+.pq__inner{position:relative;max-width:760px;margin:0 auto}
+.pq__align-left .pq__inner{margin-left:0}
+.pq__quote{margin:0;position:relative;z-index:1}
+.pq__text{margin:0;font-weight:600;line-height:1.4}
+.pq__size-md .pq__text{font-size:clamp(1.5rem,3vw,2.5rem)}
+.pq__size-lg .pq__text{font-size:clamp(2rem,4vw,3.25rem)}
+.pq__align-center{text-align:center}
+.pq__align-center .pq__author{justify-content:center}
+.pq__align-left{text-align:left}
+.pq__variant-editorial .pq__text{font-style:italic}
+.pq__bg-quote{position:absolute;top:-.5em;left:-.1em;font-size:12rem;font-weight:900;color:var(--color-accent);opacity:.06;line-height:1;pointer-events:none;user-select:none;z-index:0}
+.pq__variant-minimal .pq__inner{padding-left:1.5rem;border-left:3px solid var(--color-accent)}
+.pq__variant-minimal .pq__text{font-size:clamp(1.125rem,2vw,1.5rem);font-style:normal;color:var(--color-primary)}
+.pq__variant-accent{background:var(--color-accent)}
+.pq__variant-accent .pq__text,.pq__variant-accent .pq__author-name{color:#fff}
+.pq__variant-accent .pq__author-role{color:#ffffffbf}
+.pq__variant-accent .pq__text{font-style:italic}
+.pq__variant-bordered .pq__inner{padding:2rem 0;border-top:3px solid var(--color-primary);border-bottom:3px solid var(--color-primary)}
+.pq__author{display:flex;align-items:center;gap:.75rem;margin-top:1.5rem}
+.pq__avatar{width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.pq__author-meta{display:flex;flex-direction:column;gap:.125rem}
+.pq__author-name{font-size:.9375rem;font-weight:700;color:var(--color-primary)}
+.pq__author-role{font-size:.8125rem;color:var(--color-muted)}
+</style>

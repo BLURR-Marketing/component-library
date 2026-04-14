@@ -2,6 +2,32 @@
 // NumberedStats — recovered from blurr-components.pages.dev
 ---
 
-<section class="ns ns--white" data-astro-cid-ko5yzhex> <div class="ns-inner" data-astro-cid-ko5yzhex> <div class="ns-header" data-astro-cid-ko5yzhex> <span class="ns-eyebrow" data-astro-cid-ko5yzhex>In cijfers</span> <h2 class="ns-headline" data-astro-cid-ko5yzhex>Resultaten die voor zichzelf spreken</h2> </div> <div class="ns-grid" data-astro-cid-ko5yzhex> <div class="ns-item" data-astro-cid-ko5yzhex> <span class="ns-num" data-astro-cid-ko5yzhex>01</span> <div class="ns-content" data-astro-cid-ko5yzhex> <span class="ns-value" data-astro-cid-ko5yzhex>€12M+</span> <span class="ns-label" data-astro-cid-ko5yzhex>Gegenereerde omzet</span> <p class="ns-desc" data-astro-cid-ko5yzhex>Totale omzet gegenereerd voor klanten in de afgelopen 3 jaar.</p> </div> </div><div class="ns-item" data-astro-cid-ko5yzhex> <span class="ns-num" data-astro-cid-ko5yzhex>02</span> <div class="ns-content" data-astro-cid-ko5yzhex> <span class="ns-value" data-astro-cid-ko5yzhex>200+</span> <span class="ns-label" data-astro-cid-ko5yzhex>Campagnes gelanceerd</span> <p class="ns-desc" data-astro-cid-ko5yzhex>Succesvolle Google en Meta campagnes voor bedrijven in alle sectoren.</p> </div> </div><div class="ns-item" data-astro-cid-ko5yzhex> <span class="ns-num" data-astro-cid-ko5yzhex>03</span> <div class="ns-content" data-astro-cid-ko5yzhex> <span class="ns-value" data-astro-cid-ko5yzhex>94%</span> <span class="ns-label" data-astro-cid-ko5yzhex>Klanttevredenheid</span> <p class="ns-desc" data-astro-cid-ko5yzhex>Op basis van jaarlijkse klantenonderzoeken.</p> </div> </div><div class="ns-item" data-astro-cid-ko5yzhex> <span class="ns-num" data-astro-cid-ko5yzhex>04</span> <div class="ns-content" data-astro-cid-ko5yzhex> <span class="ns-value" data-astro-cid-ko5yzhex>3.2x</span> <span class="ns-label" data-astro-cid-ko5yzhex>Gemiddeld ROAS</span> <p class="ns-desc" data-astro-cid-ko5yzhex>Gemiddeld rendement op advertentiekosten over alle klanten.</p> </div> </div> </div> </div> </section>
+<section class="ns ns--white"> <div class="ns-inner"> <div class="ns-header"> <span class="ns-eyebrow">In cijfers</span> <h2 class="ns-headline">Resultaten die voor zichzelf spreken</h2> </div> <div class="ns-grid"> <div class="ns-item"> <span class="ns-num">01</span> <div class="ns-content"> <span class="ns-value">€12M+</span> <span class="ns-label">Gegenereerde omzet</span> <p class="ns-desc">Totale omzet gegenereerd voor klanten in de afgelopen 3 jaar.</p> </div> </div><div class="ns-item"> <span class="ns-num">02</span> <div class="ns-content"> <span class="ns-value">200+</span> <span class="ns-label">Campagnes gelanceerd</span> <p class="ns-desc">Succesvolle Google en Meta campagnes voor bedrijven in alle sectoren.</p> </div> </div><div class="ns-item"> <span class="ns-num">03</span> <div class="ns-content"> <span class="ns-value">94%</span> <span class="ns-label">Klanttevredenheid</span> <p class="ns-desc">Op basis van jaarlijkse klantenonderzoeken.</p> </div> </div><div class="ns-item"> <span class="ns-num">04</span> <div class="ns-content"> <span class="ns-value">3.2x</span> <span class="ns-label">Gemiddeld ROAS</span> <p class="ns-desc">Gemiddeld rendement op advertentiekosten over alle klanten.</p> </div> </div> </div> </div> </section>
 
-
+<style>
+.ns{padding:5rem 2rem}
+.ns--white{background:#fff;border-top:1px solid #e5e7eb}
+.ns--light{background:#f8fafc;border-top:1px solid #e5e7eb}
+.ns--dark{background:#0a0a0a}
+.ns-inner{max-width:1100px;margin:0 auto}
+.ns-header{text-align:center;margin-bottom:3.5rem}
+.ns-eyebrow{display:block;font-size:.6875rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent,#6366f1);margin-bottom:.75rem}
+.ns-headline{font-size:clamp(1.75rem,3.5vw,2.5rem);font-weight:900;letter-spacing:-.04em;line-height:1.15;margin:0}
+.ns--white .ns-headline,.ns--light .ns-headline{color:#0a0a0a}
+.ns--dark .ns-headline{color:#fff}
+.ns-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0}
+.ns-item{display:flex;flex-direction:column;gap:1rem;padding:2.5rem 2rem;position:relative}
+.ns--white .ns-item,.ns--light .ns-item{border-right:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb}
+.ns--dark .ns-item{border-right:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.ns-item:nth-child(4n){border-right:none}
+.ns-num{font-size:.6875rem;font-weight:700;font-family:monospace;letter-spacing:.08em;opacity:.3}
+.ns--white .ns-num,.ns--light .ns-num{color:#0a0a0a}
+.ns--dark .ns-num{color:#fff}
+.ns-value{display:block;font-size:3rem;font-weight:900;color:var(--color-accent,#6366f1);letter-spacing:-.04em;line-height:1}
+.ns-label{display:block;font-size:1rem;font-weight:700}
+.ns--white .ns-label,.ns--light .ns-label{color:#0a0a0a}
+.ns--dark .ns-label{color:#fff}
+.ns-desc{font-size:.875rem;line-height:1.6;margin:0}
+.ns--white .ns-desc,.ns--light .ns-desc{color:#6b7280}
+.ns--dark .ns-desc{color:#ffffff73}
+</style>

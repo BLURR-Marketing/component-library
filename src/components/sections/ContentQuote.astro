@@ -2,6 +2,37 @@
 // ContentQuote — recovered from blurr-components.pages.dev
 ---
 
-<section class="cqu__section cqu__section--bg-light cqu__section--centered" style="" data-astro-cid-ppajvgpx> <div class="cqu__inner cqu-reveal" data-astro-cid-ppajvgpx> <!-- Decorative quotation mark --> <span class="cqu__mark" aria-hidden="true" data-astro-cid-ppajvgpx>&ldquo;</span> <blockquote class="cqu__quote cqu__quote--size-lg" data-astro-cid-ppajvgpx> <p class="cqu__text" data-astro-cid-ppajvgpx>De beste marketing voelt niet als marketing. Het voelt als een oplossing op het juiste moment.</p> <footer class="cqu__author" data-astro-cid-ppajvgpx>  <div class="cqu__author-meta" data-astro-cid-ppajvgpx> <span class="cqu__author-name" data-astro-cid-ppajvgpx>Mark Visscher</span> <span class="cqu__dot" aria-hidden="true" data-astro-cid-ppajvgpx>·</span> <span class="cqu__author-role" data-astro-cid-ppajvgpx>Founder, BLURR Marketing</span> </div> </footer> </blockquote> </div> </section>
+<section class="cqu__section cqu__section--bg-light cqu__section--centered" style=""> <div class="cqu__inner cqu-reveal"> <!-- Decorative quotation mark --> <span class="cqu__mark" aria-hidden="true">&ldquo;</span> <blockquote class="cqu__quote cqu__quote--size-lg"> <p class="cqu__text">De beste marketing voelt niet als marketing. Het voelt als een oplossing op het juiste moment.</p> <footer class="cqu__author">  <div class="cqu__author-meta"> <span class="cqu__author-name">Mark Visscher</span> <span class="cqu__dot" aria-hidden="true">·</span> <span class="cqu__author-role">Founder, BLURR Marketing</span> </div> </footer> </blockquote> </div> </section>
 
-
+<style>
+.cqu__section{position:relative;padding:clamp(4rem,10vw,8rem) clamp(1rem,5vw,2rem);overflow:hidden}
+.cqu__section--bg-white{background:var(--color-bg);color:var(--color-primary)}
+.cqu__section--bg-light{background:#00000005;color:var(--color-primary)}
+.cqu__section--bg-accent{background:var(--color-accent);color:#fff}
+.cqu__section--bg-dark{background:#0a0a0a;color:#fff}
+.cqu__inner{position:relative;max-width:820px;margin:0 auto}
+.cqu__section--centered .cqu__inner{text-align:center}
+.cqu__section--centered .cqu__author{justify-content:center}
+.cqu__section--centered .cqu__mark{left:50%;transform:translate(-50%)}
+.cqu__mark{position:absolute;top:-.15em;left:-.05em;font-size:clamp(6rem,15vw,12rem);line-height:1;font-family:Georgia,Times New Roman,serif;font-weight:900;color:var(--cqu-accent);opacity:.15;pointer-events:none;user-select:none;z-index:0}
+.cqu__section--bg-accent .cqu__mark,.cqu__section--bg-dark .cqu__mark{color:#fff}
+.cqu__quote{position:relative;z-index:1;margin:0;padding:0;border:none}
+.cqu__text{font-style:italic;font-weight:600;line-height:1.55;margin:0 0 2rem}
+.cqu__quote--size-md .cqu__text{font-size:clamp(1.125rem,2vw,1.5rem)}
+.cqu__quote--size-lg .cqu__text{font-size:clamp(1.25rem,2.5vw,2rem)}
+.cqu__quote--size-xl .cqu__text{font-size:clamp(1.5rem,3.5vw,2.5rem)}
+.cqu__section--bg-white .cqu__text,.cqu__section--bg-light .cqu__text{color:var(--color-primary)}
+.cqu__section--bg-accent .cqu__text,.cqu__section--bg-dark .cqu__text{color:#fff}
+.cqu__author{display:flex;align-items:center;gap:.875rem}
+.cqu__avatar{width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0;box-shadow:0 2px 8px #0000001f}
+.cqu__author-meta{display:flex;align-items:center;flex-wrap:wrap;gap:.4rem;font-size:.9375rem}
+.cqu__author-name{font-weight:700}
+.cqu__section--bg-white .cqu__author-name,.cqu__section--bg-light .cqu__author-name{color:var(--color-primary)}
+.cqu__section--bg-accent .cqu__author-name,.cqu__section--bg-dark .cqu__author-name{color:#fff}
+.cqu__dot{color:var(--color-muted)}
+.cqu__section--bg-accent .cqu__dot,.cqu__section--bg-dark .cqu__dot{color:#ffffff80}
+.cqu__author-role{color:var(--color-muted)}
+.cqu__section--bg-accent .cqu__author-role,.cqu__section--bg-dark .cqu__author-role{color:#ffffffa6}
+.cqu-reveal{opacity:0;transform:translateY(2rem);transition:opacity .75s ease,transform .75s ease}
+.cqu-reveal--visible{opacity:1;transform:translateY(0)}
+</style>

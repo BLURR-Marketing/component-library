@@ -2,6 +2,24 @@
 // AboutSplit — recovered from blurr-components.pages.dev
 ---
 
-<section class="abs " data-astro-cid-gcoudwzk> <div class="abs-inner" data-astro-cid-gcoudwzk> <div class="abs-image" data-astro-cid-gcoudwzk> <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Team aan het werk" class="abs-img" data-astro-cid-gcoudwzk> </div> <div class="abs-content" data-astro-cid-gcoudwzk> <span class="abs-eyebrow" data-astro-cid-gcoudwzk>Over BLURR</span> <h2 class="abs-headline" data-astro-cid-gcoudwzk>Wij zijn het bureau dat groei bewijsbaar maakt.</h2> <p class="abs-sub" data-astro-cid-gcoudwzk>Geen beloftes, geen magie — alleen data, strategie en campagnes die werken.</p> <ul class="abs-points" data-astro-cid-gcoudwzk> <li class="abs-point" data-astro-cid-gcoudwzk>[object Object]</li><li class="abs-point" data-astro-cid-gcoudwzk>[object Object]</li><li class="abs-point" data-astro-cid-gcoudwzk>[object Object]</li> </ul> <a href="#" class="abs-cta" data-astro-cid-gcoudwzk>Ons verhaal → →</a> </div> </div> </section>
+<section class="abs "> <div class="abs-inner"> <div class="abs-image"> <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Team aan het werk" class="abs-img"> </div> <div class="abs-content"> <span class="abs-eyebrow">Over BLURR</span> <h2 class="abs-headline">Wij zijn het bureau dat groei bewijsbaar maakt.</h2> <p class="abs-sub">Geen beloftes, geen magie — alleen data, strategie en campagnes die werken.</p> <ul class="abs-points"> <li class="abs-point">[object Object]</li><li class="abs-point">[object Object]</li><li class="abs-point">[object Object]</li> </ul> <a href="#" class="abs-cta">Ons verhaal → →</a> </div> </div> </section>
 
-
+<style>
+.abs{padding:5rem 2rem;background:#fff}
+.abs-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.abs--reverse .abs-image{order:2}
+.abs--reverse .abs-content{order:1}
+.abs-image{border-radius:1rem;overflow:hidden}
+.abs-img{width:100%;height:480px;object-fit:cover;display:block}
+.abs-eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent,#6366f1);margin-bottom:1rem;display:block}
+.abs-headline{font-size:clamp(1.75rem,3vw,2.75rem);font-weight:800;letter-spacing:-.03em;line-height:1.15;color:#0a0a0a;margin:0 0 1rem}
+.abs-sub{font-size:1.0625rem;color:#6b7280;line-height:1.65;margin:0 0 2rem}
+.abs-points{list-style:none;padding:0;margin:0 0 2rem;display:flex;flex-direction:column;gap:.75rem}
+.abs-point{display:flex;align-items:flex-start;gap:.625rem;font-size:.9375rem;color:#374151;line-height:1.5}
+.abs-point:before{content:"→";color:var(--color-accent,#6366f1);font-weight:700;flex-shrink:0}
+.abs-cta{display:inline-flex;align-items:center;font-size:.9375rem;font-weight:700;color:var(--color-accent,#6366f1);text-decoration:none}
+.abs-cta:hover{gap:.25rem}
+.abs-inner{grid-template-columns:1fr;gap:2rem}
+.abs--reverse .abs-image,.abs--reverse .abs-content{order:unset}
+.abs-img{height:300px}
+</style>

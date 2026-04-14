@@ -2,6 +2,11 @@
 // TextBig — recovered from blurr-components.pages.dev
 ---
 
-<div class="tbig-wrap" data-astro-cid-7vijpcjv> <p class="tbig-text" data-astro-cid-7vijpcjv> Groei begint met de juiste  <span class="tbig-accent" data-astro-cid-7vijpcjv>strategie.</span> </p> </div>
+<div class="tbig-wrap"> <p class="tbig-text"> Groei begint met de juiste  <span class="tbig-accent">strategie.</span> </p> </div>
 
-
+<style>
+.tbig-wrap{--color-accent: #6366f1;--color-primary: #0a0a0a;padding:64px 32px;font-family:system-ui,sans-serif}
+.tbig-text{margin:0;font-size:clamp(2.5rem,8vw,6rem);font-weight:900;color:var(--color-primary);line-height:1.1;letter-spacing:-.03em;max-width:900px}
+.tbig-accent{color:var(--color-accent);position:relative;display:inline-block}
+.tbig-accent:after{content:"";position:absolute;bottom:.05em;left:0;right:0;height:.06em;background:var(--color-accent);opacity:.3;border-radius:2px}
+</style>

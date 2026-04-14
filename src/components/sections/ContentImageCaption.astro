@@ -2,6 +2,15 @@
 // ContentImageCaption — recovered from blurr-components.pages.dev
 ---
 
-<figure class="cic-wrap" data-astro-cid-jaedg32w> <div class="cic-img-box" data-astro-cid-jaedg32w> <img class="cic-img" src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80" alt="BLURR team aan het werk in ons Amsterdamse kantoor" loading="lazy" data-astro-cid-jaedg32w> </div> <figcaption class="cic-caption" data-astro-cid-jaedg32w> <span class="cic-caption-text" data-astro-cid-jaedg32w>Het BLURR team werkt dagelijks aan campagnes die échte business resultaten leveren.</span> <span class="cic-credit" data-astro-cid-jaedg32w>Foto: BLURR Marketing</span> </figcaption> </figure>
+<figure class="cic-wrap"> <div class="cic-img-box"> <img class="cic-img" src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80" alt="BLURR team aan het werk in ons Amsterdamse kantoor" loading="lazy"> </div> <figcaption class="cic-caption"> <span class="cic-caption-text">Het BLURR team werkt dagelijks aan campagnes die échte business resultaten leveren.</span> <span class="cic-credit">Foto: BLURR Marketing</span> </figcaption> </figure>
 
-
+<style>
+.cic-wrap{margin:2.5rem 0;max-width:800px}
+.cic-wrap--wide{max-width:100%}
+.cic-img-box{overflow:hidden;border-radius:10px;background:#e5e5e5}
+.cic-img{width:100%;height:auto;display:block;transition:transform .4s ease}
+.cic-img:hover{transform:scale(1.02)}
+.cic-caption{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-top:.75rem;padding-top:.75rem;border-top:1px solid #e5e5e5}
+.cic-caption-text{font-size:.9rem;line-height:1.5;color:#555;flex:1}
+.cic-credit{font-size:.75rem;color:#999;white-space:nowrap;flex-shrink:0}
+</style>

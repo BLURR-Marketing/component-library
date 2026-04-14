@@ -1,0 +1,24 @@
+---
+// NavWithDropdown — recovered from blurr-components.pages.dev
+---
+
+<header class="nwd"> <nav class="nwd-inner"> <a href="/" class="nwd-logo">BLURR</a> <ul class="nwd-links"> <li class="nwd-item nwd-item--has-drop"> <a href="#" class="nwd-link"> Diensten <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"></path></svg> </a> <ul class="nwd-dropdown"> <li> <a href="#" class="nwd-drop-link"> <span class="nwd-drop-label">Google Ads</span> <span class="nwd-drop-desc">Search, Shopping &amp; Performance Max</span> </a> </li><li> <a href="#" class="nwd-drop-link"> <span class="nwd-drop-label">Meta Ads</span> <span class="nwd-drop-desc">Facebook &amp; Instagram campagnes</span> </a> </li><li> <a href="#" class="nwd-drop-link"> <span class="nwd-drop-label">SEO</span> <span class="nwd-drop-desc">Duurzame organische groei</span> </a> </li> </ul> </li><li class="nwd-item"> <a href="#" class="nwd-link"> Cases  </a>  </li><li class="nwd-item"> <a href="#" class="nwd-link"> Blog  </a>  </li><li class="nwd-item"> <a href="#" class="nwd-link"> Contact  </a>  </li> </ul> <a href="#" class="nwd-cta">Gratis gesprek</a> </nav> </header>
+
+<style>
+.nwd{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:100}
+.nwd-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;height:64px;gap:2rem}
+.nwd-logo{font-weight:800;font-size:1.0625rem;color:#0a0a0a;text-decoration:none;letter-spacing:-.02em}
+.nwd-links{list-style:none;padding:0;margin:0;display:flex;flex:1;gap:0}
+.nwd-item{position:relative}
+.nwd-link{display:flex;align-items:center;gap:.25rem;font-size:.875rem;font-weight:500;color:#374151;text-decoration:none;padding:.375rem .875rem;border-radius:.375rem;transition:all .15s;white-space:nowrap}
+.nwd-link:hover,.nwd-link--active{color:var(--color-accent,#6366f1);background:#6366f112}
+.nwd-dropdown{display:none;position:absolute;top:calc(100% + .5rem);left:0;min-width:220px;background:#fff;border:1px solid #e5e7eb;border-radius:.75rem;box-shadow:0 8px 32px #0000001a;list-style:none;padding:.5rem;z-index:200}
+.nwd-item--has-drop:hover .nwd-dropdown{display:block}
+.nwd-drop-link{display:block;padding:.625rem .875rem;border-radius:.5rem;text-decoration:none;transition:background .15s}
+.nwd-drop-link:hover{background:#f8fafc}
+.nwd-drop-label{display:block;font-size:.875rem;font-weight:500;color:#0a0a0a}
+.nwd-drop-desc{display:block;font-size:.75rem;color:#6b7280;margin-top:.125rem}
+.nwd-cta{margin-left:auto;font-size:.875rem;font-weight:600;padding:.5rem 1.25rem;background:var(--color-accent,#6366f1);color:#fff;border-radius:.5rem;text-decoration:none;transition:opacity .2s;white-space:nowrap}
+.nwd-cta:hover{opacity:.88}
+.nwd-links{display:none}
+</style>

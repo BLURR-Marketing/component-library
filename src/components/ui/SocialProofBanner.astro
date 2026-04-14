@@ -2,6 +2,27 @@
 // SocialProofBanner — recovered from blurr-components.pages.dev
 ---
 
-<div class="spb spb--light" data-astro-cid-t7my3cix> <div class="spb-inner" data-astro-cid-t7my3cix> <div class="spb-avatars" data-astro-cid-t7my3cix> <img src="https://i.pravatar.cc/32?img=1" alt="" class="spb-avatar" style="z-index:5" data-astro-cid-t7my3cix><img src="https://i.pravatar.cc/32?img=2" alt="" class="spb-avatar" style="z-index:4" data-astro-cid-t7my3cix><img src="https://i.pravatar.cc/32?img=3" alt="" class="spb-avatar" style="z-index:3" data-astro-cid-t7my3cix><img src="https://i.pravatar.cc/32?img=4" alt="" class="spb-avatar" style="z-index:2" data-astro-cid-t7my3cix> </div> <div class="spb-text" data-astro-cid-t7my3cix> <span class="spb-main" data-astro-cid-t7my3cix>Vertrouwd door 120+ bedrijven</span> <span class="spb-sub" data-astro-cid-t7my3cix>Gemiddeld 4.8/5 tevredenheid</span> </div> <div class="spb-rating" data-astro-cid-t7my3cix> <div class="spb-stars" data-astro-cid-t7my3cix> <span data-astro-cid-t7my3cix>★</span><span data-astro-cid-t7my3cix>★</span><span data-astro-cid-t7my3cix>★</span><span data-astro-cid-t7my3cix>★</span><span data-astro-cid-t7my3cix>★</span> </div> <span class="spb-count" data-astro-cid-t7my3cix>127+ reviews</span> </div> </div> </div>
+<div class="spb spb--light"> <div class="spb-inner"> <div class="spb-avatars"> <img src="https://i.pravatar.cc/32?img=1" alt="" class="spb-avatar" style="z-index:5"><img src="https://i.pravatar.cc/32?img=2" alt="" class="spb-avatar" style="z-index:4"><img src="https://i.pravatar.cc/32?img=3" alt="" class="spb-avatar" style="z-index:3"><img src="https://i.pravatar.cc/32?img=4" alt="" class="spb-avatar" style="z-index:2"> </div> <div class="spb-text"> <span class="spb-main">Vertrouwd door 120+ bedrijven</span> <span class="spb-sub">Gemiddeld 4.8/5 tevredenheid</span> </div> <div class="spb-rating"> <div class="spb-stars"> <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span> </div> <span class="spb-count">127+ reviews</span> </div> </div> </div>
 
-
+<style>
+.spb{padding:1rem 2rem}
+.spb--white{background:#fff;border:1px solid #e5e7eb;border-radius:.75rem}
+.spb--light{background:#f8fafc;border:1px solid #e5e7eb;border-radius:.75rem}
+.spb--dark{background:#ffffff0f;border:1px solid rgba(255,255,255,.1);border-radius:.75rem}
+.spb-inner{max-width:700px;margin:0 auto;display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;justify-content:center}
+.spb-avatars{display:flex}
+.spb-avatar{width:32px;height:32px;border-radius:50%;object-fit:cover;border:2px solid #fff;margin-left:-8px}
+.spb-avatar:first-child{margin-left:0}
+.spb-text{display:flex;flex-direction:column}
+.spb-main{font-size:.9375rem;font-weight:700}
+.spb--white .spb-main,.spb--light .spb-main{color:#0a0a0a}
+.spb--dark .spb-main{color:#fff}
+.spb-sub{font-size:.8125rem}
+.spb--white .spb-sub,.spb--light .spb-sub{color:#6b7280}
+.spb--dark .spb-sub{color:#ffffff73}
+.spb-rating{display:flex;flex-direction:column;align-items:center}
+.spb-stars{color:#f59e0b;font-size:.875rem;letter-spacing:.05em}
+.spb-count{font-size:.75rem}
+.spb--white .spb-count,.spb--light .spb-count{color:#9ca3af}
+.spb--dark .spb-count{color:#ffffff4d}
+</style>

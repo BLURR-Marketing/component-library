@@ -2,6 +2,16 @@
 // ContentBadges — recovered from blurr-components.pages.dev
 ---
 
-<div class="cba-wrap" data-astro-cid-yzzwqnpc> <h2 class="cba-heading" data-astro-cid-yzzwqnpc>Erkend &amp; gecertificeerd</h2> <div class="cba-list cba-list--row" data-astro-cid-yzzwqnpc> <div class="cba-badge" data-astro-cid-yzzwqnpc> <span class="cba-icon" aria-hidden="true" data-astro-cid-yzzwqnpc>🏆</span> <div class="cba-info" data-astro-cid-yzzwqnpc> <span class="cba-label" data-astro-cid-yzzwqnpc>Google Partner</span> <span class="cba-value" data-astro-cid-yzzwqnpc>Premier</span> </div> </div><div class="cba-badge" data-astro-cid-yzzwqnpc> <span class="cba-icon" aria-hidden="true" data-astro-cid-yzzwqnpc>🎯</span> <div class="cba-info" data-astro-cid-yzzwqnpc> <span class="cba-label" data-astro-cid-yzzwqnpc>Meta Business Partner</span> <span class="cba-value" data-astro-cid-yzzwqnpc>Gecertificeerd</span> </div> </div><div class="cba-badge" data-astro-cid-yzzwqnpc> <span class="cba-icon" aria-hidden="true" data-astro-cid-yzzwqnpc>⭐</span> <div class="cba-info" data-astro-cid-yzzwqnpc> <span class="cba-label" data-astro-cid-yzzwqnpc>Google Reviews</span> <span class="cba-value" data-astro-cid-yzzwqnpc>4.9/5</span> </div> </div> </div> </div>
+<div class="cba-wrap"> <h2 class="cba-heading">Erkend &amp; gecertificeerd</h2> <div class="cba-list cba-list--row"> <div class="cba-badge"> <span class="cba-icon" aria-hidden="true">🏆</span> <div class="cba-info"> <span class="cba-label">Google Partner</span> <span class="cba-value">Premier</span> </div> </div><div class="cba-badge"> <span class="cba-icon" aria-hidden="true">🎯</span> <div class="cba-info"> <span class="cba-label">Meta Business Partner</span> <span class="cba-value">Gecertificeerd</span> </div> </div><div class="cba-badge"> <span class="cba-icon" aria-hidden="true">⭐</span> <div class="cba-info"> <span class="cba-label">Google Reviews</span> <span class="cba-value">4.9/5</span> </div> </div> </div> </div>
 
-
+<style>
+.cba-wrap{padding:2rem 0}
+.cba-heading{font-size:1.25rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 1.5rem}
+.cba-list{display:flex;gap:1rem;flex-wrap:wrap}
+.cba-list--grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.cba-badge{display:flex;align-items:center;gap:.75rem;padding:.85rem 1.25rem;background:#fff;border:1px solid #e5e5e5;border-radius:10px;transition:box-shadow .2s}
+.cba-badge:hover{box-shadow:0 4px 16px #00000012}
+.cba-icon{font-size:1.5rem}
+.cba-label{display:block;font-size:.8rem;font-weight:600;color:var(--color-primary, #0a0a0a);white-space:nowrap}
+.cba-value{display:block;font-size:.7rem;color:#888;margin-top:.1rem}
+</style>

@@ -2,6 +2,25 @@
 // ComparisonSection — recovered from blurr-components.pages.dev
 ---
 
-<section class="cmp-section" data-astro-cid-tfzane3v> <h2 class="cmp-headline" data-astro-cid-tfzane3v>BLURR vs traditioneel bureau</h2> <div class="cmp-grid" data-astro-cid-tfzane3v> <div class="cmp-col cmp-col--left" data-astro-cid-tfzane3v> <div class="cmp-col-header" data-astro-cid-tfzane3v> <span class="cmp-badge cmp-badge--accent" data-astro-cid-tfzane3v>✓ Traditioneel bureau</span> </div> <ul class="cmp-list" data-astro-cid-tfzane3v> <li class="cmp-item cmp-item--good" data-astro-cid-tfzane3v> <span class="cmp-check" data-astro-cid-tfzane3v>✓</span> <span data-astro-cid-tfzane3v>Vage rapportages</span> </li><li class="cmp-item cmp-item--good" data-astro-cid-tfzane3v> <span class="cmp-check" data-astro-cid-tfzane3v>✓</span> <span data-astro-cid-tfzane3v>Lange contracten</span> </li><li class="cmp-item cmp-item--good" data-astro-cid-tfzane3v> <span class="cmp-check" data-astro-cid-tfzane3v>✓</span> <span data-astro-cid-tfzane3v>Generieke aanpak</span> </li><li class="cmp-item cmp-item--good" data-astro-cid-tfzane3v> <span class="cmp-check" data-astro-cid-tfzane3v>✓</span> <span data-astro-cid-tfzane3v>Trage communicatie</span> </li> </ul> </div> <div class="cmp-col cmp-col--right" data-astro-cid-tfzane3v> <div class="cmp-col-header" data-astro-cid-tfzane3v> <span class="cmp-badge cmp-badge--muted" data-astro-cid-tfzane3v>✗ BLURR</span> </div> <ul class="cmp-list" data-astro-cid-tfzane3v> <li class="cmp-item cmp-item--bad" data-astro-cid-tfzane3v> <span class="cmp-cross" data-astro-cid-tfzane3v>✗</span> <span data-astro-cid-tfzane3v>Transparante KPI-rapportage</span> </li><li class="cmp-item cmp-item--bad" data-astro-cid-tfzane3v> <span class="cmp-cross" data-astro-cid-tfzane3v>✗</span> <span data-astro-cid-tfzane3v>Maandelijks opzegbaar</span> </li><li class="cmp-item cmp-item--bad" data-astro-cid-tfzane3v> <span class="cmp-cross" data-astro-cid-tfzane3v>✗</span> <span data-astro-cid-tfzane3v>Maatwerk strategie</span> </li><li class="cmp-item cmp-item--bad" data-astro-cid-tfzane3v> <span class="cmp-cross" data-astro-cid-tfzane3v>✗</span> <span data-astro-cid-tfzane3v>Dedicated accountmanager</span> </li> </ul> </div> </div> </section>
+<section class="cmp-section"> <h2 class="cmp-headline">BLURR vs traditioneel bureau</h2> <div class="cmp-grid"> <div class="cmp-col cmp-col--left"> <div class="cmp-col-header"> <span class="cmp-badge cmp-badge--accent">✓ Traditioneel bureau</span> </div> <ul class="cmp-list"> <li class="cmp-item cmp-item--good"> <span class="cmp-check">✓</span> <span>Vage rapportages</span> </li><li class="cmp-item cmp-item--good"> <span class="cmp-check">✓</span> <span>Lange contracten</span> </li><li class="cmp-item cmp-item--good"> <span class="cmp-check">✓</span> <span>Generieke aanpak</span> </li><li class="cmp-item cmp-item--good"> <span class="cmp-check">✓</span> <span>Trage communicatie</span> </li> </ul> </div> <div class="cmp-col cmp-col--right"> <div class="cmp-col-header"> <span class="cmp-badge cmp-badge--muted">✗ BLURR</span> </div> <ul class="cmp-list"> <li class="cmp-item cmp-item--bad"> <span class="cmp-cross">✗</span> <span>Transparante KPI-rapportage</span> </li><li class="cmp-item cmp-item--bad"> <span class="cmp-cross">✗</span> <span>Maandelijks opzegbaar</span> </li><li class="cmp-item cmp-item--bad"> <span class="cmp-cross">✗</span> <span>Maatwerk strategie</span> </li><li class="cmp-item cmp-item--bad"> <span class="cmp-cross">✗</span> <span>Dedicated accountmanager</span> </li> </ul> </div> </div> </section>
 
-
+<style>
+.cmp-section{--color-accent: #6366f1;--color-primary: #0a0a0a;padding:64px 24px;font-family:system-ui,sans-serif;max-width:880px;margin:0 auto}
+.cmp-headline{text-align:center;margin:0 0 40px;font-size:clamp(1.5rem,4vw,2.25rem);font-weight:900;color:var(--color-primary);letter-spacing:-.025em}
+.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cmp-grid{grid-template-columns:1fr}
+.cmp-col{border-radius:16px;overflow:hidden}
+.cmp-col--left{border:2px solid var(--color-accent);background:linear-gradient(180deg,#f5f3ff,#fff)}
+.cmp-col--right{border:2px solid #e5e7eb;background:#fafafa}
+.cmp-col-header{padding:16px 24px;border-bottom:1px solid #e5e7eb}
+.cmp-col--left .cmp-col-header{border-bottom-color:#ede9fe}
+.cmp-badge{font-size:.875rem;font-weight:700}
+.cmp-badge--accent{color:var(--color-accent)}
+.cmp-badge--muted{color:#9ca3af}
+.cmp-list{list-style:none;margin:0;padding:20px 24px 24px;display:flex;flex-direction:column;gap:12px}
+.cmp-item{display:flex;gap:10px;align-items:flex-start;font-size:.875rem;line-height:1.5}
+.cmp-item--good{color:#1f2937}
+.cmp-item--bad{color:#9ca3af}
+.cmp-check{color:#10b981;font-weight:700;flex-shrink:0;margin-top:1px}
+.cmp-cross{color:#d1d5db;font-weight:700;flex-shrink:0;margin-top:1px}
+</style>

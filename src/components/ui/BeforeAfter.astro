@@ -2,6 +2,39 @@
 // BeforeAfter — recovered from blurr-components.pages.dev
 ---
 
-<section class="ba ba--light" data-astro-cid-btgugkrk> <div class="ba-inner" data-astro-cid-btgugkrk> <div class="ba-header" data-astro-cid-btgugkrk> <span class="ba-eyebrow" data-astro-cid-btgugkrk>Voor en na BLURR</span> <h2 class="ba-headline" data-astro-cid-btgugkrk>De resultaten spreken voor zich</h2> </div> <div class="ba-table" data-astro-cid-btgugkrk> <div class="ba-table-head" data-astro-cid-btgugkrk> <div class="ba-col-metric" data-astro-cid-btgugkrk></div> <div class="ba-col-before" data-astro-cid-btgugkrk>Voor BLURR</div> <div class="ba-col-after" data-astro-cid-btgugkrk>Na 6 maanden BLURR</div> <div class="ba-col-change" data-astro-cid-btgugkrk>Verschil</div> </div> <div class="ba-row" data-astro-cid-btgugkrk> <div class="ba-metric" data-astro-cid-btgugkrk>Cost per lead</div> <div class="ba-before" data-astro-cid-btgugkrk>€48,20</div> <div class="ba-after" data-astro-cid-btgugkrk>€19,40</div> <div class="ba-change" data-astro-cid-btgugkrk>-60%</div> </div><div class="ba-row" data-astro-cid-btgugkrk> <div class="ba-metric" data-astro-cid-btgugkrk>Conversieratio</div> <div class="ba-before" data-astro-cid-btgugkrk>1,8%</div> <div class="ba-after" data-astro-cid-btgugkrk>4,3%</div> <div class="ba-change" data-astro-cid-btgugkrk>+138%</div> </div><div class="ba-row" data-astro-cid-btgugkrk> <div class="ba-metric" data-astro-cid-btgugkrk>Organisch verkeer</div> <div class="ba-before" data-astro-cid-btgugkrk>1.200/maand</div> <div class="ba-after" data-astro-cid-btgugkrk>5.800/maand</div> <div class="ba-change" data-astro-cid-btgugkrk>+383%</div> </div><div class="ba-row" data-astro-cid-btgugkrk> <div class="ba-metric" data-astro-cid-btgugkrk>ROAS</div> <div class="ba-before" data-astro-cid-btgugkrk>1,8x</div> <div class="ba-after" data-astro-cid-btgugkrk>4,6x</div> <div class="ba-change" data-astro-cid-btgugkrk>+155%</div> </div><div class="ba-row" data-astro-cid-btgugkrk> <div class="ba-metric" data-astro-cid-btgugkrk>Omzet via ads</div> <div class="ba-before" data-astro-cid-btgugkrk>€18.000/mnd</div> <div class="ba-after" data-astro-cid-btgugkrk>€74.000/mnd</div> <div class="ba-change" data-astro-cid-btgugkrk>+311%</div> </div> </div> </div> </section>
+<section class="ba ba--light"> <div class="ba-inner"> <div class="ba-header"> <span class="ba-eyebrow">Voor en na BLURR</span> <h2 class="ba-headline">De resultaten spreken voor zich</h2> </div> <div class="ba-table"> <div class="ba-table-head"> <div class="ba-col-metric"></div> <div class="ba-col-before">Voor BLURR</div> <div class="ba-col-after">Na 6 maanden BLURR</div> <div class="ba-col-change">Verschil</div> </div> <div class="ba-row"> <div class="ba-metric">Cost per lead</div> <div class="ba-before">€48,20</div> <div class="ba-after">€19,40</div> <div class="ba-change">-60%</div> </div><div class="ba-row"> <div class="ba-metric">Conversieratio</div> <div class="ba-before">1,8%</div> <div class="ba-after">4,3%</div> <div class="ba-change">+138%</div> </div><div class="ba-row"> <div class="ba-metric">Organisch verkeer</div> <div class="ba-before">1.200/maand</div> <div class="ba-after">5.800/maand</div> <div class="ba-change">+383%</div> </div><div class="ba-row"> <div class="ba-metric">ROAS</div> <div class="ba-before">1,8x</div> <div class="ba-after">4,6x</div> <div class="ba-change">+155%</div> </div><div class="ba-row"> <div class="ba-metric">Omzet via ads</div> <div class="ba-before">€18.000/mnd</div> <div class="ba-after">€74.000/mnd</div> <div class="ba-change">+311%</div> </div> </div> </div> </section>
 
-
+<style>
+.ba{padding:5rem 2rem}
+.ba--white{background:#fff;border-top:1px solid #e5e7eb}
+.ba--light{background:#f8fafc;border-top:1px solid #e5e7eb}
+.ba--dark{background:#0a0a0a}
+.ba-inner{max-width:900px;margin:0 auto}
+.ba-header{text-align:center;margin-bottom:3rem}
+.ba-eyebrow{display:block;font-size:.6875rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent,#6366f1);margin-bottom:.75rem}
+.ba-headline{font-size:clamp(1.75rem,3.5vw,2.5rem);font-weight:900;letter-spacing:-.04em;line-height:1.15;margin:0}
+.ba--white .ba-headline,.ba--light .ba-headline{color:#0a0a0a}
+.ba--dark .ba-headline{color:#fff}
+.ba-table{border-radius:1rem;overflow:hidden;border:1px solid #e5e7eb}
+.ba--dark .ba-table{border-color:#ffffff14}
+.ba-table-head,.ba-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr}
+.ba-table-head{padding:.875rem 1.25rem}
+.ba--white .ba-table-head,.ba--light .ba-table-head{background:#f3f4f6}
+.ba--dark .ba-table-head{background:#ffffff0d}
+.ba-col-before,.ba-col-after,.ba-col-change,.ba-col-metric{font-size:.75rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.ba--white .ba-col-before,.ba--white .ba-col-metric,.ba--light .ba-col-before,.ba--light .ba-col-metric{color:#9ca3af}
+.ba-col-after{color:#10b981}
+.ba-col-change{color:var(--color-accent,#6366f1)}
+.ba-row{padding:1rem 1.25rem;align-items:center;border-top:1px solid #e5e7eb}
+.ba--dark .ba-row{border-color:#ffffff0f}
+.ba--white .ba-row:hover,.ba--light .ba-row:hover{background:#f9fafb}
+.ba--dark .ba-row:hover{background:#ffffff05}
+.ba-metric{font-size:.9375rem;font-weight:600}
+.ba--white .ba-metric,.ba--light .ba-metric{color:#0a0a0a}
+.ba--dark .ba-metric{color:#fff}
+.ba-before{font-size:.9375rem}
+.ba--white .ba-before,.ba--light .ba-before{color:#9ca3af}
+.ba--dark .ba-before{color:#ffffff4d}
+.ba-after{font-size:.9375rem;font-weight:700;color:#10b981}
+.ba-change{font-size:.875rem;font-weight:700;color:var(--color-accent,#6366f1)}
+</style>

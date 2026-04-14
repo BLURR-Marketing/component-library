@@ -2,6 +2,22 @@
 // VideoModal — recovered from blurr-components.pages.dev
 ---
 
-<div class="vmo" data-astro-cid-pjyjcbtv> <div class="vmo__trigger-wrap" data-astro-cid-pjyjcbtv> <div class="vmo__thumb" data-astro-cid-pjyjcbtv> <div class="vmo__placeholder" aria-label="Video thumbnail" data-astro-cid-pjyjcbtv></div> </div> <div class="vmo__meta" data-astro-cid-pjyjcbtv> <p class="vmo__title" data-astro-cid-pjyjcbtv>Bekijk onze showreel</p> <p class="vmo__desc" data-astro-cid-pjyjcbtv>3 minuten die laten zien waar BLURR voor staat.</p> <button class="vmo__btn" type="button" onclick="document.getElementById('video-modal').showModal()" data-astro-cid-pjyjcbtv> <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" style="margin-right:0.4rem" data-astro-cid-pjyjcbtv> <polygon points="4,2 16,9 4,16" data-astro-cid-pjyjcbtv></polygon> </svg> Video bekijken </button> </div> </div> <dialog class="vmo__dialog" id="video-modal" data-astro-cid-pjyjcbtv> <form method="dialog" class="vmo__close-form" data-astro-cid-pjyjcbtv> <button class="vmo__close" type="submit" aria-label="Sluit video" data-astro-cid-pjyjcbtv>✕</button> </form> <div class="vmo__dialog-player" data-astro-cid-pjyjcbtv> <div class="vmo__player-placeholder" aria-label="Video speler" data-astro-cid-pjyjcbtv> <p style="color:rgba(255,255,255,0.5); font-size:0.9rem; text-align:center" data-astro-cid-pjyjcbtv>Video wordt hier geladen<br data-astro-cid-pjyjcbtv><small data-astro-cid-pjyjcbtv>Voeg een &lt;video&gt; of iframe toe</small></p> </div> </div> </dialog> </div>
+<div class="vmo"> <div class="vmo__trigger-wrap"> <div class="vmo__thumb"> <div class="vmo__placeholder" aria-label="Video thumbnail"></div> </div> <div class="vmo__meta"> <p class="vmo__title">Bekijk onze showreel</p> <p class="vmo__desc">3 minuten die laten zien waar BLURR voor staat.</p> <button class="vmo__btn" type="button" onclick="document.getElementById('video-modal').showModal()"> <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" style="margin-right:0.4rem"> <polygon points="4,2 16,9 4,16"></polygon> </svg> Video bekijken </button> </div> </div> <dialog class="vmo__dialog" id="video-modal"> <form method="dialog" class="vmo__close-form"> <button class="vmo__close" type="submit" aria-label="Sluit video">✕</button> </form> <div class="vmo__dialog-player"> <div class="vmo__player-placeholder" aria-label="Video speler"> <p style="color:rgba(255,255,255,0.5); font-size:0.9rem; text-align:center">Video wordt hier geladen<br><small>Voeg een &lt;video&gt; of iframe toe</small></p> </div> </div> </dialog> </div>
 
-
+<style>
+.vmo__trigger-wrap{display:flex;gap:1.5rem;align-items:center}
+.vmo__thumb{width:200px;flex-shrink:0;aspect-ratio:16/9;border-radius:8px;overflow:hidden}
+.vmo__poster{width:100%;height:100%;object-fit:cover}
+.vmo__placeholder{width:100%;height:100%;background:linear-gradient(135deg,#1a1a2e,#2a2a4e)}
+.vmo__title{font-size:1.15rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 .4rem}
+.vmo__desc{font-size:.9rem;color:#777;margin:0 0 1rem;line-height:1.5}
+.vmo__btn{display:inline-flex;align-items:center;padding:.6rem 1.4rem;background:var(--color-accent, #6366f1);color:#fff;border:none;border-radius:6px;font-weight:700;font-size:.9rem;cursor:pointer;transition:opacity .2s}
+.vmo__btn:hover{opacity:.85}
+.vmo__dialog{position:fixed;inset:0;width:90vw;max-width:900px;border:none;border-radius:12px;padding:0;background:#0a0a0a;box-shadow:0 20px 60px #00000080}
+.vmo__dialog::backdrop{background:#000c;backdrop-filter:blur(4px)}
+.vmo__close-form{position:absolute;top:.75rem;right:.75rem;z-index:10}
+.vmo__close{background:#ffffff26;border:none;color:#fff;width:36px;height:36px;border-radius:50%;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.vmo__close:hover{background:#ffffff40}
+.vmo__dialog-player{aspect-ratio:16/9;border-radius:12px;overflow:hidden}
+.vmo__player-placeholder{width:100%;height:100%;background:#111;display:flex;align-items:center;justify-content:center}
+</style>

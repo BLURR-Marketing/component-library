@@ -2,6 +2,21 @@
 // VideoGrid — recovered from blurr-components.pages.dev
 ---
 
-<section class="vgr" data-astro-cid-ipaolunz> <h2 class="vgr__heading" data-astro-cid-ipaolunz>Video library</h2> <div class="vgr__grid" style="--vgr-cols: 3" data-astro-cid-ipaolunz> <a class="vgr__item" href="#" aria-label="TechFlow: van 0 naar 280% meer leads" data-astro-cid-ipaolunz> <div class="vgr__media" data-astro-cid-ipaolunz> <div class="vgr__placeholder" aria-label="Case 1" data-astro-cid-ipaolunz></div> <span class="vgr__play" aria-hidden="true" data-astro-cid-ipaolunz>▶</span> <span class="vgr__duration" data-astro-cid-ipaolunz>4:12</span> <span class="vgr__category" data-astro-cid-ipaolunz>Case</span> </div> <p class="vgr__title" data-astro-cid-ipaolunz>TechFlow: van 0 naar 280% meer leads</p> </a><a class="vgr__item" href="#" aria-label="Mode &#38; Meer: 5.1x ROAS op Meta" data-astro-cid-ipaolunz> <div class="vgr__media" data-astro-cid-ipaolunz> <div class="vgr__placeholder" aria-label="Case 2" data-astro-cid-ipaolunz></div> <span class="vgr__play" aria-hidden="true" data-astro-cid-ipaolunz>▶</span> <span class="vgr__duration" data-astro-cid-ipaolunz>3:50</span> <span class="vgr__category" data-astro-cid-ipaolunz>Case</span> </div> <p class="vgr__title" data-astro-cid-ipaolunz>Mode &amp; Meer: 5.1x ROAS op Meta</p> </a><a class="vgr__item" href="#" aria-label="Google Ads structuur opzetten in 2024" data-astro-cid-ipaolunz> <div class="vgr__media" data-astro-cid-ipaolunz> <div class="vgr__placeholder" aria-label="Tutorial 1" data-astro-cid-ipaolunz></div> <span class="vgr__play" aria-hidden="true" data-astro-cid-ipaolunz>▶</span> <span class="vgr__duration" data-astro-cid-ipaolunz>9:20</span> <span class="vgr__category" data-astro-cid-ipaolunz>Tutorial</span> </div> <p class="vgr__title" data-astro-cid-ipaolunz>Google Ads structuur opzetten in 2024</p> </a> </div> </section>
+<section class="vgr"> <h2 class="vgr__heading">Video library</h2> <div class="vgr__grid" style="--vgr-cols: 3"> <a class="vgr__item" href="#" aria-label="TechFlow: van 0 naar 280% meer leads"> <div class="vgr__media"> <div class="vgr__placeholder" aria-label="Case 1"></div> <span class="vgr__play" aria-hidden="true">▶</span> <span class="vgr__duration">4:12</span> <span class="vgr__category">Case</span> </div> <p class="vgr__title">TechFlow: van 0 naar 280% meer leads</p> </a><a class="vgr__item" href="#" aria-label="Mode &#38; Meer: 5.1x ROAS op Meta"> <div class="vgr__media"> <div class="vgr__placeholder" aria-label="Case 2"></div> <span class="vgr__play" aria-hidden="true">▶</span> <span class="vgr__duration">3:50</span> <span class="vgr__category">Case</span> </div> <p class="vgr__title">Mode &amp; Meer: 5.1x ROAS op Meta</p> </a><a class="vgr__item" href="#" aria-label="Google Ads structuur opzetten in 2024"> <div class="vgr__media"> <div class="vgr__placeholder" aria-label="Tutorial 1"></div> <span class="vgr__play" aria-hidden="true">▶</span> <span class="vgr__duration">9:20</span> <span class="vgr__category">Tutorial</span> </div> <p class="vgr__title">Google Ads structuur opzetten in 2024</p> </a> </div> </section>
 
-
+<style>
+.vgr{padding:2rem 0}
+.vgr__heading{font-size:2rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 2rem}
+.vgr__grid{display:grid;grid-template-columns:repeat(var(--vgr-cols, 3),1fr);gap:1.5rem}
+.vgr__item{text-decoration:none}
+.vgr__media{position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#111;margin-bottom:.75rem}
+.vgr__poster{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.vgr__item:hover .vgr__poster{transform:scale(1.04)}
+.vgr__placeholder{width:100%;height:100%;background:linear-gradient(135deg,#1a1a30,#2a2a50)}
+.vgr__play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#fffc}
+.vgr__duration{position:absolute;bottom:.5rem;right:.5rem;background:#000000bf;color:#fff;font-size:.7rem;font-weight:700;padding:.15rem .4rem;border-radius:3px}
+.vgr__category{position:absolute;top:.5rem;left:.5rem;background:var(--color-accent, #6366f1);color:#fff;font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.2rem .5rem;border-radius:3px}
+.vgr__title{font-size:.9rem;font-weight:600;color:var(--color-primary, #0a0a0a);margin:0;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.vgr__grid{grid-template-columns:repeat(2,1fr)}
+.vgr__grid{grid-template-columns:1fr}
+</style>

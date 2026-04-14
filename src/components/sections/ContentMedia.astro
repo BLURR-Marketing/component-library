@@ -2,6 +2,21 @@
 // ContentMedia — recovered from blurr-components.pages.dev
 ---
 
-<div class="cme-wrap cme-wrap--media-top" data-astro-cid-pcomcfpb> <div class="cme-media" data-astro-cid-pcomcfpb> <figure class="cme-figure" data-astro-cid-pcomcfpb> <img class="cme-img" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=900&q=80" alt="BLURR team meeting" loading="lazy" data-astro-cid-pcomcfpb> <figcaption class="cme-caption" data-astro-cid-pcomcfpb>Onze wekelijkse campagne-review sessie.</figcaption> </figure>   </div> <div class="cme-text-block" data-astro-cid-pcomcfpb> <h2 class="cme-heading" data-astro-cid-pcomcfpb>Achter de schermen bij BLURR</h2> <p class="cme-text" data-astro-cid-pcomcfpb>Elke campagne begint met een kick-off waarbij strategie, creatie en media samen aan tafel zitten.</p> </div> </div>
+<div class="cme-wrap cme-wrap--media-top"> <div class="cme-media"> <figure class="cme-figure"> <img class="cme-img" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=900&q=80" alt="BLURR team meeting" loading="lazy"> <figcaption class="cme-caption">Onze wekelijkse campagne-review sessie.</figcaption> </figure>   </div> <div class="cme-text-block"> <h2 class="cme-heading">Achter de schermen bij BLURR</h2> <p class="cme-text">Elke campagne begint met een kick-off waarbij strategie, creatie en media samen aan tafel zitten.</p> </div> </div>
 
-
+<style>
+.cme-wrap{padding:2.5rem 0}
+.cme-wrap--media-top,.cme-wrap--media-bottom{display:flex;flex-direction:column;gap:2rem}
+.cme-wrap--media-bottom{flex-direction:column-reverse}
+.cme-wrap--media-right,.cme-wrap--media-left{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.cme-wrap--media-right{direction:rtl}
+.cme-wrap--media-right>{direction:ltr}
+.cme-wrap--media-right,.cme-wrap--media-left{grid-template-columns:1fr;direction:ltr}
+.cme-figure{margin:0}
+.cme-img,.cme-video{width:100%;height:auto;display:block;border-radius:10px;object-fit:cover}
+.cme-embed-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px;background:#000}
+.cme-embed{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
+.cme-caption{font-size:.85rem;color:#888;margin:.75rem 0 0;line-height:1.4}
+.cme-heading{font-size:1.75rem;font-weight:800;color:var(--color-primary, #0a0a0a);margin:0 0 1rem}
+.cme-text{font-size:1rem;line-height:1.8;color:#555;margin:0}
+</style>
