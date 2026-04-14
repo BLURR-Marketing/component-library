@@ -2,6 +2,17 @@
 // ImageProfile — recovered from blurr-components.pages.dev
 ---
 
-<div class="ipr" data-astro-cid-4cal7vah> <div class="ipr__avatar" data-astro-cid-4cal7vah> <div class="ipr__placeholder" aria-label="Profielfoto" data-astro-cid-4cal7vah></div> </div> <div class="ipr__info" data-astro-cid-4cal7vah> <p class="ipr__name" data-astro-cid-4cal7vah>Lotte van den Berg</p> <p class="ipr__role" data-astro-cid-4cal7vah>Strategy Director</p> <p class="ipr__bio" data-astro-cid-4cal7vah>Lotte begeleidt merken van positionering tot performance.</p> <a class="ipr__link" href="#" aria-label="LinkedIn van Lotte van den Berg" data-astro-cid-4cal7vah>LinkedIn →</a> </div> </div>
+<div class="ipr"> <div class="ipr__avatar"> <div class="ipr__placeholder" aria-label="Profielfoto"></div> </div> <div class="ipr__info"> <p class="ipr__name">Lotte van den Berg</p> <p class="ipr__role">Strategy Director</p> <p class="ipr__bio">Lotte begeleidt merken van positionering tot performance.</p> <a class="ipr__link" href="#" aria-label="LinkedIn van Lotte van den Berg">LinkedIn →</a> </div> </div>
 
-
+<style>
+.ipr{display:flex;align-items:flex-start;gap:1.5rem;padding:1.5rem;background:#fff;border:1px solid #eee;border-radius:12px}
+.ipr__avatar{flex-shrink:0;width:80px;height:80px;border-radius:50%;overflow:hidden;border:3px solid var(--color-accent, #6366f1)}
+.ipr__img{width:100%;height:100%;object-fit:cover}
+.ipr__placeholder{width:100%;height:100%;background:linear-gradient(135deg,#c8c8f0,#a0a0e0)}
+.ipr__info{flex:1}
+.ipr__name{font-size:1.1rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 .2rem}
+.ipr__role{font-size:.85rem;font-weight:600;color:var(--color-accent, #6366f1);margin:0 0 .75rem;text-transform:uppercase;letter-spacing:.05em}
+.ipr__bio{font-size:.9rem;color:#555;line-height:1.6;margin:0 0 .75rem}
+.ipr__link{font-size:.85rem;font-weight:600;color:var(--color-accent, #6366f1);text-decoration:none}
+.ipr__link:hover{text-decoration:underline}
+</style>

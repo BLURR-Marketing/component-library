@@ -2,6 +2,20 @@
 // ListPros — recovered from blurr-components.pages.dev
 ---
 
-<div class="lst-pros" data-astro-cid-6llmxa6e> <div class="lst-pros__col lst-pros__col--pro" data-astro-cid-6llmxa6e> <p class="lst-pros__label" data-astro-cid-6llmxa6e>Voordelen</p> <ul class="lst-pros__list" data-astro-cid-6llmxa6e> <li class="lst-pros__item lst-pros__item--pro" data-astro-cid-6llmxa6e> <span aria-hidden="true" data-astro-cid-6llmxa6e>✓</span> <span data-astro-cid-6llmxa6e>Directe zichtbaarheid</span> </li><li class="lst-pros__item lst-pros__item--pro" data-astro-cid-6llmxa6e> <span aria-hidden="true" data-astro-cid-6llmxa6e>✓</span> <span data-astro-cid-6llmxa6e>Meetbaar resultaat</span> </li><li class="lst-pros__item lst-pros__item--pro" data-astro-cid-6llmxa6e> <span aria-hidden="true" data-astro-cid-6llmxa6e>✓</span> <span data-astro-cid-6llmxa6e>Flexibel budget</span> </li><li class="lst-pros__item lst-pros__item--pro" data-astro-cid-6llmxa6e> <span aria-hidden="true" data-astro-cid-6llmxa6e>✓</span> <span data-astro-cid-6llmxa6e>Snelle start</span> </li> </ul> </div> <div class="lst-pros__col lst-pros__col--con" data-astro-cid-6llmxa6e> <p class="lst-pros__label" data-astro-cid-6llmxa6e>Nadelen</p> <ul class="lst-pros__list" data-astro-cid-6llmxa6e> <li class="lst-pros__item lst-pros__item--con" data-astro-cid-6llmxa6e> <span aria-hidden="true" data-astro-cid-6llmxa6e>✗</span> <span data-astro-cid-6llmxa6e>Kost geld per klik</span> </li><li class="lst-pros__item lst-pros__item--con" data-astro-cid-6llmxa6e> <span aria-hidden="true" data-astro-cid-6llmxa6e>✗</span> <span data-astro-cid-6llmxa6e>Stopt bij budget stop</span> </li><li class="lst-pros__item lst-pros__item--con" data-astro-cid-6llmxa6e> <span aria-hidden="true" data-astro-cid-6llmxa6e>✗</span> <span data-astro-cid-6llmxa6e>Leercurve vereist</span> </li> </ul> </div> </div>
+<div class="lst-pros"> <div class="lst-pros__col lst-pros__col--pro"> <p class="lst-pros__label">Voordelen</p> <ul class="lst-pros__list"> <li class="lst-pros__item lst-pros__item--pro"> <span aria-hidden="true">✓</span> <span>Directe zichtbaarheid</span> </li><li class="lst-pros__item lst-pros__item--pro"> <span aria-hidden="true">✓</span> <span>Meetbaar resultaat</span> </li><li class="lst-pros__item lst-pros__item--pro"> <span aria-hidden="true">✓</span> <span>Flexibel budget</span> </li><li class="lst-pros__item lst-pros__item--pro"> <span aria-hidden="true">✓</span> <span>Snelle start</span> </li> </ul> </div> <div class="lst-pros__col lst-pros__col--con"> <p class="lst-pros__label">Nadelen</p> <ul class="lst-pros__list"> <li class="lst-pros__item lst-pros__item--con"> <span aria-hidden="true">✗</span> <span>Kost geld per klik</span> </li><li class="lst-pros__item lst-pros__item--con"> <span aria-hidden="true">✗</span> <span>Stopt bij budget stop</span> </li><li class="lst-pros__item lst-pros__item--con"> <span aria-hidden="true">✗</span> <span>Leercurve vereist</span> </li> </ul> </div> </div>
 
-
+<style>
+.lst-pros{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.lst-pros{grid-template-columns:1fr}
+.lst-pros__col{border-radius:.75rem;padding:1.25rem}
+.lst-pros__col--pro{background:#f0fdf4;border:1px solid #bbf7d0}
+.lst-pros__col--con{background:#fef2f2;border:1px solid #fecaca}
+.lst-pros__label{margin:0 0 .75rem;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+.lst-pros__col--pro .lst-pros__label{color:#16a34a}
+.lst-pros__col--con .lst-pros__label{color:#dc2626}
+.lst-pros__list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.5rem}
+.lst-pros__item{display:flex;align-items:flex-start;gap:.5rem;font-size:.9rem}
+.lst-pros__item--pro{color:#166534}
+.lst-pros__item--con{color:#991b1b}
+.lst-pros__item span:first-child{font-weight:700;flex-shrink:0}
+</style>

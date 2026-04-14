@@ -2,6 +2,12 @@
 // ImageRound — recovered from blurr-components.pages.dev
 ---
 
-<figure class="ird" style="--ird-size: 200px; --ird-ring: #6366f1" data-astro-cid-gsjg2rez> <div class="ird__circle" data-astro-cid-gsjg2rez> <div class="ird__placeholder" aria-label="Ronde afbeelding" data-astro-cid-gsjg2rez></div> </div>  </figure>
+<figure class="ird" style="--ird-size: 200px; --ird-ring: #6366f1"> <div class="ird__circle"> <div class="ird__placeholder" aria-label="Ronde afbeelding"></div> </div>  </figure>
 
-
+<style>
+.ird{display:inline-flex;flex-direction:column;align-items:center;gap:.75rem;margin:0}
+.ird__circle{width:var(--ird-size, 200px);height:var(--ird-size, 200px);border-radius:50%;overflow:hidden;border:4px solid var(--ird-ring, #6366f1);box-shadow:0 0 0 6px #6366f126}
+.ird__img{width:100%;height:100%;object-fit:cover}
+.ird__placeholder{width:100%;height:100%;background:linear-gradient(135deg,#d0d0f0,#b0b0e0)}
+.ird__caption{font-size:.85rem;font-weight:600;color:var(--color-primary, #0a0a0a);text-align:center}
+</style>

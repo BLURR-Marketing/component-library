@@ -2,6 +2,35 @@
 // HeroAsymmetric — recovered from blurr-components.pages.dev
 ---
 
-<section class="has" data-component="hero-asymmetric" data-astro-cid-ldatfgp6> <div class="has__inner" data-astro-cid-ldatfgp6> <!-- Col 1: image tall --> <div class="has__col has__col--img1" data-astro-cid-ldatfgp6> <div class="has__img-wrap" data-astro-cid-ldatfgp6> <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="" class="has__img" loading="eager" data-astro-cid-ldatfgp6> <span class="has__badge has__badge--tl" data-astro-cid-ldatfgp6>✓ 80+ klanten</span> </div> </div> <!-- Col 2: text centered --> <div class="has__col has__col--text" data-astro-cid-ldatfgp6> <p class="has__overline" data-astro-cid-ldatfgp6>Online Marketing</p> <h1 class="has__headline" data-astro-cid-ldatfgp6>Resultaten die <em>tellen</em></h1> <p class="has__sub" data-astro-cid-ldatfgp6>Wij combineren data en creativiteit om je groeidoelen te bereiken.</p> <div class="has__ctas" data-astro-cid-ldatfgp6> <a href="#" class="has__cta has__cta--primary" data-astro-cid-ldatfgp6>Leer ons kennen</a> <a href="#" class="has__cta has__cta--link" data-astro-cid-ldatfgp6> Gratis audit <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" data-astro-cid-ldatfgp6><path d="M3 8h10M9 4l4 4-4 4" data-astro-cid-ldatfgp6></path></svg> </a> </div> </div> <!-- Col 3: image shorter + badge --> <div class="has__col has__col--img2" data-astro-cid-ldatfgp6> <div class="has__img-wrap" data-astro-cid-ldatfgp6> <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80" alt="" class="has__img" loading="eager" data-astro-cid-ldatfgp6> <span class="has__badge has__badge--br" data-astro-cid-ldatfgp6>4.2× ROAS</span> </div> </div> </div> </section>
+<section class="has" data-component="hero-asymmetric"> <div class="has__inner"> <!-- Col 1: image tall --> <div class="has__col has__col--img1"> <div class="has__img-wrap"> <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="" class="has__img" loading="eager"> <span class="has__badge has__badge--tl">✓ 80+ klanten</span> </div> </div> <!-- Col 2: text centered --> <div class="has__col has__col--text"> <p class="has__overline">Online Marketing</p> <h1 class="has__headline">Resultaten die <em>tellen</em></h1> <p class="has__sub">Wij combineren data en creativiteit om je groeidoelen te bereiken.</p> <div class="has__ctas"> <a href="#" class="has__cta has__cta--primary">Leer ons kennen</a> <a href="#" class="has__cta has__cta--link"> Gratis audit <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"></path></svg> </a> </div> </div> <!-- Col 3: image shorter + badge --> <div class="has__col has__col--img2"> <div class="has__img-wrap"> <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80" alt="" class="has__img" loading="eager"> <span class="has__badge has__badge--br">4.2× ROAS</span> </div> </div> </div> </section>
 
-
+<style>
+.has{background:var(--color-bg, #fff);padding:4rem 1.5rem;overflow:hidden}
+.has__inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:1.5rem;align-items:center;min-height:560px}
+.has__col--img1 .has__img-wrap,.has__col--img2 .has__img-wrap{position:relative;border-radius:calc(var(--radius, .5rem) * 2);overflow:hidden}
+.has__col--img1{align-self:stretch}
+.has__col--img2{align-self:end}
+.has__img{width:100%;height:100%;object-fit:cover;display:block;min-height:320px;transition:transform .6s ease}
+.has__col--img1 .has__img{height:520px}
+.has__col--img2 .has__img{height:360px}
+.has__img-wrap:hover .has__img{transform:scale(1.03)}
+.has__badge{position:absolute;background:var(--color-accent, #6366f1);color:#fff;font-size:.75rem;font-weight:700;padding:.4rem .875rem;border-radius:100px;white-space:nowrap}
+.has__badge--tl{top:1rem;left:1rem}
+.has__badge--br{bottom:1rem;right:1rem}
+.has__col--text{padding:1rem;text-align:center}
+.has__overline{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent, #6366f1);margin-bottom:1rem}
+.has__headline{font-size:clamp(2rem,3.5vw,3.25rem);font-weight:800;line-height:1.1;letter-spacing:-.03em;color:var(--color-primary, #0a0a0a);margin-bottom:1.25rem}
+.has__headline em{font-style:normal;color:var(--color-accent, #6366f1)}
+.has__sub{font-size:1rem;line-height:1.7;color:var(--color-muted, #6b7280);margin-bottom:2rem}
+.has__ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.has__cta{text-decoration:none;font-weight:700;font-size:.9375rem;transition:all .2s}
+.has__cta--primary{display:inline-block;background:var(--color-primary, #0a0a0a);color:#fff;padding:.8125rem 1.75rem;border-radius:var(--radius, .5rem)}
+.has__cta--primary:hover{background:var(--color-accent, #6366f1);transform:translateY(-1px)}
+.has__cta--link{display:inline-flex;align-items:center;gap:.35rem;color:var(--color-primary, #0a0a0a);padding:.8125rem 0;opacity:.7}
+.has__cta--link:hover{opacity:1;color:var(--color-accent, #6366f1)}
+.has__inner{grid-template-columns:1fr;min-height:auto}
+.has__col--img1{order:1}
+.has__col--text{order:2}
+.has__col--img2{order:3}
+.has__col--img1 .has__img,.has__col--img2 .has__img{height:280px}
+</style>

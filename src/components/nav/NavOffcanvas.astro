@@ -2,6 +2,25 @@
 // NavOffcanvas — recovered from blurr-components.pages.dev
 ---
 
-<header class="noc" id="noc" data-astro-cid-vhssb632> <nav class="noc-inner" data-astro-cid-vhssb632> <button class="noc-burger" id="noc-burger" aria-label="Menu" data-astro-cid-vhssb632> <span data-astro-cid-vhssb632></span><span data-astro-cid-vhssb632></span><span data-astro-cid-vhssb632></span> </button> <a href="/" class="noc-logo" data-astro-cid-vhssb632>BLURR</a> <a href="#" class="noc-cta" data-astro-cid-vhssb632>Upgrade</a> </nav> </header> <div class="noc-backdrop" id="noc-backdrop" data-astro-cid-vhssb632></div> <aside class="noc-panel" id="noc-panel" aria-hidden="true" data-astro-cid-vhssb632> <div class="noc-panel-head" data-astro-cid-vhssb632> <span class="noc-panel-logo" data-astro-cid-vhssb632>BLURR</span> <button class="noc-close" id="noc-close" aria-label="Sluiten" data-astro-cid-vhssb632>✕</button> </div> <ul class="noc-menu" data-astro-cid-vhssb632> <li data-astro-cid-vhssb632> <a href="#" class="noc-menu-link noc-menu-link--active" data-astro-cid-vhssb632> <span class="noc-menu-icon" data-astro-cid-vhssb632>📊</span> Dashboard </a> </li><li data-astro-cid-vhssb632> <a href="#" class="noc-menu-link" data-astro-cid-vhssb632> <span class="noc-menu-icon" data-astro-cid-vhssb632>🎯</span> Google Ads </a> </li><li data-astro-cid-vhssb632> <a href="#" class="noc-menu-link" data-astro-cid-vhssb632> <span class="noc-menu-icon" data-astro-cid-vhssb632>📘</span> Meta Ads </a> </li><li data-astro-cid-vhssb632> <a href="#" class="noc-menu-link" data-astro-cid-vhssb632> <span class="noc-menu-icon" data-astro-cid-vhssb632>🔍</span> SEO </a> </li><li data-astro-cid-vhssb632> <a href="#" class="noc-menu-link" data-astro-cid-vhssb632> <span class="noc-menu-icon" data-astro-cid-vhssb632>📋</span> Rapporten </a> </li><li data-astro-cid-vhssb632> <a href="#" class="noc-menu-link" data-astro-cid-vhssb632> <span class="noc-menu-icon" data-astro-cid-vhssb632>💬</span> Contact </a> </li> </ul> </aside>
+<header class="noc" id="noc"> <nav class="noc-inner"> <button class="noc-burger" id="noc-burger" aria-label="Menu"> <span></span><span></span><span></span> </button> <a href="/" class="noc-logo">BLURR</a> <a href="#" class="noc-cta">Upgrade</a> </nav> </header> <div class="noc-backdrop" id="noc-backdrop"></div> <aside class="noc-panel" id="noc-panel" aria-hidden="true"> <div class="noc-panel-head"> <span class="noc-panel-logo">BLURR</span> <button class="noc-close" id="noc-close" aria-label="Sluiten">✕</button> </div> <ul class="noc-menu"> <li> <a href="#" class="noc-menu-link noc-menu-link--active"> <span class="noc-menu-icon">📊</span> Dashboard </a> </li><li> <a href="#" class="noc-menu-link"> <span class="noc-menu-icon">🎯</span> Google Ads </a> </li><li> <a href="#" class="noc-menu-link"> <span class="noc-menu-icon">📘</span> Meta Ads </a> </li><li> <a href="#" class="noc-menu-link"> <span class="noc-menu-icon">🔍</span> SEO </a> </li><li> <a href="#" class="noc-menu-link"> <span class="noc-menu-icon">📋</span> Rapporten </a> </li><li> <a href="#" class="noc-menu-link"> <span class="noc-menu-icon">💬</span> Contact </a> </li> </ul> </aside>
 
-
+<style>
+.noc{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:200}
+.noc-inner{max-width:1280px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;height:60px;gap:1rem}
+.noc-burger{background:none;border:none;cursor:pointer;display:flex;flex-direction:column;gap:4px;padding:4px}
+.noc-burger span{display:block;width:20px;height:2px;background:#0a0a0a;border-radius:2px}
+.noc-logo{font-weight:800;font-size:1.0625rem;color:#0a0a0a;text-decoration:none;letter-spacing:-.02em;flex:1}
+.noc-cta{font-size:.875rem;font-weight:600;padding:.5rem 1.125rem;background:var(--color-accent,#6366f1);color:#fff;border-radius:.5rem;text-decoration:none}
+.noc-backdrop{position:fixed;inset:0;background:#0006;z-index:299;opacity:0;pointer-events:none;transition:opacity .3s}
+.noc-backdrop--show{opacity:1;pointer-events:all}
+.noc-panel{position:fixed;top:0;left:-320px;width:300px;height:100vh;background:#fff;z-index:300;transition:left .35s cubic-bezier(.4,0,.2,1);box-shadow:4px 0 32px #0000001a;display:flex;flex-direction:column}
+.noc-panel--open{left:0}
+.noc-panel-head{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;border-bottom:1px solid #f1f5f9}
+.noc-panel-logo{font-weight:800;font-size:1.0625rem;color:#0a0a0a;letter-spacing:-.02em}
+.noc-close{background:none;border:none;font-size:1.125rem;cursor:pointer;color:#6b7280;padding:.25rem;transition:color .15s}
+.noc-close:hover{color:#0a0a0a}
+.noc-menu{list-style:none;padding:.75rem;margin:0;display:flex;flex-direction:column;gap:.125rem}
+.noc-menu-link{display:flex;align-items:center;gap:.75rem;font-size:.9375rem;font-weight:500;color:#374151;text-decoration:none;padding:.75rem .875rem;border-radius:.5rem;transition:all .15s}
+.noc-menu-link:hover,.noc-menu-link--active{background:#6366f112;color:var(--color-accent,#6366f1)}
+.noc-menu-icon{font-size:1.125rem}
+</style>

@@ -2,6 +2,22 @@
 // NavGlass — recovered from blurr-components.pages.dev
 ---
 
-<header class="ng" data-astro-cid-mjdgsgz6> <nav class="ng-inner" data-astro-cid-mjdgsgz6> <a href="/" class="ng-logo" data-astro-cid-mjdgsgz6>BLURR</a> <ul class="ng-links" data-astro-cid-mjdgsgz6> <li data-astro-cid-mjdgsgz6><a href="#" class="ng-link" data-astro-cid-mjdgsgz6>Diensten</a></li><li data-astro-cid-mjdgsgz6><a href="#" class="ng-link" data-astro-cid-mjdgsgz6>Cases</a></li><li data-astro-cid-mjdgsgz6><a href="#" class="ng-link" data-astro-cid-mjdgsgz6>Over ons</a></li><li data-astro-cid-mjdgsgz6><a href="#" class="ng-link" data-astro-cid-mjdgsgz6>Blog</a></li> </ul> <a href="#" class="ng-cta" data-astro-cid-mjdgsgz6>Gratis gesprek</a> </nav> </header>
+<header class="ng"> <nav class="ng-inner"> <a href="/" class="ng-logo">BLURR</a> <ul class="ng-links"> <li><a href="#" class="ng-link">Diensten</a></li><li><a href="#" class="ng-link">Cases</a></li><li><a href="#" class="ng-link">Over ons</a></li><li><a href="#" class="ng-link">Blog</a></li> </ul> <a href="#" class="ng-cta">Gratis gesprek</a> </nav> </header>
 
-
+<style>
+.ng{position:sticky;top:0;z-index:100;backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%)}
+.ng{background:#ffffffb3;border-bottom:1px solid rgba(255,255,255,.5)}
+.ng--dark{background:#0a0a14a6;border-bottom-color:#ffffff14}
+.ng-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;height:64px;gap:2rem}
+.ng-logo{font-weight:800;font-size:1.0625rem;letter-spacing:-.02em;text-decoration:none}
+.ng .ng-logo{color:#0a0a0a}
+.ng--dark .ng-logo{color:#fff}
+.ng-links{list-style:none;padding:0;margin:0;display:flex;flex:1;gap:0}
+.ng-link{display:block;font-size:.875rem;font-weight:500;text-decoration:none;padding:.375rem .875rem;border-radius:.375rem;transition:all .15s}
+.ng .ng-link{color:#374151}
+.ng--dark .ng-link{color:#ffffffb3}
+.ng-link:hover,.ng-link--active{color:var(--color-accent,#6366f1)!important;background:#6366f11a}
+.ng-cta{margin-left:auto;font-size:.875rem;font-weight:600;padding:.5rem 1.25rem;background:var(--color-accent,#6366f1);color:#fff;border-radius:.5rem;text-decoration:none;transition:opacity .2s;white-space:nowrap}
+.ng-cta:hover{opacity:.88}
+.ng-links{display:none}
+</style>

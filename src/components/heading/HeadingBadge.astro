@@ -2,6 +2,11 @@
 // HeadingBadge — recovered from blurr-components.pages.dev
 ---
 
-<div class="hd-badge" data-astro-cid-upsfi54v> <span class="hd-badge__badge" data-astro-cid-upsfi54v>Nieuw</span> <h2 class="hd-badge__title" data-astro-cid-upsfi54v>Introductie BLURR AI-pakket</h2> <p class="hd-badge__sub" data-astro-cid-upsfi54v>Slimmere advertenties, minder verspilling, meer rendement.</p> </div>
+<div class="hd-badge"> <span class="hd-badge__badge">Nieuw</span> <h2 class="hd-badge__title">Introductie BLURR AI-pakket</h2> <p class="hd-badge__sub">Slimmere advertenties, minder verspilling, meer rendement.</p> </div>
 
-
+<style>
+.hd-badge{padding:2.5rem 0;display:flex;flex-direction:column;align-items:flex-start;gap:.75rem}
+.hd-badge__badge{display:inline-block;background:var(--color-accent);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .65rem;border-radius:999px}
+.hd-badge__title{margin:0;font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.15;color:var(--color-primary);letter-spacing:-.02em}
+.hd-badge__sub{margin:0;font-size:1.05rem;color:#555;line-height:1.6;max-width:520px}
+</style>

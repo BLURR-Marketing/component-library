@@ -2,9 +2,30 @@
 // FormUpload — recovered from blurr-components.pages.dev
 ---
 
-<div class="ful-wrap" data-astro-cid-kvouqhwe> <div class="ful-header" data-astro-cid-kvouqhwe> <h2 class="ful-heading" data-astro-cid-kvouqhwe>Bestanden uploaden</h2> <p class="ful-subtext" data-astro-cid-kvouqhwe>Upload je logo, huisstijlgids of campagnemateriaal zodat we direct aan de slag kunnen.</p> </div> <form class="ful-form" onsubmit="return false;" novalidate data-astro-cid-kvouqhwe> <div class="ful-field" data-astro-cid-kvouqhwe> <label class="ful-label" for="ful-name" data-astro-cid-kvouqhwe>Jouw naam *</label> <input class="ful-input" type="text" id="ful-name" name="name" placeholder="Jan de Vries" required autocomplete="name" data-astro-cid-kvouqhwe> </div> <div class="ful-field" data-astro-cid-kvouqhwe> <label class="ful-label" for="ful-email" data-astro-cid-kvouqhwe>E-mailadres *</label> <input class="ful-input" type="email" id="ful-email" name="email" placeholder="jij@bedrijf.nl" required autocomplete="email" data-astro-cid-kvouqhwe> </div> <div class="ful-field" data-astro-cid-kvouqhwe> <label class="ful-label" for="ful-context" data-astro-cid-kvouqhwe>Toelichting (optioneel)</label> <textarea class="ful-textarea" id="ful-context" name="context" rows="3" placeholder="Wat zijn we met de bestanden?" data-astro-cid-kvouqhwe></textarea> </div> <div class="ful-dropzone" data-astro-cid-kvouqhwe> <label class="ful-drop-label" for="ful-files" data-astro-cid-kvouqhwe> <div class="ful-drop-icon" aria-hidden="true" data-astro-cid-kvouqhwe>📎</div> <div class="ful-drop-text" data-astro-cid-kvouqhwe> <strong data-astro-cid-kvouqhwe>Klik om bestanden te kiezen</strong> of sleep ze hier naartoe
-</div> <div class="ful-drop-meta" data-astro-cid-kvouqhwe>
+<div class="ful-wrap"> <div class="ful-header"> <h2 class="ful-heading">Bestanden uploaden</h2> <p class="ful-subtext">Upload je logo, huisstijlgids of campagnemateriaal zodat we direct aan de slag kunnen.</p> </div> <form class="ful-form" onsubmit="return false;" novalidate> <div class="ful-field"> <label class="ful-label" for="ful-name">Jouw naam *</label> <input class="ful-input" type="text" id="ful-name" name="name" placeholder="Jan de Vries" required autocomplete="name"> </div> <div class="ful-field"> <label class="ful-label" for="ful-email">E-mailadres *</label> <input class="ful-input" type="email" id="ful-email" name="email" placeholder="jij@bedrijf.nl" required autocomplete="email"> </div> <div class="ful-field"> <label class="ful-label" for="ful-context">Toelichting (optioneel)</label> <textarea class="ful-textarea" id="ful-context" name="context" rows="3" placeholder="Wat zijn we met de bestanden?"></textarea> </div> <div class="ful-dropzone"> <label class="ful-drop-label" for="ful-files"> <div class="ful-drop-icon" aria-hidden="true">📎</div> <div class="ful-drop-text"> <strong>Klik om bestanden te kiezen</strong> of sleep ze hier naartoe
+</div> <div class="ful-drop-meta">
 Toegestaan: .pdf,.jpg,.png,.ai,.psd,.zip — Max 25MB per bestand
-</div> <input class="ful-file-input" type="file" id="ful-files" name="files" accept=".pdf,.jpg,.png,.ai,.psd,.zip" multiple="true" aria-label="Bestanden kiezen" data-astro-cid-kvouqhwe> </label> </div> <button class="ful-submit" type="submit" data-astro-cid-kvouqhwe>Bestanden versturen</button> </form> </div>
+</div> <input class="ful-file-input" type="file" id="ful-files" name="files" accept=".pdf,.jpg,.png,.ai,.psd,.zip" multiple="true" aria-label="Bestanden kiezen"> </label> </div> <button class="ful-submit" type="submit">Bestanden versturen</button> </form> </div>
 
-
+<style>
+.ful-wrap{max-width:560px;padding:2rem 0}
+.ful-header{margin-bottom:1.75rem}
+.ful-heading{font-size:1.75rem;font-weight:800;color:var(--color-primary, #0a0a0a);margin:0 0 .5rem}
+.ful-subtext{font-size:.95rem;color:#666;margin:0}
+.ful-form{display:flex;flex-direction:column;gap:1.25rem}
+.ful-field{display:flex;flex-direction:column;gap:.4rem}
+.ful-label{font-size:.85rem;font-weight:600;color:var(--color-primary, #0a0a0a)}
+.ful-input,.ful-textarea{padding:.7rem .9rem;border:1.5px solid #ddd;border-radius:8px;font-size:.95rem;color:var(--color-primary, #0a0a0a);background:#fff;transition:border-color .2s;font-family:inherit;box-sizing:border-box;width:100%}
+.ful-input:focus,.ful-textarea:focus{outline:none;border-color:var(--color-accent, #6366f1);box-shadow:0 0 0 3px #6366f11f}
+.ful-textarea{resize:vertical;min-height:80px}
+.ful-dropzone{border:2px dashed #ddd;border-radius:12px;transition:border-color .2s,background .2s}
+.ful-dropzone:hover{border-color:var(--color-accent, #6366f1);background:#f9f9ff}
+.ful-drop-label{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2.5rem 1.5rem;text-align:center;cursor:pointer;gap:.5rem}
+.ful-drop-icon{font-size:2.5rem;margin-bottom:.25rem}
+.ful-drop-text{font-size:.95rem;color:#444}
+.ful-drop-text strong{color:var(--color-accent, #6366f1)}
+.ful-drop-meta{font-size:.78rem;color:#aaa}
+.ful-file-input{display:none}
+.ful-submit{padding:.9rem 2rem;background:var(--color-accent, #6366f1);color:#fff;border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:opacity .2s;align-self:flex-start}
+.ful-submit:hover{opacity:.88}
+</style>

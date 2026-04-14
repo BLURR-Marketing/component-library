@@ -2,6 +2,28 @@
 // HeroParallax — recovered from blurr-components.pages.dev
 ---
 
-<section class="hpar__root" aria-label="Hero" data-astro-cid-3eusv3u5> <!-- Background parallax layer --> <div class="hpar__bg" id="hpar-bg" data-astro-cid-3eusv3u5> <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=80" alt="" class="hpar__bg-img" loading="eager" fetchpriority="high" aria-hidden="true" data-astro-cid-3eusv3u5> <div class="hpar__overlay" aria-hidden="true" data-astro-cid-3eusv3u5></div> </div> <!-- Foreground parallax card --> <div class="hpar__fg" id="hpar-fg" aria-hidden="true" data-astro-cid-3eusv3u5> <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80" alt="" class="hpar__fg-img" loading="eager" fetchpriority="high" data-astro-cid-3eusv3u5> </div> <!-- Content --> <div class="hpar__content" id="hpar-content" data-astro-cid-3eusv3u5> <div class="hpar__inner" data-astro-cid-3eusv3u5> <h1 class="hpar__headline" data-astro-cid-3eusv3u5>Marketing die <em>beweegt</em></h1> <p class="hpar__sub" data-astro-cid-3eusv3u5>Data-gedreven campagnes voor ambitieuze merken. Van strategie tot executie.</p> <div class="hpar__actions" data-astro-cid-3eusv3u5> <a href="#" class="hpar__cta hpar__cta--primary" data-astro-cid-3eusv3u5> Aan de slag </a> <a href="#" class="hpar__cta hpar__cta--ghost" data-astro-cid-3eusv3u5> Bekijk cases </a> </div> </div> </div> </section>
+<section class="hpar__root" aria-label="Hero"> <!-- Background parallax layer --> <div class="hpar__bg" id="hpar-bg"> <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=80" alt="" class="hpar__bg-img" loading="eager" fetchpriority="high" aria-hidden="true"> <div class="hpar__overlay" aria-hidden="true"></div> </div> <!-- Foreground parallax card --> <div class="hpar__fg" id="hpar-fg" aria-hidden="true"> <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80" alt="" class="hpar__fg-img" loading="eager" fetchpriority="high"> </div> <!-- Content --> <div class="hpar__content" id="hpar-content"> <div class="hpar__inner"> <h1 class="hpar__headline">Marketing die <em>beweegt</em></h1> <p class="hpar__sub">Data-gedreven campagnes voor ambitieuze merken. Van strategie tot executie.</p> <div class="hpar__actions"> <a href="#" class="hpar__cta hpar__cta--primary"> Aan de slag </a> <a href="#" class="hpar__cta hpar__cta--ghost"> Bekijk cases </a> </div> </div> </div> </section>
 
-
+<style>
+.hpar__root{position:relative;width:100%;min-height:100svh;overflow:hidden;display:flex;align-items:center;background:var(--color-primary)}
+.hpar__bg{position:absolute;inset:-15% 0;will-change:transform;z-index:0}
+.hpar__bg-img{width:100%;height:100%;object-fit:cover;display:block}
+.hpar__overlay{position:absolute;inset:0;background:#00000073}
+.hpar__fg{position:absolute;right:6%;top:50%;transform:translateY(-50%);width:clamp(260px,32vw,520px);aspect-ratio:4 / 5;border-radius:calc(var(--radius) * 2);overflow:hidden;box-shadow:0 32px 80px #00000080,0 8px 24px #00000059;will-change:transform;z-index:2}
+.hpar__fg-img{width:100%;height:100%;object-fit:cover;display:block}
+.hpar__content{position:relative;z-index:3;width:100%;padding:clamp(2rem,6vw,6rem) clamp(1.5rem,8vw,8rem);opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.hpar__content--visible{opacity:1;transform:translateY(0)}
+.hpar__inner{max-width:min(640px,55vw)}
+.hpar__headline{font-size:clamp(3rem,6vw,5.5rem);font-weight:900;line-height:1.04;letter-spacing:-.03em;color:#fff;margin:0 0 1.25rem}
+.hpar__headline em{font-style:normal;color:var(--color-accent)}
+.hpar__sub{font-size:clamp(1rem,1.5vw,1.25rem);color:#ffffffb8;line-height:1.65;margin:0 0 2.5rem;max-width:48ch}
+.hpar__actions{display:flex;flex-wrap:wrap;gap:.875rem;align-items:center}
+.hpar__cta{display:inline-flex;align-items:center;justify-content:center;padding:.8125rem 2rem;border-radius:var(--radius);font-size:.9375rem;font-weight:600;text-decoration:none;transition:opacity .2s,transform .2s;white-space:nowrap}
+.hpar__cta:hover{opacity:.88;transform:translateY(-1px)}
+.hpar__cta--primary{background:var(--color-accent);color:#fff}
+.hpar__cta--ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4)}
+.hpar__cta--ghost:hover{border-color:#ffffffb3}
+.hpar__inner{max-width:100%}
+.hpar__fg{display:none}
+.hpar__content{padding:clamp(2rem,8vw,3rem) clamp(1.25rem,5vw,2rem)}
+</style>

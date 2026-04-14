@@ -2,6 +2,13 @@
 // HeadingAnimated — recovered from blurr-components.pages.dev
 ---
 
-<div class="hd-anim" data-astro-cid-irvi4dsb> <span class="hd-anim__eyebrow" data-astro-cid-irvi4dsb>Aanpak</span> <h2 class="hd-anim__title" data-astro-cid-irvi4dsb>Van idee naar resultaat</h2> <p class="hd-anim__sub" data-astro-cid-irvi4dsb>Onze bewezen aanpak zorgt voor consistente groei.</p> </div>
+<div class="hd-anim"> <span class="hd-anim__eyebrow">Aanpak</span> <h2 class="hd-anim__title">Van idee naar resultaat</h2> <p class="hd-anim__sub">Onze bewezen aanpak zorgt voor consistente groei.</p> </div>
 
-
+<style>
+.hd-anim{padding:2.5rem 0}
+.hd-anim__eyebrow{display:block;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--color-accent);margin-bottom:.5rem}
+.hd-anim__title{margin:0 0 .75rem;font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.15;color:var(--color-primary);display:inline-block;position:relative;cursor:default}
+.hd-anim__title:after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:3px;background:var(--color-accent);transition:width .35s ease}
+.hd-anim__title:hover:after{width:100%}
+.hd-anim__sub{margin:0;font-size:1.05rem;color:#555;line-height:1.6;max-width:520px}
+</style>

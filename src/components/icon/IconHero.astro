@@ -2,6 +2,16 @@
 // IconHero — recovered from blurr-components.pages.dev
 ---
 
-<section class="ihr" data-astro-cid-i5b4cwve> <div class="ihr__bg-icons" aria-hidden="true" data-astro-cid-i5b4cwve> <span class="ihr__bg-icon" data-astro-cid-i5b4cwve>📊</span><span class="ihr__bg-icon" data-astro-cid-i5b4cwve>🎯</span><span class="ihr__bg-icon" data-astro-cid-i5b4cwve>✏️</span><span class="ihr__bg-icon" data-astro-cid-i5b4cwve>🔍</span><span class="ihr__bg-icon" data-astro-cid-i5b4cwve>📱</span><span class="ihr__bg-icon" data-astro-cid-i5b4cwve>🌐</span><span class="ihr__bg-icon" data-astro-cid-i5b4cwve>📧</span><span class="ihr__bg-icon" data-astro-cid-i5b4cwve>🏆</span><span class="ihr__bg-icon" data-astro-cid-i5b4cwve>📈</span><span class="ihr__bg-icon" data-astro-cid-i5b4cwve>🎥</span><span class="ihr__bg-icon" data-astro-cid-i5b4cwve>🤝</span><span class="ihr__bg-icon" data-astro-cid-i5b4cwve>⚡</span> </div> <div class="ihr__overlay" data-astro-cid-i5b4cwve> <div class="ihr__content" data-astro-cid-i5b4cwve> <h1 class="ihr__title" data-astro-cid-i5b4cwve>Volledig digitaal bureau</h1> <p class="ihr__subtitle" data-astro-cid-i5b4cwve>Van ads tot design, van web tot SEO — alles voor jouw groei.</p> <a class="ihr__cta" href="#" data-astro-cid-i5b4cwve>Start een project</a> </div> </div> </section>
+<section class="ihr"> <div class="ihr__bg-icons" aria-hidden="true"> <span class="ihr__bg-icon">📊</span><span class="ihr__bg-icon">🎯</span><span class="ihr__bg-icon">✏️</span><span class="ihr__bg-icon">🔍</span><span class="ihr__bg-icon">📱</span><span class="ihr__bg-icon">🌐</span><span class="ihr__bg-icon">📧</span><span class="ihr__bg-icon">🏆</span><span class="ihr__bg-icon">📈</span><span class="ihr__bg-icon">🎥</span><span class="ihr__bg-icon">🤝</span><span class="ihr__bg-icon">⚡</span> </div> <div class="ihr__overlay"> <div class="ihr__content"> <h1 class="ihr__title">Volledig digitaal bureau</h1> <p class="ihr__subtitle">Van ads tot design, van web tot SEO — alles voor jouw groei.</p> <a class="ihr__cta" href="#">Start een project</a> </div> </div> </section>
 
-
+<style>
+.ihr{position:relative;min-height:480px;overflow:hidden;background:#fafafa;display:flex;align-items:center;justify-content:center;border-radius:16px}
+.ihr__bg-icons{position:absolute;inset:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.ihr__bg-icon{display:flex;align-items:center;justify-content:center;font-size:2.5rem;opacity:.12;padding:1.5rem;filter:grayscale(.5)}
+.ihr__overlay{position:absolute;inset:0;background:linear-gradient(135deg,#6366f114,#ffffffe6 60%);display:flex;align-items:center;justify-content:center}
+.ihr__content{text-align:center;z-index:1;padding:2rem;max-width:600px}
+.ihr__title{font-size:clamp(2rem,5vw,3.5rem);font-weight:900;color:var(--color-primary, #0a0a0a);margin:0 0 1rem;line-height:1.1}
+.ihr__subtitle{font-size:1.1rem;color:#666;margin:0 0 2rem;line-height:1.6}
+.ihr__cta{display:inline-block;padding:.9rem 2.25rem;background:var(--color-accent, #6366f1);color:#fff;text-decoration:none;border-radius:8px;font-weight:700;transition:transform .2s,opacity .2s}
+.ihr__cta:hover{transform:translateY(-2px);opacity:.9}
+</style>

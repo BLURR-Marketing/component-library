@@ -2,6 +2,16 @@
 // NavLogoRight — recovered from blurr-components.pages.dev
 ---
 
-<header class="nlr" data-astro-cid-d5typpa6> <nav class="nlr-inner" data-astro-cid-d5typpa6> <ul class="nlr-links" data-astro-cid-d5typpa6> <li data-astro-cid-d5typpa6><a href="#" class="nlr-link" data-astro-cid-d5typpa6>Diensten</a></li><li data-astro-cid-d5typpa6><a href="#" class="nlr-link" data-astro-cid-d5typpa6>Cases</a></li><li data-astro-cid-d5typpa6><a href="#" class="nlr-link" data-astro-cid-d5typpa6>Blog</a></li><li data-astro-cid-d5typpa6><a href="#" class="nlr-link" data-astro-cid-d5typpa6>Over ons</a></li> </ul> <a href="#" class="nlr-cta" data-astro-cid-d5typpa6>Contact</a> <a href="/" class="nlr-logo" data-astro-cid-d5typpa6>BLURR</a> </nav> </header>
+<header class="nlr"> <nav class="nlr-inner"> <ul class="nlr-links"> <li><a href="#" class="nlr-link">Diensten</a></li><li><a href="#" class="nlr-link">Cases</a></li><li><a href="#" class="nlr-link">Blog</a></li><li><a href="#" class="nlr-link">Over ons</a></li> </ul> <a href="#" class="nlr-cta">Contact</a> <a href="/" class="nlr-logo">BLURR</a> </nav> </header>
 
-
+<style>
+.nlr{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:100}
+.nlr-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;height:64px;gap:1rem}
+.nlr-links{list-style:none;padding:0;margin:0;display:flex;flex:1;gap:0}
+.nlr-link{display:block;font-size:.875rem;font-weight:500;color:#374151;text-decoration:none;padding:.375rem .875rem;border-radius:.375rem;transition:all .15s}
+.nlr-link:hover,.nlr-link--active{color:var(--color-accent,#6366f1);background:#6366f112}
+.nlr-cta{font-size:.875rem;font-weight:600;padding:.5rem 1.25rem;border:2px solid #0a0a0a;color:#0a0a0a;border-radius:.5rem;text-decoration:none;transition:all .2s;white-space:nowrap}
+.nlr-cta:hover{background:#0a0a0a;color:#fff}
+.nlr-logo{font-weight:800;font-size:1.0625rem;color:#0a0a0a;text-decoration:none;letter-spacing:-.02em;white-space:nowrap;margin-left:1rem}
+.nlr-links{display:none}
+</style>

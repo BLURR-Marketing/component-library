@@ -2,6 +2,21 @@
 // ImageMosaic — recovered from blurr-components.pages.dev
 ---
 
-<section class="imo" data-astro-cid-vylikonw> <h2 class="imo__title" data-astro-cid-vylikonw>Impressie</h2> <div class="imo__grid" data-astro-cid-vylikonw> <div class="imo__item imo__item--large" data-astro-cid-vylikonw> <div class="imo__placeholder" aria-label="Groot beeld" data-astro-cid-vylikonw></div> <span class="imo__label" data-astro-cid-vylikonw>Featured project</span> </div><div class="imo__item" data-astro-cid-vylikonw> <div class="imo__placeholder" aria-label="Klein beeld 1" data-astro-cid-vylikonw></div> <span class="imo__label" data-astro-cid-vylikonw>Detail 1</span> </div><div class="imo__item" data-astro-cid-vylikonw> <div class="imo__placeholder" aria-label="Klein beeld 2" data-astro-cid-vylikonw></div> <span class="imo__label" data-astro-cid-vylikonw>Detail 2</span> </div><div class="imo__item" data-astro-cid-vylikonw> <div class="imo__placeholder" aria-label="Klein beeld 3" data-astro-cid-vylikonw></div> <span class="imo__label" data-astro-cid-vylikonw>Detail 3</span> </div> </div> </section>
+<section class="imo"> <h2 class="imo__title">Impressie</h2> <div class="imo__grid"> <div class="imo__item imo__item--large"> <div class="imo__placeholder" aria-label="Groot beeld"></div> <span class="imo__label">Featured project</span> </div><div class="imo__item"> <div class="imo__placeholder" aria-label="Klein beeld 1"></div> <span class="imo__label">Detail 1</span> </div><div class="imo__item"> <div class="imo__placeholder" aria-label="Klein beeld 2"></div> <span class="imo__label">Detail 2</span> </div><div class="imo__item"> <div class="imo__placeholder" aria-label="Klein beeld 3"></div> <span class="imo__label">Detail 3</span> </div> </div> </section>
 
-
+<style>
+.imo{padding:2rem 0}
+.imo__title{font-size:2rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 2rem}
+.imo__grid{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:auto auto;gap:.75rem}
+.imo__item{position:relative;overflow:hidden;border-radius:8px;aspect-ratio:4/3}
+.imo__item--large{grid-row:span 2;aspect-ratio:auto}
+.imo__img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.imo__item:hover .imo__img{transform:scale(1.04)}
+.imo__placeholder{width:100%;height:100%;min-height:150px}
+.imo__item--large .imo__placeholder{background:linear-gradient(135deg,#1a2a4a,#3a4a7a);min-height:320px}
+.imo__item:not(.imo__item--large) .imo__placeholder{background:linear-gradient(135deg,#e0e0f0,#c8c8e8)}
+.imo__item:nth-child(3) .imo__placeholder{background:linear-gradient(135deg,#e8f0e0,#c8e0c8)}
+.imo__label{position:absolute;bottom:.75rem;left:.75rem;background:#0a0a0aa6;color:#fff;font-size:.75rem;font-weight:600;padding:.25rem .6rem;border-radius:4px}
+.imo__grid{grid-template-columns:1fr}
+.imo__item--large{grid-row:auto}
+</style>

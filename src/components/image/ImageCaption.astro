@@ -2,6 +2,15 @@
 // ImageCaption — recovered from blurr-components.pages.dev
 ---
 
-<figure class="icap icap--rounded" style="--icap-ratio: 16/9" data-astro-cid-ivqbzcts> <div class="icap__media" data-astro-cid-ivqbzcts> <div class="icap__placeholder" aria-label="Afbeelding" data-astro-cid-ivqbzcts></div> </div> <figcaption class="icap__figcaption" data-astro-cid-ivqbzcts> <span class="icap__caption" data-astro-cid-ivqbzcts>Een beeld zegt meer dan duizend woorden — zo ook bij BLURR-campagnes.</span> <span class="icap__credit" data-astro-cid-ivqbzcts>Foto: BLURR Creative Studio</span> </figcaption> </figure>
+<figure class="icap icap--rounded" style="--icap-ratio: 16/9"> <div class="icap__media"> <div class="icap__placeholder" aria-label="Afbeelding"></div> </div> <figcaption class="icap__figcaption"> <span class="icap__caption">Een beeld zegt meer dan duizend woorden — zo ook bij BLURR-campagnes.</span> <span class="icap__credit">Foto: BLURR Creative Studio</span> </figcaption> </figure>
 
-
+<style>
+.icap{margin:0}
+.icap__media{aspect-ratio:var(--icap-ratio, 16/9);overflow:hidden}
+.icap--rounded .icap__media{border-radius:10px}
+.icap__img{width:100%;height:100%;object-fit:cover}
+.icap__placeholder{width:100%;height:100%;background:linear-gradient(135deg,#e0e0f0,#c8c8e8)}
+.icap__figcaption{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;padding:.75rem .25rem 0;border-top:1px solid #eee;margin-top:.5rem}
+.icap__caption{font-size:.9rem;color:#555;line-height:1.5;font-style:italic}
+.icap__credit{font-size:.75rem;color:#999;white-space:nowrap;flex-shrink:0}
+</style>

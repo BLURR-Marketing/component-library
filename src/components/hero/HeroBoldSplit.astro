@@ -2,6 +2,31 @@
 // HeroBoldSplit — recovered from blurr-components.pages.dev
 ---
 
-<section class="hbs" data-component="hero-bold-split" data-astro-cid-id3w4djp> <div class="hbs__left" data-astro-cid-id3w4djp> <div class="hbs__content" data-astro-cid-id3w4djp> <p class="hbs__pre" data-astro-cid-id3w4djp> <span class="hbs__pre-dot" data-astro-cid-id3w4djp></span> Online Marketing Bureau </p> <h1 class="hbs__headline" data-astro-cid-id3w4djp>Wij laten jouw <em>merk</em> groeien</h1> <p class="hbs__sub" data-astro-cid-id3w4djp>Van strategie tot executie — data-gedreven campagnes die écht converteren.</p> <div class="hbs__actions" data-astro-cid-id3w4djp> <a href="#" class="hbs__cta" data-astro-cid-id3w4djp>Aan de slag</a> <a href="#" class="hbs__secondary" data-astro-cid-id3w4djp> Bekijk cases <svg width="14" height="14" viewBox="0 0 14 14" fill="none" data-astro-cid-id3w4djp> <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-id3w4djp></path> </svg> </a> </div> </div> </div> <div class="hbs__right" data-astro-cid-id3w4djp> <div class="hbs__img-wrap" data-astro-cid-id3w4djp> <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80" alt="Team aan het werk" class="hbs__img" loading="eager" fetchpriority="high" data-astro-cid-id3w4djp> <div class="hbs__img-overlay" data-astro-cid-id3w4djp></div> </div> </div> </section>
+<section class="hbs" data-component="hero-bold-split"> <div class="hbs__left"> <div class="hbs__content"> <p class="hbs__pre"> <span class="hbs__pre-dot"></span> Online Marketing Bureau </p> <h1 class="hbs__headline">Wij laten jouw <em>merk</em> groeien</h1> <p class="hbs__sub">Van strategie tot executie — data-gedreven campagnes die écht converteren.</p> <div class="hbs__actions"> <a href="#" class="hbs__cta">Aan de slag</a> <a href="#" class="hbs__secondary"> Bekijk cases <svg width="14" height="14" viewBox="0 0 14 14" fill="none"> <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </a> </div> </div> </div> <div class="hbs__right"> <div class="hbs__img-wrap"> <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80" alt="Team aan het werk" class="hbs__img" loading="eager" fetchpriority="high"> <div class="hbs__img-overlay"></div> </div> </div> </section>
 
-
+<style>
+.hbs{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;overflow:hidden;background:var(--color-bg, #fff)}
+.hbs__left{display:flex;align-items:center;padding:5rem 4rem 5rem 5vw;background:var(--color-bg, #fff)}
+.hbs__content{max-width:560px}
+.hbs__pre{display:flex;align-items:center;gap:.625rem;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--color-muted, #6b7280);margin-bottom:1.5rem;animation:hbs-fade-up .5s .1s cubic-bezier(.22,1,.36,1) both}
+.hbs__pre-dot{width:8px;height:8px;border-radius:50%;background:var(--color-accent, #6366f1);flex-shrink:0}
+.hbs__headline{font-size:clamp(3rem,6vw,6rem);font-weight:800;line-height:1;letter-spacing:-.045em;color:var(--color-primary, #0a0a0a);margin-bottom:1.5rem;animation:hbs-fade-up .65s .2s cubic-bezier(.22,1,.36,1) both}
+.hbs__headline em{font-style:normal;color:var(--color-accent, #6366f1)}
+.hbs__headline strong{-webkit-text-stroke:2px var(--color-primary, #0a0a0a);color:transparent;font-weight:800}
+.hbs__sub{font-size:1.0625rem;line-height:1.65;color:var(--color-muted, #6b7280);margin-bottom:2.5rem;max-width:40ch;animation:hbs-fade-up .6s .35s cubic-bezier(.22,1,.36,1) both}
+.hbs__actions{display:flex;align-items:center;gap:1.5rem;animation:hbs-fade-up .6s .45s cubic-bezier(.22,1,.36,1) both}
+.hbs__cta{display:inline-flex;align-items:center;background:var(--color-primary, #0a0a0a);color:#fff;padding:.9375rem 2rem;border-radius:var(--radius, .5rem);font-weight:700;font-size:.9375rem;text-decoration:none;transition:background .2s,transform .2s}
+.hbs__cta:hover{background:var(--color-accent, #6366f1);transform:translateY(-2px)}
+.hbs__secondary{display:inline-flex;align-items:center;gap:.4rem;font-size:.9375rem;font-weight:600;color:var(--color-primary, #0a0a0a);text-decoration:none;opacity:.6;transition:opacity .2s,gap .2s}
+.hbs__secondary:hover{opacity:1;gap:.6rem}
+.hbs__right{position:relative;overflow:hidden}
+.hbs__img-wrap{position:absolute;inset:0;animation:hbs-scale-in 1s .1s cubic-bezier(.22,1,.36,1) both}
+.hbs__img{width:100%;height:100%;object-fit:cover;display:block}
+.hbs__img-overlay{position:absolute;inset:0;background:linear-gradient(to right,var(--color-bg, #fff) 0%,transparent 15%);pointer-events:none}
+.hbs__pre,.hbs__headline,.hbs__sub,.hbs__actions,.hbs__img-wrap{animation:none}
+.hbs{grid-template-columns:1fr;min-height:auto}
+.hbs__right{height:55vw;min-height:280px;position:relative}
+.hbs__left{padding:3.5rem 1.5rem;order:2}
+.hbs__right{order:1}
+.hbs__img-overlay{background:linear-gradient(to bottom,transparent 60%,var(--color-bg, #fff) 100%)}
+</style>

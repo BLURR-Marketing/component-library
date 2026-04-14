@@ -2,6 +2,13 @@
 // ListHorizontal — recovered from blurr-components.pages.dev
 ---
 
-<div class="lst-hor" data-astro-cid-pv4ejmpe> <ul class="lst-hor__list" data-astro-cid-pv4ejmpe> <li class="lst-hor__item" data-astro-cid-pv4ejmpe> <span class="lst-hor__label" data-astro-cid-pv4ejmpe>Google Ads</span> <span class="lst-hor__value" data-astro-cid-pv4ejmpe>Specialist</span> </li><li class="lst-hor__item" data-astro-cid-pv4ejmpe> <span class="lst-hor__label" data-astro-cid-pv4ejmpe>Meta Ads</span> <span class="lst-hor__value" data-astro-cid-pv4ejmpe>Certified</span> </li><li class="lst-hor__item" data-astro-cid-pv4ejmpe> <span class="lst-hor__label" data-astro-cid-pv4ejmpe>SEO</span> <span class="lst-hor__value" data-astro-cid-pv4ejmpe>Expert</span> </li><li class="lst-hor__item" data-astro-cid-pv4ejmpe> <span class="lst-hor__label" data-astro-cid-pv4ejmpe>Analytics</span> <span class="lst-hor__value" data-astro-cid-pv4ejmpe>GA4</span> </li> </ul> </div>
+<div class="lst-hor"> <ul class="lst-hor__list"> <li class="lst-hor__item"> <span class="lst-hor__label">Google Ads</span> <span class="lst-hor__value">Specialist</span> </li><li class="lst-hor__item"> <span class="lst-hor__label">Meta Ads</span> <span class="lst-hor__value">Certified</span> </li><li class="lst-hor__item"> <span class="lst-hor__label">SEO</span> <span class="lst-hor__value">Expert</span> </li><li class="lst-hor__item"> <span class="lst-hor__label">Analytics</span> <span class="lst-hor__value">GA4</span> </li> </ul> </div>
 
-
+<style>
+.lst-hor{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.lst-hor__list{list-style:none;margin:0;padding:.5rem 0;display:flex;gap:.75rem;width:max-content}
+.lst-hor__item{display:flex;flex-direction:column;align-items:center;gap:.2rem;padding:.9rem 1.25rem;border:1.5px solid #e5e5e5;border-radius:.75rem;min-width:100px;transition:border-color .2s}
+.lst-hor__item:hover{border-color:var(--color-accent)}
+.lst-hor__label{font-size:.875rem;font-weight:700;color:var(--color-primary)}
+.lst-hor__value{font-size:.75rem;color:var(--color-accent);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+</style>

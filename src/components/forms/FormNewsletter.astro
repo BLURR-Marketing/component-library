@@ -2,6 +2,30 @@
 // FormNewsletter — recovered from blurr-components.pages.dev
 ---
 
-<div class="fnl-wrap" data-astro-cid-nvhq7y2e> <div class="fnl-header" data-astro-cid-nvhq7y2e> <h2 class="fnl-heading" data-astro-cid-nvhq7y2e>Blijf op de hoogte</h2> <p class="fnl-subtext" data-astro-cid-nvhq7y2e>Ontvang maandelijks onze beste marketing insights. Geen spam.</p> </div> <form class="fnl-form" onsubmit="return false;" novalidate data-astro-cid-nvhq7y2e> <div class="fnl-row" data-astro-cid-nvhq7y2e> <div class="fnl-field" data-astro-cid-nvhq7y2e> <label class="fnl-label" for="fnl-name" data-astro-cid-nvhq7y2e>Voornaam</label> <input class="fnl-input" type="text" id="fnl-name" name="first_name" placeholder="Jouw voornaam" autocomplete="given-name" data-astro-cid-nvhq7y2e> </div> <div class="fnl-field" data-astro-cid-nvhq7y2e> <label class="fnl-label" for="fnl-email" data-astro-cid-nvhq7y2e>E-mailadres *</label> <input class="fnl-input" type="email" id="fnl-email" name="email" placeholder="jij@bedrijf.nl" required autocomplete="email" data-astro-cid-nvhq7y2e> </div> </div>  <div class="fnl-checkgroup" data-astro-cid-nvhq7y2e> <p class="fnl-check-label-head" data-astro-cid-nvhq7y2e>Interesses (optioneel):</p> <div class="fnl-checks" data-astro-cid-nvhq7y2e> <label class="fnl-check-item" data-astro-cid-nvhq7y2e> <input class="fnl-check" type="checkbox" name="interests" value="Performance marketing" data-astro-cid-nvhq7y2e> Performance marketing </label><label class="fnl-check-item" data-astro-cid-nvhq7y2e> <input class="fnl-check" type="checkbox" name="interests" value="SEO &#38; content" data-astro-cid-nvhq7y2e> SEO &amp; content </label><label class="fnl-check-item" data-astro-cid-nvhq7y2e> <input class="fnl-check" type="checkbox" name="interests" value="Social media" data-astro-cid-nvhq7y2e> Social media </label><label class="fnl-check-item" data-astro-cid-nvhq7y2e> <input class="fnl-check" type="checkbox" name="interests" value="Design &#38; branding" data-astro-cid-nvhq7y2e> Design &amp; branding </label> </div> </div> <button class="fnl-submit" type="submit" data-astro-cid-nvhq7y2e>Aanmelden</button> <p class="fnl-disclaimer" data-astro-cid-nvhq7y2e>Door je aan te melden ga je akkoord met onze <a href="/privacy" class="fnl-link" data-astro-cid-nvhq7y2e>privacyverklaring</a>.</p> </form> </div>
+<div class="fnl-wrap"> <div class="fnl-header"> <h2 class="fnl-heading">Blijf op de hoogte</h2> <p class="fnl-subtext">Ontvang maandelijks onze beste marketing insights. Geen spam.</p> </div> <form class="fnl-form" onsubmit="return false;" novalidate> <div class="fnl-row"> <div class="fnl-field"> <label class="fnl-label" for="fnl-name">Voornaam</label> <input class="fnl-input" type="text" id="fnl-name" name="first_name" placeholder="Jouw voornaam" autocomplete="given-name"> </div> <div class="fnl-field"> <label class="fnl-label" for="fnl-email">E-mailadres *</label> <input class="fnl-input" type="email" id="fnl-email" name="email" placeholder="jij@bedrijf.nl" required autocomplete="email"> </div> </div>  <div class="fnl-checkgroup"> <p class="fnl-check-label-head">Interesses (optioneel):</p> <div class="fnl-checks"> <label class="fnl-check-item"> <input class="fnl-check" type="checkbox" name="interests" value="Performance marketing"> Performance marketing </label><label class="fnl-check-item"> <input class="fnl-check" type="checkbox" name="interests" value="SEO &#38; content"> SEO &amp; content </label><label class="fnl-check-item"> <input class="fnl-check" type="checkbox" name="interests" value="Social media"> Social media </label><label class="fnl-check-item"> <input class="fnl-check" type="checkbox" name="interests" value="Design &#38; branding"> Design &amp; branding </label> </div> </div> <button class="fnl-submit" type="submit">Aanmelden</button> <p class="fnl-disclaimer">Door je aan te melden ga je akkoord met onze <a href="/privacy" class="fnl-link">privacyverklaring</a>.</p> </form> </div>
 
-
+<style>
+.fnl-wrap{max-width:560px;padding:2rem 0}
+.fnl-wrap--compact{max-width:100%;padding:0}
+.fnl-header{margin-bottom:1.75rem}
+.fnl-heading{font-size:1.75rem;font-weight:800;color:var(--color-primary, #0a0a0a);margin:0 0 .5rem}
+.fnl-subtext{font-size:.95rem;color:#666;margin:0}
+.fnl-form{display:flex;flex-direction:column;gap:1.25rem}
+.fnl-wrap--compact .fnl-form{flex-direction:row;align-items:flex-end;gap:.75rem}
+.fnl-row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.fnl-row{grid-template-columns:1fr}
+.fnl-field{display:flex;flex-direction:column;gap:.4rem}
+.fnl-label{font-size:.85rem;font-weight:600;color:var(--color-primary, #0a0a0a)}
+.fnl-input{padding:.7rem .9rem;border:1.5px solid #ddd;border-radius:8px;font-size:.95rem;color:var(--color-primary, #0a0a0a);background:#fff;transition:border-color .2s;font-family:inherit;box-sizing:border-box;flex:1}
+.fnl-input:focus{outline:none;border-color:var(--color-accent, #6366f1);box-shadow:0 0 0 3px #6366f11f}
+.fnl-checkgroup{background:#f9f9f9;border-radius:8px;padding:1rem 1.25rem}
+.fnl-check-label-head{font-size:.85rem;font-weight:600;color:#555;margin:0 0 .75rem}
+.fnl-checks{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem}
+.fnl-check-item{display:flex;align-items:center;gap:.4rem;font-size:.85rem;color:#444;cursor:pointer}
+.fnl-check{accent-color:var(--color-accent, #6366f1)}
+.fnl-submit{padding:.85rem 1.75rem;background:var(--color-accent, #6366f1);color:#fff;border:none;border-radius:8px;font-size:.95rem;font-weight:600;cursor:pointer;transition:opacity .2s;white-space:nowrap;align-self:flex-start}
+.fnl-wrap--compact .fnl-submit{align-self:auto}
+.fnl-submit:hover{opacity:.88}
+.fnl-disclaimer{font-size:.8rem;color:#999;margin:0}
+.fnl-link{color:var(--color-accent, #6366f1)}
+</style>

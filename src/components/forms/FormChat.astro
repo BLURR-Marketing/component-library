@@ -2,8 +2,28 @@
 // FormChat — recovered from blurr-components.pages.dev
 ---
 
-<div class="fch-wrap" data-astro-cid-eae27cwz> <div class="fch-header" data-astro-cid-eae27cwz> <div class="fch-avatar" aria-hidden="true" data-astro-cid-eae27cwz>B</div> <div data-astro-cid-eae27cwz> <h3 class="fch-bot-name" data-astro-cid-eae27cwz>BLURR Assistent</h3> <span class="fch-status" data-astro-cid-eae27cwz> <span class="fch-dot" aria-hidden="true" data-astro-cid-eae27cwz></span>
+<div class="fch-wrap"> <div class="fch-header"> <div class="fch-avatar" aria-hidden="true">B</div> <div> <h3 class="fch-bot-name">BLURR Assistent</h3> <span class="fch-status"> <span class="fch-dot" aria-hidden="true"></span>
 Online
-</span> </div> </div> <div class="fch-messages" role="log" aria-label="Chatberichten" aria-live="polite" data-astro-cid-eae27cwz> <div class="fch-msg fch-msg--bot" data-astro-cid-eae27cwz> <div class="fch-bubble" data-astro-cid-eae27cwz>Hoi! 👋 Ik ben de BLURR assistent. Hoe kan ik je helpen vandaag?</div> </div><div class="fch-msg fch-msg--bot" data-astro-cid-eae27cwz> <div class="fch-bubble" data-astro-cid-eae27cwz>Je kunt me vragen stellen over onze diensten, prijzen, of gewoon even kennismaken.</div> </div> </div> <form class="fch-form" onsubmit="return false;" aria-label="Stel een vraag" data-astro-cid-eae27cwz> <div class="fch-input-wrap" data-astro-cid-eae27cwz> <input class="fch-input" type="text" name="message" placeholder="Typ je vraag hier..." aria-label="Chatbericht" autocomplete="off" data-astro-cid-eae27cwz> <button class="fch-send" type="submit" aria-label="Verstuur bericht" data-astro-cid-eae27cwz> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-eae27cwz><line x1="22" y1="2" x2="11" y2="13" data-astro-cid-eae27cwz></line><polygon points="22 2 15 22 11 13 2 9 22 2" data-astro-cid-eae27cwz></polygon></svg> </button> </div> <p class="fch-disclaimer" data-astro-cid-eae27cwz>Dit is een demo-chatformulier. Reacties zijn niet actief.</p> </form> </div>
+</span> </div> </div> <div class="fch-messages" role="log" aria-label="Chatberichten" aria-live="polite"> <div class="fch-msg fch-msg--bot"> <div class="fch-bubble">Hoi! 👋 Ik ben de BLURR assistent. Hoe kan ik je helpen vandaag?</div> </div><div class="fch-msg fch-msg--bot"> <div class="fch-bubble">Je kunt me vragen stellen over onze diensten, prijzen, of gewoon even kennismaken.</div> </div> </div> <form class="fch-form" onsubmit="return false;" aria-label="Stel een vraag"> <div class="fch-input-wrap"> <input class="fch-input" type="text" name="message" placeholder="Typ je vraag hier..." aria-label="Chatbericht" autocomplete="off"> <button class="fch-send" type="submit" aria-label="Verstuur bericht"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg> </button> </div> <p class="fch-disclaimer">Dit is een demo-chatformulier. Reacties zijn niet actief.</p> </form> </div>
 
-
+<style>
+.fch-wrap{max-width:420px;background:#fff;border:1px solid #e5e5e5;border-radius:16px;overflow:hidden;box-shadow:0 8px 40px #0000001a;display:flex;flex-direction:column}
+.fch-header{display:flex;align-items:center;gap:.875rem;padding:1rem 1.25rem;background:var(--color-primary, #0a0a0a)}
+.fch-avatar{width:40px;height:40px;border-radius:50%;background:var(--color-accent, #6366f1);color:#fff;font-size:1rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.fch-bot-name{font-size:.9rem;font-weight:700;color:#fff;margin:0 0 .15rem}
+.fch-status{display:flex;align-items:center;gap:.35rem;font-size:.75rem;color:#fff9}
+.fch-dot{width:7px;height:7px;border-radius:50%;background:#22c55e}
+.fch-messages{flex:1;padding:1.25rem;display:flex;flex-direction:column;gap:.75rem;min-height:200px;max-height:320px;overflow-y:auto;background:#f9f9f9}
+.fch-msg{display:flex}
+.fch-msg--user{justify-content:flex-end}
+.fch-bubble{max-width:80%;padding:.65rem 1rem;font-size:.875rem;line-height:1.5;border-radius:12px}
+.fch-msg--bot .fch-bubble{background:#fff;color:#333;border:1px solid #ebebeb;border-bottom-left-radius:4px}
+.fch-msg--user .fch-bubble{background:var(--color-accent, #6366f1);color:#fff;border-bottom-right-radius:4px}
+.fch-form{padding:1rem 1.25rem;background:#fff;border-top:1px solid #ebebeb}
+.fch-input-wrap{display:flex;gap:.5rem;align-items:center}
+.fch-input{flex:1;padding:.65rem .9rem;border:1.5px solid #ddd;border-radius:8px;font-size:.9rem;color:var(--color-primary, #0a0a0a);background:#fff;transition:border-color .2s;font-family:inherit}
+.fch-input:focus{outline:none;border-color:var(--color-accent, #6366f1);box-shadow:0 0 0 3px #6366f11f}
+.fch-send{width:40px;height:40px;border-radius:8px;background:var(--color-accent, #6366f1);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:opacity .2s}
+.fch-send:hover{opacity:.88}
+.fch-disclaimer{font-size:.72rem;color:#bbb;margin:.5rem 0 0;text-align:center}
+</style>

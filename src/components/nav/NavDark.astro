@@ -2,6 +2,20 @@
 // NavDark — recovered from blurr-components.pages.dev
 ---
 
-<header class="nd" data-astro-cid-3lobcldx> <nav class="nd-inner" data-astro-cid-3lobcldx> <a href="/" class="nd-logo" data-astro-cid-3lobcldx>BLURR</a> <ul class="nd-links" data-astro-cid-3lobcldx> <li data-astro-cid-3lobcldx><a href="#" class="nd-link nd-link--active" data-astro-cid-3lobcldx>Diensten</a></li><li data-astro-cid-3lobcldx><a href="#" class="nd-link" data-astro-cid-3lobcldx>Cases</a></li><li data-astro-cid-3lobcldx><a href="#" class="nd-link" data-astro-cid-3lobcldx>Over ons</a></li><li data-astro-cid-3lobcldx><a href="#" class="nd-link" data-astro-cid-3lobcldx>Blog</a></li> </ul> <div class="nd-actions" data-astro-cid-3lobcldx> <a href="#" class="nd-cta" style="background:#6366f1" data-astro-cid-3lobcldx>Plan gesprek</a> </div> <button class="nd-burger" aria-label="Menu" data-astro-cid-3lobcldx> <span data-astro-cid-3lobcldx></span><span data-astro-cid-3lobcldx></span><span data-astro-cid-3lobcldx></span> </button> </nav> </header>
+<header class="nd"> <nav class="nd-inner"> <a href="/" class="nd-logo">BLURR</a> <ul class="nd-links"> <li><a href="#" class="nd-link nd-link--active">Diensten</a></li><li><a href="#" class="nd-link">Cases</a></li><li><a href="#" class="nd-link">Over ons</a></li><li><a href="#" class="nd-link">Blog</a></li> </ul> <div class="nd-actions"> <a href="#" class="nd-cta" style="background:#6366f1">Plan gesprek</a> </div> <button class="nd-burger" aria-label="Menu"> <span></span><span></span><span></span> </button> </nav> </header>
 
-
+<style>
+.nd{background:#0a0a0a;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(255,255,255,.06)}
+.nd-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;height:64px;gap:2rem}
+.nd-logo{color:#fff;font-weight:800;font-size:1.125rem;text-decoration:none;letter-spacing:-.02em;margin-right:1rem}
+.nd-links{list-style:none;padding:0;margin:0;display:flex;gap:0;flex:1}
+.nd-link{display:block;font-size:.875rem;font-weight:500;color:#ffffffa6;text-decoration:none;padding:.375rem .875rem;border-radius:.375rem;transition:color .15s,background .15s}
+.nd-link:hover,.nd-link--active{color:#fff;background:#ffffff14}
+.nd-actions{margin-left:auto}
+.nd-cta{font-size:.875rem;font-weight:600;padding:.5rem 1.25rem;color:#fff;border-radius:.5rem;text-decoration:none;transition:opacity .2s}
+.nd-cta:hover{opacity:.85}
+.nd-burger{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:4px}
+.nd-burger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}
+.nd-links{display:none}
+.nd-burger{display:flex}
+</style>

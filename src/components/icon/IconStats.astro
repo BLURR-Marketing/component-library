@@ -2,6 +2,19 @@
 // IconStats — recovered from blurr-components.pages.dev
 ---
 
-<section class="ista" data-astro-cid-qnc3wk7l> <h2 class="ista__title" data-astro-cid-qnc3wk7l>Onze resultaten in cijfers</h2> <div class="ista__grid" data-astro-cid-qnc3wk7l> <div class="ista__item" data-astro-cid-qnc3wk7l> <span class="ista__icon" aria-hidden="true" data-astro-cid-qnc3wk7l>📈</span> <div class="ista__data" data-astro-cid-qnc3wk7l> <p class="ista__value" data-astro-cid-qnc3wk7l>+340%</p> <p class="ista__label" data-astro-cid-qnc3wk7l>Gemiddelde omzetgroei</p> <p class="ista__trend ista__trend--up" data-astro-cid-qnc3wk7l> ↑ +12% vs vorig jaar </p> </div> </div><div class="ista__item" data-astro-cid-qnc3wk7l> <span class="ista__icon" aria-hidden="true" data-astro-cid-qnc3wk7l>💰</span> <div class="ista__data" data-astro-cid-qnc3wk7l> <p class="ista__value" data-astro-cid-qnc3wk7l>4.2x</p> <p class="ista__label" data-astro-cid-qnc3wk7l>Return on Ad Spend</p> <p class="ista__trend ista__trend--up" data-astro-cid-qnc3wk7l> ↑ Industrie gem.: 2.1x </p> </div> </div><div class="ista__item" data-astro-cid-qnc3wk7l> <span class="ista__icon" aria-hidden="true" data-astro-cid-qnc3wk7l>👥</span> <div class="ista__data" data-astro-cid-qnc3wk7l> <p class="ista__value" data-astro-cid-qnc3wk7l>80+</p> <p class="ista__label" data-astro-cid-qnc3wk7l>Actieve klanten</p> <p class="ista__trend ista__trend--up" data-astro-cid-qnc3wk7l> ↑ +24 dit jaar </p> </div> </div><div class="ista__item" data-astro-cid-qnc3wk7l> <span class="ista__icon" aria-hidden="true" data-astro-cid-qnc3wk7l>⭐</span> <div class="ista__data" data-astro-cid-qnc3wk7l> <p class="ista__value" data-astro-cid-qnc3wk7l>4.9</p> <p class="ista__label" data-astro-cid-qnc3wk7l>Google Review score</p> <p class="ista__trend" data-astro-cid-qnc3wk7l> → 127 reviews </p> </div> </div> </div> </section>
+<section class="ista"> <h2 class="ista__title">Onze resultaten in cijfers</h2> <div class="ista__grid"> <div class="ista__item"> <span class="ista__icon" aria-hidden="true">📈</span> <div class="ista__data"> <p class="ista__value">+340%</p> <p class="ista__label">Gemiddelde omzetgroei</p> <p class="ista__trend ista__trend--up"> ↑ +12% vs vorig jaar </p> </div> </div><div class="ista__item"> <span class="ista__icon" aria-hidden="true">💰</span> <div class="ista__data"> <p class="ista__value">4.2x</p> <p class="ista__label">Return on Ad Spend</p> <p class="ista__trend ista__trend--up"> ↑ Industrie gem.: 2.1x </p> </div> </div><div class="ista__item"> <span class="ista__icon" aria-hidden="true">👥</span> <div class="ista__data"> <p class="ista__value">80+</p> <p class="ista__label">Actieve klanten</p> <p class="ista__trend ista__trend--up"> ↑ +24 dit jaar </p> </div> </div><div class="ista__item"> <span class="ista__icon" aria-hidden="true">⭐</span> <div class="ista__data"> <p class="ista__value">4.9</p> <p class="ista__label">Google Review score</p> <p class="ista__trend"> → 127 reviews </p> </div> </div> </div> </section>
 
-
+<style>
+.ista{padding:2rem 0}
+.ista__title{font-size:2rem;font-weight:700;color:var(--color-primary, #0a0a0a);text-align:center;margin:0 0 2.5rem}
+.ista__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.ista__item{background:#fff;border:1px solid #eee;border-radius:12px;padding:1.5rem;display:flex;flex-direction:column;gap:.75rem;transition:box-shadow .2s}
+.ista__item:hover{box-shadow:0 6px 20px #00000014}
+.ista__icon{font-size:1.75rem}
+.ista__value{font-size:2rem;font-weight:900;color:var(--color-primary, #0a0a0a);margin:0;line-height:1}
+.ista__label{font-size:.85rem;color:#888;margin:.25rem 0 0;font-weight:500}
+.ista__trend{font-size:.75rem;color:#aaa;margin:.4rem 0 0}
+.ista__trend--up{color:#16a34a}
+.ista__grid{grid-template-columns:repeat(2,1fr)}
+.ista__grid{grid-template-columns:1fr}
+</style>

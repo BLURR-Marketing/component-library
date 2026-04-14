@@ -2,6 +2,12 @@
 // HeadingUnderline — recovered from blurr-components.pages.dev
 ---
 
-<div class="hd-underline" data-astro-cid-f2bnqtpp> <span class="hd-underline__eyebrow" data-astro-cid-f2bnqtpp>Portfolio</span> <h2 class="hd-underline__title" data-astro-cid-f2bnqtpp> Ons werk <span class="hd-underline__bar" aria-hidden="true" data-astro-cid-f2bnqtpp></span> </h2> <p class="hd-underline__sub" data-astro-cid-f2bnqtpp>Een selectie van projecten waar we trots op zijn.</p> </div>
+<div class="hd-underline"> <span class="hd-underline__eyebrow">Portfolio</span> <h2 class="hd-underline__title"> Ons werk <span class="hd-underline__bar" aria-hidden="true"></span> </h2> <p class="hd-underline__sub">Een selectie van projecten waar we trots op zijn.</p> </div>
 
-
+<style>
+.hd-underline{padding:2.5rem 0;text-align:center}
+.hd-underline__eyebrow{display:block;font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--color-accent);margin-bottom:.5rem}
+.hd-underline__title{margin:0 0 .5rem;font-size:clamp(2rem,5vw,3.25rem);font-weight:800;color:var(--color-primary);line-height:1.1;letter-spacing:-.02em;display:inline-flex;flex-direction:column;align-items:center;gap:.4rem}
+.hd-underline__bar{display:block;width:80px;height:4px;background:linear-gradient(90deg,var(--color-accent),#a855f7);border-radius:2px}
+.hd-underline__sub{margin:.75rem auto 0;max-width:480px;font-size:1rem;color:#666;line-height:1.6}
+</style>

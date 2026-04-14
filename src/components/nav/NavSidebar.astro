@@ -2,6 +2,18 @@
 // NavSidebar — recovered from blurr-components.pages.dev
 ---
 
-<aside class="nsb" data-astro-cid-ekbmmshg> <div class="nsb-logo-wrap" data-astro-cid-ekbmmshg> <a href="/" class="nsb-logo" data-astro-cid-ekbmmshg>BLURR</a> </div> <nav class="nsb-nav" data-astro-cid-ekbmmshg> <ul class="nsb-links" data-astro-cid-ekbmmshg> <li data-astro-cid-ekbmmshg> <a href="#" class="nsb-link nsb-link--active" data-astro-cid-ekbmmshg> <span class="nsb-icon" data-astro-cid-ekbmmshg>📊</span> <span class="nsb-label" data-astro-cid-ekbmmshg>Dashboard</span> </a> </li><li data-astro-cid-ekbmmshg> <a href="#" class="nsb-link" data-astro-cid-ekbmmshg> <span class="nsb-icon" data-astro-cid-ekbmmshg>🎯</span> <span class="nsb-label" data-astro-cid-ekbmmshg>Campagnes</span> </a> </li><li data-astro-cid-ekbmmshg> <a href="#" class="nsb-link" data-astro-cid-ekbmmshg> <span class="nsb-icon" data-astro-cid-ekbmmshg>📈</span> <span class="nsb-label" data-astro-cid-ekbmmshg>Analytics</span> </a> </li><li data-astro-cid-ekbmmshg> <a href="#" class="nsb-link" data-astro-cid-ekbmmshg> <span class="nsb-icon" data-astro-cid-ekbmmshg>👥</span> <span class="nsb-label" data-astro-cid-ekbmmshg>Klanten</span> </a> </li><li data-astro-cid-ekbmmshg> <a href="#" class="nsb-link" data-astro-cid-ekbmmshg> <span class="nsb-icon" data-astro-cid-ekbmmshg>📋</span> <span class="nsb-label" data-astro-cid-ekbmmshg>Rapporten</span> </a> </li> </ul> <ul class="nsb-links nsb-links--bottom" data-astro-cid-ekbmmshg> <li data-astro-cid-ekbmmshg> <a href="#" class="nsb-link" data-astro-cid-ekbmmshg> <span class="nsb-icon" data-astro-cid-ekbmmshg>⚙️</span> <span class="nsb-label" data-astro-cid-ekbmmshg>Instellingen</span> </a> </li><li data-astro-cid-ekbmmshg> <a href="#" class="nsb-link" data-astro-cid-ekbmmshg> <span class="nsb-icon" data-astro-cid-ekbmmshg>🚪</span> <span class="nsb-label" data-astro-cid-ekbmmshg>Uitloggen</span> </a> </li> </ul> </nav> </aside>
+<aside class="nsb"> <div class="nsb-logo-wrap"> <a href="/" class="nsb-logo">BLURR</a> </div> <nav class="nsb-nav"> <ul class="nsb-links"> <li> <a href="#" class="nsb-link nsb-link--active"> <span class="nsb-icon">📊</span> <span class="nsb-label">Dashboard</span> </a> </li><li> <a href="#" class="nsb-link"> <span class="nsb-icon">🎯</span> <span class="nsb-label">Campagnes</span> </a> </li><li> <a href="#" class="nsb-link"> <span class="nsb-icon">📈</span> <span class="nsb-label">Analytics</span> </a> </li><li> <a href="#" class="nsb-link"> <span class="nsb-icon">👥</span> <span class="nsb-label">Klanten</span> </a> </li><li> <a href="#" class="nsb-link"> <span class="nsb-icon">📋</span> <span class="nsb-label">Rapporten</span> </a> </li> </ul> <ul class="nsb-links nsb-links--bottom"> <li> <a href="#" class="nsb-link"> <span class="nsb-icon">⚙️</span> <span class="nsb-label">Instellingen</span> </a> </li><li> <a href="#" class="nsb-link"> <span class="nsb-icon">🚪</span> <span class="nsb-label">Uitloggen</span> </a> </li> </ul> </nav> </aside>
 
-
+<style>
+.nsb{width:240px;height:100vh;background:#fff;border-right:1px solid #e5e7eb;display:flex;flex-direction:column;position:sticky;top:0}
+.nsb--collapsed{width:64px}
+.nsb-logo-wrap{padding:1.25rem 1rem;border-bottom:1px solid #f1f5f9}
+.nsb-logo{font-weight:800;font-size:1rem;color:#0a0a0a;text-decoration:none;letter-spacing:-.02em}
+.nsb-nav{flex:1;display:flex;flex-direction:column;padding:.75rem .5rem}
+.nsb-links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.125rem}
+.nsb-links--bottom{margin-top:auto;border-top:1px solid #f1f5f9;padding-top:.75rem}
+.nsb-link{display:flex;align-items:center;gap:.75rem;font-size:.875rem;font-weight:500;color:#374151;text-decoration:none;padding:.625rem .875rem;border-radius:.5rem;transition:all .15s}
+.nsb-link:hover{background:#f8fafc;color:#0a0a0a}
+.nsb-link--active{background:#6366f114;color:var(--color-accent,#6366f1);font-weight:600}
+.nsb-icon{font-size:1.0625rem;flex-shrink:0}
+</style>

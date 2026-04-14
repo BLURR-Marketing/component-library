@@ -2,6 +2,23 @@
 // NavCompact — recovered from blurr-components.pages.dev
 ---
 
-<header class="nco nco--white" data-astro-cid-lhfwekm3> <nav class="nco-inner" data-astro-cid-lhfwekm3> <a href="/" class="nco-logo" data-astro-cid-lhfwekm3>BLURR</a> <ul class="nco-links" data-astro-cid-lhfwekm3> <li data-astro-cid-lhfwekm3><a href="#" class="nco-link nco-link--active" data-astro-cid-lhfwekm3>Overzicht</a></li><li data-astro-cid-lhfwekm3><a href="#" class="nco-link" data-astro-cid-lhfwekm3>Campagnes</a></li><li data-astro-cid-lhfwekm3><a href="#" class="nco-link" data-astro-cid-lhfwekm3>Instellingen</a></li> </ul> <a href="#" class="nco-cta" data-astro-cid-lhfwekm3>Export</a> </nav> </header>
+<header class="nco nco--white"> <nav class="nco-inner"> <a href="/" class="nco-logo">BLURR</a> <ul class="nco-links"> <li><a href="#" class="nco-link nco-link--active">Overzicht</a></li><li><a href="#" class="nco-link">Campagnes</a></li><li><a href="#" class="nco-link">Instellingen</a></li> </ul> <a href="#" class="nco-cta">Export</a> </nav> </header>
 
-
+<style>
+.nco{position:sticky;top:0;z-index:100}
+.nco--white{background:#fff;border-bottom:1px solid #f1f5f9}
+.nco--gray{background:#f8fafc;border-bottom:1px solid #e5e7eb}
+.nco--dark{background:#1e293b}
+.nco-inner{max-width:1280px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;height:48px;gap:1.5rem}
+.nco-logo{font-weight:700;font-size:.9375rem;letter-spacing:-.02em;text-decoration:none}
+.nco--white .nco-logo,.nco--gray .nco-logo{color:#0a0a0a}
+.nco--dark .nco-logo{color:#fff}
+.nco-links{list-style:none;padding:0;margin:0;display:flex;flex:1;gap:0}
+.nco-link{display:block;font-size:.8125rem;font-weight:500;text-decoration:none;padding:.3rem .625rem;border-radius:.3rem;transition:all .15s}
+.nco--white .nco-link,.nco--gray .nco-link{color:#6b7280}
+.nco--dark .nco-link{color:#ffffffa6}
+.nco-link:hover,.nco-link--active{color:var(--color-accent,#6366f1)!important;background:#6366f114}
+.nco-cta{margin-left:auto;font-size:.8125rem;font-weight:600;padding:.375rem .875rem;background:var(--color-accent,#6366f1);color:#fff;border-radius:.375rem;text-decoration:none;transition:opacity .2s;white-space:nowrap}
+.nco-cta:hover{opacity:.88}
+.nco-links{display:none}
+</style>

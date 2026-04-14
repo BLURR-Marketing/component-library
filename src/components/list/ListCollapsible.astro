@@ -2,6 +2,15 @@
 // ListCollapsible — recovered from blurr-components.pages.dev
 ---
 
-<div class="lst-col" data-astro-cid-hm3yatrc> <details class="lst-col__detail" data-astro-cid-hm3yatrc> <summary class="lst-col__summary" data-astro-cid-hm3yatrc> <span data-astro-cid-hm3yatrc>Wat kost een samenwerking met BLURR?</span> <span class="lst-col__icon" aria-hidden="true" data-astro-cid-hm3yatrc>+</span> </summary> <p class="lst-col__answer" data-astro-cid-hm3yatrc>Onze pakketten starten vanaf €750 per maand.</p> </details><details class="lst-col__detail" data-astro-cid-hm3yatrc> <summary class="lst-col__summary" data-astro-cid-hm3yatrc> <span data-astro-cid-hm3yatrc>Hoe snel zie ik resultaten?</span> <span class="lst-col__icon" aria-hidden="true" data-astro-cid-hm3yatrc>+</span> </summary> <p class="lst-col__answer" data-astro-cid-hm3yatrc>Bij betaalde advertenties al binnen 2-4 weken.</p> </details><details class="lst-col__detail" data-astro-cid-hm3yatrc> <summary class="lst-col__summary" data-astro-cid-hm3yatrc> <span data-astro-cid-hm3yatrc>Moet ik langdurig contract aangaan?</span> <span class="lst-col__icon" aria-hidden="true" data-astro-cid-hm3yatrc>+</span> </summary> <p class="lst-col__answer" data-astro-cid-hm3yatrc>Nee, we werken met maandelijks opzegbare contracten.</p> </details> </div>
+<div class="lst-col"> <details class="lst-col__detail"> <summary class="lst-col__summary"> <span>Wat kost een samenwerking met BLURR?</span> <span class="lst-col__icon" aria-hidden="true">+</span> </summary> <p class="lst-col__answer">Onze pakketten starten vanaf €750 per maand.</p> </details><details class="lst-col__detail"> <summary class="lst-col__summary"> <span>Hoe snel zie ik resultaten?</span> <span class="lst-col__icon" aria-hidden="true">+</span> </summary> <p class="lst-col__answer">Bij betaalde advertenties al binnen 2-4 weken.</p> </details><details class="lst-col__detail"> <summary class="lst-col__summary"> <span>Moet ik langdurig contract aangaan?</span> <span class="lst-col__icon" aria-hidden="true">+</span> </summary> <p class="lst-col__answer">Nee, we werken met maandelijks opzegbare contracten.</p> </details> </div>
 
-
+<style>
+.lst-col{display:flex;flex-direction:column;gap:0}
+.lst-col__detail{border-bottom:1px solid #efefef}
+.lst-col__detail:first-child{border-top:1px solid #efefef}
+.lst-col__summary{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 0;cursor:pointer;list-style:none;font-size:.975rem;font-weight:600;color:var(--color-primary);user-select:none}
+.lst-col__summary::-webkit-details-marker{display:none}
+.lst-col__icon{font-size:1.25rem;color:var(--color-accent);flex-shrink:0;transition:transform .2s;line-height:1}
+.lst-col__detail[open] .lst-col__icon{transform:rotate(45deg)}
+.lst-col__answer{margin:0 0 1rem;font-size:.9rem;color:#666;line-height:1.65}
+</style>

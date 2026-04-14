@@ -2,6 +2,17 @@
 // NavAccent — recovered from blurr-components.pages.dev
 ---
 
-<header class="nac" style="--ac:#6366f1" data-astro-cid-g5nuffnu> <div class="nac-stripe" data-astro-cid-g5nuffnu></div> <nav class="nac-inner" data-astro-cid-g5nuffnu> <a href="/" class="nac-logo" data-astro-cid-g5nuffnu>BLURR</a> <ul class="nac-links" data-astro-cid-g5nuffnu> <li data-astro-cid-g5nuffnu><a href="#" class="nac-link nac-link--active" data-astro-cid-g5nuffnu>Diensten</a></li><li data-astro-cid-g5nuffnu><a href="#" class="nac-link" data-astro-cid-g5nuffnu>Cases</a></li><li data-astro-cid-g5nuffnu><a href="#" class="nac-link" data-astro-cid-g5nuffnu>Over ons</a></li><li data-astro-cid-g5nuffnu><a href="#" class="nac-link" data-astro-cid-g5nuffnu>Blog</a></li> </ul> <a href="#" class="nac-cta" data-astro-cid-g5nuffnu>Contact</a> </nav> </header>
+<header class="nac" style="--ac:#6366f1"> <div class="nac-stripe"></div> <nav class="nac-inner"> <a href="/" class="nac-logo">BLURR</a> <ul class="nac-links"> <li><a href="#" class="nac-link nac-link--active">Diensten</a></li><li><a href="#" class="nac-link">Cases</a></li><li><a href="#" class="nac-link">Over ons</a></li><li><a href="#" class="nac-link">Blog</a></li> </ul> <a href="#" class="nac-cta">Contact</a> </nav> </header>
 
-
+<style>
+.nac{background:#fff;box-shadow:0 1px #e5e7eb;position:sticky;top:0;z-index:100}
+.nac-stripe{height:3px;background:var(--ac)}
+.nac-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;height:60px;gap:2rem}
+.nac-logo{font-weight:800;font-size:1.0625rem;color:#0a0a0a;text-decoration:none;letter-spacing:-.02em}
+.nac-links{list-style:none;padding:0;margin:0;display:flex;flex:1;gap:0}
+.nac-link{display:block;font-size:.875rem;font-weight:500;color:#374151;text-decoration:none;padding:.375rem .875rem;border-radius:.375rem;transition:all .15s}
+.nac-link:hover,.nac-link--active{color:var(--ac);background:color-mix(in srgb,var(--ac) 8%,transparent)}
+.nac-cta{margin-left:auto;font-size:.875rem;font-weight:600;padding:.5rem 1.25rem;background:var(--ac);color:#fff;border-radius:.5rem;text-decoration:none;transition:opacity .2s;white-space:nowrap}
+.nac-cta:hover{opacity:.88}
+.nac-links{display:none}
+</style>

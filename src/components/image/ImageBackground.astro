@@ -2,6 +2,14 @@
 // ImageBackground — recovered from blurr-components.pages.dev
 ---
 
-<section class="ibg" style="--ibg-opacity: 0.5; --ibg-min-height: 400px" data-astro-cid-kdafqgkn> <img class="ibg__img" src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=80" alt="Achtergrondafbeelding" data-astro-cid-kdafqgkn> <div class="ibg__overlay" data-astro-cid-kdafqgkn></div> <div class="ibg__content" data-astro-cid-kdafqgkn>  <h2 class="ibg__default-title" data-astro-cid-kdafqgkn>Jouw boodschap hier</h2> <p class="ibg__default-sub" data-astro-cid-kdafqgkn>Voeg inhoud toe via de slot.</p>  </div> </section>
+<section class="ibg" style="--ibg-opacity: 0.5; --ibg-min-height: 400px"> <img class="ibg__img" src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=80" alt="Achtergrondafbeelding"> <div class="ibg__overlay"></div> <div class="ibg__content">  <h2 class="ibg__default-title">Jouw boodschap hier</h2> <p class="ibg__default-sub">Voeg inhoud toe via de slot.</p>  </div> </section>
 
-
+<style>
+.ibg{position:relative;min-height:var(--ibg-min-height, 400px);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.ibg__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ibg__placeholder{position:absolute;inset:0;background:linear-gradient(135deg,#1a1a3a,#2a2a5a)}
+.ibg__overlay{position:absolute;inset:0;background:rgba(10,10,10,var(--ibg-opacity, .5))}
+.ibg__content{position:relative;z-index:1;text-align:center;padding:3rem 2rem;max-width:800px}
+.ibg__default-title{font-size:2rem;font-weight:700;color:#fff;margin:0 0 1rem}
+.ibg__default-sub{font-size:1rem;color:#fffc;margin:0}
+</style>

@@ -2,6 +2,35 @@
 // HeroSplitDark — recovered from blurr-components.pages.dev
 ---
 
-<section class="hsd" data-component="hero-split-dark" data-astro-cid-g4nq7ysc> <!-- Left dark panel --> <div class="hsd__left" data-astro-cid-g4nq7ysc> <div class="hsd__left-content" data-astro-cid-g4nq7ysc> <p class="hsd__kicker" data-astro-cid-g4nq7ysc> <span class="hsd__kicker-line" data-astro-cid-g4nq7ysc></span> Online Marketing Bureau </p> <h1 class="hsd__headline" data-astro-cid-g4nq7ysc>Resultaten die <em>spreken</em></h1> <p class="hsd__sub" data-astro-cid-g4nq7ysc>Data-gedreven marketing zonder bullshit. Wij leveren ROAS, leads en groei — niet alleen rapporten.</p> <div class="hsd__actions" data-astro-cid-g4nq7ysc> <a href="#" class="hsd__cta" data-astro-cid-g4nq7ysc>Ontdek meer</a> <a href="#" class="hsd__secondary" data-astro-cid-g4nq7ysc> Cases bekijken <svg width="14" height="14" viewBox="0 0 14 14" fill="none" data-astro-cid-g4nq7ysc> <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-g4nq7ysc></path> </svg> </a> </div> </div> <!-- Vertical marquee on border --> <div class="hsd__v-label" aria-hidden="true" data-astro-cid-g4nq7ysc> <span class="hsd__v-label-track" data-astro-cid-g4nq7ysc> <span data-astro-cid-g4nq7ysc>Premium · Quality · Design · </span><span data-astro-cid-g4nq7ysc>Premium · Quality · Design · </span><span data-astro-cid-g4nq7ysc>Premium · Quality · Design · </span><span data-astro-cid-g4nq7ysc>Premium · Quality · Design · </span><span data-astro-cid-g4nq7ysc>Premium · Quality · Design · </span><span data-astro-cid-g4nq7ysc>Premium · Quality · Design · </span> </span> </div> </div> <!-- Right image panel --> <div class="hsd__right" data-astro-cid-g4nq7ysc> <div class="hsd__img-wrap" data-astro-cid-g4nq7ysc> <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80" alt="Marketing resultaten" class="hsd__img" loading="eager" fetchpriority="high" data-astro-cid-g4nq7ysc> <!-- Subtle vignette --> <div class="hsd__vignette" data-astro-cid-g4nq7ysc></div> </div> <div class="hsd__caption" data-astro-cid-g4nq7ysc> <span class="hsd__caption-dot" data-astro-cid-g4nq7ysc></span> Gemiddeld 4.2× ROAS voor onze klanten </div> </div> </section>
+<section class="hsd" data-component="hero-split-dark"> <!-- Left dark panel --> <div class="hsd__left"> <div class="hsd__left-content"> <p class="hsd__kicker"> <span class="hsd__kicker-line"></span> Online Marketing Bureau </p> <h1 class="hsd__headline">Resultaten die <em>spreken</em></h1> <p class="hsd__sub">Data-gedreven marketing zonder bullshit. Wij leveren ROAS, leads en groei — niet alleen rapporten.</p> <div class="hsd__actions"> <a href="#" class="hsd__cta">Ontdek meer</a> <a href="#" class="hsd__secondary"> Cases bekijken <svg width="14" height="14" viewBox="0 0 14 14" fill="none"> <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </a> </div> </div> <!-- Vertical marquee on border --> <div class="hsd__v-label" aria-hidden="true"> <span class="hsd__v-label-track"> <span>Premium · Quality · Design · </span><span>Premium · Quality · Design · </span><span>Premium · Quality · Design · </span><span>Premium · Quality · Design · </span><span>Premium · Quality · Design · </span><span>Premium · Quality · Design · </span> </span> </div> </div> <!-- Right image panel --> <div class="hsd__right"> <div class="hsd__img-wrap"> <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80" alt="Marketing resultaten" class="hsd__img" loading="eager" fetchpriority="high"> <!-- Subtle vignette --> <div class="hsd__vignette"></div> </div> <div class="hsd__caption"> <span class="hsd__caption-dot"></span> Gemiddeld 4.2× ROAS voor onze klanten </div> </div> </section>
 
-
+<style>
+.hsd{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;overflow:hidden}
+.hsd__left{background:#080810;display:flex;align-items:stretch;position:relative;overflow:hidden}
+.hsd__left-content{flex:1;display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 5rem 5vw;max-width:580px}
+.hsd__kicker{display:flex;align-items:center;gap:.875rem;font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff6;margin-bottom:1.75rem;animation:hsd-fade-up .5s .1s cubic-bezier(.22,1,.36,1) both}
+.hsd__kicker-line{width:24px;height:1px;background:var(--color-accent, #6366f1);flex-shrink:0}
+.hsd__headline{font-size:clamp(2.75rem,5.5vw,5.5rem);font-weight:900;line-height:.97;letter-spacing:-.045em;color:#fff;margin-bottom:1.5rem;animation:hsd-fade-up .7s .2s cubic-bezier(.22,1,.36,1) both}
+.hsd__headline em{font-style:normal;color:var(--color-accent, #6366f1)}
+.hsd__headline strong{-webkit-text-stroke:1.5px rgba(255,255,255,.35);-webkit-text-fill-color:transparent;color:transparent}
+.hsd__sub{font-size:1rem;line-height:1.7;color:#fff6;max-width:40ch;margin-bottom:2.5rem;animation:hsd-fade-up .6s .35s cubic-bezier(.22,1,.36,1) both}
+.hsd__actions{display:flex;align-items:center;gap:1.5rem;animation:hsd-fade-up .6s .45s cubic-bezier(.22,1,.36,1) both}
+.hsd__cta{display:inline-flex;align-items:center;background:#fff;color:#080810;padding:.9375rem 2rem;border-radius:var(--radius, .5rem);font-weight:800;font-size:.9375rem;text-decoration:none;transition:background .2s,transform .2s}
+.hsd__cta:hover{background:var(--color-accent, #6366f1);color:#fff;transform:translateY(-2px)}
+.hsd__secondary{display:inline-flex;align-items:center;gap:.4rem;font-size:.9375rem;font-weight:600;color:#ffffff73;text-decoration:none;transition:color .2s,gap .2s}
+.hsd__secondary:hover{color:#ffffffd9;gap:.65rem}
+.hsd__v-label{width:32px;display:flex;align-items:center;justify-content:center;border-left:1px solid rgba(255,255,255,.06);overflow:hidden;flex-shrink:0}
+.hsd__v-label-track{display:flex;flex-direction:column;white-space:nowrap;font-size:.625rem;letter-spacing:.12em;text-transform:uppercase;color:#ffffff2e;writing-mode:vertical-lr;animation:hsd-scroll-up 20s linear infinite;gap:1rem}
+.hsd__right{position:relative;background:#0d0d18;overflow:hidden;animation:hsd-scale-in 1s .1s cubic-bezier(.22,1,.36,1) both}
+.hsd__img-wrap{position:absolute;inset:0}
+.hsd__img{width:100%;height:100%;object-fit:cover;display:block;opacity:.85;mix-blend-mode:luminosity}
+.hsd__right:hover .hsd__img{mix-blend-mode:normal;transition:mix-blend-mode 0s}
+.hsd__vignette{position:absolute;inset:0;background:linear-gradient(to right,#080810 0%,transparent 20%),linear-gradient(to top,#080810 0%,transparent 20%);pointer-events:none}
+.hsd__caption{position:absolute;bottom:1.5rem;right:1.5rem;z-index:1;display:flex;align-items:center;gap:.5rem;font-size:.75rem;color:#fff6;letter-spacing:.05em}
+.hsd__caption-dot{width:6px;height:6px;border-radius:50%;background:var(--color-accent, #6366f1);flex-shrink:0}
+.hsd__kicker,.hsd__headline,.hsd__sub,.hsd__actions,.hsd__right,.hsd__v-label-track{animation:none}
+.hsd{grid-template-columns:1fr;min-height:auto}
+.hsd__right{height:55vw;min-height:280px;order:-1}
+.hsd__v-label{display:none}
+.hsd__left-content{padding:3rem 1.5rem;max-width:none}
+</style>

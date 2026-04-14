@@ -2,6 +2,18 @@
 // FormQuick — recovered from blurr-components.pages.dev
 ---
 
-<section class="fqk" data-astro-cid-bulwwdj2> <form class="fqk__form" novalidate data-astro-cid-bulwwdj2> <div class="fqk__wrap" data-astro-cid-bulwwdj2> <input class="fqk__input" type="email" placeholder="Jouw e-mailadres" required data-astro-cid-bulwwdj2> <button class="fqk__btn" type="submit" data-astro-cid-bulwwdj2>Aan de slag</button> </div> <p class="fqk__sub" data-astro-cid-bulwwdj2>Gratis en vrijblijvend</p> </form> </section>
+<section class="fqk"> <form class="fqk__form" novalidate> <div class="fqk__wrap"> <input class="fqk__input" type="email" placeholder="Jouw e-mailadres" required> <button class="fqk__btn" type="submit">Aan de slag</button> </div> <p class="fqk__sub">Gratis en vrijblijvend</p> </form> </section>
 
-
+<style>
+.fqk{padding:2.5rem 1.5rem}
+.fqk__form{max-width:520px;margin:0 auto;display:flex;flex-direction:column;gap:.6rem}
+.fqk__wrap{display:flex;border:1.5px solid #e0e0e0;border-radius:10px;overflow:hidden;background:#fff;transition:border-color .2s}
+.fqk__wrap:focus-within{border-color:var(--color-accent, #6366f1)}
+.fqk__input{flex:1;padding:.85rem 1.1rem;border:none;background:transparent;font-size:.95rem;color:var(--color-primary, #0a0a0a);outline:none;font-family:inherit;min-width:0}
+.fqk__input::placeholder{color:#aaa}
+.fqk__btn{padding:.85rem 1.4rem;background:var(--color-accent, #6366f1);color:#fff;border:none;font-size:.9rem;font-weight:600;cursor:pointer;transition:opacity .2s;white-space:nowrap;font-family:inherit}
+.fqk__btn:hover{opacity:.88}
+.fqk__sub{font-size:.78rem;color:#999;text-align:center;margin:0}
+.fqk__wrap{flex-direction:column}
+.fqk__btn{border-radius:0 0 8px 8px}
+</style>

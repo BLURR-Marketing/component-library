@@ -2,6 +2,21 @@
 // ContentAccordion — recovered from blurr-components.pages.dev
 ---
 
-<section class="cac-wrap" data-astro-cid-4mxl3h5e> <h2 class="cac-heading" data-astro-cid-4mxl3h5e>Veelgestelde vragen</h2> <div class="cac-list" data-astro-cid-4mxl3h5e> <details class="cac-item" open data-astro-cid-4mxl3h5e> <summary class="cac-question" data-astro-cid-4mxl3h5e> <span class="cac-q-text" data-astro-cid-4mxl3h5e>Wat kost een samenwerking met BLURR?</span> <span class="cac-chevron" aria-hidden="true" data-astro-cid-4mxl3h5e>▾</span> </summary> <div class="cac-answer" data-astro-cid-4mxl3h5e> <p data-astro-cid-4mxl3h5e>Onze trajecten starten vanaf €1.500 per maand, afhankelijk van de scope en kanalen.</p> </div> </details><details class="cac-item" data-astro-cid-4mxl3h5e> <summary class="cac-question" data-astro-cid-4mxl3h5e> <span class="cac-q-text" data-astro-cid-4mxl3h5e>Hoe snel kunnen jullie starten?</span> <span class="cac-chevron" aria-hidden="true" data-astro-cid-4mxl3h5e>▾</span> </summary> <div class="cac-answer" data-astro-cid-4mxl3h5e> <p data-astro-cid-4mxl3h5e>Na een eerste kennismakingsgesprek en akkoord op de offerte kunnen we binnen 10 werkdagen live zijn.</p> </div> </details><details class="cac-item" data-astro-cid-4mxl3h5e> <summary class="cac-question" data-astro-cid-4mxl3h5e> <span class="cac-q-text" data-astro-cid-4mxl3h5e>Werken jullie ook voor kleine bedrijven?</span> <span class="cac-chevron" aria-hidden="true" data-astro-cid-4mxl3h5e>▾</span> </summary> <div class="cac-answer" data-astro-cid-4mxl3h5e> <p data-astro-cid-4mxl3h5e>Zeker. We werken voor bedrijven van alle groottes.</p> </div> </details> </div> </section>
+<section class="cac-wrap"> <h2 class="cac-heading">Veelgestelde vragen</h2> <div class="cac-list"> <details class="cac-item" open> <summary class="cac-question"> <span class="cac-q-text">Wat kost een samenwerking met BLURR?</span> <span class="cac-chevron" aria-hidden="true">▾</span> </summary> <div class="cac-answer"> <p>Onze trajecten starten vanaf €1.500 per maand, afhankelijk van de scope en kanalen.</p> </div> </details><details class="cac-item"> <summary class="cac-question"> <span class="cac-q-text">Hoe snel kunnen jullie starten?</span> <span class="cac-chevron" aria-hidden="true">▾</span> </summary> <div class="cac-answer"> <p>Na een eerste kennismakingsgesprek en akkoord op de offerte kunnen we binnen 10 werkdagen live zijn.</p> </div> </details><details class="cac-item"> <summary class="cac-question"> <span class="cac-q-text">Werken jullie ook voor kleine bedrijven?</span> <span class="cac-chevron" aria-hidden="true">▾</span> </summary> <div class="cac-answer"> <p>Zeker. We werken voor bedrijven van alle groottes.</p> </div> </details> </div> </section>
 
-
+<style>
+.cac-wrap{padding:2.5rem 0}
+.cac-heading{font-size:2rem;font-weight:800;color:var(--color-primary, #0a0a0a);margin:0 0 2rem}
+.cac-list{display:flex;flex-direction:column;gap:0;border:1px solid #e5e5e5;border-radius:10px;overflow:hidden}
+.cac-item{border-bottom:1px solid #e5e5e5}
+.cac-item:last-child{border-bottom:none}
+.cac-question{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 1.5rem;cursor:pointer;list-style:none;background:#fff;transition:background .15s;gap:1rem}
+.cac-question:hover{background:#fafafa}
+.cac-item[open] .cac-question{background:#f9f9ff}
+.cac-question::-webkit-details-marker{display:none}
+.cac-q-text{font-size:1rem;font-weight:600;color:var(--color-primary, #0a0a0a);flex:1}
+.cac-chevron{font-size:1.2rem;color:#999;transition:transform .25s;flex-shrink:0}
+.cac-item[open] .cac-chevron{transform:rotate(180deg)}
+.cac-answer{padding:0 1.5rem 1.25rem;background:#fafafa}
+.cac-answer p{font-size:.975rem;line-height:1.75;color:#555;margin:0}
+</style>

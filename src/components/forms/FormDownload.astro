@@ -2,8 +2,31 @@
 // FormDownload — recovered from blurr-components.pages.dev
 ---
 
-<div class="fdl-wrap" data-astro-cid-rdrhwt5j> <div class="fdl-resource" data-astro-cid-rdrhwt5j> <div class="fdl-cover" data-astro-cid-rdrhwt5j> <img class="fdl-cover-img" src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=400&q=80" alt="De ultieme Google Ads gids voor Nederlandse bedrijven" loading="lazy" data-astro-cid-rdrhwt5j> <div class="fdl-cover-badge" data-astro-cid-rdrhwt5j>Gratis whitepaper</div> </div> <div class="fdl-resource-info" data-astro-cid-rdrhwt5j> <h3 class="fdl-resource-title" data-astro-cid-rdrhwt5j>De ultieme Google Ads gids voor Nederlandse bedrijven</h3> <ul class="fdl-benefits" data-astro-cid-rdrhwt5j> <li class="fdl-benefit" data-astro-cid-rdrhwt5j><span aria-hidden="true" data-astro-cid-rdrhwt5j>✓</span> 42 pagina&#39;s vol praktische tips</li><li class="fdl-benefit" data-astro-cid-rdrhwt5j><span aria-hidden="true" data-astro-cid-rdrhwt5j>✓</span> Exclusieve benchmark data 2024</li><li class="fdl-benefit" data-astro-cid-rdrhwt5j><span aria-hidden="true" data-astro-cid-rdrhwt5j>✓</span> Campagnestructuren die werken</li> </ul> </div> </div> <div class="fdl-form-area" data-astro-cid-rdrhwt5j> <h2 class="fdl-heading" data-astro-cid-rdrhwt5j>Download de whitepaper gratis</h2> <form class="fdl-form" onsubmit="return false;" novalidate data-astro-cid-rdrhwt5j> <div class="fdl-field" data-astro-cid-rdrhwt5j> <label class="fdl-label" for="fdl-name" data-astro-cid-rdrhwt5j>Voornaam *</label> <input class="fdl-input" type="text" id="fdl-name" name="name" placeholder="Jouw naam" required autocomplete="given-name" data-astro-cid-rdrhwt5j> </div> <div class="fdl-field" data-astro-cid-rdrhwt5j> <label class="fdl-label" for="fdl-email" data-astro-cid-rdrhwt5j>Zakelijk e-mailadres *</label> <input class="fdl-input" type="email" id="fdl-email" name="email" placeholder="jij@bedrijf.nl" required autocomplete="email" data-astro-cid-rdrhwt5j> </div> <div class="fdl-field" data-astro-cid-rdrhwt5j> <label class="fdl-label" for="fdl-company" data-astro-cid-rdrhwt5j>Bedrijfsnaam</label> <input class="fdl-input" type="text" id="fdl-company" name="company" placeholder="Jouw bedrijf" autocomplete="organization" data-astro-cid-rdrhwt5j> </div> <label class="fdl-check-label" data-astro-cid-rdrhwt5j> <input class="fdl-check" type="checkbox" name="newsletter" data-astro-cid-rdrhwt5j>
+<div class="fdl-wrap"> <div class="fdl-resource"> <div class="fdl-cover"> <img class="fdl-cover-img" src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=400&q=80" alt="De ultieme Google Ads gids voor Nederlandse bedrijven" loading="lazy"> <div class="fdl-cover-badge">Gratis whitepaper</div> </div> <div class="fdl-resource-info"> <h3 class="fdl-resource-title">De ultieme Google Ads gids voor Nederlandse bedrijven</h3> <ul class="fdl-benefits"> <li class="fdl-benefit"><span aria-hidden="true">✓</span> 42 pagina&#39;s vol praktische tips</li><li class="fdl-benefit"><span aria-hidden="true">✓</span> Exclusieve benchmark data 2024</li><li class="fdl-benefit"><span aria-hidden="true">✓</span> Campagnestructuren die werken</li> </ul> </div> </div> <div class="fdl-form-area"> <h2 class="fdl-heading">Download de whitepaper gratis</h2> <form class="fdl-form" onsubmit="return false;" novalidate> <div class="fdl-field"> <label class="fdl-label" for="fdl-name">Voornaam *</label> <input class="fdl-input" type="text" id="fdl-name" name="name" placeholder="Jouw naam" required autocomplete="given-name"> </div> <div class="fdl-field"> <label class="fdl-label" for="fdl-email">Zakelijk e-mailadres *</label> <input class="fdl-input" type="email" id="fdl-email" name="email" placeholder="jij@bedrijf.nl" required autocomplete="email"> </div> <div class="fdl-field"> <label class="fdl-label" for="fdl-company">Bedrijfsnaam</label> <input class="fdl-input" type="text" id="fdl-company" name="company" placeholder="Jouw bedrijf" autocomplete="organization"> </div> <label class="fdl-check-label"> <input class="fdl-check" type="checkbox" name="newsletter">
 Ja, stuur mij ook de BLURR marketing nieuwsbrief
-</label> <button class="fdl-submit" type="submit" data-astro-cid-rdrhwt5j>Download nu gratis →</button> <p class="fdl-disclaimer" data-astro-cid-rdrhwt5j>We delen je gegevens nooit met derden. <a href="/privacy" class="fdl-link" data-astro-cid-rdrhwt5j>Privacyverklaring</a></p> </form> </div> </div>
+</label> <button class="fdl-submit" type="submit">Download nu gratis →</button> <p class="fdl-disclaimer">We delen je gegevens nooit met derden. <a href="/privacy" class="fdl-link">Privacyverklaring</a></p> </form> </div> </div>
 
-
+<style>
+.fdl-wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;padding:2rem 0}
+.fdl-wrap{grid-template-columns:1fr}
+.fdl-resource{display:flex;flex-direction:column;gap:1.5rem}
+.fdl-cover{position:relative}
+.fdl-cover-img{width:100%;height:220px;object-fit:cover;border-radius:10px;display:block}
+.fdl-cover-badge{position:absolute;top:1rem;left:1rem;background:var(--color-accent, #6366f1);color:#fff;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.3rem .7rem;border-radius:4px}
+.fdl-resource-title{font-size:1.2rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 1rem}
+.fdl-benefits{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.5rem}
+.fdl-benefit{font-size:.9rem;color:#333;display:flex;gap:.5rem;align-items:flex-start}
+.fdl-benefit span{color:#22c55e;font-weight:700;flex-shrink:0}
+.fdl-heading{font-size:1.4rem;font-weight:800;color:var(--color-primary, #0a0a0a);margin:0 0 1.5rem}
+.fdl-form{display:flex;flex-direction:column;gap:1rem}
+.fdl-field{display:flex;flex-direction:column;gap:.35rem}
+.fdl-label{font-size:.83rem;font-weight:600;color:var(--color-primary, #0a0a0a)}
+.fdl-input{padding:.7rem .9rem;border:1.5px solid #ddd;border-radius:8px;font-size:.925rem;color:var(--color-primary, #0a0a0a);background:#fff;transition:border-color .2s;font-family:inherit;box-sizing:border-box}
+.fdl-input:focus{outline:none;border-color:var(--color-accent, #6366f1);box-shadow:0 0 0 3px #6366f11f}
+.fdl-check-label{display:flex;align-items:flex-start;gap:.5rem;font-size:.83rem;color:#555;cursor:pointer}
+.fdl-check{accent-color:var(--color-accent, #6366f1);flex-shrink:0;margin-top:2px}
+.fdl-submit{padding:.9rem;background:var(--color-accent, #6366f1);color:#fff;border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:opacity .2s}
+.fdl-submit:hover{opacity:.88}
+.fdl-disclaimer{font-size:.78rem;color:#999;margin:.25rem 0 0}
+.fdl-link{color:var(--color-accent, #6366f1)}
+</style>

@@ -2,6 +2,12 @@
 // HeadingSplit — recovered from blurr-components.pages.dev
 ---
 
-<div class="hd-split" data-astro-cid-rw4tp36v> <h2 class="hd-split__left" data-astro-cid-rw4tp36v>Groei begint met een strategie.</h2> <p class="hd-split__right" data-astro-cid-rw4tp36v>Wij analyseren jouw markt, identificeren kansen en bouwen een plan dat werkt.</p> </div>
+<div class="hd-split"> <h2 class="hd-split__left">Groei begint met een strategie.</h2> <p class="hd-split__right">Wij analyseren jouw markt, identificeren kansen en bouwen een plan dat werkt.</p> </div>
 
-
+<style>
+.hd-split{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center;padding:3rem 0;border-top:2px solid var(--color-primary)}
+.hd-split__left{margin:0;font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;line-height:1.15;color:var(--color-primary);letter-spacing:-.02em}
+.hd-split__right{margin:0;font-size:1.1rem;color:#555;line-height:1.7;border-left:2px solid var(--color-accent);padding-left:1.5rem}
+.hd-split{grid-template-columns:1fr}
+.hd-split__right{border-left:none;padding-left:0;border-top:2px solid var(--color-accent);padding-top:1.5rem}
+</style>

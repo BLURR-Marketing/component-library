@@ -2,6 +2,21 @@
 // ImageComparison — recovered from blurr-components.pages.dev
 ---
 
-<section class="icmp" data-astro-cid-f4bqrjva> <h2 class="icmp__title" data-astro-cid-f4bqrjva>Vergelijk het verschil</h2> <div class="icmp__grid" style="grid-template-columns: repeat(2, 1fr)" data-astro-cid-f4bqrjva> <div class="icmp__item" data-astro-cid-f4bqrjva> <div class="icmp__media" data-astro-cid-f4bqrjva> <div class="icmp__placeholder" aria-label="Optie A" data-astro-cid-f4bqrjva></div> </div> <div class="icmp__meta" data-astro-cid-f4bqrjva> <p class="icmp__label" data-astro-cid-f4bqrjva>Aanpak A</p> <p class="icmp__note" data-astro-cid-f4bqrjva>Traditioneel bureau</p> </div> </div><div class="icmp__item icmp__item--featured" data-astro-cid-f4bqrjva> <div class="icmp__media" data-astro-cid-f4bqrjva> <div class="icmp__placeholder" aria-label="Optie B" data-astro-cid-f4bqrjva></div> </div> <div class="icmp__meta" data-astro-cid-f4bqrjva> <p class="icmp__label" data-astro-cid-f4bqrjva>Aanpak B</p> <p class="icmp__note" data-astro-cid-f4bqrjva>BLURR methode</p> </div> </div> </div> </section>
+<section class="icmp"> <h2 class="icmp__title">Vergelijk het verschil</h2> <div class="icmp__grid" style="grid-template-columns: repeat(2, 1fr)"> <div class="icmp__item"> <div class="icmp__media"> <div class="icmp__placeholder" aria-label="Optie A"></div> </div> <div class="icmp__meta"> <p class="icmp__label">Aanpak A</p> <p class="icmp__note">Traditioneel bureau</p> </div> </div><div class="icmp__item icmp__item--featured"> <div class="icmp__media"> <div class="icmp__placeholder" aria-label="Optie B"></div> </div> <div class="icmp__meta"> <p class="icmp__label">Aanpak B</p> <p class="icmp__note">BLURR methode</p> </div> </div> </div> </section>
 
-
+<style>
+.icmp{padding:2rem 0}
+.icmp__title{font-size:2rem;font-weight:700;color:var(--color-primary, #0a0a0a);text-align:center;margin:0 0 2rem}
+.icmp__grid{display:grid;gap:1.5rem}
+.icmp__item{border:1px solid #e0e0e0;border-radius:12px;overflow:hidden}
+.icmp__item--featured{border-color:var(--color-accent, #6366f1);box-shadow:0 0 0 2px #6366f133}
+.icmp__media{aspect-ratio:4/3}
+.icmp__img{width:100%;height:100%;object-fit:cover}
+.icmp__placeholder{width:100%;height:100%;background:linear-gradient(135deg,#e8e8f8,#d0d0f0)}
+.icmp__item--featured .icmp__placeholder{background:linear-gradient(135deg,#c8ccf8,#a8acf0)}
+.icmp__meta{padding:1rem 1.25rem}
+.icmp__label{font-size:1rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 .25rem}
+.icmp__note{font-size:.85rem;color:#777;margin:0}
+.icmp__item--featured .icmp__label{color:var(--color-accent, #6366f1)}
+.icmp__grid{grid-template-columns:1fr!important}
+</style>

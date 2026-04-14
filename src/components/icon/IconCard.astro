@@ -2,6 +2,14 @@
 // IconCard — recovered from blurr-components.pages.dev
 ---
 
-<div class="icd" data-astro-cid-bjv2sr6d> <div class="icd__icon-wrap" aria-hidden="true" data-astro-cid-bjv2sr6d> <span class="icd__icon" data-astro-cid-bjv2sr6d>📊</span> </div> <h3 class="icd__title" data-astro-cid-bjv2sr6d>Data Analyse</h3> <p class="icd__desc" data-astro-cid-bjv2sr6d>Realtime inzicht in alle campagneprestaties.</p> <a class="icd__link" href="#" data-astro-cid-bjv2sr6d>Meer weten →</a> </div>
+<div class="icd"> <div class="icd__icon-wrap" aria-hidden="true"> <span class="icd__icon">📊</span> </div> <h3 class="icd__title">Data Analyse</h3> <p class="icd__desc">Realtime inzicht in alle campagneprestaties.</p> <a class="icd__link" href="#">Meer weten →</a> </div>
 
-
+<style>
+.icd{padding:2rem;background:#fff;border:1px solid #eee;border-radius:12px;display:flex;flex-direction:column;gap:.75rem;transition:box-shadow .2s,transform .2s}
+.icd:hover{box-shadow:0 8px 24px #6366f11f;transform:translateY(-3px)}
+.icd__icon-wrap{width:56px;height:56px;border-radius:14px;background:#f0f0ff;display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0}
+.icd__title{font-size:1.05rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0}
+.icd__desc{font-size:.9rem;color:#666;line-height:1.6;margin:0;flex:1}
+.icd__link{font-size:.85rem;font-weight:700;color:var(--color-accent, #6366f1);text-decoration:none;margin-top:auto}
+.icd__link:hover{text-decoration:underline}
+</style>

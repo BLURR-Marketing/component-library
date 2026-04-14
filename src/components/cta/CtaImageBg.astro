@@ -2,6 +2,17 @@
 // CtaImageBg — recovered from blurr-components.pages.dev
 ---
 
-<section class="ctaib" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&#38;q=80')" data-astro-cid-j2gn6luo> <div class="ctaib-overlay" style="background:rgba(0,0,0,0.7)" data-astro-cid-j2gn6luo></div> <div class="ctaib-inner" data-astro-cid-j2gn6luo> <h2 class="ctaib-headline" data-astro-cid-j2gn6luo>Meer klanten. Meer omzet. Bewezen.</h2> <p class="ctaib-sub" data-astro-cid-j2gn6luo>BLURR brengt meetbare groei voor bedrijven die ambitieus zijn.</p> <div class="ctaib-btns" data-astro-cid-j2gn6luo> <a href="#" class="ctaib-btn-primary" data-astro-cid-j2gn6luo>Plan een gesprek</a> <a href="#" class="ctaib-btn-secondary" data-astro-cid-j2gn6luo>Bekijk cases</a> </div> </div> </section>
+<section class="ctaib" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&#38;q=80')"> <div class="ctaib-overlay" style="background:rgba(0,0,0,0.7)"></div> <div class="ctaib-inner"> <h2 class="ctaib-headline">Meer klanten. Meer omzet. Bewezen.</h2> <p class="ctaib-sub">BLURR brengt meetbare groei voor bedrijven die ambitieus zijn.</p> <div class="ctaib-btns"> <a href="#" class="ctaib-btn-primary">Plan een gesprek</a> <a href="#" class="ctaib-btn-secondary">Bekijk cases</a> </div> </div> </section>
 
-
+<style>
+.ctaib{position:relative;background-size:cover;background-position:center;padding:7rem 2rem}
+.ctaib-overlay{position:absolute;inset:0}
+.ctaib-inner{position:relative;z-index:1;max-width:760px;margin:0 auto;text-align:center}
+.ctaib-headline{font-size:clamp(2rem,5vw,3.5rem);font-weight:900;color:#fff;letter-spacing:-.04em;line-height:1.1;margin:0 0 1.25rem}
+.ctaib-sub{font-size:1.125rem;color:#fffc;line-height:1.65;margin:0 0 2.5rem}
+.ctaib-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.ctaib-btn-primary{padding:.9375rem 2.5rem;background:var(--color-accent,#6366f1);color:#fff;font-weight:700;font-size:1rem;border-radius:.5rem;text-decoration:none;transition:opacity .2s}
+.ctaib-btn-primary:hover{opacity:.88}
+.ctaib-btn-secondary{padding:.9375rem 2.5rem;border:2px solid rgba(255,255,255,.5);color:#fff;font-weight:600;font-size:1rem;border-radius:.5rem;text-decoration:none;transition:border-color .2s}
+.ctaib-btn-secondary:hover{border-color:#fff}
+</style>

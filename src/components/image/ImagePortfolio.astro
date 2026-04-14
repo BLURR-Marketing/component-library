@@ -2,6 +2,23 @@
 // ImagePortfolio — recovered from blurr-components.pages.dev
 ---
 
-<section class="ipt" data-astro-cid-a3qek7j4> <div class="ipt__header" data-astro-cid-a3qek7j4> <h2 class="ipt__title" data-astro-cid-a3qek7j4>Cases</h2> <p class="ipt__subtitle" data-astro-cid-a3qek7j4>Resultaten waar wij trots op zijn</p> </div> <div class="ipt__grid" data-astro-cid-a3qek7j4> <div class="ipt__item" data-astro-cid-a3qek7j4> <div class="ipt__media" data-astro-cid-a3qek7j4> <div class="ipt__placeholder" aria-label="Klant 1" data-astro-cid-a3qek7j4></div> <span class="ipt__result" data-astro-cid-a3qek7j4>+280% leads</span> </div> <div class="ipt__meta" data-astro-cid-a3qek7j4> <p class="ipt__client" data-astro-cid-a3qek7j4>TechFlow B.V.</p> <p class="ipt__service" data-astro-cid-a3qek7j4>Google Ads</p> </div> </div><div class="ipt__item" data-astro-cid-a3qek7j4> <div class="ipt__media" data-astro-cid-a3qek7j4> <div class="ipt__placeholder" aria-label="Klant 2" data-astro-cid-a3qek7j4></div> <span class="ipt__result" data-astro-cid-a3qek7j4>5.1x ROAS</span> </div> <div class="ipt__meta" data-astro-cid-a3qek7j4> <p class="ipt__client" data-astro-cid-a3qek7j4>Mode &amp; Meer</p> <p class="ipt__service" data-astro-cid-a3qek7j4>Meta Ads</p> </div> </div><div class="ipt__item" data-astro-cid-a3qek7j4> <div class="ipt__media" data-astro-cid-a3qek7j4> <div class="ipt__placeholder" aria-label="Klant 3" data-astro-cid-a3qek7j4></div> <span class="ipt__result" data-astro-cid-a3qek7j4>Nieuw merk live</span> </div> <div class="ipt__meta" data-astro-cid-a3qek7j4> <p class="ipt__client" data-astro-cid-a3qek7j4>Bouw &amp; Co</p> <p class="ipt__service" data-astro-cid-a3qek7j4>Branding</p> </div> </div> </div> </section>
+<section class="ipt"> <div class="ipt__header"> <h2 class="ipt__title">Cases</h2> <p class="ipt__subtitle">Resultaten waar wij trots op zijn</p> </div> <div class="ipt__grid"> <div class="ipt__item"> <div class="ipt__media"> <div class="ipt__placeholder" aria-label="Klant 1"></div> <span class="ipt__result">+280% leads</span> </div> <div class="ipt__meta"> <p class="ipt__client">TechFlow B.V.</p> <p class="ipt__service">Google Ads</p> </div> </div><div class="ipt__item"> <div class="ipt__media"> <div class="ipt__placeholder" aria-label="Klant 2"></div> <span class="ipt__result">5.1x ROAS</span> </div> <div class="ipt__meta"> <p class="ipt__client">Mode &amp; Meer</p> <p class="ipt__service">Meta Ads</p> </div> </div><div class="ipt__item"> <div class="ipt__media"> <div class="ipt__placeholder" aria-label="Klant 3"></div> <span class="ipt__result">Nieuw merk live</span> </div> <div class="ipt__meta"> <p class="ipt__client">Bouw &amp; Co</p> <p class="ipt__service">Branding</p> </div> </div> </div> </section>
 
-
+<style>
+.ipt{padding:3rem 0}
+.ipt__header{text-align:center;margin-bottom:3rem}
+.ipt__title{font-size:clamp(1.75rem,3vw,2.5rem);font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 .5rem}
+.ipt__subtitle{font-size:1.05rem;color:#666;margin:0}
+.ipt__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.ipt__item{border-radius:10px;overflow:hidden;border:1px solid #eee;transition:transform .2s,box-shadow .2s}
+.ipt__item:hover{transform:translateY(-4px);box-shadow:0 12px 30px #0000001a}
+.ipt__media{position:relative;aspect-ratio:3/2}
+.ipt__img{width:100%;height:100%;object-fit:cover}
+.ipt__placeholder{width:100%;height:100%;background:linear-gradient(135deg,#e0e8f8,#c8d8f0)}
+.ipt__result{position:absolute;top:.75rem;right:.75rem;background:var(--color-accent, #6366f1);color:#fff;font-size:.75rem;font-weight:700;padding:.25rem .6rem;border-radius:4px}
+.ipt__meta{padding:1rem}
+.ipt__client{font-size:.95rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 .2rem}
+.ipt__service{font-size:.8rem;color:#888;margin:0;text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+.ipt__grid{grid-template-columns:repeat(2,1fr)}
+.ipt__grid{grid-template-columns:1fr}
+</style>

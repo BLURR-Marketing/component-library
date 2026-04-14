@@ -2,6 +2,14 @@
 // ImageBanner — recovered from blurr-components.pages.dev
 ---
 
-<div class="ibann" data-astro-cid-j4bi3x6a> <div class="ibann__img-wrap" data-astro-cid-j4bi3x6a> <img class="ibann__img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&q=80" alt="Marketing team aan het werk" loading="lazy" data-astro-cid-j4bi3x6a> <div class="ibann__overlay" data-astro-cid-j4bi3x6a></div> </div> <div class="ibann__content" data-astro-cid-j4bi3x6a> <h2 class="ibann__headline" data-astro-cid-j4bi3x6a>Data-driven marketing</h2> <p class="ibann__sub" data-astro-cid-j4bi3x6a>Groei die zichtbaar is in je cijfers.</p> </div> </div>
+<div class="ibann"> <div class="ibann__img-wrap"> <img class="ibann__img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&q=80" alt="Marketing team aan het werk" loading="lazy"> <div class="ibann__overlay"></div> </div> <div class="ibann__content"> <h2 class="ibann__headline">Data-driven marketing</h2> <p class="ibann__sub">Groei die zichtbaar is in je cijfers.</p> </div> </div>
 
-
+<style>
+.ibann{position:relative;width:100%;min-height:380px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.ibann__img-wrap{position:absolute;inset:0}
+.ibann__img{width:100%;height:100%;object-fit:cover;display:block}
+.ibann__overlay{position:absolute;inset:0;background:linear-gradient(to bottom,#0a0a0a59,#0a0a0aa6)}
+.ibann__content{position:relative;z-index:1;text-align:center;padding:3rem 1.5rem;max-width:740px}
+.ibann__headline{font-size:clamp(1.5rem,3.5vw,2.75rem);font-weight:800;color:#fff;margin:0 0 .6rem;line-height:1.15;letter-spacing:-.02em;text-shadow:0 2px 16px rgba(0,0,0,.3)}
+.ibann__sub{font-size:1.05rem;color:#ffffffbf;margin:0;line-height:1.5}
+</style>

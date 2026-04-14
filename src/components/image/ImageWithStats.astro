@@ -2,6 +2,17 @@
 // ImageWithStats — recovered from blurr-components.pages.dev
 ---
 
-<div class="iws" data-astro-cid-6ij3pglz> <div class="iws__media" data-astro-cid-6ij3pglz> <div class="iws__placeholder" aria-label="Resultaten afbeelding" data-astro-cid-6ij3pglz></div> </div> <div class="iws__stats" data-astro-cid-6ij3pglz> <div class="iws__stat" data-astro-cid-6ij3pglz> <span class="iws__value" data-astro-cid-6ij3pglz>+340%</span> <span class="iws__label" data-astro-cid-6ij3pglz>Omzetgroei</span> </div><div class="iws__stat" data-astro-cid-6ij3pglz> <span class="iws__value" data-astro-cid-6ij3pglz>4.2x</span> <span class="iws__label" data-astro-cid-6ij3pglz>ROAS gemiddeld</span> </div><div class="iws__stat" data-astro-cid-6ij3pglz> <span class="iws__value" data-astro-cid-6ij3pglz>80+</span> <span class="iws__label" data-astro-cid-6ij3pglz>Tevreden klanten</span> </div><div class="iws__stat" data-astro-cid-6ij3pglz> <span class="iws__value" data-astro-cid-6ij3pglz>12jr</span> <span class="iws__label" data-astro-cid-6ij3pglz>Ervaring</span> </div> </div> </div>
+<div class="iws"> <div class="iws__media"> <div class="iws__placeholder" aria-label="Resultaten afbeelding"></div> </div> <div class="iws__stats"> <div class="iws__stat"> <span class="iws__value">+340%</span> <span class="iws__label">Omzetgroei</span> </div><div class="iws__stat"> <span class="iws__value">4.2x</span> <span class="iws__label">ROAS gemiddeld</span> </div><div class="iws__stat"> <span class="iws__value">80+</span> <span class="iws__label">Tevreden klanten</span> </div><div class="iws__stat"> <span class="iws__value">12jr</span> <span class="iws__label">Ervaring</span> </div> </div> </div>
 
-
+<style>
+.iws{position:relative;border-radius:12px;overflow:hidden}
+.iws__media{aspect-ratio:16/9}
+.iws__img{width:100%;height:100%;object-fit:cover}
+.iws__placeholder{width:100%;height:100%;background:linear-gradient(135deg,#1a2a4a,#2a3a6a)}
+.iws__stats{position:absolute;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(4,1fr);background:#0a0a0ad9;backdrop-filter:blur(8px);padding:1.25rem;gap:1rem}
+.iws__stat{text-align:center;display:flex;flex-direction:column;gap:.25rem}
+.iws__value{font-size:1.5rem;font-weight:800;color:var(--color-accent, #6366f1);line-height:1}
+.iws__label{font-size:.7rem;font-weight:600;color:#ffffffb3;text-transform:uppercase;letter-spacing:.08em}
+.iws__stats{grid-template-columns:repeat(2,1fr);position:static}
+.iws__stat{padding:.75rem}
+</style>

@@ -2,6 +2,18 @@
 // NavMobileFirst — recovered from blurr-components.pages.dev
 ---
 
-<header class="nmf" id="nmf" data-astro-cid-egvlttfp> <nav class="nmf-inner" data-astro-cid-egvlttfp> <a href="/" class="nmf-logo" data-astro-cid-egvlttfp>BLURR</a> <div class="nmf-actions" data-astro-cid-egvlttfp> <a href="#" class="nmf-cta" data-astro-cid-egvlttfp>Gratis gesprek</a> <button class="nmf-burger" id="nmf-burger" aria-label="Menu openen" aria-expanded="false" data-astro-cid-egvlttfp> <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-astro-cid-egvlttfp> <line x1="3" y1="6" x2="19" y2="6" class="nmf-line top" data-astro-cid-egvlttfp></line> <line x1="3" y1="11" x2="19" y2="11" class="nmf-line mid" data-astro-cid-egvlttfp></line> <line x1="3" y1="16" x2="19" y2="16" class="nmf-line bot" data-astro-cid-egvlttfp></line> </svg> </button> </div> </nav> <div class="nmf-overlay" id="nmf-overlay" data-astro-cid-egvlttfp> <ul class="nmf-menu" data-astro-cid-egvlttfp> <li data-astro-cid-egvlttfp><a href="#" class="nmf-menu-link" data-astro-cid-egvlttfp>Diensten</a></li><li data-astro-cid-egvlttfp><a href="#" class="nmf-menu-link" data-astro-cid-egvlttfp>Cases</a></li><li data-astro-cid-egvlttfp><a href="#" class="nmf-menu-link" data-astro-cid-egvlttfp>Over ons</a></li><li data-astro-cid-egvlttfp><a href="#" class="nmf-menu-link" data-astro-cid-egvlttfp>Blog</a></li><li data-astro-cid-egvlttfp><a href="#" class="nmf-menu-link" data-astro-cid-egvlttfp>Contact</a></li> </ul> </div> </header>
+<header class="nmf" id="nmf"> <nav class="nmf-inner"> <a href="/" class="nmf-logo">BLURR</a> <div class="nmf-actions"> <a href="#" class="nmf-cta">Gratis gesprek</a> <button class="nmf-burger" id="nmf-burger" aria-label="Menu openen" aria-expanded="false"> <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"> <line x1="3" y1="6" x2="19" y2="6" class="nmf-line top"></line> <line x1="3" y1="11" x2="19" y2="11" class="nmf-line mid"></line> <line x1="3" y1="16" x2="19" y2="16" class="nmf-line bot"></line> </svg> </button> </div> </nav> <div class="nmf-overlay" id="nmf-overlay"> <ul class="nmf-menu"> <li><a href="#" class="nmf-menu-link">Diensten</a></li><li><a href="#" class="nmf-menu-link">Cases</a></li><li><a href="#" class="nmf-menu-link">Over ons</a></li><li><a href="#" class="nmf-menu-link">Blog</a></li><li><a href="#" class="nmf-menu-link">Contact</a></li> </ul> </div> </header>
 
-
+<style>
+.nmf{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:100}
+.nmf-inner{max-width:1280px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:60px}
+.nmf-logo{font-weight:800;font-size:1.0625rem;color:#0a0a0a;text-decoration:none;letter-spacing:-.02em}
+.nmf-actions{display:flex;align-items:center;gap:1rem}
+.nmf-cta{font-size:.875rem;font-weight:600;padding:.5rem 1.25rem;background:var(--color-accent,#6366f1);color:#fff;border-radius:.5rem;text-decoration:none}
+.nmf-burger{background:none;border:none;cursor:pointer;display:flex;color:#0a0a0a;padding:.25rem}
+.nmf-overlay{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid #e5e7eb;padding:1.5rem}
+.nmf-overlay--open{display:block}
+.nmf-menu{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.25rem}
+.nmf-menu-link{display:block;font-size:1.0625rem;font-weight:500;color:#374151;text-decoration:none;padding:.875rem 1rem;border-radius:.5rem;transition:all .15s}
+.nmf-menu-link:hover,.nmf-menu-link--active{color:var(--color-accent,#6366f1);background:#6366f112}
+</style>

@@ -2,6 +2,19 @@
 // NavTabs — recovered from blurr-components.pages.dev
 ---
 
-<header class="ntabs" data-astro-cid-j6ln5npz> <div class="ntabs-top" data-astro-cid-j6ln5npz> <div class="ntabs-top-inner" data-astro-cid-j6ln5npz> <a href="/" class="ntabs-logo" data-astro-cid-j6ln5npz>BLURR</a> <a href="#" class="ntabs-cta" data-astro-cid-j6ln5npz>Upgrade</a> </div> </div> <nav class="ntabs-bar" data-astro-cid-j6ln5npz> <div class="ntabs-inner" data-astro-cid-j6ln5npz> <ul class="ntabs-list" data-astro-cid-j6ln5npz> <li data-astro-cid-j6ln5npz> <a href="#" class="ntabs-tab ntabs-tab--active" data-astro-cid-j6ln5npz> Overzicht  </a> </li><li data-astro-cid-j6ln5npz> <a href="#" class="ntabs-tab" data-astro-cid-j6ln5npz> Google Ads  </a> </li><li data-astro-cid-j6ln5npz> <a href="#" class="ntabs-tab" data-astro-cid-j6ln5npz> Meta Ads <span class="ntabs-badge" data-astro-cid-j6ln5npz>Nieuw</span> </a> </li><li data-astro-cid-j6ln5npz> <a href="#" class="ntabs-tab" data-astro-cid-j6ln5npz> SEO  </a> </li><li data-astro-cid-j6ln5npz> <a href="#" class="ntabs-tab" data-astro-cid-j6ln5npz> Analytics  </a> </li> </ul> </div> </nav> </header>
+<header class="ntabs"> <div class="ntabs-top"> <div class="ntabs-top-inner"> <a href="/" class="ntabs-logo">BLURR</a> <a href="#" class="ntabs-cta">Upgrade</a> </div> </div> <nav class="ntabs-bar"> <div class="ntabs-inner"> <ul class="ntabs-list"> <li> <a href="#" class="ntabs-tab ntabs-tab--active"> Overzicht  </a> </li><li> <a href="#" class="ntabs-tab"> Google Ads  </a> </li><li> <a href="#" class="ntabs-tab"> Meta Ads <span class="ntabs-badge">Nieuw</span> </a> </li><li> <a href="#" class="ntabs-tab"> SEO  </a> </li><li> <a href="#" class="ntabs-tab"> Analytics  </a> </li> </ul> </div> </nav> </header>
 
-
+<style>
+.ntabs-top{background:#fff;border-bottom:1px solid #f1f5f9}
+.ntabs-top-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px}
+.ntabs-logo{font-weight:800;font-size:1.0625rem;color:#0a0a0a;text-decoration:none;letter-spacing:-.02em}
+.ntabs-cta{font-size:.875rem;font-weight:600;padding:.5rem 1.25rem;background:var(--color-accent,#6366f1);color:#fff;border-radius:.5rem;text-decoration:none;transition:opacity .2s}
+.ntabs-cta:hover{opacity:.88}
+.ntabs-bar{background:#fff;border-bottom:2px solid #e5e7eb;position:sticky;top:0;z-index:100}
+.ntabs-inner{max-width:1280px;margin:0 auto;padding:0 2rem}
+.ntabs-list{list-style:none;padding:0;margin:0;display:flex;gap:0}
+.ntabs-tab{display:flex;align-items:center;gap:.5rem;font-size:.875rem;font-weight:500;color:#6b7280;text-decoration:none;padding:.875rem 1rem;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .15s}
+.ntabs-tab:hover{color:#374151}
+.ntabs-tab--active{color:var(--color-accent,#6366f1);border-bottom-color:var(--color-accent,#6366f1);font-weight:600}
+.ntabs-badge{font-size:.6875rem;font-weight:700;background:var(--color-accent,#6366f1);color:#fff;padding:.1rem .4rem;border-radius:999px}
+</style>

@@ -2,8 +2,27 @@
 // FormLogin — recovered from blurr-components.pages.dev
 ---
 
-<div class="fli-wrap" data-astro-cid-n6gnhkye> <div class="fli-header" data-astro-cid-n6gnhkye> <div class="fli-logo" aria-hidden="true" data-astro-cid-n6gnhkye>B</div> <h1 class="fli-heading" data-astro-cid-n6gnhkye>Inloggen</h1> <p class="fli-subtext" data-astro-cid-n6gnhkye>Welkom terug bij het BLURR klantenportaal.</p> </div> <form class="fli-form" onsubmit="return false;" novalidate data-astro-cid-n6gnhkye> <div class="fli-field" data-astro-cid-n6gnhkye> <label class="fli-label" for="fli-email" data-astro-cid-n6gnhkye>E-mailadres</label> <input class="fli-input" type="email" id="fli-email" name="email" placeholder="jij@bedrijf.nl" required autocomplete="email" data-astro-cid-n6gnhkye> </div> <div class="fli-field" data-astro-cid-n6gnhkye> <div class="fli-label-row" data-astro-cid-n6gnhkye> <label class="fli-label" for="fli-password" data-astro-cid-n6gnhkye>Wachtwoord</label> <a class="fli-forgot" href="/wachtwoord-vergeten" data-astro-cid-n6gnhkye>Vergeten?</a> </div> <input class="fli-input" type="password" id="fli-password" name="password" placeholder="••••••••" required autocomplete="current-password" data-astro-cid-n6gnhkye> </div> <label class="fli-remember" data-astro-cid-n6gnhkye> <input class="fli-check" type="checkbox" name="remember" data-astro-cid-n6gnhkye>
+<div class="fli-wrap"> <div class="fli-header"> <div class="fli-logo" aria-hidden="true">B</div> <h1 class="fli-heading">Inloggen</h1> <p class="fli-subtext">Welkom terug bij het BLURR klantenportaal.</p> </div> <form class="fli-form" onsubmit="return false;" novalidate> <div class="fli-field"> <label class="fli-label" for="fli-email">E-mailadres</label> <input class="fli-input" type="email" id="fli-email" name="email" placeholder="jij@bedrijf.nl" required autocomplete="email"> </div> <div class="fli-field"> <div class="fli-label-row"> <label class="fli-label" for="fli-password">Wachtwoord</label> <a class="fli-forgot" href="/wachtwoord-vergeten">Vergeten?</a> </div> <input class="fli-input" type="password" id="fli-password" name="password" placeholder="••••••••" required autocomplete="current-password"> </div> <label class="fli-remember"> <input class="fli-check" type="checkbox" name="remember">
 Onthoud mij op dit apparaat
-</label> <button class="fli-submit" type="submit" data-astro-cid-n6gnhkye>Inloggen</button> <p class="fli-register" data-astro-cid-n6gnhkye>Nog geen account? <a class="fli-link" href="/registreren" data-astro-cid-n6gnhkye>Registreer hier</a></p> </form> </div>
+</label> <button class="fli-submit" type="submit">Inloggen</button> <p class="fli-register">Nog geen account? <a class="fli-link" href="/registreren">Registreer hier</a></p> </form> </div>
 
-
+<style>
+.fli-wrap{max-width:420px;margin:0 auto;padding:2.5rem;background:#fff;border:1px solid #e5e5e5;border-radius:16px;box-shadow:0 4px 30px #0000000f}
+.fli-header{text-align:center;margin-bottom:2rem}
+.fli-logo{width:48px;height:48px;background:var(--color-accent, #6366f1);color:#fff;border-radius:12px;font-size:1.5rem;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
+.fli-heading{font-size:1.5rem;font-weight:800;color:var(--color-primary, #0a0a0a);margin:0 0 .4rem}
+.fli-subtext{font-size:.9rem;color:#666;margin:0}
+.fli-form{display:flex;flex-direction:column;gap:1.25rem}
+.fli-field{display:flex;flex-direction:column;gap:.4rem}
+.fli-label-row{display:flex;justify-content:space-between;align-items:center}
+.fli-label{font-size:.85rem;font-weight:600;color:var(--color-primary, #0a0a0a)}
+.fli-forgot{font-size:.8rem;color:var(--color-accent, #6366f1);text-decoration:none}
+.fli-input{padding:.75rem 1rem;border:1.5px solid #ddd;border-radius:8px;font-size:.95rem;color:var(--color-primary, #0a0a0a);background:#fff;transition:border-color .2s;font-family:inherit;box-sizing:border-box}
+.fli-input:focus{outline:none;border-color:var(--color-accent, #6366f1);box-shadow:0 0 0 3px #6366f11f}
+.fli-remember{display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:#555;cursor:pointer}
+.fli-check{accent-color:var(--color-accent, #6366f1)}
+.fli-submit{padding:.9rem;background:var(--color-accent, #6366f1);color:#fff;border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:opacity .2s}
+.fli-submit:hover{opacity:.88}
+.fli-register{font-size:.85rem;color:#666;text-align:center;margin:0}
+.fli-link{color:var(--color-accent, #6366f1);font-weight:600;text-decoration:none}
+</style>

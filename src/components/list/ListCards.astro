@@ -2,6 +2,13 @@
 // ListCards — recovered from blurr-components.pages.dev
 ---
 
-<ul class="lst-cards" data-astro-cid-6rljig6v> <li class="lst-cards__card" data-astro-cid-6rljig6v> <span class="lst-cards__tag" data-astro-cid-6rljig6v>Organisch</span> <strong class="lst-cards__title" data-astro-cid-6rljig6v>SEO &amp; Content</strong> <p class="lst-cards__desc" data-astro-cid-6rljig6v>Duurzame zichtbaarheid via organische zoekresultaten.</p> </li><li class="lst-cards__card" data-astro-cid-6rljig6v> <span class="lst-cards__tag" data-astro-cid-6rljig6v>Paid</span> <strong class="lst-cards__title" data-astro-cid-6rljig6v>Google Ads</strong> <p class="lst-cards__desc" data-astro-cid-6rljig6v>Directe leads via betaalde zoekcampagnes.</p> </li><li class="lst-cards__card" data-astro-cid-6rljig6v> <span class="lst-cards__tag" data-astro-cid-6rljig6v>Social</span> <strong class="lst-cards__title" data-astro-cid-6rljig6v>Social Media</strong> <p class="lst-cards__desc" data-astro-cid-6rljig6v>Merk bouwen en community activeren.</p> </li> </ul>
+<ul class="lst-cards"> <li class="lst-cards__card"> <span class="lst-cards__tag">Organisch</span> <strong class="lst-cards__title">SEO &amp; Content</strong> <p class="lst-cards__desc">Duurzame zichtbaarheid via organische zoekresultaten.</p> </li><li class="lst-cards__card"> <span class="lst-cards__tag">Paid</span> <strong class="lst-cards__title">Google Ads</strong> <p class="lst-cards__desc">Directe leads via betaalde zoekcampagnes.</p> </li><li class="lst-cards__card"> <span class="lst-cards__tag">Social</span> <strong class="lst-cards__title">Social Media</strong> <p class="lst-cards__desc">Merk bouwen en community activeren.</p> </li> </ul>
 
-
+<style>
+.lst-cards{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+.lst-cards__card{border:1.5px solid #e5e5e5;border-radius:.75rem;padding:1.25rem;display:flex;flex-direction:column;gap:.4rem;transition:border-color .2s,box-shadow .2s}
+.lst-cards__card:hover{border-color:var(--color-accent);box-shadow:0 4px 16px #6366f11a}
+.lst-cards__tag{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--color-accent)}
+.lst-cards__title{font-size:.975rem;font-weight:700;color:var(--color-primary)}
+.lst-cards__desc{margin:0;font-size:.875rem;color:#666;line-height:1.5}
+</style>

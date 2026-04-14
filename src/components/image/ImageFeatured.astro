@@ -2,6 +2,16 @@
 // ImageFeatured — recovered from blurr-components.pages.dev
 ---
 
-<figure class="ifeat" data-astro-cid-7bafmdhs> <div class="ifeat__img-wrap" data-astro-cid-7bafmdhs> <img class="ifeat__img" src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80" alt="Team bespreekt marketingstrategie" loading="lazy" data-astro-cid-7bafmdhs> </div> <figcaption class="ifeat__meta" data-astro-cid-7bafmdhs> <p class="ifeat__caption" data-astro-cid-7bafmdhs>Het BLURR team tijdens de jaarlijkse groeisprint.</p> <div class="ifeat__byline" data-astro-cid-7bafmdhs> <span class="ifeat__author" data-astro-cid-7bafmdhs>Foto: BLURR</span> <span class="ifeat__sep" aria-hidden="true" data-astro-cid-7bafmdhs>·</span> <time class="ifeat__date" data-astro-cid-7bafmdhs>14 april 2025</time> </div> </figcaption> </figure>
+<figure class="ifeat"> <div class="ifeat__img-wrap"> <img class="ifeat__img" src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80" alt="Team bespreekt marketingstrategie" loading="lazy"> </div> <figcaption class="ifeat__meta"> <p class="ifeat__caption">Het BLURR team tijdens de jaarlijkse groeisprint.</p> <div class="ifeat__byline"> <span class="ifeat__author">Foto: BLURR</span> <span class="ifeat__sep" aria-hidden="true">·</span> <time class="ifeat__date">14 april 2025</time> </div> </figcaption> </figure>
 
-
+<style>
+.ifeat{max-width:880px;margin:0 auto;padding:0 1.5rem}
+.ifeat__img-wrap{border-radius:14px;overflow:hidden;box-shadow:0 4px 32px #0000001a}
+.ifeat__img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.ifeat__meta{padding:1rem .25rem 0;display:flex;flex-direction:column;gap:.4rem}
+.ifeat__caption{font-size:.88rem;color:#555;line-height:1.6;margin:0;font-style:italic}
+.ifeat__byline{display:flex;align-items:center;gap:.4rem;flex-wrap:wrap}
+.ifeat__author{font-size:.78rem;font-weight:700;color:var(--color-primary, #0a0a0a);text-transform:uppercase;letter-spacing:.06em}
+.ifeat__sep{color:#bbb;font-size:.78rem}
+.ifeat__date{font-size:.78rem;color:#999}
+</style>

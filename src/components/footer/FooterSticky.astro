@@ -2,6 +2,18 @@
 // FooterSticky — recovered from blurr-components.pages.dev
 ---
 
-<footer class="fs" data-astro-cid-7avcmcp6> <div class="fs-inner" data-astro-cid-7avcmcp6> <span class="fs-logo" data-astro-cid-7avcmcp6>BLURR</span> <nav class="fs-nav" data-astro-cid-7avcmcp6> <a href="#" class="fs-link" data-astro-cid-7avcmcp6>Diensten</a><a href="#" class="fs-link" data-astro-cid-7avcmcp6>Cases</a><a href="#" class="fs-link" data-astro-cid-7avcmcp6>Privacy</a> </nav> <div class="fs-right" data-astro-cid-7avcmcp6> <span class="fs-copy" data-astro-cid-7avcmcp6>© 2025 BLURR</span> <a href="#" class="fs-cta" data-astro-cid-7avcmcp6>Plan gesprek</a> </div> </div> </footer>
+<footer class="fs"> <div class="fs-inner"> <span class="fs-logo">BLURR</span> <nav class="fs-nav"> <a href="#" class="fs-link">Diensten</a><a href="#" class="fs-link">Cases</a><a href="#" class="fs-link">Privacy</a> </nav> <div class="fs-right"> <span class="fs-copy">© 2025 BLURR</span> <a href="#" class="fs-cta">Plan gesprek</a> </div> </div> </footer>
 
-
+<style>
+.fs{position:sticky;bottom:0;left:0;right:0;z-index:100;background:#fff;border-top:1px solid #e5e7eb;box-shadow:0 -4px 20px #0000000f}
+.fs-inner{max-width:1200px;margin:0 auto;padding:.875rem 2rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
+.fs-logo{font-size:1rem;font-weight:900;color:#0a0a0a;letter-spacing:-.04em}
+.fs-nav{display:flex;gap:1.5rem;flex:1}
+.fs-link{font-size:.875rem;color:#6b7280;text-decoration:none;transition:color .15s}
+.fs-link:hover{color:#0a0a0a}
+.fs-right{display:flex;align-items:center;gap:1.5rem;margin-left:auto}
+.fs-copy{font-size:.8125rem;color:#9ca3af}
+.fs-cta{padding:.5rem 1.25rem;background:var(--color-accent,#6366f1);color:#fff;font-size:.875rem;font-weight:700;border-radius:.375rem;text-decoration:none;transition:opacity .15s}
+.fs-cta:hover{opacity:.88}
+.fs-nav{display:none}
+</style>

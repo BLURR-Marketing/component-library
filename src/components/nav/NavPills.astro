@@ -2,6 +2,18 @@
 // NavPills — recovered from blurr-components.pages.dev
 ---
 
-<header class="np" data-astro-cid-jenn53ax> <nav class="np-inner" data-astro-cid-jenn53ax> <a href="/" class="np-logo" data-astro-cid-jenn53ax>BLURR</a> <ul class="np-links" data-astro-cid-jenn53ax> <li data-astro-cid-jenn53ax><a href="#" class="np-link np-link--active" data-astro-cid-jenn53ax>Dashboard</a></li><li data-astro-cid-jenn53ax><a href="#" class="np-link" data-astro-cid-jenn53ax>Campagnes</a></li><li data-astro-cid-jenn53ax><a href="#" class="np-link" data-astro-cid-jenn53ax>Rapporten</a></li><li data-astro-cid-jenn53ax><a href="#" class="np-link" data-astro-cid-jenn53ax>Instellingen</a></li> </ul> <div class="np-actions" data-astro-cid-jenn53ax> <a href="#" class="np-cta" data-astro-cid-jenn53ax>Upgrade</a> </div> </nav> </header>
+<header class="np"> <nav class="np-inner"> <a href="/" class="np-logo">BLURR</a> <ul class="np-links"> <li><a href="#" class="np-link np-link--active">Dashboard</a></li><li><a href="#" class="np-link">Campagnes</a></li><li><a href="#" class="np-link">Rapporten</a></li><li><a href="#" class="np-link">Instellingen</a></li> </ul> <div class="np-actions"> <a href="#" class="np-cta">Upgrade</a> </div> </nav> </header>
 
-
+<style>
+.np{background:#fff;border-bottom:1px solid #f1f5f9;position:sticky;top:0;z-index:100}
+.np-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;height:64px;gap:2rem}
+.np-logo{font-weight:800;font-size:1.0625rem;color:#0a0a0a;text-decoration:none;letter-spacing:-.02em}
+.np-links{list-style:none;padding:0;margin:0;display:flex;flex:1;gap:.25rem;background:#f8fafc;border-radius:999px;padding:.25rem}
+.np-link{display:block;font-size:.8125rem;font-weight:500;color:#6b7280;text-decoration:none;padding:.375rem .875rem;border-radius:999px;transition:all .15s;white-space:nowrap}
+.np-link:hover{color:#374151;background:#fff}
+.np-link--active{background:#fff;color:#0a0a0a;font-weight:600;box-shadow:0 1px 4px #00000014}
+.np-actions{margin-left:auto}
+.np-cta{font-size:.875rem;font-weight:600;padding:.5rem 1.25rem;background:var(--color-accent,#6366f1);color:#fff;border-radius:999px;text-decoration:none;transition:opacity .2s}
+.np-cta:hover{opacity:.88}
+.np-links{display:none}
+</style>

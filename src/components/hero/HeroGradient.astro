@@ -2,6 +2,37 @@
 // HeroGradient — recovered from blurr-components.pages.dev
 ---
 
-<section class="hg" data-component="hero-gradient" style="--hg-from:#f5f3ff;--hg-to:#ede9fe;--hg-blob:#818cf8;" data-astro-cid-qry3ekfs> <!-- Animated blobs --> <div class="hg__blobs" aria-hidden="true" data-astro-cid-qry3ekfs> <div class="hg__blob hg__blob--1" data-astro-cid-qry3ekfs></div> <div class="hg__blob hg__blob--2" data-astro-cid-qry3ekfs></div> <div class="hg__blob hg__blob--3" data-astro-cid-qry3ekfs></div> </div> <!-- Noise overlay --> <div class="hg__noise" aria-hidden="true" data-astro-cid-qry3ekfs></div> <div class="hg__content" data-astro-cid-qry3ekfs> <div class="hg__badge-wrap" data-astro-cid-qry3ekfs> <span class="hg__badge" data-astro-cid-qry3ekfs> <span class="hg__badge-dot" data-astro-cid-qry3ekfs></span> Nu beschikbaar — Gratis audit aanvragen </span> </div> <h1 class="hg__headline" data-astro-cid-qry3ekfs>Marketing die <em>écht</em> werkt</h1> <p class="hg__sub" data-astro-cid-qry3ekfs>Data-gedreven campagnes voor ambitieuze bedrijven. Transparant, meetbaar en altijd bereikbaar.</p> <div class="hg__actions" data-astro-cid-qry3ekfs> <a href="#" class="hg__cta" data-astro-cid-qry3ekfs>Begin nu</a> <a href="#" class="hg__secondary" data-astro-cid-qry3ekfs> Bekijk onze cases <svg width="14" height="14" viewBox="0 0 14 14" fill="none" data-astro-cid-qry3ekfs> <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-qry3ekfs></path> </svg> </a> </div> <!-- Social proof --> <div class="hg__proof" data-astro-cid-qry3ekfs> <div class="hg__avatars" data-astro-cid-qry3ekfs> <div class="hg__avatar" style="background:hsl(220,60%,65%)" data-astro-cid-qry3ekfs></div><div class="hg__avatar" style="background:hsl(290,60%,65%)" data-astro-cid-qry3ekfs></div><div class="hg__avatar" style="background:hsl(360,60%,65%)" data-astro-cid-qry3ekfs></div><div class="hg__avatar" style="background:hsl(430,60%,65%)" data-astro-cid-qry3ekfs></div> </div> <p class="hg__proof-text" data-astro-cid-qry3ekfs>Meer dan <strong data-astro-cid-qry3ekfs>500+</strong> tevreden klanten</p> </div> </div> </section>
+<section class="hg" data-component="hero-gradient" style="--hg-from:#f5f3ff;--hg-to:#ede9fe;--hg-blob:#818cf8;"> <!-- Animated blobs --> <div class="hg__blobs" aria-hidden="true"> <div class="hg__blob hg__blob--1"></div> <div class="hg__blob hg__blob--2"></div> <div class="hg__blob hg__blob--3"></div> </div> <!-- Noise overlay --> <div class="hg__noise" aria-hidden="true"></div> <div class="hg__content"> <div class="hg__badge-wrap"> <span class="hg__badge"> <span class="hg__badge-dot"></span> Nu beschikbaar — Gratis audit aanvragen </span> </div> <h1 class="hg__headline">Marketing die <em>écht</em> werkt</h1> <p class="hg__sub">Data-gedreven campagnes voor ambitieuze bedrijven. Transparant, meetbaar en altijd bereikbaar.</p> <div class="hg__actions"> <a href="#" class="hg__cta">Begin nu</a> <a href="#" class="hg__secondary"> Bekijk onze cases <svg width="14" height="14" viewBox="0 0 14 14" fill="none"> <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </a> </div> <!-- Social proof --> <div class="hg__proof"> <div class="hg__avatars"> <div class="hg__avatar" style="background:hsl(220,60%,65%)"></div><div class="hg__avatar" style="background:hsl(290,60%,65%)"></div><div class="hg__avatar" style="background:hsl(360,60%,65%)"></div><div class="hg__avatar" style="background:hsl(430,60%,65%)"></div> </div> <p class="hg__proof-text">Meer dan <strong>500+</strong> tevreden klanten</p> </div> </div> </section>
 
-
+<style>
+.hg{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(135deg,var(--hg-from, #f5f3ff) 0%,var(--hg-to, #ede9fe) 100%)}
+.hg__blobs{position:absolute;inset:0;pointer-events:none}
+.hg__blob{position:absolute;border-radius:50%;filter:blur(72px);opacity:.45}
+.hg__blob--1{width:55vw;height:55vw;background:var(--hg-blob, #818cf8);top:-20%;left:-15%;animation:hg-float-1 18s ease-in-out infinite}
+.hg__blob--2{width:40vw;height:40vw;background:#a78bfa;bottom:-10%;right:-10%;animation:hg-float-2 22s ease-in-out infinite}
+.hg__blob--3{width:30vw;height:30vw;background:#f9a8d4;top:40%;right:20%;animation:hg-float-3 16s ease-in-out infinite}
+.hg__noise{position:absolute;inset:0;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");background-size:256px;pointer-events:none}
+.hg__content{position:relative;z-index:1;text-align:center;max-width:800px;padding:5rem 2rem;display:flex;flex-direction:column;align-items:center;gap:0}
+.hg__badge-wrap{margin-bottom:1.75rem;animation:hg-fade-up .5s .1s cubic-bezier(.22,1,.36,1) both}
+.hg__badge{display:inline-flex;align-items:center;gap:.5rem;background:#ffffffa6;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.8);padding:.4375rem 1rem;border-radius:999px;font-size:.8125rem;font-weight:600;color:var(--color-primary, #0a0a0a);box-shadow:0 2px 8px #0000000f}
+.hg__badge-dot{width:6px;height:6px;background:var(--color-accent, #6366f1);border-radius:50%;flex-shrink:0;animation:hg-pulse 2s ease-in-out infinite}
+.hg__headline{font-size:clamp(3rem,7vw,6.5rem);font-weight:900;line-height:1;letter-spacing:-.05em;color:var(--color-primary, #0a0a0a);margin-bottom:1.5rem;animation:hg-fade-up .7s .2s cubic-bezier(.22,1,.36,1) both}
+.hg__headline em{font-style:normal;background:linear-gradient(135deg,var(--color-accent, #6366f1),#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hg__headline strong{-webkit-text-stroke:2px var(--color-primary, #0a0a0a);-webkit-text-fill-color:transparent;color:transparent}
+.hg__sub{font-size:1.125rem;line-height:1.65;color:#0a0a0a99;max-width:44ch;margin-bottom:2.5rem;animation:hg-fade-up .6s .35s cubic-bezier(.22,1,.36,1) both}
+.hg__actions{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;justify-content:center;margin-bottom:2.5rem;animation:hg-fade-up .6s .45s cubic-bezier(.22,1,.36,1) both}
+.hg__cta{display:inline-flex;align-items:center;background:var(--color-primary, #0a0a0a);color:#fff;padding:1rem 2.25rem;border-radius:var(--radius, .5rem);font-weight:700;font-size:.9375rem;text-decoration:none;box-shadow:0 4px 24px #0000002e;transition:transform .2s,box-shadow .2s}
+.hg__cta:hover{transform:translateY(-3px);box-shadow:0 8px 32px #00000038}
+.hg__secondary{display:inline-flex;align-items:center;gap:.4rem;font-size:.9375rem;font-weight:600;color:var(--color-primary, #0a0a0a);text-decoration:none;opacity:.65;transition:opacity .2s,gap .2s}
+.hg__secondary:hover{opacity:1;gap:.65rem}
+.hg__proof{display:flex;align-items:center;gap:.875rem;animation:hg-fade-up .5s .6s cubic-bezier(.22,1,.36,1) both}
+.hg__avatars{display:flex}
+.hg__avatar{width:32px;height:32px;border-radius:50%;border:2px solid rgba(255,255,255,.9);margin-left:-8px;flex-shrink:0}
+.hg__avatars .hg__avatar:first-child{margin-left:0}
+.hg__proof-text{font-size:.875rem;color:#0a0a0a8c}
+.hg__proof-text strong{color:var(--color-primary, #0a0a0a);font-weight:700}
+.hg__blob--1,.hg__blob--2,.hg__blob--3,.hg__badge-dot,.hg__badge-wrap,.hg__headline,.hg__sub,.hg__actions,.hg__proof{animation:none}
+.hg__content{padding:3.5rem 1.25rem}
+.hg__actions{flex-direction:column;width:100%}
+.hg__cta{width:100%;justify-content:center}
+</style>

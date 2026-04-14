@@ -2,6 +2,21 @@
 // NavBreadcrumb — recovered from blurr-components.pages.dev
 ---
 
-<div class="nb" data-astro-cid-wnnkx37k> <header class="nb-nav" data-astro-cid-wnnkx37k> <div class="nb-nav-inner" data-astro-cid-wnnkx37k> <a href="/" class="nb-logo" data-astro-cid-wnnkx37k>BLURR</a> <ul class="nb-links" data-astro-cid-wnnkx37k> <li data-astro-cid-wnnkx37k><a href="#" class="nb-link" data-astro-cid-wnnkx37k>Diensten</a></li><li data-astro-cid-wnnkx37k><a href="#" class="nb-link" data-astro-cid-wnnkx37k>Blog</a></li><li data-astro-cid-wnnkx37k><a href="#" class="nb-link" data-astro-cid-wnnkx37k>Contact</a></li> </ul> </div> </header> <nav class="nb-bread" aria-label="Breadcrumb" data-astro-cid-wnnkx37k> <div class="nb-bread-inner" data-astro-cid-wnnkx37k> <ol class="nb-crumbs" data-astro-cid-wnnkx37k> <li class="nb-crumb" data-astro-cid-wnnkx37k> <a href="/" class="nb-crumb-link" data-astro-cid-wnnkx37k>Home</a> <span class="nb-sep" data-astro-cid-wnnkx37k>/</span> </li><li class="nb-crumb" data-astro-cid-wnnkx37k> <a href="/blog" class="nb-crumb-link" data-astro-cid-wnnkx37k>Blog</a> <span class="nb-sep" data-astro-cid-wnnkx37k>/</span> </li><li class="nb-crumb" data-astro-cid-wnnkx37k> <span class="nb-crumb-current" data-astro-cid-wnnkx37k>Google Ads strategie voor 2025</span>  </li> </ol> </div> </nav> </div>
+<div class="nb"> <header class="nb-nav"> <div class="nb-nav-inner"> <a href="/" class="nb-logo">BLURR</a> <ul class="nb-links"> <li><a href="#" class="nb-link">Diensten</a></li><li><a href="#" class="nb-link">Blog</a></li><li><a href="#" class="nb-link">Contact</a></li> </ul> </div> </header> <nav class="nb-bread" aria-label="Breadcrumb"> <div class="nb-bread-inner"> <ol class="nb-crumbs"> <li class="nb-crumb"> <a href="/" class="nb-crumb-link">Home</a> <span class="nb-sep">/</span> </li><li class="nb-crumb"> <a href="/blog" class="nb-crumb-link">Blog</a> <span class="nb-sep">/</span> </li><li class="nb-crumb"> <span class="nb-crumb-current">Google Ads strategie voor 2025</span>  </li> </ol> </div> </nav> </div>
 
-
+<style>
+.nb-nav{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:100}
+.nb-nav-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;height:56px;gap:2rem}
+.nb-logo{font-weight:800;font-size:1rem;color:#0a0a0a;text-decoration:none;letter-spacing:-.02em}
+.nb-links{list-style:none;padding:0;margin:0;display:flex;flex:1;gap:0}
+.nb-link{display:block;font-size:.8125rem;font-weight:500;color:#6b7280;text-decoration:none;padding:.3rem .75rem;border-radius:.375rem;transition:all .15s}
+.nb-link:hover{color:var(--color-accent,#6366f1);background:#6366f112}
+.nb-bread{background:#f8fafc;border-bottom:1px solid #f1f5f9}
+.nb-bread-inner{max-width:1280px;margin:0 auto;padding:.5rem 2rem}
+.nb-crumbs{list-style:none;padding:0;margin:0;display:flex;align-items:center;gap:.375rem;flex-wrap:wrap}
+.nb-crumb{display:flex;align-items:center;gap:.375rem}
+.nb-crumb-link{font-size:.8125rem;color:#6b7280;text-decoration:none;transition:color .15s}
+.nb-crumb-link:hover{color:var(--color-accent,#6366f1)}
+.nb-crumb-current{font-size:.8125rem;font-weight:500;color:#0a0a0a}
+.nb-sep{font-size:.8125rem;color:#d1d5db}
+</style>

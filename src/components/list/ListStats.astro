@@ -2,6 +2,12 @@
 // ListStats — recovered from blurr-components.pages.dev
 ---
 
-<ul class="lst-stat" data-astro-cid-6w6wi7hb> <li class="lst-stat__item" data-astro-cid-6w6wi7hb> <span class="lst-stat__value" data-astro-cid-6w6wi7hb>3.8×</span> <strong class="lst-stat__label" data-astro-cid-6w6wi7hb>Gemiddeld ROAS</strong> <span class="lst-stat__desc" data-astro-cid-6w6wi7hb>Over alle actieve campagnes</span> </li><li class="lst-stat__item" data-astro-cid-6w6wi7hb> <span class="lst-stat__value" data-astro-cid-6w6wi7hb>80+</span> <strong class="lst-stat__label" data-astro-cid-6w6wi7hb>Klanten</strong>  </li><li class="lst-stat__item" data-astro-cid-6w6wi7hb> <span class="lst-stat__value" data-astro-cid-6w6wi7hb>4.2×</span> <strong class="lst-stat__label" data-astro-cid-6w6wi7hb>ROI</strong>  </li> </ul>
+<ul class="lst-stat"> <li class="lst-stat__item"> <span class="lst-stat__value">3.8×</span> <strong class="lst-stat__label">Gemiddeld ROAS</strong> <span class="lst-stat__desc">Over alle actieve campagnes</span> </li><li class="lst-stat__item"> <span class="lst-stat__value">80+</span> <strong class="lst-stat__label">Klanten</strong>  </li><li class="lst-stat__item"> <span class="lst-stat__value">4.2×</span> <strong class="lst-stat__label">ROI</strong>  </li> </ul>
 
-
+<style>
+.lst-stat{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1px;background:#efefef;border:1px solid #efefef;border-radius:.75rem;overflow:hidden}
+.lst-stat__item{display:flex;flex-direction:column;gap:.2rem;padding:1.5rem 1.25rem;background:#fff}
+.lst-stat__value{font-size:clamp(1.75rem,4vw,2.5rem);font-weight:900;color:var(--color-accent);line-height:1;letter-spacing:-.04em}
+.lst-stat__label{font-size:.875rem;font-weight:700;color:var(--color-primary)}
+.lst-stat__desc{font-size:.775rem;color:#999}
+</style>

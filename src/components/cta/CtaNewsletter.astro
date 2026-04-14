@@ -2,6 +2,31 @@
 // CtaNewsletter — recovered from blurr-components.pages.dev
 ---
 
-<section class="ctanl ctanl--light" data-astro-cid-hguin2w7> <div class="ctanl-inner" data-astro-cid-hguin2w7> <span class="ctanl-eyebrow" data-astro-cid-hguin2w7>Nieuwsbrief</span> <h2 class="ctanl-headline" data-astro-cid-hguin2w7>Marketing insights, elke week gratis</h2> <p class="ctanl-sub" data-astro-cid-hguin2w7>Ontvang praktische tips over Google Ads, SEO en conversieverhoging. Geen spam, altijd opzegbaar.</p> <form class="ctanl-form" onsubmit="return false;" data-astro-cid-hguin2w7> <input type="email" class="ctanl-input" placeholder="jouw@email.nl" data-astro-cid-hguin2w7> <button type="submit" class="ctanl-btn" data-astro-cid-hguin2w7>Aanmelden</button> </form> <p class="ctanl-disclaimer" data-astro-cid-hguin2w7>We sturen nooit spam. Uitschrijven kan altijd.</p> </div> </section>
+<section class="ctanl ctanl--light"> <div class="ctanl-inner"> <span class="ctanl-eyebrow">Nieuwsbrief</span> <h2 class="ctanl-headline">Marketing insights, elke week gratis</h2> <p class="ctanl-sub">Ontvang praktische tips over Google Ads, SEO en conversieverhoging. Geen spam, altijd opzegbaar.</p> <form class="ctanl-form" onsubmit="return false;"> <input type="email" class="ctanl-input" placeholder="jouw@email.nl"> <button type="submit" class="ctanl-btn">Aanmelden</button> </form> <p class="ctanl-disclaimer">We sturen nooit spam. Uitschrijven kan altijd.</p> </div> </section>
 
-
+<style>
+.ctanl{padding:5rem 2rem}
+.ctanl--white{background:#fff;border-top:1px solid #e5e7eb}
+.ctanl--light{background:#f8fafc;border-top:1px solid #e5e7eb}
+.ctanl--dark{background:#0a0a0a}
+.ctanl-inner{max-width:600px;margin:0 auto;text-align:center}
+.ctanl-eyebrow{display:block;font-size:.6875rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent,#6366f1);margin-bottom:.75rem}
+.ctanl-headline{font-size:clamp(1.75rem,3.5vw,2.5rem);font-weight:900;letter-spacing:-.04em;line-height:1.15;margin:0 0 .875rem}
+.ctanl--white .ctanl-headline,.ctanl--light .ctanl-headline{color:#0a0a0a}
+.ctanl--dark .ctanl-headline{color:#fff}
+.ctanl-sub{font-size:1.0625rem;line-height:1.65;margin:0 0 2rem}
+.ctanl--white .ctanl-sub,.ctanl--light .ctanl-sub{color:#6b7280}
+.ctanl--dark .ctanl-sub{color:#ffffff8c}
+.ctanl-form{display:flex;gap:.625rem;max-width:460px;margin:0 auto}
+.ctanl-input{flex:1;padding:.8125rem 1rem;border-radius:.5rem;font-size:.9375rem;outline:none;transition:border-color .2s}
+.ctanl--white .ctanl-input,.ctanl--light .ctanl-input{border:1.5px solid #d1d5db;background:#fff;color:#0a0a0a}
+.ctanl--dark .ctanl-input{border:1.5px solid rgba(255,255,255,.15);background:#ffffff0d;color:#fff}
+.ctanl-input:focus{border-color:var(--color-accent,#6366f1)}
+.ctanl-btn{padding:.8125rem 1.5rem;background:var(--color-accent,#6366f1);color:#fff;font-weight:700;font-size:.9375rem;border:none;border-radius:.5rem;cursor:pointer;transition:opacity .2s;white-space:nowrap}
+.ctanl-btn:hover{opacity:.88}
+.ctanl-disclaimer{font-size:.75rem;margin:1rem 0 0}
+.ctanl--white .ctanl-disclaimer,.ctanl--light .ctanl-disclaimer{color:#9ca3af}
+.ctanl--dark .ctanl-disclaimer{color:#ffffff4d}
+.ctanl-form{flex-direction:column}
+.ctanl-btn{width:100%}
+</style>

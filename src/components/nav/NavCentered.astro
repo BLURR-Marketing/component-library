@@ -2,6 +2,25 @@
 // NavCentered — recovered from blurr-components.pages.dev
 ---
 
-<header class="nc nc--white" data-astro-cid-wevoemdd> <nav class="nc-inner" data-astro-cid-wevoemdd> <ul class="nc-links nc-links--left" data-astro-cid-wevoemdd> <li data-astro-cid-wevoemdd><a href="#" class="nc-link" data-astro-cid-wevoemdd>Diensten</a></li><li data-astro-cid-wevoemdd><a href="#" class="nc-link" data-astro-cid-wevoemdd>Cases</a></li> </ul> <a href="/" class="nc-logo" data-astro-cid-wevoemdd>BLURR</a> <ul class="nc-links nc-links--right" data-astro-cid-wevoemdd> <li data-astro-cid-wevoemdd><a href="#" class="nc-link" data-astro-cid-wevoemdd>Blog</a></li><li data-astro-cid-wevoemdd><a href="#" class="nc-link" data-astro-cid-wevoemdd>Prijzen</a></li> <li data-astro-cid-wevoemdd><a href="#" class="nc-cta" data-astro-cid-wevoemdd>Gratis gesprek</a></li> </ul> </nav> </header>
+<header class="nc nc--white"> <nav class="nc-inner"> <ul class="nc-links nc-links--left"> <li><a href="#" class="nc-link">Diensten</a></li><li><a href="#" class="nc-link">Cases</a></li> </ul> <a href="/" class="nc-logo">BLURR</a> <ul class="nc-links nc-links--right"> <li><a href="#" class="nc-link">Blog</a></li><li><a href="#" class="nc-link">Prijzen</a></li> <li><a href="#" class="nc-cta">Gratis gesprek</a></li> </ul> </nav> </header>
 
-
+<style>
+.nc{position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(0,0,0,.07);backdrop-filter:blur(12px)}
+.nc--white{background:#fffffff2}
+.nc--light{background:#f8fafcf2}
+.nc--dark{background:#0a0a0af7;border-bottom-color:#ffffff14}
+.nc-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;gap:2rem}
+.nc-links{list-style:none;padding:0;margin:0;display:flex;align-items:center;gap:.25rem;flex:1}
+.nc-links--right{justify-content:flex-end}
+.nc-link{font-size:.875rem;font-weight:500;text-decoration:none;padding:.375rem .75rem;border-radius:.375rem;transition:background .15s,color .15s}
+.nc--white .nc-link,.nc--light .nc-link{color:#374151}
+.nc--dark .nc-link{color:#ffffffb3}
+.nc-link:hover,.nc-link--active{background:#6366f114;color:var(--color-accent,#6366f1)!important}
+.nc-logo{font-weight:800;font-size:1.125rem;text-decoration:none;letter-spacing:-.02em;white-space:nowrap}
+.nc--white .nc-logo,.nc--light .nc-logo{color:#0a0a0a}
+.nc--dark .nc-logo{color:#fff}
+.nc-cta{font-size:.875rem;font-weight:600;padding:.5rem 1.125rem;background:var(--color-accent,#6366f1);color:#fff!important;border-radius:.5rem;text-decoration:none;transition:opacity .2s}
+.nc-cta:hover{opacity:.88}
+.nc-links{display:none}
+.nc-inner{justify-content:center}
+</style>

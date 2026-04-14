@@ -2,6 +2,14 @@
 // IconCircle — recovered from blurr-components.pages.dev
 ---
 
-<div class="ico" data-astro-cid-7zdxlmm2>  <div class="ico__row" data-astro-cid-7zdxlmm2> <a class="ico__item" href="#" style="--ico-size: 72px" aria-label="Analytics" data-astro-cid-7zdxlmm2> <span class="ico__icon" aria-hidden="true" data-astro-cid-7zdxlmm2>📊</span> <span class="ico__label" data-astro-cid-7zdxlmm2>Analytics</span> </a><a class="ico__item" href="#" style="--ico-size: 72px" aria-label="Ads" data-astro-cid-7zdxlmm2> <span class="ico__icon" aria-hidden="true" data-astro-cid-7zdxlmm2>🎯</span> <span class="ico__label" data-astro-cid-7zdxlmm2>Ads</span> </a><a class="ico__item" href="#" style="--ico-size: 72px" aria-label="Design" data-astro-cid-7zdxlmm2> <span class="ico__icon" aria-hidden="true" data-astro-cid-7zdxlmm2>✏️</span> <span class="ico__label" data-astro-cid-7zdxlmm2>Design</span> </a><a class="ico__item" href="#" style="--ico-size: 72px" aria-label="SEO" data-astro-cid-7zdxlmm2> <span class="ico__icon" aria-hidden="true" data-astro-cid-7zdxlmm2>🔍</span> <span class="ico__label" data-astro-cid-7zdxlmm2>SEO</span> </a><a class="ico__item" href="#" style="--ico-size: 72px" aria-label="Social" data-astro-cid-7zdxlmm2> <span class="ico__icon" aria-hidden="true" data-astro-cid-7zdxlmm2>📱</span> <span class="ico__label" data-astro-cid-7zdxlmm2>Social</span> </a> </div> </div>
+<div class="ico">  <div class="ico__row"> <a class="ico__item" href="#" style="--ico-size: 72px" aria-label="Analytics"> <span class="ico__icon" aria-hidden="true">📊</span> <span class="ico__label">Analytics</span> </a><a class="ico__item" href="#" style="--ico-size: 72px" aria-label="Ads"> <span class="ico__icon" aria-hidden="true">🎯</span> <span class="ico__label">Ads</span> </a><a class="ico__item" href="#" style="--ico-size: 72px" aria-label="Design"> <span class="ico__icon" aria-hidden="true">✏️</span> <span class="ico__label">Design</span> </a><a class="ico__item" href="#" style="--ico-size: 72px" aria-label="SEO"> <span class="ico__icon" aria-hidden="true">🔍</span> <span class="ico__label">SEO</span> </a><a class="ico__item" href="#" style="--ico-size: 72px" aria-label="Social"> <span class="ico__icon" aria-hidden="true">📱</span> <span class="ico__label">Social</span> </a> </div> </div>
 
-
+<style>
+.ico__title{font-size:1.25rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 1.5rem}
+.ico__row{display:flex;flex-wrap:wrap;gap:1.5rem}
+.ico__item{display:flex;flex-direction:column;align-items:center;gap:.5rem;text-decoration:none;cursor:default}
+a.ico__item{cursor:pointer}
+.ico__icon{display:flex;align-items:center;justify-content:center;width:var(--ico-size, 72px);height:var(--ico-size, 72px);border-radius:50%;background:#f0f0ff;border:2px solid rgba(99,102,241,.2);font-size:calc(var(--ico-size, 72px) * .45);transition:background .2s,transform .2s}
+a.ico__item:hover .ico__icon{background:#6366f11f;transform:translateY(-3px)}
+.ico__label{font-size:.8rem;font-weight:600;color:var(--color-primary, #0a0a0a)}
+</style>

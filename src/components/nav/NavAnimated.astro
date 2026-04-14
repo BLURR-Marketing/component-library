@@ -2,6 +2,20 @@
 // NavAnimated — recovered from blurr-components.pages.dev
 ---
 
-<header class="na" data-astro-cid-uhia6w4l> <nav class="na-inner" data-astro-cid-uhia6w4l> <a href="/" class="na-logo" data-astro-cid-uhia6w4l>BLURR</a> <ul class="na-links" data-astro-cid-uhia6w4l> <li class="na-item" data-astro-cid-uhia6w4l> <a href="#" class="na-link" data-astro-cid-uhia6w4l>Diensten</a> </li><li class="na-item" data-astro-cid-uhia6w4l> <a href="#" class="na-link na-link--active" data-astro-cid-uhia6w4l>Cases</a> </li><li class="na-item" data-astro-cid-uhia6w4l> <a href="#" class="na-link" data-astro-cid-uhia6w4l>Over ons</a> </li><li class="na-item" data-astro-cid-uhia6w4l> <a href="#" class="na-link" data-astro-cid-uhia6w4l>Blog</a> </li> </ul> <a href="#" class="na-cta" data-astro-cid-uhia6w4l>Gratis gesprek</a> </nav> </header>
+<header class="na"> <nav class="na-inner"> <a href="/" class="na-logo">BLURR</a> <ul class="na-links"> <li class="na-item"> <a href="#" class="na-link">Diensten</a> </li><li class="na-item"> <a href="#" class="na-link na-link--active">Cases</a> </li><li class="na-item"> <a href="#" class="na-link">Over ons</a> </li><li class="na-item"> <a href="#" class="na-link">Blog</a> </li> </ul> <a href="#" class="na-cta">Gratis gesprek</a> </nav> </header>
 
-
+<style>
+.na{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:100}
+.na-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;height:64px;gap:2rem}
+.na-logo{font-weight:800;font-size:1.0625rem;color:#0a0a0a;text-decoration:none;letter-spacing:-.02em}
+.na-links{list-style:none;padding:0;margin:0;display:flex;flex:1;gap:0}
+.na-item{position:relative}
+.na-link{display:block;font-size:.875rem;font-weight:500;color:#6b7280;text-decoration:none;padding:.375rem .875rem;transition:color .2s}
+.na-link:after{content:"";position:absolute;bottom:-1px;left:.875rem;right:.875rem;height:2px;background:var(--color-accent,#6366f1);transform:scaleX(0);transform-origin:left;transition:transform .25s cubic-bezier(.4,0,.2,1);border-radius:2px}
+.na-link:hover{color:#0a0a0a}
+.na-link:hover:after,.na-link--active:after{transform:scaleX(1)}
+.na-link--active{color:var(--color-accent,#6366f1)}
+.na-cta{margin-left:auto;font-size:.875rem;font-weight:600;padding:.5rem 1.25rem;background:var(--color-accent,#6366f1);color:#fff;border-radius:.5rem;text-decoration:none;transition:opacity .2s;white-space:nowrap}
+.na-cta:hover{opacity:.88}
+.na-links{display:none}
+</style>

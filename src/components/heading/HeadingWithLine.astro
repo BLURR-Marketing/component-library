@@ -2,6 +2,24 @@
 // HeadingWithLine — recovered from blurr-components.pages.dev
 ---
 
-<section class="hwl__section hwl__align-center hwl__pos-both" style="" data-astro-cid-uosiprq7> <p class="hwl__eyebrow" data-astro-cid-uosiprq7>Selectie</p> <div class="hwl__headline-row" data-astro-cid-uosiprq7> <span class="hwl__rule hwl__rule--left" aria-hidden="true" data-astro-cid-uosiprq7></span> <h2 class="hwl__headline" data-astro-cid-uosiprq7>Uitgelichte <em>projecten</em></h2> <span class="hwl__rule hwl__rule--right" aria-hidden="true" data-astro-cid-uosiprq7></span> </div> <p class="hwl__sub" data-astro-cid-uosiprq7>Een greep uit het werk dat we trots op zijn.</p> </section>
+<section class="hwl__section hwl__align-center hwl__pos-both" style=""> <p class="hwl__eyebrow">Selectie</p> <div class="hwl__headline-row"> <span class="hwl__rule hwl__rule--left" aria-hidden="true"></span> <h2 class="hwl__headline">Uitgelichte <em>projecten</em></h2> <span class="hwl__rule hwl__rule--right" aria-hidden="true"></span> </div> <p class="hwl__sub">Een greep uit het werk dat we trots op zijn.</p> </section>
 
-
+<style>
+.hwl__section{padding:5rem 1.5rem;display:flex;flex-direction:column;gap:1rem}
+.hwl__align-center{align-items:center;text-align:center}
+.hwl__align-left{align-items:flex-start;text-align:left}
+.hwl__eyebrow{margin:0;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent)}
+.hwl__headline-row{display:flex;align-items:center;gap:1.25rem;width:100%}
+.hwl__align-center .hwl__headline-row{justify-content:center}
+.hwl__align-left .hwl__headline-row{justify-content:flex-start}
+.hwl__rule{display:block;height:2px;background:var(--hwl-line-color, var(--color-accent));flex:1;max-width:120px;transform:scaleX(0);transform-origin:left center;transition:transform .6s cubic-bezier(.4,0,.2,1)}
+.hwl__rule--right{transform-origin:right center}
+.hwl--visible .hwl__rule{transform:scaleX(1)}
+.hwl__headline{margin:0;font-size:clamp(2rem,4vw,3.5rem);font-weight:800;letter-spacing:-.02em;color:var(--color-primary);line-height:1.1;white-space:nowrap}
+.hwl__headline em{font-style:italic;color:var(--color-accent)}
+.hwl__sub{margin:0;font-size:1.125rem;line-height:1.7;color:var(--color-muted);max-width:580px}
+.hwl__pos-left .hwl__rule--left{transform-origin:left center}
+.hwl__pos-right .hwl__rule--right{transform-origin:right center}
+.hwl__headline{white-space:normal}
+.hwl__rule{max-width:60px}
+</style>

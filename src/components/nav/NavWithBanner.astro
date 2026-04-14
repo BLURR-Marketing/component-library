@@ -2,6 +2,19 @@
 // NavWithBanner — recovered from blurr-components.pages.dev
 ---
 
-<div class="nwb" data-astro-cid-q5ytxecw> <div class="nwb-banner" style="background:#6366f1" data-astro-cid-q5ytxecw> <p class="nwb-banner-text" data-astro-cid-q5ytxecw> 🎉 Nieuw: Gratis Google Ads audit — voor nieuwe klanten. <a href="#" class="nwb-banner-link" data-astro-cid-q5ytxecw>Aanvragen →</a> </p> </div> <header class="nwb-nav" data-astro-cid-q5ytxecw> <nav class="nwb-inner" data-astro-cid-q5ytxecw> <a href="/" class="nwb-logo" data-astro-cid-q5ytxecw>BLURR</a> <ul class="nwb-links" data-astro-cid-q5ytxecw> <li data-astro-cid-q5ytxecw><a href="#" class="nwb-link" data-astro-cid-q5ytxecw>Diensten</a></li><li data-astro-cid-q5ytxecw><a href="#" class="nwb-link" data-astro-cid-q5ytxecw>Cases</a></li><li data-astro-cid-q5ytxecw><a href="#" class="nwb-link" data-astro-cid-q5ytxecw>Blog</a></li> </ul> <a href="#" class="nwb-cta" data-astro-cid-q5ytxecw>Contact</a> </nav> </header> </div>
+<div class="nwb"> <div class="nwb-banner" style="background:#6366f1"> <p class="nwb-banner-text"> 🎉 Nieuw: Gratis Google Ads audit — voor nieuwe klanten. <a href="#" class="nwb-banner-link">Aanvragen →</a> </p> </div> <header class="nwb-nav"> <nav class="nwb-inner"> <a href="/" class="nwb-logo">BLURR</a> <ul class="nwb-links"> <li><a href="#" class="nwb-link">Diensten</a></li><li><a href="#" class="nwb-link">Cases</a></li><li><a href="#" class="nwb-link">Blog</a></li> </ul> <a href="#" class="nwb-cta">Contact</a> </nav> </header> </div>
 
-
+<style>
+.nwb-banner{padding:.5rem 2rem;text-align:center}
+.nwb-banner-text{font-size:.8125rem;font-weight:500;color:#fff;margin:0}
+.nwb-banner-link{color:#ffffffe6;font-weight:700;text-decoration:underline;margin-left:.5rem}
+.nwb-nav{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:100}
+.nwb-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;height:60px;gap:2rem}
+.nwb-logo{font-weight:800;font-size:1.0625rem;color:#0a0a0a;text-decoration:none;letter-spacing:-.02em}
+.nwb-links{list-style:none;padding:0;margin:0;display:flex;flex:1;gap:0}
+.nwb-link{display:block;font-size:.875rem;font-weight:500;color:#374151;text-decoration:none;padding:.375rem .75rem;border-radius:.375rem;transition:color .15s,background .15s}
+.nwb-link:hover,.nwb-link--active{color:var(--color-accent,#6366f1);background:#6366f112}
+.nwb-cta{margin-left:auto;font-size:.875rem;font-weight:600;padding:.5rem 1.25rem;background:var(--color-accent,#6366f1);color:#fff;border-radius:.5rem;text-decoration:none;transition:opacity .2s;white-space:nowrap}
+.nwb-cta:hover{opacity:.88}
+.nwb-links{display:none}
+</style>

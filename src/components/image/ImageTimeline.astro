@@ -2,6 +2,28 @@
 // ImageTimeline — recovered from blurr-components.pages.dev
 ---
 
-<section class="itl" data-astro-cid-sful34gt> <h2 class="itl__title" data-astro-cid-sful34gt>Onze geschiedenis</h2> <div class="itl__list" data-astro-cid-sful34gt> <div class="itl__item" data-astro-cid-sful34gt> <div class="itl__media" data-astro-cid-sful34gt> <div class="itl__placeholder" aria-label="2016" data-astro-cid-sful34gt></div> </div> <div class="itl__dot" aria-hidden="true" data-astro-cid-sful34gt></div> <div class="itl__content" data-astro-cid-sful34gt> <span class="itl__year" data-astro-cid-sful34gt>2016</span> <h3 class="itl__name" data-astro-cid-sful34gt>Oprichting BLURR</h3> <p class="itl__body" data-astro-cid-sful34gt>Gestart als tweemansbureau vanuit een zolderkamer in Amsterdam.</p> </div> </div><div class="itl__item itl__item--right" data-astro-cid-sful34gt> <div class="itl__media" data-astro-cid-sful34gt> <div class="itl__placeholder" aria-label="2018" data-astro-cid-sful34gt></div> </div> <div class="itl__dot" aria-hidden="true" data-astro-cid-sful34gt></div> <div class="itl__content" data-astro-cid-sful34gt> <span class="itl__year" data-astro-cid-sful34gt>2018</span> <h3 class="itl__name" data-astro-cid-sful34gt>Eerste grote klant</h3> <p class="itl__body" data-astro-cid-sful34gt>Eerste €1M campagnebudget.</p> </div> </div><div class="itl__item" data-astro-cid-sful34gt> <div class="itl__media" data-astro-cid-sful34gt> <div class="itl__placeholder" aria-label="2023" data-astro-cid-sful34gt></div> </div> <div class="itl__dot" aria-hidden="true" data-astro-cid-sful34gt></div> <div class="itl__content" data-astro-cid-sful34gt> <span class="itl__year" data-astro-cid-sful34gt>2023</span> <h3 class="itl__name" data-astro-cid-sful34gt>Bureau van het jaar</h3> <p class="itl__body" data-astro-cid-sful34gt>Genomineerd door Adformatie.</p> </div> </div> <div class="itl__line" aria-hidden="true" data-astro-cid-sful34gt></div> </div> </section>
+<section class="itl"> <h2 class="itl__title">Onze geschiedenis</h2> <div class="itl__list"> <div class="itl__item"> <div class="itl__media"> <div class="itl__placeholder" aria-label="2016"></div> </div> <div class="itl__dot" aria-hidden="true"></div> <div class="itl__content"> <span class="itl__year">2016</span> <h3 class="itl__name">Oprichting BLURR</h3> <p class="itl__body">Gestart als tweemansbureau vanuit een zolderkamer in Amsterdam.</p> </div> </div><div class="itl__item itl__item--right"> <div class="itl__media"> <div class="itl__placeholder" aria-label="2018"></div> </div> <div class="itl__dot" aria-hidden="true"></div> <div class="itl__content"> <span class="itl__year">2018</span> <h3 class="itl__name">Eerste grote klant</h3> <p class="itl__body">Eerste €1M campagnebudget.</p> </div> </div><div class="itl__item"> <div class="itl__media"> <div class="itl__placeholder" aria-label="2023"></div> </div> <div class="itl__dot" aria-hidden="true"></div> <div class="itl__content"> <span class="itl__year">2023</span> <h3 class="itl__name">Bureau van het jaar</h3> <p class="itl__body">Genomineerd door Adformatie.</p> </div> </div> <div class="itl__line" aria-hidden="true"></div> </div> </section>
 
-
+<style>
+.itl{padding:3rem 0}
+.itl__title{font-size:2rem;font-weight:700;color:var(--color-primary, #0a0a0a);text-align:center;margin:0 0 3rem}
+.itl__list{position:relative;display:flex;flex-direction:column;gap:3rem}
+.itl__line{position:absolute;top:0;bottom:0;left:50%;transform:translate(-50%);width:2px;background:#e0e0e0;z-index:0}
+.itl__item{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:2rem;position:relative;z-index:1}
+.itl__item--right .itl__media{order:3}
+.itl__item--right .itl__content{order:1;text-align:right}
+.itl__media{aspect-ratio:4/3;border-radius:8px;overflow:hidden}
+.itl__img{width:100%;height:100%;object-fit:cover}
+.itl__placeholder{width:100%;height:100%;background:linear-gradient(135deg,#e0e0f0,#c8c8e8)}
+.itl__dot{width:16px;height:16px;border-radius:50%;background:var(--color-accent, #6366f1);border:3px solid #fff;box-shadow:0 0 0 3px #6366f133;flex-shrink:0}
+.itl__content{padding:.5rem}
+.itl__year{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent, #6366f1);display:block;margin-bottom:.25rem}
+.itl__name{font-size:1.1rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 .5rem}
+.itl__body{font-size:.9rem;color:#666;line-height:1.6;margin:0}
+.itl__line{left:1.5rem}
+.itl__item,.itl__item--right{grid-template-columns:1fr;grid-template-rows:auto;padding-left:3.5rem}
+.itl__item--right .itl__media{order:0}
+.itl__item--right .itl__content{order:2;text-align:left}
+.itl__dot{position:absolute;left:1rem}
+.itl__media{max-height:200px}
+</style>

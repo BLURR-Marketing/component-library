@@ -2,6 +2,34 @@
 // CtaCard — recovered from blurr-components.pages.dev
 ---
 
-<section class="ctc" data-component="cta-card" data-astro-cid-2jxwdkp4> <div class="ctc__outer" data-astro-cid-2jxwdkp4> <div class="ctc__card ctc__card--dark" style="" data-astro-cid-2jxwdkp4>  <div class="ctc__body" data-astro-cid-2jxwdkp4> <p class="ctc__eyebrow" data-astro-cid-2jxwdkp4>Klaar om te groeien?</p> <h2 class="ctc__headline" data-astro-cid-2jxwdkp4>Start vandaag met <em>betere</em> campagnes</h2> <p class="ctc__sub" data-astro-cid-2jxwdkp4>Boek een gratis strategie-gesprek. We analyseren je situatie en komen met een concreet plan.</p> <div class="ctc__ctas" data-astro-cid-2jxwdkp4> <a href="#" class="ctc__cta ctc__cta--primary" data-astro-cid-2jxwdkp4>Plan een gesprek</a> <a href="#" class="ctc__cta ctc__cta--ghost" data-astro-cid-2jxwdkp4>Bekijk cases</a> </div> </div> </div> </div> </section>
+<section class="ctc" data-component="cta-card"> <div class="ctc__outer"> <div class="ctc__card ctc__card--dark" style="">  <div class="ctc__body"> <p class="ctc__eyebrow">Klaar om te groeien?</p> <h2 class="ctc__headline">Start vandaag met <em>betere</em> campagnes</h2> <p class="ctc__sub">Boek een gratis strategie-gesprek. We analyseren je situatie en komen met een concreet plan.</p> <div class="ctc__ctas"> <a href="#" class="ctc__cta ctc__cta--primary">Plan een gesprek</a> <a href="#" class="ctc__cta ctc__cta--ghost">Bekijk cases</a> </div> </div> </div> </div> </section>
 
-
+<style>
+.ctc{padding:4rem 1.5rem;background:var(--color-bg, #fff)}
+.ctc__outer{max-width:1000px;margin:0 auto}
+.ctc__card{border-radius:calc(var(--radius, .5rem) * 3);padding:5rem 3rem;text-align:center;position:relative;overflow:hidden}
+.ctc__card--light{background:#f5f5f7;color:var(--color-primary, #0a0a0a)}
+.ctc__card--dark{background:var(--color-primary, #0a0a0a);color:#fff}
+.ctc__card--accent{background:var(--color-accent, #6366f1);color:#fff}
+.ctc__card--image{background-image:var(--bg-img);background-size:cover;background-position:center;color:#fff}
+.ctc__overlay{position:absolute;inset:0;background:#0000008c}
+.ctc__body{position:relative;z-index:1}
+.ctc__eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.55;margin-bottom:1rem}
+.ctc__headline{font-size:clamp(2rem,4vw,3.25rem);font-weight:800;line-height:1.1;letter-spacing:-.03em;margin-bottom:1.25rem}
+.ctc__card--light .ctc__headline{color:var(--color-primary, #0a0a0a)}
+.ctc__headline em{font-style:normal;color:var(--color-accent, #6366f1)}
+.ctc__card--accent .ctc__headline em,.ctc__card--image .ctc__headline em{color:#ffffffb3}
+.ctc__sub{font-size:1.0625rem;line-height:1.6;opacity:.7;margin-bottom:2.5rem;max-width:52ch;margin-left:auto;margin-right:auto}
+.ctc__ctas{display:flex;gap:.875rem;justify-content:center;flex-wrap:wrap}
+.ctc__cta{display:inline-block;padding:.9375rem 2rem;border-radius:var(--radius, .5rem);font-weight:700;font-size:1rem;text-decoration:none;transition:all .2s}
+.ctc__card--light .ctc__cta--primary{background:var(--color-accent, #6366f1);color:#fff}
+.ctc__card--dark .ctc__cta--primary,.ctc__card--image .ctc__cta--primary{background:#fff;color:var(--color-primary, #0a0a0a)}
+.ctc__card--accent .ctc__cta--primary{background:#fff;color:var(--color-accent, #6366f1)}
+.ctc__cta--primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px #0003}
+.ctc__cta--ghost{border:1.5px solid rgba(255,255,255,.4);color:inherit;opacity:.75}
+.ctc__card--light .ctc__cta--ghost{border-color:#0003;color:var(--color-primary, #0a0a0a)}
+.ctc__cta--ghost:hover{opacity:1}
+.ctc__card{padding:3rem 1.5rem}
+.ctc__cta{width:100%;text-align:center}
+.ctc__ctas{flex-direction:column;align-items:center}
+</style>

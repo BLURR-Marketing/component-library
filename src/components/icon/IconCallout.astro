@@ -2,6 +2,21 @@
 // IconCallout — recovered from blurr-components.pages.dev
 ---
 
-<div class="icall icall--accent" data-astro-cid-reco3gaz> <span class="icall__icon" aria-hidden="true" data-astro-cid-reco3gaz>🎯</span> <div class="icall__content" data-astro-cid-reco3gaz> <h3 class="icall__title" data-astro-cid-reco3gaz>Gratis strategiegesprek</h3> <p class="icall__body" data-astro-cid-reco3gaz>Plan vandaag nog een vrijblijvend gesprek met een BLURR specialist.</p> <a class="icall__cta" href="#" data-astro-cid-reco3gaz>Plan gesprek</a> </div> </div>
+<div class="icall icall--accent"> <span class="icall__icon" aria-hidden="true">🎯</span> <div class="icall__content"> <h3 class="icall__title">Gratis strategiegesprek</h3> <p class="icall__body">Plan vandaag nog een vrijblijvend gesprek met een BLURR specialist.</p> <a class="icall__cta" href="#">Plan gesprek</a> </div> </div>
 
-
+<style>
+.icall{display:flex;gap:1.5rem;align-items:flex-start;padding:2rem 2.5rem;border-radius:14px;border-left:4px solid}
+.icall--default{background:#f8f8f8;border-color:#ddd}
+.icall--accent{background:#6366f10f;border-color:var(--color-accent, #6366f1)}
+.icall--dark{background:var(--color-primary, #0a0a0a);border-color:var(--color-accent, #6366f1)}
+.icall__icon{font-size:2.5rem;flex-shrink:0;margin-top:.2rem}
+.icall__content{flex:1}
+.icall__title{font-size:1.25rem;font-weight:700;margin:0 0 .5rem}
+.icall--default .icall__title,.icall--accent .icall__title{color:var(--color-primary, #0a0a0a)}
+.icall--dark .icall__title{color:#fff}
+.icall__body{font-size:.95rem;line-height:1.65;margin:0 0 1.25rem}
+.icall--default .icall__body,.icall--accent .icall__body{color:#666}
+.icall--dark .icall__body{color:#ffffffbf}
+.icall__cta{display:inline-block;padding:.65rem 1.5rem;background:var(--color-accent, #6366f1);color:#fff;text-decoration:none;border-radius:6px;font-weight:700;font-size:.9rem;transition:opacity .2s}
+.icall__cta:hover{opacity:.85}
+</style>

@@ -2,6 +2,14 @@
 // IconNav — recovered from blurr-components.pages.dev
 ---
 
-<nav class="inav inav--horizontal" aria-label="Navigatie met iconen" data-astro-cid-5grtcj4d> <a class="inav__item inav__item--active" href="/" aria-current="page" data-astro-cid-5grtcj4d> <span class="inav__icon" aria-hidden="true" data-astro-cid-5grtcj4d>🏠</span> <span class="inav__label" data-astro-cid-5grtcj4d>Home</span>  </a><a class="inav__item" href="/diensten" data-astro-cid-5grtcj4d> <span class="inav__icon" aria-hidden="true" data-astro-cid-5grtcj4d>🛠</span> <span class="inav__label" data-astro-cid-5grtcj4d>Diensten</span>  </a><a class="inav__item" href="/cases" data-astro-cid-5grtcj4d> <span class="inav__icon" aria-hidden="true" data-astro-cid-5grtcj4d>📁</span> <span class="inav__label" data-astro-cid-5grtcj4d>Cases</span> <span class="inav__badge" data-astro-cid-5grtcj4d>Nieuw</span> </a><a class="inav__item" href="/blog" data-astro-cid-5grtcj4d> <span class="inav__icon" aria-hidden="true" data-astro-cid-5grtcj4d>✏️</span> <span class="inav__label" data-astro-cid-5grtcj4d>Blog</span>  </a><a class="inav__item" href="/over-ons" data-astro-cid-5grtcj4d> <span class="inav__icon" aria-hidden="true" data-astro-cid-5grtcj4d>👥</span> <span class="inav__label" data-astro-cid-5grtcj4d>Over ons</span>  </a><a class="inav__item" href="/contact" data-astro-cid-5grtcj4d> <span class="inav__icon" aria-hidden="true" data-astro-cid-5grtcj4d>💬</span> <span class="inav__label" data-astro-cid-5grtcj4d>Contact</span>  </a> </nav>
+<nav class="inav inav--horizontal" aria-label="Navigatie met iconen"> <a class="inav__item inav__item--active" href="/" aria-current="page"> <span class="inav__icon" aria-hidden="true">🏠</span> <span class="inav__label">Home</span>  </a><a class="inav__item" href="/diensten"> <span class="inav__icon" aria-hidden="true">🛠</span> <span class="inav__label">Diensten</span>  </a><a class="inav__item" href="/cases"> <span class="inav__icon" aria-hidden="true">📁</span> <span class="inav__label">Cases</span> <span class="inav__badge">Nieuw</span> </a><a class="inav__item" href="/blog"> <span class="inav__icon" aria-hidden="true">✏️</span> <span class="inav__label">Blog</span>  </a><a class="inav__item" href="/over-ons"> <span class="inav__icon" aria-hidden="true">👥</span> <span class="inav__label">Over ons</span>  </a><a class="inav__item" href="/contact"> <span class="inav__icon" aria-hidden="true">💬</span> <span class="inav__label">Contact</span>  </a> </nav>
 
-
+<style>
+.inav{display:flex;gap:.25rem}
+.inav--vertical{flex-direction:column}
+.inav__item{display:flex;align-items:center;gap:.6rem;padding:.6rem 1rem;border-radius:8px;text-decoration:none;color:#666;font-size:.9rem;font-weight:500;transition:background .15s,color .15s;position:relative}
+.inav__item:hover{background:#f5f5f5;color:var(--color-primary, #0a0a0a)}
+.inav__item--active{background:#6366f11a;color:var(--color-accent, #6366f1);font-weight:700}
+.inav__icon{font-size:1.1rem}
+.inav__badge{position:absolute;top:.25rem;right:.25rem;background:var(--color-accent, #6366f1);color:#fff;font-size:.55rem;font-weight:700;padding:.1rem .35rem;border-radius:10px;text-transform:uppercase;letter-spacing:.04em}
+</style>

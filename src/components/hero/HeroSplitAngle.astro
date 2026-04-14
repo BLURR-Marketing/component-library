@@ -2,6 +2,22 @@
 // HeroSplitAngle — recovered from blurr-components.pages.dev
 ---
 
-<section class="hsa" style="--hsa-accent:#6366f1" data-astro-cid-hdqo6gcr> <div class="hsa-text" data-astro-cid-hdqo6gcr> <span class="hsa-eyebrow" data-astro-cid-hdqo6gcr>Online Marketing Bureau</span> <h1 class="hsa-headline" data-astro-cid-hdqo6gcr>Jouw groei is onze missie.</h1> <p class="hsa-sub" data-astro-cid-hdqo6gcr>Van Google Ads tot SEO — wij zorgen dat je gevonden wordt door klanten die kopen.</p> <div class="hsa-actions" data-astro-cid-hdqo6gcr> <a href="#" class="hsa-btn hsa-btn--primary" data-astro-cid-hdqo6gcr>Gratis gesprek</a> <a href="#" class="hsa-btn hsa-btn--ghost" data-astro-cid-hdqo6gcr>Onze resultaten</a> </div> </div> <div class="hsa-visual" data-astro-cid-hdqo6gcr> <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="" class="hsa-img" data-astro-cid-hdqo6gcr> </div> </section>
+<section class="hsa" style="--hsa-accent:#6366f1"> <div class="hsa-text"> <span class="hsa-eyebrow">Online Marketing Bureau</span> <h1 class="hsa-headline">Jouw groei is onze missie.</h1> <p class="hsa-sub">Van Google Ads tot SEO — wij zorgen dat je gevonden wordt door klanten die kopen.</p> <div class="hsa-actions"> <a href="#" class="hsa-btn hsa-btn--primary">Gratis gesprek</a> <a href="#" class="hsa-btn hsa-btn--ghost">Onze resultaten</a> </div> </div> <div class="hsa-visual"> <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="" class="hsa-img"> </div> </section>
 
-
+<style>
+.hsa{display:grid;grid-template-columns:1fr 1fr;min-height:90vh;overflow:hidden}
+.hsa-text{display:flex;flex-direction:column;justify-content:center;padding:5rem clamp(2rem,6vw,5rem);background:#fff;clip-path:polygon(0 0,100% 0,92% 100%,0 100%);z-index:1}
+.hsa-eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--hsa-accent);margin-bottom:1.25rem}
+.hsa-headline{font-size:clamp(2.25rem,4vw,4rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;color:#0a0a0a;margin:0 0 1.25rem}
+.hsa-sub{font-size:1.0625rem;color:#6b7280;line-height:1.65;margin:0 0 2.5rem;max-width:440px}
+.hsa-actions{display:flex;gap:.75rem;flex-wrap:wrap}
+.hsa-btn{display:inline-flex;align-items:center;padding:.8125rem 1.75rem;border-radius:.5rem;font-size:.9375rem;font-weight:600;text-decoration:none;transition:all .2s}
+.hsa-btn--primary{background:var(--hsa-accent);color:#fff}
+.hsa-btn--primary:hover{opacity:.9;transform:translateY(-1px)}
+.hsa-btn--ghost{border:1.5px solid #e2e8f0;color:#374151}
+.hsa-visual{overflow:hidden;margin-left:-8%}
+.hsa-img{width:100%;height:100%;object-fit:cover}
+.hsa{grid-template-columns:1fr;min-height:auto}
+.hsa-text{clip-path:none;padding:4rem 1.5rem 2rem}
+.hsa-visual{height:300px;margin:0}
+</style>

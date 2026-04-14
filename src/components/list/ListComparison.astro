@@ -2,6 +2,19 @@
 // ListComparison — recovered from blurr-components.pages.dev
 ---
 
-<div class="lst-cmp" data-astro-cid-dn7scx7d> <div class="lst-cmp__table" data-astro-cid-dn7scx7d> <div class="lst-cmp__head" data-astro-cid-dn7scx7d> <span class="lst-cmp__feature-head" data-astro-cid-dn7scx7d></span> <span class="lst-cmp__col-head lst-cmp__col-head--left" data-astro-cid-dn7scx7d>Zonder BLURR</span> <span class="lst-cmp__col-head lst-cmp__col-head--right" data-astro-cid-dn7scx7d>Met BLURR</span> </div> <div class="lst-cmp__row" data-astro-cid-dn7scx7d> <span class="lst-cmp__label" data-astro-cid-dn7scx7d>Meetbare ROI</span> <span class="lst-cmp__cell" data-astro-cid-dn7scx7d>✗</span> <span class="lst-cmp__cell lst-cmp__cell--yes" data-astro-cid-dn7scx7d>✓</span> </div><div class="lst-cmp__row" data-astro-cid-dn7scx7d> <span class="lst-cmp__label" data-astro-cid-dn7scx7d>Dedicated strategie</span> <span class="lst-cmp__cell" data-astro-cid-dn7scx7d>✗</span> <span class="lst-cmp__cell lst-cmp__cell--yes" data-astro-cid-dn7scx7d>✓</span> </div><div class="lst-cmp__row" data-astro-cid-dn7scx7d> <span class="lst-cmp__label" data-astro-cid-dn7scx7d>Wekelijkse rapportage</span> <span class="lst-cmp__cell" data-astro-cid-dn7scx7d>✗</span> <span class="lst-cmp__cell lst-cmp__cell--yes" data-astro-cid-dn7scx7d>✓</span> </div><div class="lst-cmp__row" data-astro-cid-dn7scx7d> <span class="lst-cmp__label" data-astro-cid-dn7scx7d>Transparante kosten</span> <span class="lst-cmp__cell" data-astro-cid-dn7scx7d>✗</span> <span class="lst-cmp__cell lst-cmp__cell--yes" data-astro-cid-dn7scx7d>✓</span> </div> </div> </div>
+<div class="lst-cmp"> <div class="lst-cmp__table"> <div class="lst-cmp__head"> <span class="lst-cmp__feature-head"></span> <span class="lst-cmp__col-head lst-cmp__col-head--left">Zonder BLURR</span> <span class="lst-cmp__col-head lst-cmp__col-head--right">Met BLURR</span> </div> <div class="lst-cmp__row"> <span class="lst-cmp__label">Meetbare ROI</span> <span class="lst-cmp__cell">✗</span> <span class="lst-cmp__cell lst-cmp__cell--yes">✓</span> </div><div class="lst-cmp__row"> <span class="lst-cmp__label">Dedicated strategie</span> <span class="lst-cmp__cell">✗</span> <span class="lst-cmp__cell lst-cmp__cell--yes">✓</span> </div><div class="lst-cmp__row"> <span class="lst-cmp__label">Wekelijkse rapportage</span> <span class="lst-cmp__cell">✗</span> <span class="lst-cmp__cell lst-cmp__cell--yes">✓</span> </div><div class="lst-cmp__row"> <span class="lst-cmp__label">Transparante kosten</span> <span class="lst-cmp__cell">✗</span> <span class="lst-cmp__cell lst-cmp__cell--yes">✓</span> </div> </div> </div>
 
-
+<style>
+.lst-cmp{overflow-x:auto}
+.lst-cmp__table{min-width:360px;border:1px solid #e5e5e5;border-radius:.75rem;overflow:hidden}
+.lst-cmp__head,.lst-cmp__row{display:grid;grid-template-columns:1fr 120px 120px;align-items:center}
+.lst-cmp__head{background:#f7f7f7;padding:.6rem 1.25rem;border-bottom:1px solid #e5e5e5}
+.lst-cmp__col-head{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;text-align:center}
+.lst-cmp__col-head--left{color:#999}
+.lst-cmp__col-head--right{color:var(--color-accent)}
+.lst-cmp__row{padding:.75rem 1.25rem;border-bottom:1px solid #f0f0f0}
+.lst-cmp__row:last-child{border-bottom:none}
+.lst-cmp__label{font-size:.95rem;color:var(--color-primary)}
+.lst-cmp__cell{text-align:center;font-size:1rem;color:#ccc;font-weight:700}
+.lst-cmp__cell--yes{color:var(--color-accent)}
+</style>

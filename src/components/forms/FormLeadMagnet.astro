@@ -2,6 +2,21 @@
 // FormLeadMagnet — recovered from blurr-components.pages.dev
 ---
 
-<section class="flm" data-astro-cid-jazwrv6l> <div class="flm__box" data-astro-cid-jazwrv6l> <div class="flm__content" data-astro-cid-jazwrv6l> <p class="flm__tag" data-astro-cid-jazwrv6l>Gratis resource</p> <h2 class="flm__headline" data-astro-cid-jazwrv6l>Download de gratis Google Ads gids</h2> <p class="flm__sub" data-astro-cid-jazwrv6l>Voor ambitieuze MKB-ondernemers</p> <p class="flm__benefit" data-astro-cid-jazwrv6l>100% gratis — direct in je inbox</p> </div> <form class="flm__form" novalidate data-astro-cid-jazwrv6l> <input class="flm__input" type="text" placeholder="Voornaam" required data-astro-cid-jazwrv6l> <input class="flm__input" type="email" placeholder="E-mailadres" required data-astro-cid-jazwrv6l> <button class="flm__btn" type="submit" data-astro-cid-jazwrv6l>Stuur mij de gids</button> <p class="flm__privacy" data-astro-cid-jazwrv6l>We respecteren jouw privacy. Afmelden kan altijd.</p> </form> </div> </section>
+<section class="flm"> <div class="flm__box"> <div class="flm__content"> <p class="flm__tag">Gratis resource</p> <h2 class="flm__headline">Download de gratis Google Ads gids</h2> <p class="flm__sub">Voor ambitieuze MKB-ondernemers</p> <p class="flm__benefit">100% gratis — direct in je inbox</p> </div> <form class="flm__form" novalidate> <input class="flm__input" type="text" placeholder="Voornaam" required> <input class="flm__input" type="email" placeholder="E-mailadres" required> <button class="flm__btn" type="submit">Stuur mij de gids</button> <p class="flm__privacy">We respecteren jouw privacy. Afmelden kan altijd.</p> </form> </div> </section>
 
-
+<style>
+.flm{background:var(--color-primary, #0a0a0a);padding:4rem 1.5rem}
+.flm__box{max-width:920px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.flm__tag{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent, #6366f1);margin:0 0 .75rem}
+.flm__headline{font-size:1.75rem;font-weight:700;color:#fff;margin:0 0 .75rem;line-height:1.25}
+.flm__sub{color:#aaa;font-size:.95rem;line-height:1.6;margin:0 0 1rem}
+.flm__benefit{color:#ccc;font-size:.82rem;letter-spacing:.02em;margin:0}
+.flm__form{display:flex;flex-direction:column;gap:.75rem}
+.flm__input{padding:.8rem 1rem;border:1.5px solid #333;border-radius:8px;font-size:.95rem;color:#fff;background:#1a1a1a;outline:none;font-family:inherit;transition:border-color .2s;width:100%;box-sizing:border-box}
+.flm__input::placeholder{color:#666}
+.flm__input:focus{border-color:var(--color-accent, #6366f1)}
+.flm__btn{padding:.9rem 1.5rem;background:var(--color-accent, #6366f1);color:#fff;border:none;border-radius:8px;font-size:.97rem;font-weight:700;cursor:pointer;transition:opacity .2s;width:100%}
+.flm__btn:hover{opacity:.88}
+.flm__privacy{font-size:.75rem;color:#666;text-align:center;margin:0}
+.flm__box{grid-template-columns:1fr;gap:2rem}
+</style>

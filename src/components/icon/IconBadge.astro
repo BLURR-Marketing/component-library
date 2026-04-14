@@ -2,6 +2,16 @@
 // IconBadge — recovered from blurr-components.pages.dev
 ---
 
-<div class="ibdg" data-astro-cid-37e6cp2z> <p class="ibdg__title" data-astro-cid-37e6cp2z>Onze certificeringen</p> <div class="ibdg__list" data-astro-cid-37e6cp2z> <span class="ibdg__badge ibdg__badge--accent" data-astro-cid-37e6cp2z> <span class="ibdg__icon" aria-hidden="true" data-astro-cid-37e6cp2z>🏆</span> Bureau van het jaar </span><span class="ibdg__badge ibdg__badge--success" data-astro-cid-37e6cp2z> <span class="ibdg__icon" aria-hidden="true" data-astro-cid-37e6cp2z>✅</span> Google Partner </span><span class="ibdg__badge ibdg__badge--default" data-astro-cid-37e6cp2z> <span class="ibdg__icon" aria-hidden="true" data-astro-cid-37e6cp2z>⭐</span> 4.9 rating </span><span class="ibdg__badge ibdg__badge--outline" data-astro-cid-37e6cp2z> <span class="ibdg__icon" aria-hidden="true" data-astro-cid-37e6cp2z>🇳🇱</span> Nederlands bureau </span><span class="ibdg__badge ibdg__badge--default" data-astro-cid-37e6cp2z> <span class="ibdg__icon" aria-hidden="true" data-astro-cid-37e6cp2z>🔒</span> ISO gecertificeerd </span><span class="ibdg__badge ibdg__badge--default" data-astro-cid-37e6cp2z> <span class="ibdg__icon" aria-hidden="true" data-astro-cid-37e6cp2z>📱</span> Meta Business Partner </span> </div> </div>
+<div class="ibdg"> <p class="ibdg__title">Onze certificeringen</p> <div class="ibdg__list"> <span class="ibdg__badge ibdg__badge--accent"> <span class="ibdg__icon" aria-hidden="true">🏆</span> Bureau van het jaar </span><span class="ibdg__badge ibdg__badge--success"> <span class="ibdg__icon" aria-hidden="true">✅</span> Google Partner </span><span class="ibdg__badge ibdg__badge--default"> <span class="ibdg__icon" aria-hidden="true">⭐</span> 4.9 rating </span><span class="ibdg__badge ibdg__badge--outline"> <span class="ibdg__icon" aria-hidden="true">🇳🇱</span> Nederlands bureau </span><span class="ibdg__badge ibdg__badge--default"> <span class="ibdg__icon" aria-hidden="true">🔒</span> ISO gecertificeerd </span><span class="ibdg__badge ibdg__badge--default"> <span class="ibdg__icon" aria-hidden="true">📱</span> Meta Business Partner </span> </div> </div>
 
-
+<style>
+.ibdg__title{font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#999;margin:0 0 .75rem}
+.ibdg__list{display:flex;flex-wrap:wrap;gap:.5rem}
+.ibdg__badge{display:inline-flex;align-items:center;gap:.35rem;padding:.3rem .8rem;border-radius:20px;font-size:.82rem;font-weight:600;white-space:nowrap}
+.ibdg__badge--default{background:#f0f0f0;color:#444}
+.ibdg__badge--accent{background:#6366f11f;color:var(--color-accent, #6366f1);border:1px solid rgba(99,102,241,.25)}
+.ibdg__badge--success{background:#16a34a1a;color:#16a34a;border:1px solid rgba(22,163,74,.2)}
+.ibdg__badge--warning{background:#eab3081a;color:#a16207;border:1px solid rgba(234,179,8,.25)}
+.ibdg__badge--outline{background:transparent;color:#666;border:1px solid #ddd}
+.ibdg__icon{font-size:.9rem}
+</style>

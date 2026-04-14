@@ -2,6 +2,21 @@
 // NavDualLine — recovered from blurr-components.pages.dev
 ---
 
-<div class="ndl" data-astro-cid-jgkuhpro> <div class="ndl-top" data-astro-cid-jgkuhpro> <div class="ndl-top-inner" data-astro-cid-jgkuhpro> <div class="ndl-top-links" data-astro-cid-jgkuhpro> <a href="#" class="ndl-top-link" data-astro-cid-jgkuhpro>Privacy</a><a href="#" class="ndl-top-link" data-astro-cid-jgkuhpro>Algemene voorwaarden</a> </div> <div class="ndl-top-right" data-astro-cid-jgkuhpro> <span class="ndl-phone" data-astro-cid-jgkuhpro>📞 020 123 45 67</span> <a href="#" class="ndl-cta" data-astro-cid-jgkuhpro>Gratis gesprek</a> </div> </div> </div> <header class="ndl-main" data-astro-cid-jgkuhpro> <nav class="ndl-main-inner" data-astro-cid-jgkuhpro> <a href="/" class="ndl-logo" data-astro-cid-jgkuhpro>BLURR</a> <ul class="ndl-links" data-astro-cid-jgkuhpro> <li data-astro-cid-jgkuhpro><a href="#" class="ndl-link ndl-link--active" data-astro-cid-jgkuhpro>Diensten</a></li><li data-astro-cid-jgkuhpro><a href="#" class="ndl-link" data-astro-cid-jgkuhpro>Cases</a></li><li data-astro-cid-jgkuhpro><a href="#" class="ndl-link" data-astro-cid-jgkuhpro>Over ons</a></li><li data-astro-cid-jgkuhpro><a href="#" class="ndl-link" data-astro-cid-jgkuhpro>Blog</a></li> </ul> </nav> </header> </div>
+<div class="ndl"> <div class="ndl-top"> <div class="ndl-top-inner"> <div class="ndl-top-links"> <a href="#" class="ndl-top-link">Privacy</a><a href="#" class="ndl-top-link">Algemene voorwaarden</a> </div> <div class="ndl-top-right"> <span class="ndl-phone">📞 020 123 45 67</span> <a href="#" class="ndl-cta">Gratis gesprek</a> </div> </div> </div> <header class="ndl-main"> <nav class="ndl-main-inner"> <a href="/" class="ndl-logo">BLURR</a> <ul class="ndl-links"> <li><a href="#" class="ndl-link ndl-link--active">Diensten</a></li><li><a href="#" class="ndl-link">Cases</a></li><li><a href="#" class="ndl-link">Over ons</a></li><li><a href="#" class="ndl-link">Blog</a></li> </ul> </nav> </header> </div>
 
-
+<style>
+.ndl-top{background:#1e293b}
+.ndl-top-inner{max-width:1280px;margin:0 auto;padding:.4rem 2rem;display:flex;justify-content:space-between;align-items:center}
+.ndl-top-link{font-size:.75rem;color:#ffffffa6;text-decoration:none;margin-right:1rem;transition:color .15s}
+.ndl-top-link:hover{color:#fff}
+.ndl-top-right{display:flex;align-items:center;gap:1rem}
+.ndl-phone{font-size:.75rem;color:#ffffffa6}
+.ndl-cta{font-size:.75rem;font-weight:600;padding:.25rem .75rem;background:var(--color-accent,#6366f1);color:#fff;border-radius:.25rem;text-decoration:none}
+.ndl-main{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:100}
+.ndl-main-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;height:60px;gap:2rem}
+.ndl-logo{font-weight:800;font-size:1.125rem;color:#0a0a0a;text-decoration:none;letter-spacing:-.02em}
+.ndl-links{list-style:none;padding:0;margin:0;display:flex;flex:1;gap:0}
+.ndl-link{display:block;font-size:.875rem;font-weight:500;color:#374151;text-decoration:none;padding:.375rem .875rem;border-radius:.375rem;transition:all .15s}
+.ndl-link:hover,.ndl-link--active{color:var(--color-accent,#6366f1);background:#6366f112}
+.ndl-top,.ndl-links{display:none}
+</style>

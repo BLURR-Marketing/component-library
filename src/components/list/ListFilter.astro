@@ -2,6 +2,12 @@
 // ListFilter — recovered from blurr-components.pages.dev
 ---
 
-<div class="lst-fil" data-astro-cid-ae6qu4nm> <label class="lst-fil__option" data-astro-cid-ae6qu4nm> <input type="radio" name="lst-filter" value="alle" class="lst-fil__radio" checked data-astro-cid-ae6qu4nm> <span class="lst-fil__label" data-astro-cid-ae6qu4nm>Alles</span> </label><label class="lst-fil__option" data-astro-cid-ae6qu4nm> <input type="radio" name="lst-filter" value="ads" class="lst-fil__radio" data-astro-cid-ae6qu4nm> <span class="lst-fil__label" data-astro-cid-ae6qu4nm>Advertenties</span> </label><label class="lst-fil__option" data-astro-cid-ae6qu4nm> <input type="radio" name="lst-filter" value="seo" class="lst-fil__radio" data-astro-cid-ae6qu4nm> <span class="lst-fil__label" data-astro-cid-ae6qu4nm>SEO</span> </label><label class="lst-fil__option" data-astro-cid-ae6qu4nm> <input type="radio" name="lst-filter" value="social" class="lst-fil__radio" data-astro-cid-ae6qu4nm> <span class="lst-fil__label" data-astro-cid-ae6qu4nm>Social</span> </label><label class="lst-fil__option" data-astro-cid-ae6qu4nm> <input type="radio" name="lst-filter" value="content" class="lst-fil__radio" data-astro-cid-ae6qu4nm> <span class="lst-fil__label" data-astro-cid-ae6qu4nm>Content</span> </label> </div>
+<div class="lst-fil"> <label class="lst-fil__option"> <input type="radio" name="lst-filter" value="alle" class="lst-fil__radio" checked> <span class="lst-fil__label">Alles</span> </label><label class="lst-fil__option"> <input type="radio" name="lst-filter" value="ads" class="lst-fil__radio"> <span class="lst-fil__label">Advertenties</span> </label><label class="lst-fil__option"> <input type="radio" name="lst-filter" value="seo" class="lst-fil__radio"> <span class="lst-fil__label">SEO</span> </label><label class="lst-fil__option"> <input type="radio" name="lst-filter" value="social" class="lst-fil__radio"> <span class="lst-fil__label">Social</span> </label><label class="lst-fil__option"> <input type="radio" name="lst-filter" value="content" class="lst-fil__radio"> <span class="lst-fil__label">Content</span> </label> </div>
 
-
+<style>
+.lst-fil{display:flex;flex-wrap:wrap;gap:.5rem}
+.lst-fil__radio{display:none}
+.lst-fil__label{display:inline-block;padding:.4rem .9rem;border-radius:999px;font-size:.875rem;font-weight:600;border:1.5px solid #e0e0e0;color:#555;cursor:pointer;transition:all .2s}
+.lst-fil__label:hover{border-color:var(--color-accent);color:var(--color-accent)}
+.lst-fil__radio:checked+.lst-fil__label{background:var(--color-accent);border-color:var(--color-accent);color:#fff}
+</style>

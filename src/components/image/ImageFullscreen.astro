@@ -2,6 +2,17 @@
 // ImageFullscreen — recovered from blurr-components.pages.dev
 ---
 
-<section class="ifs" data-astro-cid-engxi54t> <div class="ifs__placeholder" aria-label="Fullscreen achtergrond" data-astro-cid-engxi54t></div> <div class="ifs__overlay" data-astro-cid-engxi54t> <div class="ifs__content" data-astro-cid-engxi54t> <p class="ifs__eyebrow" data-astro-cid-engxi54t>Bureau van het jaar 2024</p> <h1 class="ifs__title" data-astro-cid-engxi54t>Marketing die resultaat levert</h1> <p class="ifs__body" data-astro-cid-engxi54t>Meer dan 80 merken kozen BLURR voor structurele groei.</p> <a class="ifs__cta" href="#" data-astro-cid-engxi54t>Start jouw project</a> </div> </div> </section>
+<section class="ifs"> <div class="ifs__placeholder" aria-label="Fullscreen achtergrond"></div> <div class="ifs__overlay"> <div class="ifs__content"> <p class="ifs__eyebrow">Bureau van het jaar 2024</p> <h1 class="ifs__title">Marketing die resultaat levert</h1> <p class="ifs__body">Meer dan 80 merken kozen BLURR voor structurele groei.</p> <a class="ifs__cta" href="#">Start jouw project</a> </div> </div> </section>
 
-
+<style>
+.ifs{position:relative;width:100%;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.ifs__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ifs__placeholder{position:absolute;inset:0;background:linear-gradient(160deg,#0f0f1a,#1a1a3a 60%,#0d0d2b)}
+.ifs__overlay{position:absolute;inset:0;background:#0a0a0a8c;display:flex;align-items:center;justify-content:center;padding:2rem}
+.ifs__content{text-align:center;max-width:800px}
+.ifs__eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--color-accent, #6366f1);margin:0 0 1rem}
+.ifs__title{font-size:clamp(2.5rem,6vw,5rem);font-weight:900;color:#fff;margin:0 0 1.25rem;line-height:1.05}
+.ifs__body{font-size:1.15rem;color:#fffc;margin:0 0 2.5rem;line-height:1.6}
+.ifs__cta{display:inline-block;padding:1rem 2.5rem;background:var(--color-accent, #6366f1);color:#fff;text-decoration:none;border-radius:8px;font-weight:700;font-size:1rem;transition:transform .2s,opacity .2s}
+.ifs__cta:hover{transform:translateY(-2px);opacity:.9}
+</style>

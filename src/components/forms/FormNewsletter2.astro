@@ -2,6 +2,22 @@
 // FormNewsletter2 — recovered from blurr-components.pages.dev
 ---
 
-<section class="fnl2" data-astro-cid-ezwfauag> <div class="fnl2__inner" data-astro-cid-ezwfauag> <div class="fnl2__text" data-astro-cid-ezwfauag> <h2 class="fnl2__headline" data-astro-cid-ezwfauag>Blijf op de hoogte</h2> <p class="fnl2__sub" data-astro-cid-ezwfauag>Wekelijkse marketing tips</p> <div class="fnl2__proof" data-astro-cid-ezwfauag> <div class="fnl2__avatars" aria-hidden="true" data-astro-cid-ezwfauag> <span class="fnl2__avatar" data-astro-cid-ezwfauag>MB</span> <span class="fnl2__avatar" data-astro-cid-ezwfauag>JV</span> <span class="fnl2__avatar" data-astro-cid-ezwfauag>KR</span> <span class="fnl2__avatar" data-astro-cid-ezwfauag>+</span> </div> <span class="fnl2__proof-text" data-astro-cid-ezwfauag>Meer dan 2.400 ondernemers gingen je voor</span> </div> </div> <form class="fnl2__form" novalidate data-astro-cid-ezwfauag> <input class="fnl2__input" type="email" placeholder="jouw@emailadres.nl" required data-astro-cid-ezwfauag> <button class="fnl2__btn" type="submit" data-astro-cid-ezwfauag>Aanmelden</button> <p class="fnl2__privacy" data-astro-cid-ezwfauag>Geen spam. Afmelden in één klik.</p> </form> </div> </section>
+<section class="fnl2"> <div class="fnl2__inner"> <div class="fnl2__text"> <h2 class="fnl2__headline">Blijf op de hoogte</h2> <p class="fnl2__sub">Wekelijkse marketing tips</p> <div class="fnl2__proof"> <div class="fnl2__avatars" aria-hidden="true"> <span class="fnl2__avatar">MB</span> <span class="fnl2__avatar">JV</span> <span class="fnl2__avatar">KR</span> <span class="fnl2__avatar">+</span> </div> <span class="fnl2__proof-text">Meer dan 2.400 ondernemers gingen je voor</span> </div> </div> <form class="fnl2__form" novalidate> <input class="fnl2__input" type="email" placeholder="jouw@emailadres.nl" required> <button class="fnl2__btn" type="submit">Aanmelden</button> <p class="fnl2__privacy">Geen spam. Afmelden in één klik.</p> </form> </div> </section>
 
-
+<style>
+.fnl2{background:#f5f4ff;padding:4.5rem 1.5rem;border-top:1px solid #e8e6ff;border-bottom:1px solid #e8e6ff}
+.fnl2__inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.fnl2__headline{font-size:1.65rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 .6rem;line-height:1.25}
+.fnl2__sub{color:#555;font-size:.95rem;line-height:1.65;margin:0 0 1.25rem}
+.fnl2__proof{display:flex;align-items:center;gap:.75rem}
+.fnl2__avatars{display:flex}
+.fnl2__avatar{width:30px;height:30px;border-radius:50%;background:var(--color-accent, #6366f1);color:#fff;font-size:.65rem;font-weight:700;display:flex;align-items:center;justify-content:center;border:2px solid #f5f4ff;margin-right:-8px}
+.fnl2__proof-text{font-size:.82rem;color:#666;font-weight:500;padding-left:.5rem}
+.fnl2__form{display:flex;flex-direction:column;gap:.75rem}
+.fnl2__input{padding:.85rem 1rem;border:1.5px solid #d4d0fb;border-radius:8px;font-size:.95rem;color:var(--color-primary, #0a0a0a);background:#fff;outline:none;font-family:inherit;transition:border-color .2s;width:100%;box-sizing:border-box}
+.fnl2__input:focus{border-color:var(--color-accent, #6366f1)}
+.fnl2__btn{padding:.9rem 1.5rem;background:var(--color-accent, #6366f1);color:#fff;border:none;border-radius:8px;font-size:.97rem;font-weight:700;cursor:pointer;transition:opacity .2s;width:100%;font-family:inherit}
+.fnl2__btn:hover{opacity:.88}
+.fnl2__privacy{font-size:.75rem;color:#999;text-align:center;margin:0}
+.fnl2__inner{grid-template-columns:1fr;gap:2rem}
+</style>

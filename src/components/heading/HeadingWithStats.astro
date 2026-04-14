@@ -2,6 +2,15 @@
 // HeadingWithStats — recovered from blurr-components.pages.dev
 ---
 
-<div class="hd-stats" data-astro-cid-yc2rq23y> <div class="hd-stats__header" data-astro-cid-yc2rq23y> <span class="hd-stats__eyebrow" data-astro-cid-yc2rq23y>Resultaten</span> <h2 class="hd-stats__title" data-astro-cid-yc2rq23y>Cijfers die bewijzen dat het werkt</h2> </div> <div class="hd-stats__row" data-astro-cid-yc2rq23y> <div class="hd-stats__item" data-astro-cid-yc2rq23y> <span class="hd-stats__value" data-astro-cid-yc2rq23y>3.8×</span> <span class="hd-stats__label" data-astro-cid-yc2rq23y>Gemiddeld ROAS</span> </div><div class="hd-stats__item" data-astro-cid-yc2rq23y> <span class="hd-stats__value" data-astro-cid-yc2rq23y>80+</span> <span class="hd-stats__label" data-astro-cid-yc2rq23y>Tevreden klanten</span> </div><div class="hd-stats__item" data-astro-cid-yc2rq23y> <span class="hd-stats__value" data-astro-cid-yc2rq23y>€12M+</span> <span class="hd-stats__label" data-astro-cid-yc2rq23y>Omzet gegenereerd</span> </div> </div> </div>
+<div class="hd-stats"> <div class="hd-stats__header"> <span class="hd-stats__eyebrow">Resultaten</span> <h2 class="hd-stats__title">Cijfers die bewijzen dat het werkt</h2> </div> <div class="hd-stats__row"> <div class="hd-stats__item"> <span class="hd-stats__value">3.8×</span> <span class="hd-stats__label">Gemiddeld ROAS</span> </div><div class="hd-stats__item"> <span class="hd-stats__value">80+</span> <span class="hd-stats__label">Tevreden klanten</span> </div><div class="hd-stats__item"> <span class="hd-stats__value">€12M+</span> <span class="hd-stats__label">Omzet gegenereerd</span> </div> </div> </div>
 
-
+<style>
+.hd-stats{padding:2.5rem 0}
+.hd-stats__header{margin-bottom:2rem}
+.hd-stats__eyebrow{display:block;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--color-accent);margin-bottom:.5rem}
+.hd-stats__title{margin:0;font-size:clamp(1.75rem,4vw,2.75rem);font-weight:800;color:var(--color-primary);line-height:1.15;letter-spacing:-.02em;max-width:600px}
+.hd-stats__row{display:flex;gap:2.5rem;flex-wrap:wrap;padding-top:2rem;border-top:1px solid #e5e5e5}
+.hd-stats__item{display:flex;flex-direction:column;gap:.25rem}
+.hd-stats__value{font-size:clamp(2rem,4vw,2.75rem);font-weight:900;color:var(--color-accent);line-height:1;letter-spacing:-.03em}
+.hd-stats__label{font-size:.85rem;color:#666;font-weight:500}
+</style>

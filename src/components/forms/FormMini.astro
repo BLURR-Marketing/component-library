@@ -2,6 +2,16 @@
 // FormMini — recovered from blurr-components.pages.dev
 ---
 
-<div class="fmn-wrap" data-astro-cid-43ag7nmm> <span class="fmn-label" data-astro-cid-43ag7nmm>Nieuwsbrief</span> <form class="fmn-form" onsubmit="return false;" novalidate data-astro-cid-43ag7nmm> <input class="fmn-input" type="email" name="email" placeholder="Jouw e-mailadres" required autocomplete="email" aria-label="Jouw e-mailadres" data-astro-cid-43ag7nmm> <button class="fmn-btn" type="submit" data-astro-cid-43ag7nmm>Aanmelden</button> </form> <p class="fmn-hint" data-astro-cid-43ag7nmm>Geen spam. Afmelden kan altijd.</p> </div>
+<div class="fmn-wrap"> <span class="fmn-label">Nieuwsbrief</span> <form class="fmn-form" onsubmit="return false;" novalidate> <input class="fmn-input" type="email" name="email" placeholder="Jouw e-mailadres" required autocomplete="email" aria-label="Jouw e-mailadres"> <button class="fmn-btn" type="submit">Aanmelden</button> </form> <p class="fmn-hint">Geen spam. Afmelden kan altijd.</p> </div>
 
-
+<style>
+.fmn-wrap{display:inline-flex;flex-direction:column;gap:.5rem}
+.fmn-label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--color-accent, #6366f1)}
+.fmn-form{display:flex;align-items:stretch;background:#fff;border:1.5px solid #ddd;border-radius:8px;overflow:hidden;transition:border-color .2s,box-shadow .2s}
+.fmn-form:focus-within{border-color:var(--color-accent, #6366f1);box-shadow:0 0 0 3px #6366f11f}
+.fmn-input{flex:1;padding:.65rem .9rem;border:none;font-size:.9rem;color:var(--color-primary, #0a0a0a);background:transparent;font-family:inherit;min-width:0}
+.fmn-input:focus{outline:none}
+.fmn-btn{padding:.65rem 1.1rem;background:var(--color-accent, #6366f1);color:#fff;border:none;font-size:.875rem;font-weight:600;cursor:pointer;transition:opacity .2s;white-space:nowrap;flex-shrink:0}
+.fmn-btn:hover{opacity:.88}
+.fmn-hint{font-size:.72rem;color:#aaa;margin:0}
+</style>

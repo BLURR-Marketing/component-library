@@ -2,6 +2,23 @@
 // FormContact — recovered from blurr-components.pages.dev
 ---
 
-<section class="fct fct--white" data-astro-cid-gq7hmdmz> <div class="fct-inner" data-astro-cid-gq7hmdmz> <div class="fct-header" data-astro-cid-gq7hmdmz> <h2 class="fct-headline" data-astro-cid-gq7hmdmz>Neem contact op</h2> <p class="fct-sub" data-astro-cid-gq7hmdmz>We reageren binnen één werkdag.</p> </div> <form class="fct-form" onsubmit="return false;" data-astro-cid-gq7hmdmz> <div class="fct-row" data-astro-cid-gq7hmdmz> <div class="fct-field" data-astro-cid-gq7hmdmz> <label class="fct-label" for="fct-name" data-astro-cid-gq7hmdmz>Naam *</label> <input id="fct-name" type="text" class="fct-input" placeholder="Jan Jansen" required data-astro-cid-gq7hmdmz> </div> <div class="fct-field" data-astro-cid-gq7hmdmz> <label class="fct-label" for="fct-email" data-astro-cid-gq7hmdmz>E-mail *</label> <input id="fct-email" type="email" class="fct-input" placeholder="jan@bedrijf.nl" required data-astro-cid-gq7hmdmz> </div> </div> <div class="fct-field" data-astro-cid-gq7hmdmz> <label class="fct-label" for="fct-subject" data-astro-cid-gq7hmdmz>Onderwerp</label> <input id="fct-subject" type="text" class="fct-input" placeholder="Waar kunnen we je mee helpen?" data-astro-cid-gq7hmdmz> </div> <div class="fct-field" data-astro-cid-gq7hmdmz> <label class="fct-label" for="fct-message" data-astro-cid-gq7hmdmz>Bericht *</label> <textarea id="fct-message" class="fct-textarea" rows="5" placeholder="Vertel ons meer..." required data-astro-cid-gq7hmdmz></textarea> </div> <button type="submit" class="fct-submit" data-astro-cid-gq7hmdmz>Verstuur bericht</button> </form> </div> </section>
+<section class="fct fct--white"> <div class="fct-inner"> <div class="fct-header"> <h2 class="fct-headline">Neem contact op</h2> <p class="fct-sub">We reageren binnen één werkdag.</p> </div> <form class="fct-form" onsubmit="return false;"> <div class="fct-row"> <div class="fct-field"> <label class="fct-label" for="fct-name">Naam *</label> <input id="fct-name" type="text" class="fct-input" placeholder="Jan Jansen" required> </div> <div class="fct-field"> <label class="fct-label" for="fct-email">E-mail *</label> <input id="fct-email" type="email" class="fct-input" placeholder="jan@bedrijf.nl" required> </div> </div> <div class="fct-field"> <label class="fct-label" for="fct-subject">Onderwerp</label> <input id="fct-subject" type="text" class="fct-input" placeholder="Waar kunnen we je mee helpen?"> </div> <div class="fct-field"> <label class="fct-label" for="fct-message">Bericht *</label> <textarea id="fct-message" class="fct-textarea" rows="5" placeholder="Vertel ons meer..." required></textarea> </div> <button type="submit" class="fct-submit">Verstuur bericht</button> </form> </div> </section>
 
-
+<style>
+.fct{padding:4rem 2rem}
+.fct--white{background:#fff}
+.fct--light{background:#f8fafc}
+.fct-inner{max-width:680px;margin:0 auto}
+.fct-header{margin-bottom:2rem}
+.fct-headline{font-size:clamp(1.5rem,3vw,2.25rem);font-weight:900;color:#0a0a0a;letter-spacing:-.03em;margin:0 0 .5rem}
+.fct-sub{font-size:1rem;color:#6b7280;margin:0}
+.fct-form{display:flex;flex-direction:column;gap:1.25rem}
+.fct-row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.fct-field{display:flex;flex-direction:column;gap:.375rem}
+.fct-label{font-size:.875rem;font-weight:600;color:#374151}
+.fct-input,.fct-textarea{padding:.75rem 1rem;border:1.5px solid #d1d5db;border-radius:.5rem;font-size:.9375rem;color:#0a0a0a;background:#fff;outline:none;transition:border-color .15s;resize:vertical;font-family:inherit}
+.fct-input:focus,.fct-textarea:focus{border-color:var(--color-accent,#6366f1)}
+.fct-submit{padding:.875rem 2rem;background:var(--color-accent,#6366f1);color:#fff;font-weight:700;font-size:.9375rem;border:none;border-radius:.5rem;cursor:pointer;transition:opacity .2s;align-self:flex-start}
+.fct-submit:hover{opacity:.88}
+.fct-row{grid-template-columns:1fr}
+</style>

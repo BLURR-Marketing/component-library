@@ -2,6 +2,12 @@
 // HeadingNumber — recovered from blurr-components.pages.dev
 ---
 
-<div class="hd-number" data-astro-cid-lcr76io6> <span class="hd-number__num" data-astro-cid-lcr76io6>01</span> <div class="hd-number__content" data-astro-cid-lcr76io6> <h2 class="hd-number__title" data-astro-cid-lcr76io6>Strategie &amp; Analyse</h2> <p class="hd-number__sub" data-astro-cid-lcr76io6>We starten altijd met diepgaand onderzoek naar jouw markt.</p> </div> </div>
+<div class="hd-number"> <span class="hd-number__num">01</span> <div class="hd-number__content"> <h2 class="hd-number__title">Strategie &amp; Analyse</h2> <p class="hd-number__sub">We starten altijd met diepgaand onderzoek naar jouw markt.</p> </div> </div>
 
-
+<style>
+.hd-number{display:flex;align-items:flex-start;gap:1.5rem;padding:2rem 0}
+.hd-number__num{font-size:clamp(3rem,8vw,5rem);font-weight:900;line-height:1;color:var(--color-accent);opacity:.25;flex-shrink:0;letter-spacing:-.04em}
+.hd-number__content{padding-top:.5rem}
+.hd-number__title{margin:0 0 .5rem;font-size:clamp(1.5rem,3.5vw,2.25rem);font-weight:800;color:var(--color-primary);line-height:1.2}
+.hd-number__sub{margin:0;font-size:1rem;color:#666;line-height:1.6}
+</style>

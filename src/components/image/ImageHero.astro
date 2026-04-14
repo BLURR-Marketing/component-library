@@ -2,6 +2,14 @@
 // ImageHero — recovered from blurr-components.pages.dev
 ---
 
-<section class="ih" style="--ih-height: 80vh" data-astro-cid-ooki34zn> <div class="ih__placeholder" aria-label="Hero afbeelding" data-astro-cid-ooki34zn></div> <div class="ih__overlay" data-astro-cid-ooki34zn> <div class="ih__content" data-astro-cid-ooki34zn> <h1 class="ih__title" data-astro-cid-ooki34zn>Resultaten die spreken voor zich</h1> <p class="ih__subtitle" data-astro-cid-ooki34zn>Van strategie tot uitvoering — wij bouwen merken die groeien.</p> </div> </div> </section>
+<section class="ih" style="--ih-height: 80vh"> <div class="ih__placeholder" aria-label="Hero afbeelding"></div> <div class="ih__overlay"> <div class="ih__content"> <h1 class="ih__title">Resultaten die spreken voor zich</h1> <p class="ih__subtitle">Van strategie tot uitvoering — wij bouwen merken die groeien.</p> </div> </div> </section>
 
-
+<style>
+.ih{position:relative;width:100%;height:var(--ih-height, 80vh);overflow:hidden}
+.ih__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.ih__placeholder{position:absolute;inset:0;background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460)}
+.ih__overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.7) 0%,rgba(10,10,10,.2) 60%,transparent 100%);display:flex;align-items:flex-end;padding:3rem}
+.ih__content{max-width:720px}
+.ih__title{font-size:clamp(2rem,5vw,4rem);font-weight:800;color:#fff;margin:0 0 1rem;line-height:1.1}
+.ih__subtitle{font-size:clamp(1rem,2vw,1.25rem);color:#ffffffd9;margin:0;line-height:1.6}
+</style>

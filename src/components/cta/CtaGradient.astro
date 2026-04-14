@@ -2,6 +2,27 @@
 // CtaGradient — recovered from blurr-components.pages.dev
 ---
 
-<section class="cg" data-component="cta-gradient" style="--cg-from:#6366f1;--cg-to:#8b5cf6;" data-astro-cid-tjebafiy> <!-- Animated blobs --> <div class="cg__blob cg__blob--1" aria-hidden="true" data-astro-cid-tjebafiy></div> <div class="cg__blob cg__blob--2" aria-hidden="true" data-astro-cid-tjebafiy></div> <!-- Noise --> <div class="cg__noise" aria-hidden="true" data-astro-cid-tjebafiy></div> <div class="cg__content" data-astro-cid-tjebafiy> <p class="cg__eyebrow" data-astro-cid-tjebafiy>Klaar om te starten?</p> <h2 class="cg__headline" data-astro-cid-tjebafiy>Laten we jouw <em>groei</em> bouwen</h2> <p class="cg__sub" data-astro-cid-tjebafiy>Boek een gratis strategie-gesprek. Geen verplichtingen — wel concrete inzichten.</p> <div class="cg__actions" data-astro-cid-tjebafiy> <a href="#" class="cg__cta-primary" data-astro-cid-tjebafiy>Plan een gesprek</a> <a href="#" class="cg__cta-secondary" data-astro-cid-tjebafiy> Bekijk cases <svg width="14" height="14" viewBox="0 0 14 14" fill="none" data-astro-cid-tjebafiy> <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-tjebafiy></path> </svg> </a> </div> </div> </section>
+<section class="cg" data-component="cta-gradient" style="--cg-from:#6366f1;--cg-to:#8b5cf6;"> <!-- Animated blobs --> <div class="cg__blob cg__blob--1" aria-hidden="true"></div> <div class="cg__blob cg__blob--2" aria-hidden="true"></div> <!-- Noise --> <div class="cg__noise" aria-hidden="true"></div> <div class="cg__content"> <p class="cg__eyebrow">Klaar om te starten?</p> <h2 class="cg__headline">Laten we jouw <em>groei</em> bouwen</h2> <p class="cg__sub">Boek een gratis strategie-gesprek. Geen verplichtingen — wel concrete inzichten.</p> <div class="cg__actions"> <a href="#" class="cg__cta-primary">Plan een gesprek</a> <a href="#" class="cg__cta-secondary"> Bekijk cases <svg width="14" height="14" viewBox="0 0 14 14" fill="none"> <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </a> </div> </div> </section>
 
-
+<style>
+.cg{position:relative;padding:7rem 1.5rem;overflow:hidden;background:linear-gradient(135deg,var(--cg-from, #6366f1) 0%,var(--cg-to, #8b5cf6) 100%);text-align:center}
+.cg__blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.3;pointer-events:none}
+.cg__blob--1{width:60vw;height:60vw;background:#ffffff4d;top:-30%;right:-20%;animation:cg-float-1 20s ease-in-out infinite}
+.cg__blob--2{width:40vw;height:40vw;background:#0003;bottom:-20%;left:-15%;animation:cg-float-2 16s ease-in-out infinite}
+.cg__noise{position:absolute;inset:0;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:256px;pointer-events:none}
+.cg__content{position:relative;z-index:1;max-width:680px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:0}
+.cg__eyebrow{display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(255,255,255,.3);background:#ffffff1a;padding:.375rem 1rem;border-radius:999px;font-size:.8125rem;font-weight:600;color:#ffffffe6;letter-spacing:.04em;margin-bottom:1.75rem}
+.cg__headline{font-size:clamp(2.25rem,5vw,4rem);font-weight:900;line-height:1.05;letter-spacing:-.04em;color:#fff;margin-bottom:1.25rem}
+.cg__headline em{font-style:normal;opacity:.75}
+.cg__headline strong{-webkit-text-stroke:1.5px rgba(255,255,255,.6);-webkit-text-fill-color:transparent;color:transparent}
+.cg__sub{font-size:1.0625rem;line-height:1.65;color:#ffffffb3;max-width:48ch;margin-bottom:2.5rem}
+.cg__actions{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;justify-content:center}
+.cg__cta-primary{display:inline-flex;align-items:center;background:#fff;color:var(--cg-from, #6366f1);padding:1rem 2.25rem;border-radius:var(--radius, .5rem);font-weight:800;font-size:.9375rem;text-decoration:none;box-shadow:0 4px 24px #00000026;transition:transform .2s,box-shadow .2s}
+.cg__cta-primary:hover{transform:translateY(-3px);box-shadow:0 8px 32px #0003}
+.cg__cta-secondary{display:inline-flex;align-items:center;gap:.5rem;font-size:.9375rem;font-weight:600;color:#fffc;text-decoration:none;transition:color .2s,gap .2s}
+.cg__cta-secondary:hover{color:#fff;gap:.75rem}
+.cg__blob--1,.cg__blob--2{animation:none}
+.cg{padding:5rem 1.25rem}
+.cg__actions{flex-direction:column;width:100%}
+.cg__cta-primary{width:100%;justify-content:center}
+</style>

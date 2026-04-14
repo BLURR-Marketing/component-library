@@ -2,6 +2,20 @@
 // ImageWithCaption — recovered from blurr-components.pages.dev
 ---
 
-<figure class="iwc__figure iwc__figure--contained" data-astro-cid-hpr634cm> <div class="iwc__img-wrap iwc__img-wrap--rounded" style="aspect-ratio: 16/9;" data-astro-cid-hpr634cm> <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1600&q=80" alt="BLURR team in vergadering" class="iwc__img" loading="lazy" decoding="async" data-astro-cid-hpr634cm> </div> <figcaption class="iwc__meta" data-astro-cid-hpr634cm> <p class="iwc__caption" data-astro-cid-hpr634cm>Het BLURR team tijdens een strategiesessie met een van onze grootste klanten, Amsterdam 2024.</p> <span class="iwc__credit" data-astro-cid-hpr634cm>Foto: Studio Kees van Dam</span> </figcaption> </figure>
+<figure class="iwc__figure iwc__figure--contained"> <div class="iwc__img-wrap iwc__img-wrap--rounded" style="aspect-ratio: 16/9;"> <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1600&q=80" alt="BLURR team in vergadering" class="iwc__img" loading="lazy" decoding="async"> </div> <figcaption class="iwc__meta"> <p class="iwc__caption">Het BLURR team tijdens een strategiesessie met een van onze grootste klanten, Amsterdam 2024.</p> <span class="iwc__credit">Foto: Studio Kees van Dam</span> </figcaption> </figure>
 
-
+<style>
+.iwc__figure{margin:2.5rem 0;padding:0;opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
+.iwc__figure--visible{opacity:1;transform:translateY(0)}
+.iwc__figure--full{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw)}
+.iwc__figure--contained{max-width:960px;margin-left:auto;margin-right:auto;padding:0 1.5rem}
+.iwc__figure--narrow{max-width:640px;margin-left:auto;margin-right:auto;padding:0 1.5rem}
+.iwc__img-wrap{overflow:hidden;width:100%}
+.iwc__img-wrap--rounded{border-radius:var(--radius)}
+.iwc__img-wrap[style*=aspect-ratio] .iwc__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.iwc__img-wrap[style*=aspect-ratio]{position:relative}
+.iwc__img{display:block;width:100%;height:auto;object-fit:cover}
+.iwc__meta{margin:0;padding:.625rem 0 0;border-top:1px solid #e5e7eb;display:flex;flex-direction:column;gap:.25rem}
+.iwc__caption{margin:0;font-size:.875rem;font-style:italic;color:var(--color-muted);line-height:1.5}
+.iwc__credit{font-size:.75rem;color:#9ca3af;letter-spacing:.02em}
+</style>

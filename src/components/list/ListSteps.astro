@@ -2,6 +2,14 @@
 // ListSteps — recovered from blurr-components.pages.dev
 ---
 
-<div class="lst-steps" data-astro-cid-usgarwia> <div class="lst-steps__step" data-astro-cid-usgarwia> <div class="lst-steps__header" data-astro-cid-usgarwia> <span class="lst-steps__n" data-astro-cid-usgarwia>01</span> <strong class="lst-steps__title" data-astro-cid-usgarwia>Boek een gratis gesprek</strong> </div> <p class="lst-steps__desc" data-astro-cid-usgarwia>Geen verplichtingen.</p> </div><div class="lst-steps__step" data-astro-cid-usgarwia> <div class="lst-steps__header" data-astro-cid-usgarwia> <span class="lst-steps__n" data-astro-cid-usgarwia>02</span> <strong class="lst-steps__title" data-astro-cid-usgarwia>Ontvang jouw strategie</strong> </div> <p class="lst-steps__desc" data-astro-cid-usgarwia>Binnen 5 werkdagen.</p> </div><div class="lst-steps__step" data-astro-cid-usgarwia> <div class="lst-steps__header" data-astro-cid-usgarwia> <span class="lst-steps__n" data-astro-cid-usgarwia>03</span> <strong class="lst-steps__title" data-astro-cid-usgarwia>Start met groeien</strong> </div> <p class="lst-steps__desc" data-astro-cid-usgarwia>Campagnes live binnen 2 weken.</p> </div> </div>
+<div class="lst-steps"> <div class="lst-steps__step"> <div class="lst-steps__header"> <span class="lst-steps__n">01</span> <strong class="lst-steps__title">Boek een gratis gesprek</strong> </div> <p class="lst-steps__desc">Geen verplichtingen.</p> </div><div class="lst-steps__step"> <div class="lst-steps__header"> <span class="lst-steps__n">02</span> <strong class="lst-steps__title">Ontvang jouw strategie</strong> </div> <p class="lst-steps__desc">Binnen 5 werkdagen.</p> </div><div class="lst-steps__step"> <div class="lst-steps__header"> <span class="lst-steps__n">03</span> <strong class="lst-steps__title">Start met groeien</strong> </div> <p class="lst-steps__desc">Campagnes live binnen 2 weken.</p> </div> </div>
 
-
+<style>
+.lst-steps{display:flex;flex-direction:column;gap:0}
+.lst-steps__step{padding:1.5rem 0;border-bottom:1px solid #efefef}
+.lst-steps__step:last-child{border-bottom:none}
+.lst-steps__header{display:flex;align-items:baseline;gap:.75rem;margin-bottom:.5rem}
+.lst-steps__n{font-size:.7rem;font-weight:800;letter-spacing:.1em;color:var(--color-accent);font-variant-numeric:tabular-nums}
+.lst-steps__title{font-size:1.1rem;font-weight:700;color:var(--color-primary)}
+.lst-steps__desc{margin:0;font-size:.9rem;color:#666;line-height:1.6;padding-left:1.75rem}
+</style>

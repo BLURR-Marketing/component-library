@@ -2,6 +2,16 @@
 // ImageGrid2x2 — recovered from blurr-components.pages.dev
 ---
 
-<section class="ig22" data-astro-cid-udqkwhyp> <h2 class="ig22__title" data-astro-cid-udqkwhyp>Ons werk</h2> <div class="ig22__grid" data-astro-cid-udqkwhyp> <div class="ig22__item" data-astro-cid-udqkwhyp> <div class="ig22__placeholder" aria-label="Project Alpha" data-astro-cid-udqkwhyp></div> <span class="ig22__caption" data-astro-cid-udqkwhyp>Branding &amp; Identiteit</span> </div><div class="ig22__item" data-astro-cid-udqkwhyp> <div class="ig22__placeholder" aria-label="Project Beta" data-astro-cid-udqkwhyp></div> <span class="ig22__caption" data-astro-cid-udqkwhyp>Web Development</span> </div><div class="ig22__item" data-astro-cid-udqkwhyp> <div class="ig22__placeholder" aria-label="Project Gamma" data-astro-cid-udqkwhyp></div> <span class="ig22__caption" data-astro-cid-udqkwhyp>Performance Ads</span> </div><div class="ig22__item" data-astro-cid-udqkwhyp> <div class="ig22__placeholder" aria-label="Project Delta" data-astro-cid-udqkwhyp></div> <span class="ig22__caption" data-astro-cid-udqkwhyp>Social Media</span> </div> </div> </section>
+<section class="ig22"> <h2 class="ig22__title">Ons werk</h2> <div class="ig22__grid"> <div class="ig22__item"> <div class="ig22__placeholder" aria-label="Project Alpha"></div> <span class="ig22__caption">Branding &amp; Identiteit</span> </div><div class="ig22__item"> <div class="ig22__placeholder" aria-label="Project Beta"></div> <span class="ig22__caption">Web Development</span> </div><div class="ig22__item"> <div class="ig22__placeholder" aria-label="Project Gamma"></div> <span class="ig22__caption">Performance Ads</span> </div><div class="ig22__item"> <div class="ig22__placeholder" aria-label="Project Delta"></div> <span class="ig22__caption">Social Media</span> </div> </div> </section>
 
-
+<style>
+.ig22{padding:3rem 0}
+.ig22__title{font-size:2rem;font-weight:700;color:var(--color-primary, #0a0a0a);margin:0 0 2rem;text-align:center}
+.ig22__grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.ig22__item{position:relative;overflow:hidden;border-radius:8px;aspect-ratio:4/3}
+.ig22__img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+.ig22__item:hover .ig22__img{transform:scale(1.04)}
+.ig22__placeholder{width:100%;height:100%;background:linear-gradient(135deg,#e0e0f0,#c8c8e8)}
+.ig22__caption{position:absolute;bottom:.75rem;left:.75rem;background:#0a0a0ab3;color:#fff;font-size:.8rem;font-weight:600;padding:.25rem .6rem;border-radius:4px}
+.ig22__grid{grid-template-columns:1fr}
+</style>

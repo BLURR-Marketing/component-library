@@ -2,6 +2,32 @@
 // HeroFloatingTestimonial — recovered from blurr-components.pages.dev
 ---
 
-<section class="hft" data-component="hero-floating-testimonial" data-astro-cid-hhjjerjl> <div class="hft__inner" data-astro-cid-hhjjerjl> <!-- Left: text content --> <div class="hft__content" data-astro-cid-hhjjerjl> <span class="hft__badge" data-astro-cid-hhjjerjl>Nieuw in 2025</span> <h1 class="hft__headline" data-astro-cid-hhjjerjl>Meer klanten via <em>slimme</em> marketing</h1> <p class="hft__sub" data-astro-cid-hhjjerjl>Wij bouwen campagnes die converteren. Geen aannames, wel resultaten die je kunt zien.</p> <div class="hft__ctas" data-astro-cid-hhjjerjl> <a href="#" class="hft__cta hft__cta--primary" data-astro-cid-hhjjerjl>Gratis gesprek plannen</a> <a href="#" class="hft__cta hft__cta--ghost" data-astro-cid-hhjjerjl>Bekijk cases</a> </div> </div> <!-- Right: image + floating testimonial --> <div class="hft__visual" data-astro-cid-hhjjerjl> <div class="hft__img-wrap" data-astro-cid-hhjjerjl> <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80" alt="" class="hft__img" loading="eager" data-astro-cid-hhjjerjl> <div class="hft__testimonial" data-astro-cid-hhjjerjl> <svg class="hft__quote-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" data-astro-cid-hhjjerjl> <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" data-astro-cid-hhjjerjl></path> </svg> <p class="hft__testimonial-text" data-astro-cid-hhjjerjl>Binnen 6 weken verdubbelde onze lead-stroom. BLURR begrijpt echt wat wij nodig hebben.</p> <div class="hft__testimonial-author" data-astro-cid-hhjjerjl>  <div data-astro-cid-hhjjerjl> <div class="hft__author-name" data-astro-cid-hhjjerjl>Sarah van den Berg</div> <div class="hft__author-role" data-astro-cid-hhjjerjl>Marketing Director, TechCorp</div> </div> </div> </div> </div> </div> </div> </section>
+<section class="hft" data-component="hero-floating-testimonial"> <div class="hft__inner"> <!-- Left: text content --> <div class="hft__content"> <span class="hft__badge">Nieuw in 2025</span> <h1 class="hft__headline">Meer klanten via <em>slimme</em> marketing</h1> <p class="hft__sub">Wij bouwen campagnes die converteren. Geen aannames, wel resultaten die je kunt zien.</p> <div class="hft__ctas"> <a href="#" class="hft__cta hft__cta--primary">Gratis gesprek plannen</a> <a href="#" class="hft__cta hft__cta--ghost">Bekijk cases</a> </div> </div> <!-- Right: image + floating testimonial --> <div class="hft__visual"> <div class="hft__img-wrap"> <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80" alt="" class="hft__img" loading="eager"> <div class="hft__testimonial"> <svg class="hft__quote-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"> <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path> </svg> <p class="hft__testimonial-text">Binnen 6 weken verdubbelde onze lead-stroom. BLURR begrijpt echt wat wij nodig hebben.</p> <div class="hft__testimonial-author">  <div> <div class="hft__author-name">Sarah van den Berg</div> <div class="hft__author-role">Marketing Director, TechCorp</div> </div> </div> </div> </div> </div> </div> </section>
 
-
+<style>
+.hft{background:var(--color-bg, #fff);padding:5rem 1.5rem 4rem;overflow:hidden}
+.hft__inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.hft__badge{display:inline-block;background:color-mix(in srgb,var(--color-accent, #6366f1) 12%,transparent);color:var(--color-accent, #6366f1);font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.35rem .85rem;border-radius:100px;margin-bottom:1.25rem}
+.hft__headline{font-size:clamp(2.25rem,4vw,3.5rem);font-weight:800;line-height:1.1;letter-spacing:-.03em;color:var(--color-primary, #0a0a0a);margin-bottom:1.25rem}
+.hft__headline em{font-style:normal;color:var(--color-accent, #6366f1)}
+.hft__sub{font-size:1.125rem;color:var(--color-muted, #6b7280);line-height:1.65;margin-bottom:2rem;max-width:42ch}
+.hft__ctas{display:flex;gap:.75rem;flex-wrap:wrap}
+.hft__cta{display:inline-flex;align-items:center;gap:.5rem;padding:.8125rem 1.75rem;border-radius:var(--radius, .5rem);font-size:.9375rem;font-weight:700;text-decoration:none;transition:all .2s}
+.hft__cta--primary{background:var(--color-accent, #6366f1);color:#fff}
+.hft__cta--primary:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.hft__cta--ghost{color:var(--color-primary, #0a0a0a);border:1.5px solid currentColor;opacity:.7}
+.hft__cta--ghost:hover{opacity:1}
+.hft__visual{position:relative}
+.hft__img-wrap{position:relative;border-radius:calc(var(--radius, .5rem) * 2);overflow:visible}
+.hft__img{width:100%;height:480px;object-fit:cover;border-radius:calc(var(--radius, .5rem) * 2);display:block}
+.hft__testimonial{position:absolute;bottom:-2rem;left:-2.5rem;background:#fff;border:1px solid rgba(0,0,0,.07);border-radius:calc(var(--radius, .5rem) * 1.5);padding:1.25rem 1.5rem;max-width:300px;box-shadow:0 20px 40px #0000001a}
+.hft__quote-icon{color:var(--color-accent, #6366f1);margin-bottom:.625rem;opacity:.7}
+.hft__testimonial-text{font-size:.875rem;line-height:1.6;color:var(--color-primary, #0a0a0a);margin-bottom:.875rem}
+.hft__testimonial-author{display:flex;align-items:center;gap:.625rem}
+.hft__avatar{width:32px;height:32px;border-radius:50%;object-fit:cover}
+.hft__author-name{font-size:.8125rem;font-weight:700;color:var(--color-primary, #0a0a0a)}
+.hft__author-role{font-size:.75rem;color:var(--color-muted, #6b7280)}
+.hft__inner{grid-template-columns:1fr;gap:2rem}
+.hft__testimonial{position:static;margin-top:1rem;max-width:100%}
+.hft__img{height:300px}
+</style>

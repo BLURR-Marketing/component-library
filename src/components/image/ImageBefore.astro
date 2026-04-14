@@ -2,6 +2,24 @@
 // ImageBefore — recovered from blurr-components.pages.dev
 ---
 
-<section class="iba" data-astro-cid-w4o7gmd6> <h2 class="iba__title" data-astro-cid-w4o7gmd6>Transformatie in actie</h2> <div class="iba__wrapper" data-astro-cid-w4o7gmd6> <div class="iba__panel iba__panel--before" data-astro-cid-w4o7gmd6> <div class="iba__placeholder iba__placeholder--before" aria-label="Voor" data-astro-cid-w4o7gmd6></div> <span class="iba__label iba__label--before" data-astro-cid-w4o7gmd6>Voor</span> </div> <div class="iba__divider" aria-hidden="true" data-astro-cid-w4o7gmd6> <span class="iba__divider-line" data-astro-cid-w4o7gmd6></span> <span class="iba__divider-icon" data-astro-cid-w4o7gmd6>↔</span> <span class="iba__divider-line" data-astro-cid-w4o7gmd6></span> </div> <div class="iba__panel iba__panel--after" data-astro-cid-w4o7gmd6> <div class="iba__placeholder iba__placeholder--after" aria-label="Na" data-astro-cid-w4o7gmd6></div> <span class="iba__label iba__label--after" data-astro-cid-w4o7gmd6>Na</span> </div> </div> </section>
+<section class="iba"> <h2 class="iba__title">Transformatie in actie</h2> <div class="iba__wrapper"> <div class="iba__panel iba__panel--before"> <div class="iba__placeholder iba__placeholder--before" aria-label="Voor"></div> <span class="iba__label iba__label--before">Voor</span> </div> <div class="iba__divider" aria-hidden="true"> <span class="iba__divider-line"></span> <span class="iba__divider-icon">↔</span> <span class="iba__divider-line"></span> </div> <div class="iba__panel iba__panel--after"> <div class="iba__placeholder iba__placeholder--after" aria-label="Na"></div> <span class="iba__label iba__label--after">Na</span> </div> </div> </section>
 
-
+<style>
+.iba{padding:2rem 0}
+.iba__title{font-size:2rem;font-weight:700;color:var(--color-primary, #0a0a0a);text-align:center;margin:0 0 2rem}
+.iba__wrapper{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;gap:0;border-radius:12px;overflow:hidden;border:1px solid #e0e0e0}
+.iba__panel{position:relative;aspect-ratio:4/3}
+.iba__img{width:100%;height:100%;object-fit:cover}
+.iba__placeholder{width:100%;height:100%}
+.iba__placeholder--before{background:linear-gradient(135deg,#d0d0d0,#b0b0b0)}
+.iba__placeholder--after{background:linear-gradient(135deg,#c8d8f0,#a8c0e8)}
+.iba__label{position:absolute;top:1rem;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .75rem;border-radius:20px}
+.iba__label--before{left:1rem;background:#333;color:#fff}
+.iba__label--after{right:1rem;background:var(--color-accent, #6366f1);color:#fff}
+.iba__divider{display:flex;flex-direction:column;align-items:center;justify-content:center;width:2.5rem;background:#fff;gap:.5rem;padding:1rem 0}
+.iba__divider-line{display:block;width:1px;flex:1;background:#e0e0e0}
+.iba__divider-icon{font-size:1rem;color:var(--color-accent, #6366f1);font-weight:700}
+.iba__wrapper{grid-template-columns:1fr;grid-template-rows:1fr auto 1fr}
+.iba__divider{flex-direction:row;width:100%;height:2.5rem}
+.iba__divider-line{width:auto;flex:1;height:1px}
+</style>

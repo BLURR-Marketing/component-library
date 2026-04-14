@@ -2,6 +2,36 @@
 // HeroCenteredMinimal — recovered from blurr-components.pages.dev
 ---
 
-<section class="hcm hcm--bg-white" data-component="hero-centered-minimal" data-astro-cid-mxpxxv2z> <div class="hcm__inner" data-astro-cid-mxpxxv2z> <div class="hcm__label" data-astro-cid-mxpxxv2z> <span class="hcm__label-dot" data-astro-cid-mxpxxv2z></span> Nu beschikbaar </div> <h1 class="hcm__headline" data-astro-cid-mxpxxv2z>Marketing die <em>écht</em> werkt</h1> <p class="hcm__sub" data-astro-cid-mxpxxv2z>Eén bureau voor Google, Meta, SEO en Webdesign. Transparant, datagedreven en altijd bereikbaar.</p> <div class="hcm__ctas" data-astro-cid-mxpxxv2z> <a href="#" class="hcm__cta hcm__cta--primary" data-astro-cid-mxpxxv2z>Begin vandaag</a> <a href="#" class="hcm__cta hcm__cta--ghost" data-astro-cid-mxpxxv2z>Bekijk prijzen</a> </div> <p class="hcm__trust" data-astro-cid-mxpxxv2z>✓ Geen contract · ✓ Resultaat in 30 dagen · ✓ Gratis onboarding</p> </div> </section>
+<section class="hcm hcm--bg-white" data-component="hero-centered-minimal"> <div class="hcm__inner"> <div class="hcm__label"> <span class="hcm__label-dot"></span> Nu beschikbaar </div> <h1 class="hcm__headline">Marketing die <em>écht</em> werkt</h1> <p class="hcm__sub">Eén bureau voor Google, Meta, SEO en Webdesign. Transparant, datagedreven en altijd bereikbaar.</p> <div class="hcm__ctas"> <a href="#" class="hcm__cta hcm__cta--primary">Begin vandaag</a> <a href="#" class="hcm__cta hcm__cta--ghost">Bekijk prijzen</a> </div> <p class="hcm__trust">✓ Geen contract · ✓ Resultaat in 30 dagen · ✓ Gratis onboarding</p> </div> </section>
 
-
+<style>
+.hcm{padding:7rem 1.5rem 6rem;text-align:center}
+.hcm--bg-white{background:var(--color-bg, #fff)}
+.hcm--bg-light{background:#f5f5f7}
+.hcm--bg-dark{background:var(--color-primary, #0a0a0a);color:#fff}
+.hcm--bg-accent{background:var(--color-accent, #6366f1);color:#fff}
+.hcm__inner{max-width:760px;margin:0 auto}
+.hcm__label{display:inline-flex;align-items:center;gap:.5rem;font-size:.8125rem;font-weight:600;letter-spacing:.04em;margin-bottom:1.5rem;padding:.375rem 1rem;border-radius:100px;border:1px solid currentColor;opacity:.5}
+.hcm--bg-dark .hcm__label,.hcm--bg-accent .hcm__label{color:#fff;border-color:#ffffff4d;opacity:.8}
+.hcm__label-dot{width:6px;height:6px;border-radius:50%;background:var(--color-accent, #6366f1);flex-shrink:0}
+.hcm--bg-accent .hcm__label-dot{background:#fff}
+.hcm__headline{font-size:clamp(2.75rem,6vw,5rem);font-weight:800;line-height:1.05;letter-spacing:-.04em;color:var(--color-primary, #0a0a0a);margin-bottom:1.5rem}
+.hcm--bg-dark .hcm__headline,.hcm--bg-accent .hcm__headline{color:#fff}
+.hcm__headline em{font-style:normal;color:var(--color-accent, #6366f1)}
+.hcm--bg-accent .hcm__headline em{color:#ffffffbf}
+.hcm__sub{font-size:1.1875rem;line-height:1.65;color:var(--color-muted, #6b7280);margin-bottom:2.5rem;max-width:52ch;margin-left:auto;margin-right:auto}
+.hcm--bg-dark .hcm__sub,.hcm--bg-accent .hcm__sub{color:#ffffffa6}
+.hcm__ctas{display:flex;gap:.875rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem}
+.hcm__cta{display:inline-block;padding:.9375rem 2rem;border-radius:var(--radius, .5rem);font-weight:700;font-size:1rem;text-decoration:none;transition:all .2s}
+.hcm__cta--primary{background:var(--color-accent, #6366f1);color:#fff}
+.hcm--bg-accent .hcm__cta--primary{background:#fff;color:var(--color-accent, #6366f1)}
+.hcm__cta--primary:hover{filter:brightness(1.1);transform:translateY(-2px);box-shadow:0 8px 24px #00000026}
+.hcm__cta--ghost{border:1.5px solid var(--color-primary, #0a0a0a);color:var(--color-primary, #0a0a0a);opacity:.7}
+.hcm--bg-dark .hcm__cta--ghost,.hcm--bg-accent .hcm__cta--ghost{border-color:#fff6;color:#fff}
+.hcm__cta--ghost:hover{opacity:1}
+.hcm__trust{font-size:.8125rem;color:var(--color-muted, #6b7280)}
+.hcm--bg-dark .hcm__trust,.hcm--bg-accent .hcm__trust{color:#ffffff73}
+.hcm{padding:4rem 1.25rem}
+.hcm__cta{width:100%;text-align:center}
+.hcm__ctas{flex-direction:column;align-items:center}
+</style>

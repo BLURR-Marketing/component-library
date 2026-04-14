@@ -2,6 +2,17 @@
 // ListLinks — recovered from blurr-components.pages.dev
 ---
 
-<ul class="lst-lnk" data-astro-cid-m5x777ov> <li class="lst-lnk__item" data-astro-cid-m5x777ov> <a href="#" class="lst-lnk__link" data-astro-cid-m5x777ov> <div data-astro-cid-m5x777ov> <span class="lst-lnk__label" data-astro-cid-m5x777ov>Onze werkwijze</span> <span class="lst-lnk__desc" data-astro-cid-m5x777ov>Hoe wij van strategie naar resultaat gaan</span> </div> <span class="lst-lnk__arrow" aria-hidden="true" data-astro-cid-m5x777ov>→</span> </a> </li><li class="lst-lnk__item" data-astro-cid-m5x777ov> <a href="#" class="lst-lnk__link" data-astro-cid-m5x777ov> <div data-astro-cid-m5x777ov> <span class="lst-lnk__label" data-astro-cid-m5x777ov>Case studies</span> <span class="lst-lnk__desc" data-astro-cid-m5x777ov>Bewijs dat onze aanpak werkt</span> </div> <span class="lst-lnk__arrow" aria-hidden="true" data-astro-cid-m5x777ov>→</span> </a> </li><li class="lst-lnk__item" data-astro-cid-m5x777ov> <a href="#" class="lst-lnk__link" data-astro-cid-m5x777ov> <div data-astro-cid-m5x777ov> <span class="lst-lnk__label" data-astro-cid-m5x777ov>Tarieven</span> <span class="lst-lnk__desc" data-astro-cid-m5x777ov>Transparant en eerlijk geprijsd</span> </div> <span class="lst-lnk__arrow" aria-hidden="true" data-astro-cid-m5x777ov>→</span> </a> </li><li class="lst-lnk__item" data-astro-cid-m5x777ov> <a href="#" class="lst-lnk__link" data-astro-cid-m5x777ov> <div data-astro-cid-m5x777ov> <span class="lst-lnk__label" data-astro-cid-m5x777ov>Contact</span> <span class="lst-lnk__desc" data-astro-cid-m5x777ov>Plan een gratis kennismaking</span> </div> <span class="lst-lnk__arrow" aria-hidden="true" data-astro-cid-m5x777ov>→</span> </a> </li> </ul>
+<ul class="lst-lnk"> <li class="lst-lnk__item"> <a href="#" class="lst-lnk__link"> <div> <span class="lst-lnk__label">Onze werkwijze</span> <span class="lst-lnk__desc">Hoe wij van strategie naar resultaat gaan</span> </div> <span class="lst-lnk__arrow" aria-hidden="true">→</span> </a> </li><li class="lst-lnk__item"> <a href="#" class="lst-lnk__link"> <div> <span class="lst-lnk__label">Case studies</span> <span class="lst-lnk__desc">Bewijs dat onze aanpak werkt</span> </div> <span class="lst-lnk__arrow" aria-hidden="true">→</span> </a> </li><li class="lst-lnk__item"> <a href="#" class="lst-lnk__link"> <div> <span class="lst-lnk__label">Tarieven</span> <span class="lst-lnk__desc">Transparant en eerlijk geprijsd</span> </div> <span class="lst-lnk__arrow" aria-hidden="true">→</span> </a> </li><li class="lst-lnk__item"> <a href="#" class="lst-lnk__link"> <div> <span class="lst-lnk__label">Contact</span> <span class="lst-lnk__desc">Plan een gratis kennismaking</span> </div> <span class="lst-lnk__arrow" aria-hidden="true">→</span> </a> </li> </ul>
 
-
+<style>
+.lst-lnk{list-style:none;margin:0;padding:0}
+.lst-lnk__item{border-bottom:1px solid #efefef}
+.lst-lnk__item:last-child{border-bottom:none}
+.lst-lnk__link{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 0;text-decoration:none;color:inherit;transition:color .2s}
+.lst-lnk__link:hover{color:var(--color-accent)}
+.lst-lnk__label{display:block;font-size:.975rem;font-weight:600;color:var(--color-primary);transition:color .2s}
+.lst-lnk__link:hover .lst-lnk__label{color:var(--color-accent)}
+.lst-lnk__desc{display:block;font-size:.825rem;color:#888;margin-top:.1rem}
+.lst-lnk__arrow{color:var(--color-accent);font-size:1rem;flex-shrink:0;transition:transform .2s}
+.lst-lnk__link:hover .lst-lnk__arrow{transform:translate(3px)}
+</style>

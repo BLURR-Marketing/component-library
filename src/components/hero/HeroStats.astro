@@ -2,6 +2,30 @@
 // HeroStats — recovered from blurr-components.pages.dev
 ---
 
-<section class="hst hst--light" data-astro-cid-levxrrbs> <div class="hst-hero" data-astro-cid-levxrrbs> <p class="hst-eyebrow" data-astro-cid-levxrrbs>Bewezen resultaten</p> <h1 class="hst-headline" data-astro-cid-levxrrbs>Marketing die je kunt meten.</h1> <p class="hst-sub" data-astro-cid-levxrrbs>Wij leveren resultaat dat zichtbaar is in je Google Analytics.</p> <div class="hst-actions" data-astro-cid-levxrrbs> <a href="#" class="hst-btn hst-btn--primary" data-astro-cid-levxrrbs>Plan gratis gesprek</a> <a href="#" class="hst-btn hst-btn--ghost" data-astro-cid-levxrrbs>Bekijk cases →</a> </div> </div> <div class="hst-stats-bar" data-astro-cid-levxrrbs> <div class="hst-stat" data-astro-cid-levxrrbs> <span class="hst-stat-value" data-astro-cid-levxrrbs>€12M+</span> <span class="hst-stat-label" data-astro-cid-levxrrbs>Gegenereerde omzet</span> </div><div class="hst-stat" data-astro-cid-levxrrbs> <span class="hst-stat-value" data-astro-cid-levxrrbs>4.2×</span> <span class="hst-stat-label" data-astro-cid-levxrrbs>Gemiddeld ROAS</span> </div><div class="hst-stat" data-astro-cid-levxrrbs> <span class="hst-stat-value" data-astro-cid-levxrrbs>80+</span> <span class="hst-stat-label" data-astro-cid-levxrrbs>Tevreden klanten</span> </div><div class="hst-stat" data-astro-cid-levxrrbs> <span class="hst-stat-value" data-astro-cid-levxrrbs>93%</span> <span class="hst-stat-label" data-astro-cid-levxrrbs>Klantretentie</span> </div> </div> </section>
+<section class="hst hst--light"> <div class="hst-hero"> <p class="hst-eyebrow">Bewezen resultaten</p> <h1 class="hst-headline">Marketing die je kunt meten.</h1> <p class="hst-sub">Wij leveren resultaat dat zichtbaar is in je Google Analytics.</p> <div class="hst-actions"> <a href="#" class="hst-btn hst-btn--primary">Plan gratis gesprek</a> <a href="#" class="hst-btn hst-btn--ghost">Bekijk cases →</a> </div> </div> <div class="hst-stats-bar"> <div class="hst-stat"> <span class="hst-stat-value">€12M+</span> <span class="hst-stat-label">Gegenereerde omzet</span> </div><div class="hst-stat"> <span class="hst-stat-value">4.2×</span> <span class="hst-stat-label">Gemiddeld ROAS</span> </div><div class="hst-stat"> <span class="hst-stat-value">80+</span> <span class="hst-stat-label">Tevreden klanten</span> </div><div class="hst-stat"> <span class="hst-stat-value">93%</span> <span class="hst-stat-label">Klantretentie</span> </div> </div> </section>
 
-
+<style>
+.hst{background:#fff}
+.hst--light{background:#f8fafc}
+.hst--dark{background:#0f172a;color:#fff}
+.hst-hero{padding:6rem 2rem 4rem;text-align:center;max-width:760px;margin:0 auto}
+.hst-eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--color-accent,#6366f1);margin-bottom:1rem}
+.hst-headline{font-size:clamp(2.5rem,5vw,4.5rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin:0 0 1.25rem}
+.hst--dark .hst-headline{color:#fff}
+.hst-sub{font-size:1.125rem;color:#64748b;line-height:1.65;max-width:560px;margin:0 auto 2.5rem}
+.hst--dark .hst-sub{color:#ffffff8c}
+.hst-actions{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
+.hst-btn{display:inline-flex;align-items:center;padding:.8125rem 2rem;border-radius:.5rem;font-size:.9375rem;font-weight:600;text-decoration:none;transition:all .2s}
+.hst-btn--primary{background:var(--color-accent,#6366f1);color:#fff}
+.hst-btn--primary:hover{opacity:.9}
+.hst-btn--ghost{border:1.5px solid currentColor;color:inherit;opacity:.7}
+.hst-btn--ghost:hover{opacity:1}
+.hst-stats-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));border-top:1px solid rgba(0,0,0,.06)}
+.hst--dark .hst-stats-bar{border-color:#ffffff14}
+.hst-stat{padding:2rem;text-align:center;border-right:1px solid rgba(0,0,0,.06)}
+.hst--dark .hst-stat{border-color:#ffffff14}
+.hst-stat:last-child{border-right:none}
+.hst-stat-value{display:block;font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;color:var(--color-accent,#6366f1);letter-spacing:-.02em}
+.hst-stat-label{display:block;font-size:.8125rem;color:#64748b;margin-top:.25rem}
+.hst--dark .hst-stat-label{color:#fff6}
+</style>

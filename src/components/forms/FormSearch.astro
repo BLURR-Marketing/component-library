@@ -2,6 +2,24 @@
 // FormSearch — recovered from blurr-components.pages.dev
 ---
 
-<div class="fsr-wrap fsr-wrap--md" data-astro-cid-nnradtoh> <form class="fsr-form" onsubmit="return false;" role="search" data-astro-cid-nnradtoh> <div class="fsr-input-wrap" data-astro-cid-nnradtoh> <span class="fsr-icon" aria-hidden="true" data-astro-cid-nnradtoh> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-nnradtoh><circle cx="11" cy="11" r="8" data-astro-cid-nnradtoh></circle><line x1="21" y1="21" x2="16.65" y2="16.65" data-astro-cid-nnradtoh></line></svg> </span> <input class="fsr-input" type="search" name="q" placeholder="Zoek naar diensten, cases of blogs..." aria-label="Zoekterm" autocomplete="off" data-astro-cid-nnradtoh> <button class="fsr-submit" type="submit" data-astro-cid-nnradtoh>Zoeken</button> </div> <div class="fsr-filters" role="group" aria-label="Zoekfilters" data-astro-cid-nnradtoh> <label class="fsr-filter" data-astro-cid-nnradtoh> <input class="fsr-filter-input" type="radio" name="filter" value="Alles" checked data-astro-cid-nnradtoh> <span class="fsr-filter-label" data-astro-cid-nnradtoh>Alles</span> </label><label class="fsr-filter" data-astro-cid-nnradtoh> <input class="fsr-filter-input" type="radio" name="filter" value="Cases" data-astro-cid-nnradtoh> <span class="fsr-filter-label" data-astro-cid-nnradtoh>Cases</span> </label><label class="fsr-filter" data-astro-cid-nnradtoh> <input class="fsr-filter-input" type="radio" name="filter" value="Blogs" data-astro-cid-nnradtoh> <span class="fsr-filter-label" data-astro-cid-nnradtoh>Blogs</span> </label><label class="fsr-filter" data-astro-cid-nnradtoh> <input class="fsr-filter-input" type="radio" name="filter" value="Diensten" data-astro-cid-nnradtoh> <span class="fsr-filter-label" data-astro-cid-nnradtoh>Diensten</span> </label><label class="fsr-filter" data-astro-cid-nnradtoh> <input class="fsr-filter-input" type="radio" name="filter" value="Team" data-astro-cid-nnradtoh> <span class="fsr-filter-label" data-astro-cid-nnradtoh>Team</span> </label> </div> </form> </div>
+<div class="fsr-wrap fsr-wrap--md"> <form class="fsr-form" onsubmit="return false;" role="search"> <div class="fsr-input-wrap"> <span class="fsr-icon" aria-hidden="true"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> </span> <input class="fsr-input" type="search" name="q" placeholder="Zoek naar diensten, cases of blogs..." aria-label="Zoekterm" autocomplete="off"> <button class="fsr-submit" type="submit">Zoeken</button> </div> <div class="fsr-filters" role="group" aria-label="Zoekfilters"> <label class="fsr-filter"> <input class="fsr-filter-input" type="radio" name="filter" value="Alles" checked> <span class="fsr-filter-label">Alles</span> </label><label class="fsr-filter"> <input class="fsr-filter-input" type="radio" name="filter" value="Cases"> <span class="fsr-filter-label">Cases</span> </label><label class="fsr-filter"> <input class="fsr-filter-input" type="radio" name="filter" value="Blogs"> <span class="fsr-filter-label">Blogs</span> </label><label class="fsr-filter"> <input class="fsr-filter-input" type="radio" name="filter" value="Diensten"> <span class="fsr-filter-label">Diensten</span> </label><label class="fsr-filter"> <input class="fsr-filter-input" type="radio" name="filter" value="Team"> <span class="fsr-filter-label">Team</span> </label> </div> </form> </div>
 
-
+<style>
+.fsr-wrap{width:100%;max-width:700px}
+.fsr-form{display:flex;flex-direction:column;gap:.875rem}
+.fsr-input-wrap{display:flex;align-items:center;background:#fff;border:2px solid #ddd;border-radius:10px;overflow:hidden;transition:border-color .2s,box-shadow .2s}
+.fsr-input-wrap:focus-within{border-color:var(--color-accent, #6366f1);box-shadow:0 0 0 3px #6366f11f}
+.fsr-icon{padding:0 .75rem 0 1rem;color:#aaa;display:flex;align-items:center;flex-shrink:0}
+.fsr-input{flex:1;border:none;padding:.85rem .5rem;font-size:.975rem;color:var(--color-primary, #0a0a0a);background:transparent;font-family:inherit}
+.fsr-wrap--lg .fsr-input{padding:1.1rem .5rem;font-size:1.1rem}
+.fsr-wrap--sm .fsr-input{padding:.6rem .5rem;font-size:.875rem}
+.fsr-input:focus{outline:none}
+.fsr-input::-webkit-search-cancel-button{display:none}
+.fsr-submit{padding:.75rem 1.25rem;background:var(--color-accent, #6366f1);color:#fff;border:none;font-size:.9rem;font-weight:600;cursor:pointer;transition:opacity .2s;white-space:nowrap;flex-shrink:0}
+.fsr-submit:hover{opacity:.88}
+.fsr-filters{display:flex;gap:.4rem;flex-wrap:wrap}
+.fsr-filter{cursor:pointer}
+.fsr-filter-input{display:none}
+.fsr-filter-label{display:block;padding:.35rem .85rem;background:#f5f5f5;color:#555;border-radius:20px;font-size:.8rem;font-weight:500;border:1.5px solid transparent;transition:all .15s}
+.fsr-filter-input:checked+.fsr-filter-label{background:#eef2ff;color:var(--color-accent, #6366f1);border-color:var(--color-accent, #6366f1);font-weight:600}
+</style>

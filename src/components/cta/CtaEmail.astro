@@ -2,6 +2,35 @@
 // CtaEmail — recovered from blurr-components.pages.dev
 ---
 
-<section class="cte__section cte__bg-light cte__layout-inline" data-astro-cid-f5kwtbiz> <div class="cte__inner" data-astro-cid-f5kwtbiz> <h2 class="cte__headline" data-astro-cid-f5kwtbiz>Ontvang wekelijkse groei-tips</h2> <p class="cte__sub" data-astro-cid-f5kwtbiz>Praktisch advies over Google Ads, Meta en SEO. Elke dinsdag in je inbox.</p> <form class="cte__form" action="#" method="post" novalidate data-astro-cid-f5kwtbiz> <div class="cte__pill" data-astro-cid-f5kwtbiz> <label class="cte__label-sr" for="cte-email" data-astro-cid-f5kwtbiz>E-mailadres</label> <input class="cte__input" id="cte-email" type="email" name="email" placeholder="jouw@email.nl" autocomplete="email" required data-astro-cid-f5kwtbiz> <button class="cte__btn" type="submit" data-astro-cid-f5kwtbiz>Aanmelden</button> </div> <p class="cte__disclaimer" data-astro-cid-f5kwtbiz>Geen spam. Uitschrijven kan altijd.</p> </form> </div> </section>
+<section class="cte__section cte__bg-light cte__layout-inline"> <div class="cte__inner"> <h2 class="cte__headline">Ontvang wekelijkse groei-tips</h2> <p class="cte__sub">Praktisch advies over Google Ads, Meta en SEO. Elke dinsdag in je inbox.</p> <form class="cte__form" action="#" method="post" novalidate> <div class="cte__pill"> <label class="cte__label-sr" for="cte-email">E-mailadres</label> <input class="cte__input" id="cte-email" type="email" name="email" placeholder="jouw@email.nl" autocomplete="email" required> <button class="cte__btn" type="submit">Aanmelden</button> </div> <p class="cte__disclaimer">Geen spam. Uitschrijven kan altijd.</p> </form> </div> </section>
 
-
+<style>
+.cte__section{padding:5rem 1.5rem}
+.cte__inner{max-width:560px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:1rem;text-align:center}
+.cte__layout-stacked .cte__inner{max-width:420px}
+.cte__bg-white{background:var(--color-bg)}
+.cte__bg-light{background:#f9fafb}
+.cte__bg-accent{background:var(--color-accent)}
+.cte__bg-dark{background:var(--color-primary)}
+.cte__bg-accent .cte__headline,.cte__bg-dark .cte__headline{color:#fff}
+.cte__bg-accent .cte__sub,.cte__bg-dark .cte__sub,.cte__bg-accent .cte__disclaimer,.cte__bg-dark .cte__disclaimer{color:#ffffffbf}
+.cte__headline{margin:0;font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;letter-spacing:-.02em;color:var(--color-primary);line-height:1.2}
+.cte__sub{margin:0;font-size:1.0625rem;line-height:1.65;color:var(--color-muted)}
+.cte__label-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.cte__form{width:100%;display:flex;flex-direction:column;gap:.75rem}
+.cte__pill{display:flex;align-items:center;background:#fff;border:1.5px solid rgba(0,0,0,.12);border-radius:999px;padding:.25rem .25rem .25rem 1.25rem;gap:.5rem;width:100%;transition:border-color .2s ease,box-shadow .2s ease}
+.cte__pill:focus-within{border-color:var(--color-accent);box-shadow:0 0 0 3px #6366f126}
+.cte__bg-accent .cte__pill,.cte__bg-dark .cte__pill{background:#ffffff1f;border-color:#ffffff40}
+.cte__input{flex:1;border:none;outline:none;background:transparent;font-size:.9375rem;color:var(--color-primary);min-width:0}
+.cte__input::placeholder{color:var(--color-muted)}
+.cte__bg-accent .cte__input,.cte__bg-dark .cte__input{color:#fff}
+.cte__bg-accent .cte__input::placeholder,.cte__bg-dark .cte__input::placeholder{color:#fff9}
+.cte__stack{display:flex;flex-direction:column;gap:.625rem;width:100%}
+.cte__layout-stacked .cte__input{width:100%;padding:.75rem 1rem;border:1.5px solid rgba(0,0,0,.12);border-radius:var(--radius);font-size:.9375rem;color:var(--color-primary);background:#fff;transition:border-color .2s ease,box-shadow .2s ease}
+.cte__layout-stacked .cte__input:focus{border-color:var(--color-accent);box-shadow:0 0 0 3px #6366f126;outline:none}
+.cte__btn{display:inline-flex;align-items:center;justify-content:center;padding:.625rem 1.25rem;border-radius:999px;background:var(--color-accent);color:#fff;font-size:.9375rem;font-weight:700;border:none;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:opacity .2s ease}
+.cte__btn:hover{opacity:.88}
+.cte__bg-accent .cte__btn,.cte__bg-dark .cte__btn{background:#fff;color:var(--color-primary)}
+.cte__btn--full{width:100%;padding:.75rem 1.25rem;border-radius:var(--radius)}
+.cte__disclaimer{margin:0;font-size:.8125rem;color:var(--color-muted);line-height:1.5}
+</style>

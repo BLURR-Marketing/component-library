@@ -2,6 +2,16 @@
 // ImageCinematic — recovered from blurr-components.pages.dev
 ---
 
-<figure class="icin" data-astro-cid-5avxkbz3> <div class="icin__frame" data-astro-cid-5avxkbz3> <div class="icin__bars" aria-hidden="true" data-astro-cid-5avxkbz3></div> <img class="icin__img" src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80" alt="Modern kantoor interieur in zwart-wit stijl" loading="lazy" data-astro-cid-5avxkbz3> <div class="icin__overlay" data-astro-cid-5avxkbz3></div> <div class="icin__bars icin__bars--bottom" aria-hidden="true" data-astro-cid-5avxkbz3></div> </div> <figcaption class="icin__caption" data-astro-cid-5avxkbz3>BLURR kantoor, Amsterdam 2025.</figcaption> </figure>
+<figure class="icin"> <div class="icin__frame"> <div class="icin__bars" aria-hidden="true"></div> <img class="icin__img" src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80" alt="Modern kantoor interieur in zwart-wit stijl" loading="lazy"> <div class="icin__overlay"></div> <div class="icin__bars icin__bars--bottom" aria-hidden="true"></div> </div> <figcaption class="icin__caption">BLURR kantoor, Amsterdam 2025.</figcaption> </figure>
 
-
+<style>
+.icin{margin:0;padding:2rem 0;overflow:hidden}
+.icin__frame{position:relative;width:100%;aspect-ratio:21/9;overflow:hidden}
+.icin__img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(20%) brightness(.85)}
+.icin__overlay{position:absolute;inset:0;background:#0a0a0a4d}
+.icin__bars{position:absolute;left:0;right:0;top:0;height:80px;background:var(--color-primary, #0a0a0a);z-index:1}
+.icin__bars--bottom{top:auto;bottom:0}
+.icin__caption{display:block;text-align:center;font-size:.78rem;color:#aaa;font-style:italic;margin:.85rem 1.5rem 0;letter-spacing:.02em;line-height:1.6}
+.icin__frame{aspect-ratio:16/9}
+.icin__bars{height:48px}
+</style>

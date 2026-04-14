@@ -2,6 +2,17 @@
 // NavUnderline — recovered from blurr-components.pages.dev
 ---
 
-<header class="nu" data-astro-cid-iuxk24qt> <nav class="nu-inner" data-astro-cid-iuxk24qt> <a href="/" class="nu-logo" data-astro-cid-iuxk24qt>BLURR</a> <ul class="nu-links" data-astro-cid-iuxk24qt> <li data-astro-cid-iuxk24qt><a href="#" class="nu-link nu-link--active" data-astro-cid-iuxk24qt>Diensten</a></li><li data-astro-cid-iuxk24qt><a href="#" class="nu-link" data-astro-cid-iuxk24qt>Cases</a></li><li data-astro-cid-iuxk24qt><a href="#" class="nu-link" data-astro-cid-iuxk24qt>Over ons</a></li><li data-astro-cid-iuxk24qt><a href="#" class="nu-link" data-astro-cid-iuxk24qt>Blog</a></li><li data-astro-cid-iuxk24qt><a href="#" class="nu-link" data-astro-cid-iuxk24qt>Contact</a></li> </ul> <a href="tel:+31201234567" class="nu-cta" data-astro-cid-iuxk24qt>Bel ons</a> </nav> </header>
+<header class="nu"> <nav class="nu-inner"> <a href="/" class="nu-logo">BLURR</a> <ul class="nu-links"> <li><a href="#" class="nu-link nu-link--active">Diensten</a></li><li><a href="#" class="nu-link">Cases</a></li><li><a href="#" class="nu-link">Over ons</a></li><li><a href="#" class="nu-link">Blog</a></li><li><a href="#" class="nu-link">Contact</a></li> </ul> <a href="tel:+31201234567" class="nu-cta">Bel ons</a> </nav> </header>
 
-
+<style>
+.nu{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:100}
+.nu-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;height:64px;gap:2rem}
+.nu-logo{font-weight:800;font-size:1.0625rem;color:#0a0a0a;text-decoration:none;letter-spacing:-.02em}
+.nu-links{list-style:none;padding:0;margin:0;display:flex;flex:1;gap:0;height:100%}
+.nu-link{display:flex;align-items:center;font-size:.875rem;font-weight:500;color:#6b7280;text-decoration:none;padding:0 .875rem;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;height:100%;box-sizing:border-box}
+.nu-link:hover{color:#0a0a0a}
+.nu-link--active{color:var(--color-accent,#6366f1);border-bottom-color:var(--color-accent,#6366f1)}
+.nu-cta{margin-left:auto;font-size:.875rem;font-weight:600;padding:.5rem 1.25rem;background:var(--color-accent,#6366f1);color:#fff;border-radius:.5rem;text-decoration:none;transition:opacity .2s;white-space:nowrap}
+.nu-cta:hover{opacity:.88}
+.nu-links{display:none}
+</style>

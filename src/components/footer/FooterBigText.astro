@@ -2,6 +2,35 @@
 // FooterBigText — recovered from blurr-components.pages.dev
 ---
 
-<footer class="fbt fbt--dark" data-astro-cid-bc2pcish> <div class="fbt-inner" data-astro-cid-bc2pcish> <div class="fbt-top" data-astro-cid-bc2pcish> <a href="/" class="fbt-logo" data-astro-cid-bc2pcish>BLURR</a> <p class="fbt-tagline" data-astro-cid-bc2pcish>Online marketing bureau dat resultaten bewijst.</p> <nav class="fbt-links" data-astro-cid-bc2pcish> <a href="#" class="fbt-link" data-astro-cid-bc2pcish>Diensten</a><a href="#" class="fbt-link" data-astro-cid-bc2pcish>Cases</a><a href="#" class="fbt-link" data-astro-cid-bc2pcish>Contact</a> </nav> </div> <div class="fbt-big-wrap" aria-hidden="true" data-astro-cid-bc2pcish> <span class="fbt-big" data-astro-cid-bc2pcish>BLURR</span> </div> </div> <div class="fbt-bottom" data-astro-cid-bc2pcish> <div class="fbt-bottom-inner" data-astro-cid-bc2pcish> <p class="fbt-copy" data-astro-cid-bc2pcish>© 2026 BLURR</p> </div> </div> </footer>
+<footer class="fbt fbt--dark"> <div class="fbt-inner"> <div class="fbt-top"> <a href="/" class="fbt-logo">BLURR</a> <p class="fbt-tagline">Online marketing bureau dat resultaten bewijst.</p> <nav class="fbt-links"> <a href="#" class="fbt-link">Diensten</a><a href="#" class="fbt-link">Cases</a><a href="#" class="fbt-link">Contact</a> </nav> </div> <div class="fbt-big-wrap" aria-hidden="true"> <span class="fbt-big">BLURR</span> </div> </div> <div class="fbt-bottom"> <div class="fbt-bottom-inner"> <p class="fbt-copy">© 2026 BLURR</p> </div> </div> </footer>
 
-
+<style>
+.fbt{overflow:hidden;position:relative}
+.fbt--dark{background:#0a0a0a}
+.fbt--white{background:#fff;border-top:1px solid #e5e7eb}
+.fbt-inner{max-width:1280px;margin:0 auto;padding:3.5rem 2rem 0}
+.fbt-top{position:relative;z-index:2;padding-bottom:2rem}
+.fbt--dark .fbt-logo{color:#fff}
+.fbt--white .fbt-logo{color:#0a0a0a}
+.fbt-logo{font-weight:900;font-size:1.25rem;text-decoration:none;letter-spacing:-.03em;display:block;margin-bottom:.75rem}
+.fbt-tagline{font-size:.9375rem;line-height:1.6;margin:0 0 1.5rem}
+.fbt--dark .fbt-tagline{color:#ffffff73}
+.fbt--white .fbt-tagline{color:#6b7280}
+.fbt-links{display:flex;flex-wrap:wrap;gap:1.25rem}
+.fbt-link{font-size:.875rem;text-decoration:none;transition:color .15s}
+.fbt--dark .fbt-link{color:#ffffff80}
+.fbt--dark .fbt-link:hover{color:#fff}
+.fbt--white .fbt-link{color:#6b7280}
+.fbt--white .fbt-link:hover{color:#0a0a0a}
+.fbt-big-wrap{overflow:hidden;margin:-1rem -2rem 0}
+.fbt-big{display:block;font-size:clamp(5rem,18vw,14rem);font-weight:900;letter-spacing:-.05em;line-height:.85;white-space:nowrap;padding:0 1rem}
+.fbt--dark .fbt-big{color:#ffffff0a}
+.fbt--white .fbt-big{color:#0000000a}
+.fbt-bottom{position:relative;z-index:2}
+.fbt--dark .fbt-bottom{border-top:1px solid rgba(255,255,255,.06)}
+.fbt--white .fbt-bottom{border-top:1px solid #f1f5f9}
+.fbt-bottom-inner{max-width:1280px;margin:0 auto;padding:1.25rem 2rem}
+.fbt-copy{font-size:.8125rem;margin:0}
+.fbt--dark .fbt-copy{color:#ffffff40}
+.fbt--white .fbt-copy{color:#9ca3af}
+</style>
