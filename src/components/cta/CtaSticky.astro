@@ -1,0 +1,48 @@
+---
+// CtaSticky — recovered from blurr-components.pages.dev
+---
+
+<div id="cts-bar-sytgn2" class="cts__bar cts__bg-dark" role="complementary" aria-label="Sticky call to action" data-show-after="400" data-astro-cid-wqdsz7mp> <div class="cts__inner" data-astro-cid-wqdsz7mp> <p class="cts__text" data-astro-cid-wqdsz7mp>Gratis audit aanvragen — normaal €299</p> <div class="cts__actions" data-astro-cid-wqdsz7mp> <a class="cts__btn" href="#" data-astro-cid-wqdsz7mp>Ja, ik wil een gratis audit</a> <a class="cts__secondary" href="#" data-astro-cid-wqdsz7mp>Meer info</a> <button class="cts__close" type="button" aria-label="Sluiten" data-astro-cid-wqdsz7mp> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" data-astro-cid-wqdsz7mp> <path d="M2 2l12 12M14 2L2 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" data-astro-cid-wqdsz7mp></path> </svg> </button> </div> </div> </div> <script>(function(){const barId = "cts-bar-sytgn2";
+const showAfter = 400;
+const dismissible = true;
+
+  (function () {
+    const bar = document.getElementById(barId);
+    if (!bar) return;
+
+    let dismissed = false;
+
+    function show() {
+      bar.classList.add('cts--visible');
+    }
+
+    function hide() {
+      bar.classList.remove('cts--visible');
+    }
+
+    function onScroll() {
+      if (dismissed) return;
+      if (window.scrollY > showAfter) {
+        show();
+      } else {
+        hide();
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    if (dismissible) {
+      const closeBtn = bar.querySelector('.cts__close');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', function () {
+          dismissed = true;
+          hide();
+          window.removeEventListener('scroll', onScroll);
+        });
+      }
+    }
+  })();
+})();</script>
+
+
