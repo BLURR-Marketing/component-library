@@ -1,0 +1,19 @@
+{
+  "name": "NavGlobalMinimalV2",
+  "slug": "nav-global-minimal-v2",
+  "category": "nav",
+  "type": "nav",
+  "description": "Een minimalistische, semi-transparante globale navigatiebalk, sticky aan de bovenkant van de pagina met een mobiel menu.",
+  "tags": [
+    "navigation",
+    "header",
+    "minimal",
+    "light",
+    "sticky",
+    "translucent"
+  ],
+  "color_summary": "Licht-grijze semi-transparante achtergrond, donkergrijze typografie.",
+  "source_url": "https://www.apple.com",
+  "dependencies": {},
+  "pick_id": "52afd610-47be-4f82-9dac-2df568666cd1"
+}
