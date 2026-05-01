@@ -4699,6 +4699,20 @@ export const COMPONENTS: ComponentEntry[] = [
     mockProps: {},
     propsDocs: [],
   },
+  {
+    slug: "nav-global-minimal",
+    name: "NavGlobalMinimal",
+    category: "nav",
+    description: "Een minimalistische, semi-transparante globale navigatiebalk, sticky aan de bovenkant van de pagina met een mobiel menu.",
+    githubPath: "src/components/nav/NavGlobalMinimal.astro",
+    tags: ["navigation","header","minimal","light","sticky","translucent"],
+    mockProps: {
+      "navItems": "[\n    { label: 'Store', href: '#' },\n    { label: 'Mac', href: '#' },\n    { label: 'iPad', href: '#' },\n    { label: 'iPhone', href: '#' },\n    { label: 'Watch', href: '#' },\n    { label: 'Vision', href: '#' },\n    { label: 'AirPods', href: '#' },\n    { label: 'TV & Home', href: '#' },\n    { label: 'Entertainment', href: '#' },\n    { label: 'Accessories', href: '#' },\n    { label: 'Support', href: '#' }\n  ]"
+    },
+    propsDocs: [
+      {"name":"navItems","type":"NavItem[]","required":false,"description":"","default":"[\n    { label: 'Store', href: '#' },\n    { label: 'Mac', href: '#' },\n    { label: 'iPad', href: '#' },\n    { label: 'iPhone', href: '#' },\n    { label: 'Watch', href: '#' },\n    { label: 'Vision', href: '#' },\n    { label: 'AirPods', href: '#' },\n    { label: 'TV & Home', href: '#' },\n    { label: 'Entertainment', href: '#' },\n    { label: 'Accessories', href: '#' },\n    { label: 'Support', href: '#' }\n  ]"},
+    ],
+  },
 ];
 
 export function getComponent(slug: string): ComponentEntry | undefined {
